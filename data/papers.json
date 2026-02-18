@@ -221,9 +221,9 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Samsung",
-    "authors": "Samsung",
-    "process_node": "advanced",
+    "affiliation": "Rebellions",
+    "authors": "Rebellions",
+    "process_node": "4nm",
     "die_area_mm2": "",
     "power_mw": "",
     "energy_efficiency": "56.8TPS on Llama 3.3 70B",
@@ -284,7 +284,7 @@
     "metrics": {
       "sram_kb": "512MB of on-chip SRAM",
       "throughput": "128TOPS",
-      "technology": "advanced",
+      "technology": "4nm",
       "energy_efficiency": "56.8TPS on Llama 3.3 70B",
       "target_model": "Llama 3.3 70B",
       "source_figure": "fig_7"
@@ -355,8 +355,8 @@
         "color": "#9b59b6"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
+    "affiliation": "UNIST",
+    "authors": "UNIST",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -622,9 +622,9 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "EPFL",
-    "authors": "EPFL",
-    "process_node": "28nm",
+    "affiliation": "University of Michigan",
+    "authors": "University of Michigan",
+    "process_node": "16nm",
     "die_area_mm2": "1.1",
     "power_mw": "",
     "energy_efficiency": "13.1pJ/b",
@@ -679,7 +679,7 @@
       }
     ],
     "metrics": {
-      "technology": "28nm",
+      "technology": "16nm",
       "supply_voltage": "0.9V",
       "energy_efficiency": "13.1pJ/b",
       "throughput": "throughput of 83Mbps",
@@ -895,9 +895,9 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
-    "process_node": "28nm",
+    "affiliation": "NTHU",
+    "authors": "NTHU",
+    "process_node": "16nm",
     "die_area_mm2": "",
     "power_mw": "",
     "energy_efficiency": "98-134ms/step",
@@ -956,7 +956,7 @@
       }
     ],
     "metrics": {
-      "technology": "28nm",
+      "technology": "16nm",
       "energy_efficiency": "98-134ms/step",
       "throughput": "7.37TOPS",
       "target_model": "DiT (Diffusion Transformer)",
@@ -1457,8 +1457,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "Samsung",
-    "authors": "Samsung",
+    "affiliation": "Renesas Electronics",
+    "authors": "Renesas Electronics",
     "process_node": "3nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -1584,8 +1584,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Samsung",
-    "authors": "Samsung",
+    "affiliation": "MediaTek",
+    "authors": "MediaTek",
     "process_node": "3nm+",
     "die_area_mm2": "",
     "power_mw": "",
@@ -1720,8 +1720,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Intel",
-    "authors": "Intel",
+    "affiliation": "Qualcomm",
+    "authors": "Qualcomm",
     "process_node": "2nm GAA",
     "die_area_mm2": "",
     "power_mw": "",
@@ -1854,8 +1854,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Qualcomm",
-    "authors": "Qualcomm",
+    "affiliation": "Broadcom",
+    "authors": "Broadcom",
     "process_node": "7nm CMOS",
     "die_area_mm2": "0.008",
     "power_mw": "11.2",
@@ -1985,8 +1985,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Intel",
-    "authors": "Intel",
+    "affiliation": "Northwestern University",
+    "authors": "Northwestern University",
     "process_node": "Intel 3",
     "die_area_mm2": "",
     "power_mw": "",
@@ -2252,8 +2252,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "Tsinghua",
-    "authors": "Tsinghua Univ.",
+    "affiliation": "Peking University",
+    "authors": "Peking University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -2392,9 +2392,9 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "Georgia Tech",
-    "authors": "Georgia Tech",
-    "process_node": "12nm",
+    "affiliation": "UC Santa Barbara",
+    "authors": "UC Santa Barbara",
+    "process_node": "65nm",
     "die_area_mm2": "",
     "power_mw": "",
     "energy_efficiency": "",
@@ -2449,7 +2449,7 @@
       }
     ],
     "metrics": {
-      "technology": "12nm",
+      "technology": "65nm",
       "target_model": "Ising Model",
       "source_figure": "fig_7"
     },
@@ -2519,8 +2519,8 @@
         "color": "#9b59b6"
       }
     ],
-    "affiliation": "Georgia Tech",
-    "authors": "Georgia Tech",
+    "affiliation": "Tsinghua University",
+    "authors": "Tsinghua University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -2659,8 +2659,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Purdue",
-    "authors": "Purdue Univ.",
+    "affiliation": "UC Santa Barbara",
+    "authors": "UC Santa Barbara",
     "process_node": "55nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -2790,9 +2790,9 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "CEA-Leti",
-    "authors": "CEA-Leti",
-    "process_node": "22nm",
+    "affiliation": "CEA-List",
+    "authors": "CEA-List",
+    "process_node": "28nm FDSOI",
     "die_area_mm2": "",
     "power_mw": "",
     "energy_efficiency": "3.19pJ/b",
@@ -2851,7 +2851,7 @@
       }
     ],
     "metrics": {
-      "technology": "22nm",
+      "technology": "28nm FDSOI",
       "energy_efficiency": "3.19pJ/b",
       "throughput": "50Gb/s",
       "target_model": "N/A",
@@ -2929,8 +2929,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
+    "affiliation": "Peking University",
+    "authors": "Peking University",
     "process_node": "22nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -3206,8 +3206,8 @@
         "color": "#9b59b6"
       }
     ],
-    "affiliation": "NTU",
-    "authors": "NTU",
+    "affiliation": "HKUST(GZ)",
+    "authors": "HKUST(GZ)",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -3345,8 +3345,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
+    "affiliation": "Tsinghua University",
+    "authors": "Tsinghua University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -3483,8 +3483,8 @@
         "color": "#9b59b6"
       }
     ],
-    "affiliation": "Tsinghua",
-    "authors": "Tsinghua Univ.",
+    "affiliation": "Southeast University",
+    "authors": "Southeast University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -3902,8 +3902,8 @@
         "color": "#e67e22"
       }
     ],
-    "affiliation": "Tsinghua",
-    "authors": "Tsinghua Univ.",
+    "affiliation": "Xidian University",
+    "authors": "Xidian University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -4036,8 +4036,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "NTU",
-    "authors": "NTU",
+    "affiliation": "NTHU",
+    "authors": "NTHU",
     "process_node": "16nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -4168,8 +4168,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "Peking Univ.",
-    "authors": "Peking Univ.",
+    "affiliation": "IMECAS",
+    "authors": "IMECAS",
     "process_node": "",
     "die_area_mm2": "",
     "power_mw": "",
@@ -4300,8 +4300,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "Samsung",
-    "authors": "Samsung",
+    "affiliation": "Fudan University",
+    "authors": "Fudan University",
     "process_node": "28nm CMOS",
     "die_area_mm2": "",
     "power_mw": "",
@@ -4441,8 +4441,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "TSMC",
-    "authors": "TSMC",
+    "affiliation": "NTHU",
+    "authors": "NTHU",
     "process_node": "16nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -4989,8 +4989,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
+    "affiliation": "Southeast University",
+    "authors": "Southeast University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -5117,9 +5117,9 @@
         "color": "#2ecc71"
       }
     ],
-    "affiliation": "Tsinghua",
-    "authors": "Tsinghua Univ.",
-    "process_node": "28nm",
+    "affiliation": "Peking University",
+    "authors": "Peking University",
+    "process_node": "22nm",
     "die_area_mm2": "",
     "power_mw": "",
     "energy_efficiency": "",
@@ -5174,7 +5174,7 @@
       }
     ],
     "metrics": {
-      "technology": "28nm",
+      "technology": "22nm",
       "energy_efficiency": "33.45TOPS/W",
       "throughput": "0.435TOPS",
       "target_model": "VAR (Visual Autoregressive)",
@@ -5662,8 +5662,8 @@
         "color": "#e74c3c"
       }
     ],
-    "affiliation": "KAIST",
-    "authors": "KAIST",
+    "affiliation": "Tsinghua University",
+    "authors": "Tsinghua University",
     "process_node": "28nm",
     "die_area_mm2": "",
     "power_mw": "",
@@ -5803,9 +5803,9 @@
         "color": "#9b59b6"
       }
     ],
-    "affiliation": "Apple",
-    "authors": "Apple",
-    "process_node": "28nm CMOS",
+    "affiliation": "Nvidia",
+    "authors": "Nvidia",
+    "process_node": "16nm",
     "die_area_mm2": "",
     "power_mw": "5",
     "energy_efficiency": "<5mW",
@@ -5864,7 +5864,7 @@
       }
     ],
     "metrics": {
-      "technology": "28nm CMOS",
+      "technology": "16nm",
       "sram_kb": "2.125MB of SRAM",
       "frequency_mhz": "359",
       "power_mw": "5",
