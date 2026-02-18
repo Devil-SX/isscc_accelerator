@@ -41,41 +41,49 @@
     "challenges": [
       {
         "text": "AI算力需求增长但功耗受限于封装散热",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "3nm高密度设计导致电流密度和电压跌落加剧",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "数据搬运功耗占比大制约HBM带宽能效",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "计算单元动态功耗随吞吐提升显著增加",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "异构3D堆叠架构集成8个3nm XCD与6nm IOD",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "自适应时钟与去耦电容协同抑制电压跌落",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "IOD合并与互连拓扑优化降低数据搬运功耗",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "低功耗触发器与ML驱动的CAC优化降低动态功耗",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "AMD",
@@ -146,7 +154,23 @@
       "target_model": "LLM/AI Training",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.1/"
+    "data_path": "data/2.1/",
+    "analytical_tags": [
+      "混合精度",
+      "3D堆叠/HBM",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "AMD",
+      "name_zh": "AMD",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/amd.svg"
+    },
+    "abstract": "The AMD Instinct MI350 Series GPU, based on a 4th-generation AMD CDNA architecture, features eight stacked accelerator complex dies (XCD), two I/O dies (IOD) interconnected with AMD Inﬁnity Fabric, and interfaces for eight stacks of 12-hi HBM3E memory. The MI350 Series GPU delivers over 3× generational inference performance increase by improving energy efﬁciency, increasing compute throughput, supporting new lower-precision FP6/FP4 datatypes, and increasing both memory bandwidth and capacity.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.2",
@@ -184,41 +208,49 @@
     "challenges": [
       {
         "text": "LLM预填充阶段需要海量浮点算力",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "百万Token上下文KV缓存带宽受限",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "多芯粒间数据同步与一致性开销大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "高瞬态电流导致供电网络电压波动",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "四芯粒可扩展Mesh互连与混合精度统一计算单元",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "512MB片上SRAM分层存储架构支撑KV缓存",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "UCIe低延迟Load-Store语义实现虚拟单片互连",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "硬件交错启动与集成硅电容抑制瞬态电压噪声",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Rebellions",
@@ -289,7 +321,24 @@
       "target_model": "Llama 3.3 70B",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.2/"
+    "data_path": "data/2.2/",
+    "analytical_tags": [
+      "芯粒/Chiplet",
+      "可重构",
+      "LLM/NLP",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Rebellions",
+      "name_zh": "Rebellions",
+      "type": "industry",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/rebellions.svg"
+    },
+    "abstract": "A 4nm-based quad-chiplet with an advanced packaged LLM accelerator achieving 56.8TPS on LLaMA v3.3 70B with single-batch 2k/2k input/output sequences. The architecture combines chiplet-based design, low-latency die-to-die interfaces, uniﬁed mixed-precision compute, holistic synchronization, and HBM3E with advanced power schemes to sustain bandwidth, capacity and thermal stability. The SoC integrates four NPU chiplets, four HBM3E modules, and four ISCs for stable power delivery.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.3",
@@ -327,32 +376,38 @@
     "challenges": [
       {
         "text": "多模态融合层稀疏性剧烈波动难以利用",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "固定稀疏-密集核比例限制硬件利用率",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "时序注意力长短期记忆需大量片外访存",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "基于帧间相关性的稀疏推理单元预测并生成稀疏性",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       },
       {
         "text": "稀疏感知自适应核编排与分段聚合网络",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "ROI渐进式记忆剪枝减少92.8%时序注意力访存",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "UNIST",
@@ -422,7 +477,24 @@
       "target_model": "EED Model",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.3/"
+    "data_path": "data/2.3/",
+    "analytical_tags": [
+      "稀疏化",
+      "可重构",
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "UNIST",
+      "name_zh": "蔚山科学技术大学",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/unist.svg"
+    },
+    "abstract": "A multi-modal end-to-end driving processor is proposed with 4 features: 1) a sparsity reasoning unit to maximize sparsity exploitation, 2) a flexible sparse-dense heterogeneous architecture with a sparsity-aware adaptive core orchestrator to maximize core utilization, 3) an energy-efﬁcient segmented aggregation network, and 4) a long-/short-term memory unit to minimize external memory access (EMA) of temporal attention. It achieves 10.3fps at 71.3mJ/frame, consuming 218× less energy than a state-of-the-art driving SoC.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.4",
@@ -460,32 +532,38 @@
     "challenges": [
       {
         "text": "ViT信道估计模型参数量大无法片上存储",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "Softmax等非线性运算需外部处理器增加延迟",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "B5G/6G多频段覆盖需通用高效估计器",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "信道感知压缩将权重参数缩减95%实现片上存储",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "松弛自注意力用Taylor展开消除非线性查找表",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "频段模式切换与四Patch并行架构提升吞吐量5倍",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -556,7 +634,22 @@
     },
     "supply_voltage": "1.0V",
     "frequency_mhz": "250",
-    "data_path": "data/2.4/"
+    "data_path": "data/2.4/",
+    "analytical_tags": [
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "This work presents an AI-RAN channel estimation accelerator for next-generation communications, offering hyper reliability, low latency, and universal frequency range coverage, thereby meeting B5G/6G requirements. Utilizing algorithm-hardware co- optimization and architecture optimizations, the prototype achieves a throughput of 14.4Gb/s at 7.3pJ/b in 28nm CMOS, surpassing the state-of-the-art channel estimation systems by 7.7 to 18.9dB in reliability and 16-to-39× in throughput.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.5",
@@ -594,32 +687,38 @@
     "challenges": [
       {
         "text": "OSD高阶译码候选数指数增长延迟过高",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "高斯消元固有串行性占译码延迟60%以上",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "URLLC要求亚毫秒最坏延迟与高可靠性兼顾",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "Chase+1阶OSD两级互补译码降低复杂度156倍",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "预排序基更新替代完整高斯消元减少75%延迟",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "四级提前退出机制实现14.4ns平均译码延迟",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "University of Michigan",
@@ -688,7 +787,21 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.9V",
-    "data_path": "data/2.5/"
+    "data_path": "data/2.5/",
+    "analytical_tags": [
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "University of Michigan",
+      "name_zh": "密歇根大学",
+      "type": "academia",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/university-of-michigan.svg"
+    },
+    "abstract": "We present a two-stage FEC decoder that combines soft-decision Chase decoding with order-1 ordered statistics decoding, offering robust error correction for URLLC. A 1.1mm2, 16nm decoder prototype with optimized Gaussian elimination and early exits achieves an average latency of 14.4ns and a worst-case latency of 132.6ns, improving upon prior work by 53× and ﬁve orders of magnitude, respectively. The prototype delivers 15.2Gbps at 13.1pJ/b, outperforming state-of-the-art URLLC FEC decoders.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.6",
@@ -726,41 +839,49 @@
     "challenges": [
       {
         "text": "单槽PCIe功耗预算限制加速器性能",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "单环路功率控制浪费短时功耗余量",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "多卡推理扩展依赖专有互连方案",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "硅前功耗建模不准导致频率次优",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "双电压域设计(0.55V/0.75V)降低功耗",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "双环路峰值电流控制提升吞吐28%",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "标准PCIe Fabric实现多卡弹性扩展",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "工作负载驱动的物理设计功耗优化",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "IBM",
@@ -829,7 +950,25 @@
       "target_model": "Granite/Foundation Models",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.6/"
+    "data_path": "data/2.6/",
+    "analytical_tags": [
+      "混合精度",
+      "稀疏化",
+      "LLM/NLP",
+      "片外访存优化",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "IBM",
+      "name_zh": "IBM",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/ibm.svg"
+    },
+    "abstract": "Spyre is a scalable, power-efﬁcient AI accelerator product for enterprise workloads. Featuring 32 AI cores, mixed-precision support, and LPDDR5 memory, it ﬁts in a single- slot PCIe form factor and scales over a standard PCIE fabric. Optimized for inference workloads, Spyre achieves 2-to-3× better power/performance than GPUs on encoder-class models and scales up to 4 or more devices for large generative models.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.7",
@@ -867,32 +1006,38 @@
     "challenges": [
       {
         "text": "CFG双样本推理使权重访存翻倍",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "MX量化沿输入通道截断误差大",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "浮点残差连接需要大容量片上缓存",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "CFG批差分处理减少50%权重访存",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "权重重排量化配合两阶段特征对齐",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "混合MX分块数据通路降低缓存37%",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "NTHU",
@@ -962,7 +1107,25 @@
       "target_model": "DiT (Diffusion Transformer)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.7/"
+    "data_path": "data/2.7/",
+    "analytical_tags": [
+      "量化",
+      "混合精度",
+      "生成式AI",
+      "片外访存优化",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "NTHU",
+      "name_zh": "国立清华大学",
+      "type": "academia",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/nthu.svg"
+    },
+    "abstract": "National Tsing Hua University, Hsinchu, Taiwan A 16nm FinFET transformer-based diffusion model processor chip is fabricated for supporting class-conditional DiT-XL/2 and text-to-image PixArt-α with 98ms and 134ms generation time per step with 7.37TOPS and 1477mW at 400MHz. Classiﬁer-free guidance batching reduces external memory access (EMA) for weights by 50%, and weight-reordered quantization brings another 37% reduction. Hybrid microscaling blocking reduces feature- map buffer size by 37%, while approaching ﬂoating-point quality.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.8",
@@ -1000,32 +1163,38 @@
     "challenges": [
       {
         "text": "先进工艺SRAM面积缩放滞后于逻辑",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "跨循环特征图存储导致外部访存高",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "输入加载与缩放串行执行利用率低",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "编译器驱动L1/L2存储联合面积优化",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "细粒度写覆盖读松弛的L2分配策略",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       },
       {
         "text": "激活感知预加载与并行缩放提升利用率",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "MediaTek",
@@ -1098,7 +1267,23 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.575V",
-    "data_path": "data/2.8/"
+    "data_path": "data/2.8/",
+    "analytical_tags": [
+      "生成式AI",
+      "可重构",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "MediaTek",
+      "name_zh": "联发科",
+      "type": "industry",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/mediatek.svg"
+    },
+    "abstract": "This work presents MADiC, a 3nm 0.338mm2 diffusion accelerator for generative image editing on edge devices. MADiC features design-time L1/L2 memory optimization, cross- loop feature map allocation with write-over-read relaxation, and activation-aware input preloading with concurrent resizing. Operating at 0.575V and 546MHz, it delivers 7.4TOPS/mm2 and 17.4TOPS/W when running the Diffusion ConvNet model.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.9",
@@ -1142,32 +1327,38 @@
     "challenges": [
       {
         "text": "4DGS预处理阶段存储访问开销巨大",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "不透明度计算存在O(N²)冗余运算",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "像素渲染负载不均导致PE利用率低",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "自适应二次帧插值替代预处理减62%访存",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "融合递归不透明度计算消除冗余运算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "树形自适应精度并行渲染提升利用率2.6倍",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Tsinghua",
@@ -1238,7 +1429,23 @@
       "target_model": "4DGS",
       "source_figure": "fig_7"
     },
-    "data_path": "data/2.9/"
+    "data_path": "data/2.9/",
+    "analytical_tags": [
+      "可重构",
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Tsinghua University",
+      "name_zh": "清华大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/tsinghua-university.svg"
+    },
+    "abstract": "4D Gaussian Splatting (4DGS) has widespread applications in ﬁelds such as VR, AR and industrial simulation. However, 4DGS suffers from signiﬁcant memory requirements, redundant computations and low PE utilization. This paper introduces adaptive quadratic interpolation, recursive computation reuse and tree-based parallel rendering to tackle these challenges. The processor in the paper achieves a rendering energy of 0.24mJ/frame and improves energy efﬁciency by 6.11× on the D-Nerf dataset.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "2.10",
@@ -1276,32 +1483,38 @@
     "challenges": [
       {
         "text": "小高斯分布使粗粒度光栅化冗余严重",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "Gather步骤产生大量2D中间数据访存",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "建模与渲染异构架构带来额外面积开销",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "动态细粒度渲染引擎减89%冗余计算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "滑动窗口局部性优化消除Gather访存",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "建模渲染统一可重构架构减40%面积",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Tsinghua",
@@ -1376,7 +1589,23 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "1.01V",
-    "data_path": "data/2.10/"
+    "data_path": "data/2.10/",
+    "analytical_tags": [
+      "可重构",
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Tsinghua University",
+      "name_zh": "清华大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/tsinghua-university.svg"
+    },
+    "abstract": "A modeling/rendering uniﬁed 3D GS processor is proposed with: 1) A locality-aware dynamic ﬁne-grained rendering engine for reduced redundant computation. 2) A locality-optimized uniﬁed rendering workﬂow to reduce EMA. 3) A uniﬁed reconﬁgurable architecture for neural modeling and Gaussian rendering with minimal area overhead. It achieves 3.4× higher rendering throughput and 74.1% lower energy per frame than SOTA 3D GS accelerators, and an orders-of-magnitude reduction in modeling latency.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.1",
@@ -1420,41 +1649,49 @@
     "challenges": [
       {
         "text": "Chiplet互联缺乏功能安全FFI机制",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "大规模NPU时钟延迟超出时序窗口",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "高功耗密度下IR-drop影响可靠性",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "多功能汽车SoC需精细功耗模式管理",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "基于RegionID的UCIe FFI架构",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "分层mCPG时钟分配与统一调谐",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "Ring+Row双模式功率开关降IR-drop",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "90+电源域精细功率门控管理",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Renesas Electronics",
@@ -1524,7 +1761,22 @@
       "target_model": "N/A",
       "source_figure": "fig_7"
     },
-    "data_path": "data/10.1/"
+    "data_path": "data/10.1/",
+    "analytical_tags": [
+      "芯粒/Chiplet",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Renesas Electronics",
+      "name_zh": "瑞萨电子",
+      "type": "industry",
+      "country": "Japan",
+      "country_code": "JP",
+      "logo": "assets/logos/renesas-electronics.svg"
+    },
+    "abstract": "This paper presents a 3nm SoC, designed for software deﬁned vehicles, integrating various functions for zone-based computing. The chip includes a 1,080kDMIPS APU, 400TOPS NPU and 51.2GB/s inter-chip bandwidth. Functional safety is ensured by RegionID-based FFI over UCIe. Power efﬁciency is achieved with ﬁne-gating across 90+ power domains with enhanced IR-drop control and ASIL D-compliant DCLS. Hierarchical mCPGs reduce clock latency. The chip supports low-power modes such as Sentry and CPD.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.2",
@@ -1556,32 +1808,38 @@
     "challenges": [
       {
         "text": "高电压提升单核性能受老化预算限制",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "性能提升引发CPU热点温度飙升",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "温度传感器受电压缩放影响精度下降",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "数字老化传感器管控升压占空比",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "自适应硬件热控制器25ms快速响应",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "差分电压温度补偿消除DIBL误差",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "MediaTek",
@@ -1651,7 +1909,21 @@
       "source_figure": "fig_7"
     },
     "frequency_mhz": "3500",
-    "data_path": "data/10.2/"
+    "data_path": "data/10.2/",
+    "analytical_tags": [
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "MediaTek",
+      "name_zh": "联发科",
+      "type": "industry",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/mediatek.svg"
+    },
+    "abstract": "This work presents dynamic mobile-performance augmentation (DMPA), featuring boosting- duty control (BDC) and an adaptive thermal cooler (ATC) to augment CPU maximum performance. The BDC uses an aging sensor (A-sensor) to leverage an aging budget for performance boosting. For thermal, the ATC integrates temperature sensors (T-sensors) across the CPU and works with multiple sensors and a throttler to optimize clock speed effectively cooling hotspots. The DMPA offers a score of 3917 in the GeekBenchv6 single- core benchmark on a ﬂagship smartphone, consuming 0.078% or less total power, while occupying only 0.0122% of the CPU area.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.3",
@@ -1683,41 +1955,49 @@
     "challenges": [
       {
         "text": "传统单沿触发浪费一半动态时钟功耗",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "时钟占空比失真严重降低DET性能",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "已有DET触发器缺少复位与DFT功能",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "已有DET时钟门控引入周期间DCD",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "双沿触发架构半频运行降低时钟功耗",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "自适应时钟占空比控制器校正DCD",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "带复位和DFT功能的低功耗DET触发器",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "基于XNOR的DET时钟门控最小化DCD",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Qualcomm",
@@ -1788,7 +2068,21 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.7V",
-    "data_path": "data/10.3/"
+    "data_path": "data/10.3/",
+    "analytical_tags": [
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Qualcomm",
+      "name_zh": "高通",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/qualcomm.svg"
+    },
+    "abstract": "A 2nm clock-edge architecture (CEA) for an NPU matrix-multiplication unit (MXU) features dual-edge-triggered (DET) ﬂip-ﬂops, DET clock-gating circuits, and an adaptive clock duty- cycle controller to achieve iso-performance as a conventional (CNV) design while operating at half the clock frequency. Silicon measurements of the CEA MXU demonstrate ~39-40% lower clock power and a total dynamic power reduction of ~7-15%, depending on the workload, as compared to the CNV MXU at iso-throughput.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.4",
@@ -1826,32 +2120,38 @@
     "challenges": [
       {
         "text": "多PLL时钟生成面积和功耗开销大",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "DTC增益校准受路径失配精度受限",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "宽频数字DLL易出现锁定失败问题",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "开环分频器替代多PLL生成多路时钟",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "辅助DLL实现无副本LMS增益校准",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "三态PFD防止DLL谐波和卡死锁定",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Broadcom",
@@ -1919,7 +2219,21 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.9V",
-    "data_path": "data/10.4/"
+    "data_path": "data/10.4/",
+    "analytical_tags": [
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Broadcom",
+      "name_zh": "博通",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/broadcom.svg"
+    },
+    "abstract": "An all-digital high-performance standalone fractional divider (FDIV) is presented. It leverages a robust replica-free least-mean square (LMS)-based digital-to-time converter (DTC) background calibration using a compact auxiliary delay locked loop (AUX-DLL). The proposed FDIV provides a wide output frequency range (16-1600MHz) with very ﬁne frequency resolution (50b) and achieves worst-case integrated jitter performance of 350fsrms, while occupying only 0.008mm2.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.5",
@@ -1957,32 +2271,38 @@
     "challenges": [
       {
         "text": "PDN阻抗PVT变化导致压降预测不准",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "时钟节流缓解压降带来严重性能损失",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "功率转换器效率与响应速度难以兼顾",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "在线迁移学习适应PDN与负载变化",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       },
       {
         "text": "神经网络前馈预测实现主动压降调控",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "双电感Buck转换器兼顾效率与速度",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Northwestern University",
@@ -2051,7 +2371,21 @@
       "target_model": "N/A",
       "source_figure": "fig_7"
     },
-    "data_path": "data/10.5/"
+    "data_path": "data/10.5/",
+    "analytical_tags": [
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Northwestern University",
+      "name_zh": "西北大学",
+      "type": "academia",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/northwestern-university.svg"
+    },
+    "abstract": "A 28nm SoC solution with integrated proactive power management for droop mitigation is demonstrated combining a neural droop management unit, integrated high speed power converter, and an online learning engine to combat the PDN and workload variations. The 28nm test chip integrated with CPU and accelerators achieves 59% worst-case droop reduction, 48× throttling reduction, and >91% regulator peak efﬁciency, reducing performance degradation from prior ﬁxed-model or throttling-only schemes.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.6",
@@ -2089,32 +2423,38 @@
     "challenges": [
       {
         "text": "跨芯片数据搬运成为性能瓶颈",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "3D堆叠双芯片间时钟偏斜影响时序",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "多核DNN负载映射需兼顾延迟与能效",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "14×4×2混合键合3D NoC网络",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "转发时钟设计配合异步FIFO跨芯片接口",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "并行与数据流两种可切换负载映射策略",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       }
     ],
     "affiliation": "Intel",
@@ -2186,7 +2526,22 @@
       "target_model": "DNN",
       "source_figure": "fig_7"
     },
-    "data_path": "data/10.6/"
+    "data_path": "data/10.6/",
+    "analytical_tags": [
+      "3D堆叠/HBM",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Intel",
+      "name_zh": "英特尔",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/intel.svg"
+    },
+    "abstract": "A manycore DNN processor leverages hybrid bonding in a 14×4×2 mesh network on chip to increase 3D bandwidth between cores, accelerators, and SRAM to 2.5Tb/s/mm2. Memory throughput is improved by 39% compared to an equivalent 2D design with the same memory capacity. The 56 16×16 INT8 systolic array accelerators are stacked on top of 56 RISC-V cores to enable a peak AI performance density of 12.1TOPS/mm2. The DNN processor scores a latency of 53ms on the image classiﬁcation benchmark from MLPerf.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.7",
@@ -2224,32 +2579,38 @@
     "challenges": [
       {
         "text": "交叉开关映射PE开销达O(n²)效率低",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "缺乏冲突学习无法利用公式社区结构",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "固定宏尺寸难以适配不同规模SAT问题",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "CAM二进制编码将PE开销降至O(nlogn)",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "CIM宏实时追踪学习子句支持CDCL",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "模式可重构四核架构适配公式规模",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Peking University",
@@ -2320,7 +2681,22 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.95V",
-    "data_path": "data/10.7/"
+    "data_path": "data/10.7/",
+    "analytical_tags": [
+      "CIM",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Peking University",
+      "name_zh": "北京大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/peking-university.svg"
+    },
+    "abstract": "The K-SAT problem is NP-complete and costly on von Neumann machines. Several ASIC solvers have been proposed to mitigate this, but they rely on inefﬁcient crossbar mapping, overlook community structures and lack adaptability to formula size. This work presents an ASIC complete solver with conﬂict-driven clause learning (CDCL), employing a mode- reconﬁgurable CAM–CIM hybrid architecture. Fabricated in 28nm CMOS, it achieves 4.3-to-5.1× speedup and 1.4× energy reduction over a state-of-the-art ASIC complete solver.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.8",
@@ -2364,32 +2740,38 @@
     "challenges": [
       {
         "text": "已有Ising机硬件拓扑度数低映射受限",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "低精度系数限制实际优化问题求解",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "复杂拓扑需大量预处理映射开销大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "列二部图拓扑实现度数56的密集连接",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "嵌入式SRAM存储8位自旋交互系数",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "近存储MAC与总线控制器并行列激活",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "UC Santa Barbara",
@@ -2453,7 +2835,21 @@
       "target_model": "Ising Model",
       "source_figure": "fig_7"
     },
-    "data_path": "data/10.8/"
+    "data_path": "data/10.8/",
+    "analytical_tags": [
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "UC Santa Barbara",
+      "name_zh": "加州大学圣巴巴拉分校",
+      "type": "academia",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/uc-santa-barbara.svg"
+    },
+    "abstract": "We present a 65nm digital Ising chip with an advanced column-bipartite topology, featuring densely connected spins with a degree of 56 and 8b coefﬁcients for mapping and solving computationally intensive combinatorial optimization problems. A fabricated Ising test chip with 64 spin processing elements with spin coefﬁcients stored in ﬂexible embedded SRAM demonstrates solving practical problems, such as MIMO detection for a wireless network, with a fast solution time (<72ns).",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.9",
@@ -2491,32 +2887,38 @@
     "challenges": [
       {
         "text": "完备求解器搜索空间大收敛速度慢",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "布尔约束传播BCP速度成为性能瓶颈",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "确定性探索策略缺乏搜索多样性",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "前向VarCause构建实现快速子句学习",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "双BCP仲裁器并行发射两条传播结果",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "PRNG启发式决策器引入随机性搜索",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "Tsinghua University",
@@ -2587,7 +2989,21 @@
       "source_figure": "fig_7"
     },
     "frequency_mhz": "375",
-    "data_path": "data/10.9/"
+    "data_path": "data/10.9/",
+    "analytical_tags": [
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Tsinghua University",
+      "name_zh": "清华大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/tsinghua-university.svg"
+    },
+    "abstract": "We present SharpSAT, a heuristic-learning SAT accelerator that achieves fast solution times of 0.8μs for SAT and 16.1μs for UNSAT cases. Our design integrates: a fast clause learning unit that prunes the search space by deriving constraints from conﬂicts; a dual-BCP unit that accelerates implication propagation; and a heuristic variable decider introducing non- determinism to efﬁciently traverse the solution space. A 28nm prototype demonstrates 21.11×/2.61× (SAT/UNSAT) speedup over prior accelerators.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "10.10",
@@ -2631,32 +3047,38 @@
     "challenges": [
       {
         "text": "已有求解器仅支持3-SAT高阶需变量膨胀",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "单变量更新导航效率低收敛缓慢",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "模拟梯度计算需ADC增加面积和延迟",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "阶次无关混合信号CIM直接映射K-SAT",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "p-bit概率采样实现多变量并行更新",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "11T SRAM单周期计算make/break梯度",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "UC Santa Barbara",
@@ -2724,7 +3146,22 @@
       "target_model": "K-SAT (K≥3)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/10.10/"
+    "data_path": "data/10.10/",
+    "analytical_tags": [
+      "CIM",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "UC Santa Barbara",
+      "name_zh": "加州大学圣巴巴拉分校",
+      "type": "academia",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/uc-santa-barbara.svg"
+    },
+    "abstract": "University of California, Santa Barbara, CA We present a 55nm mixed-signal K-SAT solver with parallel-variable update algorithm for improved convergence and a compute-in-memory fabric that maps arbitrary-order K-SAT instances without preprocessing. It solves 50-variable 3-SAT (satisﬁable) problems in 5.5ms with 100% solvability at 265nJ. A custom 11T-SRAM crossbar for one-shot analog gradient computation and ADC-less gradient-based sampling with probabilistic-bit circuits enable 4- to-13× speedup over prior ASICs.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "18.1",
@@ -2762,32 +3199,38 @@
     "challenges": [
       {
         "text": "Interposer全局互连受限于近邻通信",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "有源中介层远距通信时钟同步延迟高",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "长距离SerDes驱动器复杂且功耗大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "光子中介层微环动态路由实现灵活互连",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "18ns帧级光路由与波长复用低延迟链路",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "标准单元SerDes与紧凑光驱动器降低开销",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "CEA-List",
@@ -2857,7 +3300,22 @@
       "target_model": "N/A",
       "source_figure": "fig_7"
     },
-    "data_path": "data/18.1/"
+    "data_path": "data/18.1/",
+    "analytical_tags": [
+      "芯粒/Chiplet",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "CEA-List",
+      "name_zh": "法国原子能委员会",
+      "type": "research_inst",
+      "country": "France",
+      "country_code": "FR",
+      "logo": "assets/logos/cea-list.svg"
+    },
+    "abstract": "Global interconnect on interposers between chiplets is currently mostly limited to nearest- neighbor communication. We propose an electro-optical router in 28nm on a photonic interposer to handle queuing and routing between dies and optical link drivers capable of 18ns link setup time for frame-level routing, with 1-to-6 lambda ﬂexible wavelength capacity. Compact analog drivers and standard-cell-based SerDes and clocking achieve 0.007mm2 active area per link and 3.19pJ/b power.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "18.2",
@@ -2901,32 +3359,38 @@
     "challenges": [
       {
         "text": "多人对话中静默和相似块造成计算冗余",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "两遍解码对计算和存储需求差异大",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "说话人切换和N-best重评分后处理开销大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "上下文感知冗余跳过实现在线稀疏块预测",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "2D可写CIM静态页存权重动态页支持转置",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "相似度感知TCAM加速说话人搜索与重评分",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Peking University",
@@ -2995,7 +3459,23 @@
       "target_model": "MS-ASR (RNN-T + AED)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/18.2/"
+    "data_path": "data/18.2/",
+    "analytical_tags": [
+      "CIM",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Peking University",
+      "name_zh": "北京大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/peking-university.svg"
+    },
+    "abstract": "This paper presents a DCIM-based accelerator for on-device streaming multi-speaker ASR (MS-ASR), featuring: 1) a context-aware redundancy skipping scheme with online sparse block prediction, 2) a 2D-writable CIM with static pages and dynamic pages, 3) a similarity- aware TCAM for rapid search of similar speakers and N-best semantic results. The test chip achieves a system energy efﬁciency of 37.50TFLOPS/W in MXFP8 and shows superior performance on MS-ASR tasks with 1.87-7.51ms/frame and 0.158-1.26mJ/frame efﬁciency.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "18.3",
@@ -3039,32 +3519,38 @@
     "challenges": [
       {
         "text": "MoE投机解码中被拒绝token冗余取权重",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "动态INT-FP比例变化导致硬件利用率低",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "可重构加法树支持可变输入尺寸功耗大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "Token自适应专家精炼消除冗余权重访问",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "自适应卸载NPU-CIM核平衡INT-FP利用率",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "双极编码DRAM-LUT-CIM降低加法树开销",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -3134,7 +3620,24 @@
       "target_model": "MoE-SD LLM",
       "source_figure": "fig_7"
     },
-    "data_path": "data/18.3/"
+    "data_path": "data/18.3/",
+    "analytical_tags": [
+      "CIM",
+      "稀疏化",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "SMoLPU is an energy-efﬁcient MoE-based speculative decoding LLM processor with an NPU-CIM core. It has 3 features: 1) Token-adaptive expert reﬁnement removes redundant expert activations and schedules expert load order, achieving 2.3×/4.2× energy efﬁciency improvement in preﬁll/decode; 2) An adaptive-ofﬂoad NPU-CIM core and a top scheduling unit maintain HW utilization under dynamic INT–FP ratios, achieving 3.3× lower latency; 3) A reconﬁgurable DRAM-based LUT-CIM reduces adder tree power/area, while supporting dynamic input size. The LLM processor achieves 43.5% lower energy per parameter than prior SOTA.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "18.4",
@@ -3178,32 +3681,38 @@
     "challenges": [
       {
         "text": "感存算分离导致数据搬运与帧转换开销大",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "时空在线学习功耗和存储随时间窗深度缩放",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "eNVM写耐久有限制约在线学习寿命",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "EVS集成异步近存脉冲计算消除帧转换",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "e-OTBP单时间窗反向传播降低学习开销",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "灰码权重与三值梯度减少存储编程次数",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "HKUST(GZ)",
@@ -3273,7 +3782,22 @@
       "target_model": "SNN (sCNN + sFC)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/18.4/"
+    "data_path": "data/18.4/",
+    "analytical_tags": [
+      "CIM",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "HKUST(GZ)",
+      "name_zh": "香港科技大学(广州)",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/hkust-gz.svg"
+    },
+    "abstract": "SpikeRAM is a high efﬁciency (48.1pW/Synapse/Bit) memory-centric neuromorphic system with perception, computing and on-chip learning, achieving 464M synapses and 8.28mW power in real-time processing, while realizing few-shot learning for event-based signature veriﬁcation. The EVS-sCNN core enables asynchronous sensing and feature extraction. The sFC-OCL core enables event-driven inference and learning with the e-OTBP algorithm. Gray- code weights and ternary gradients reduce memory write times by over 86%.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "18.5",
@@ -3317,32 +3841,38 @@
     "challenges": [
       {
         "text": "注意力噪声计算冗余且难区分有效元素",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "图像数据偏斜分布导致全精度硬件冗余",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "自回归逐像素生成迭代多延迟高",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "差分注意力放大器投机识别关键token",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "分布感知MXINT PE全路径精度自适应优化",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "链式反应并行生成利用空间相关性降低延迟",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Tsinghua University",
@@ -3411,7 +3941,23 @@
       "target_model": "VAR (Visual Autoregressive)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/18.5/"
+    "data_path": "data/18.5/",
+    "analytical_tags": [
+      "量化",
+      "生成式AI",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Tsinghua University",
+      "name_zh": "清华大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/tsinghua-university.svg"
+    },
+    "abstract": "To accelerate Visual Autoregressive (VAR) applications, this work implements a 28nm VAR accelerator achieving 47.3TFLOPs/W and <0.6% FID loss. A differential visual attention ampliﬁer speculates critical tokens for selective execution; a full-path optimized MXINT PE adapts to biased data distribution; and, a chain reaction-like parallel generation exploits spatial correlation. The 5.76mm2 chip runs at 400MHz, accelerating DeiT/ViT VAR by 37.6× with 2.75TFLOPs/mm2 area efﬁciency.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.1",
@@ -3455,32 +4001,38 @@
     "challenges": [
       {
         "text": "输入对齐方案算术效率低，浪费计算资源",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "可变位宽重配置导致存储容量利用率低",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "固定保留位宽限制多样化工作负载适配",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "串行双位滑动方案消除冗余乘累加操作",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "无损数据映射与分层隐藏位解码器",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "双阶段分配实现层级和组级自适应位宽",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "Southeast University",
@@ -3550,7 +4102,23 @@
       "target_model": "MXFP CNN/Transformer",
       "source_figure": "fig_7"
     },
-    "data_path": "data/30.1/"
+    "data_path": "data/30.1/",
+    "analytical_tags": [
+      "CIM",
+      "混合精度",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Southeast University",
+      "name_zh": "东南大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/southeast-university.svg"
+    },
+    "abstract": "Conventional FP-CIMs suffer from ﬁxed preserved bit-width (PBW), limiting their adaptability and efﬁciency. This work proposes the ﬁrst MXFP-CIM macro enabling wide-range adaptive PBW, featuring: (1) A serial dual-bit-sliding scheme; (2) A harmless data mapping scheme with a hierarchical hidden-bit decoder; (3) An adjustable-PBW MXFP-MAC circuit via twin- stage allocation. The 28nm MXFP-CIM macro achieves a peak energy efﬁciency of 127.54TFLOPS/W in the MXFP6/6 mode.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.2",
@@ -3594,32 +4162,38 @@
     "challenges": [
       {
         "text": "电荷俘获晶体管阈值偏移小难以实现数字CIM",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "激活后大量零值MAC运算浪费能耗",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "浮点预对齐和存储开销导致硬件成本高",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "差分增益CTT阵列支持模拟与数字MAC",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "符号幅度预测模拟通路跳过无效运算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "LUT-FP4预处理降低浮点对齐硬件开销",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "TSMC",
@@ -3691,7 +4265,22 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.8V",
-    "data_path": "data/30.2/"
+    "data_path": "data/30.2/",
+    "analytical_tags": [
+      "CIM",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "TSMC",
+      "name_zh": "台积电",
+      "type": "industry",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/tsmc.svg"
+    },
+    "abstract": "Previous non-volatile CIM (nvCIM) macros suffer from low storage density, unnecessary multiply-and-accumulate (MAC) operations, and large hardware cost for ﬂoating point computations. A 4Mb CTT nvCIM macro, fabricated in 12nm CMOS, supports INT/FP4 MAC operations with the analog-predict-digital-compute scheme for power saving, achieving an energy-efﬁciency of 137.75TFLOPS/W and >40 times improved density FoM (storage density×computing density).",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.3",
@@ -3735,32 +4324,38 @@
     "challenges": [
       {
         "text": "SLC/MLC模式间精度、能耗与面积权衡困难",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "GeLU/SiLU激活函数导致输入稀疏性低",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "非线性MLC器件精确低功耗读出困难",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "DTCO可重构计算模式融合NL-MLC/SLC",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "输入稀疏增强混合格式提升位稀疏性",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "单自参考双位ADC实现低功耗MLC读出",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "NTHU",
@@ -3830,7 +4425,23 @@
       "target_model": "Mamba/Transformer/CNN",
       "source_figure": "fig_7"
     },
-    "data_path": "data/30.3/"
+    "data_path": "data/30.3/",
+    "analytical_tags": [
+      "CIM",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "NTHU",
+      "name_zh": "国立清华大学",
+      "type": "academia",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/nthu.svg"
+    },
+    "abstract": "We present a DTCO-designed high-retention multi-mode ReRAM nvCIM macro supporting linear MLC (L-MLC), non-linear MLC (NL-MLC), and SLC modes for Mamba, Transformer, and CNN workloads, addressing key challenges in inference accuracy, energy, and readout robustness. The proposed macro incorporates: 1) a reconﬁgurable compute mode for accuracy/efﬁciency tradeoff, 2) ISE-HF encoding to enhance input sparsity and save energy, 3) an S2R-Db ADC that enables high-yield, low-power NL-MLC readout. The design achieves 50.6-to-90.2TFLOPS/W (BF16) with ImageNet accuracy loss that is 79.17% lower than L- MLC after 10 years of retention.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.4",
@@ -3874,32 +4485,38 @@
     "challenges": [
       {
         "text": "8位并行CIM布线拥塞与面积开销权衡",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "二补码符号位处理需额外面积或周期",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "中间结果引起高扇入加法器无效翻转功耗大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "跳变计数线实现无损稀疏自适应列压缩",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "总线TCL嵌入符号位扩展仅增2.95%面积",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "共享10相发生器分阶段使能避免无效翻转",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Xidian University",
@@ -3970,7 +4587,23 @@
       "source_figure": "fig_7"
     },
     "supply_voltage": "0.9V",
-    "data_path": "data/30.4/"
+    "data_path": "data/30.4/",
+    "analytical_tags": [
+      "CIM",
+      "位串行",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Xidian University",
+      "name_zh": "西安电子科技大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/xidian-university.svg"
+    },
+    "abstract": "This paper proposes a bit-parallel digital CIM macro featuring a lossless compressor based on transition-counting-lines (TCLs) for bit-column addition. The bus TCL incorporates sign- bit extension to support signed 2’s-complement MAC operations with minimal area overhead. A stage-wise enabling circuit prevents unnecessary toggling of adders, improving energy efﬁciency by 42%. Leveraging these techniques, the proposed CIM macro, which is fabricated in 28nm CMOS, achieves 106.85TOPS/W for INT8 operations and 77.68TFLOPS/W for BF16 operations.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.5",
@@ -4008,32 +4641,38 @@
     "challenges": [
       {
         "text": "二补码与符号幅度表示的面积功耗权衡",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "固定MX块大小无法适配不同输入分布",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "对数数制CIM硬件开销大且跨格式复用难",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "极性转移权重稀疏增强器统一2C/SM计算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "输入分布感知MX量化器自适应选择块大小",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       },
       {
         "text": "多格式自适应计算单元跨LNS/FP/INT复用",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "NTHU",
@@ -4102,7 +4741,23 @@
       "target_model": "General AI (LLM/FFT/CNN)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/30.5/"
+    "data_path": "data/30.5/",
+    "analytical_tags": [
+      "CIM",
+      "混合精度",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "NTHU",
+      "name_zh": "国立清华大学",
+      "type": "academia",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/nthu.svg"
+    },
+    "abstract": "Diverse AI workloads require ﬂexible data representations and numerical formats. In this work, we present a reconﬁgurable 2’s-complement and sign-magnitude scheme integrated within a versatile-format CIM macro supporting MX, LNS, FP, and INT for MAC operations. Implemented in a 16nm 72kb gain-cell array, the macro achieves record energy efﬁciency (120.5TFLOPS/W) and throughput density (3.18 TOPS/mm2) in MXINT8 mode.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.6",
@@ -4140,32 +4795,38 @@
     "challenges": [
       {
         "text": "NAND小单元间距限制近存计算单元面积和功耗",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "位线大电容导致读出能量延迟积过高",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "无法支持多比特有符号稀疏向量搜索",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "相位域计算单元紧邻BEOL FeNAND阵列",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "充放电交织感知与自动极性切换放大器",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "多比特符号感知PDC与稀疏感知输入处理",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "IMECAS",
@@ -4234,7 +4895,22 @@
       "target_model": "ANNS (Vector Search)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/30.6/"
+    "data_path": "data/30.6/",
+    "analytical_tags": [
+      "CIM",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "IMECAS",
+      "name_zh": "中科院微电子所",
+      "type": "research_inst",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/imecas.svg"
+    },
+    "abstract": "Previous near-memory computing (NMC) or in-memory-computing (IMC) NANDs suffers from limited IO width, large energy-delay-product, and an inability to support diverse vector formats. This work presents a fabricated 16Mb near-memory phase-domain-computing (NM-PDC) FeNAND chip can compute the 512 similarity distances between 256-dimensional 4b vectors in a single search operation, achieving 166.8TOPS/W energy efﬁciency and a 12.8× reduction in end-to-end search latency.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.7",
@@ -4272,32 +4948,38 @@
     "challenges": [
       {
         "text": "边缘LLM小批量推理受限于内存带宽瓶颈",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "DRAM工艺内集成计算逻辑能力受限",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "近存计算芯片难以兼容现有主机平台",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "3D混合键合与mini-TSV实现高带宽密度互连",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "逻辑与DRAM分离的两层DRAM一层逻辑架构",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "DDR4兼容接口与DMA辅助近存数据通路",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Fudan University",
@@ -4369,7 +5051,24 @@
       "source_figure": "fig_7"
     },
     "frequency_mhz": "1200",
-    "data_path": "data/30.7/"
+    "data_path": "data/30.7/",
+    "analytical_tags": [
+      "3D堆叠/HBM",
+      "片外访存优化",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Fudan University",
+      "name_zh": "复旦大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/fudan-university.svg"
+    },
+    "abstract": "A high-bandwidth-density (12.77GB/s/mm2) high-memory-density (99.4Mb/mm2) low- energy-consumption (0.67pJ/b) 3D PNM design that operates at 1.2GHz is presented. The design adopts a two-DRAM-one-logic architecture that enables near-DRAM computing through a high-density 3D integration path, reducing memory-access latency by up to 93% and GEMM execution time by up to 98%, demonstrating strong potential for edge-LLM workloads.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.8",
@@ -4413,32 +5112,38 @@
     "challenges": [
       {
         "text": "SNN与CNN双模式支持带来额外硬件开销",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "部分和存储与权重更新之间的面积能耗权衡",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "单一膜电位动态模型限制SNN模型灵活性",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "SNN-CNN共享MAC电路的紧凑可重构架构",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "部分和存储与权重复用优化数据映射方案",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       },
       {
         "text": "支持IF/LIF/IQIF多模式数字膜电位单元",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "NTHU",
@@ -4508,7 +5213,23 @@
       "target_model": "SNN-CNN Hybrid",
       "source_figure": "fig_7"
     },
-    "data_path": "data/30.8/"
+    "data_path": "data/30.8/",
+    "analytical_tags": [
+      "CIM",
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "NTHU",
+      "name_zh": "国立清华大学",
+      "type": "academia",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "logo": "assets/logos/nthu.svg"
+    },
+    "abstract": "We present a silicon-veriﬁed fully digital SRAM-CIM macro that supports multi-bit hybrid SNN-CNN processing. Key innovations include: (1) a compact CFD-SC-RC architecture that shares SNN-CNN MAC hardware to minimize area and energy overhead while enabling adaptive model and precision selection; and (2) a PS-WR-ODM scheme that balances partial- sum storage and weight-update energy. Fabricated in 16nm FinFET CMOS, the test chip achieves 444.21TOPS/W (1bIN-8bW-14bOUT, SNN) and 62.84TOPS/W (8bIN-8bW- 22bOUT, CNN).",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "30.9",
@@ -4546,32 +5267,38 @@
     "challenges": [
       {
         "text": "零点量化扩展至9比特增加面积与功耗",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "Booth编码器开销限制低位宽下功耗收益",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "CIM中权重存储面积占比过大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "无符号转有符号映射将9b乘法降至8b",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "权重驻留Booth编码复用摊销编码器开销",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "高密度可中断12T多比特锁存器存储单元",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "Intel",
@@ -4647,7 +5374,22 @@
     },
     "supply_voltage": "1.1V",
     "frequency_mhz": "2620",
-    "data_path": "data/30.9/"
+    "data_path": "data/30.9/",
+    "analytical_tags": [
+      "CIM",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Intel",
+      "name_zh": "英特尔",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/intel.svg"
+    },
+    "abstract": "A fully synthesizable DCiM on-die accelerator with 128 input channels, 32 output channels, and 2 weight sets, supporting zero-point-quantized INT8×INT8 computation, is fabricated in Intel 18A technology and occupies 0.0856mm2. The DCiM accelerator operates at 2.62GHz for a supply voltage of 1.1V, and 25°C, achieving a peak area-efﬁciency of 250TOPS/mm2. Robust operation of DCiM is maintained down to 400mV, 25°C, where it delivers a peak energy-efﬁciency of 147TOPS/W at 25% input activity, with a power consumption of 6.1mW.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.1",
@@ -4685,32 +5427,38 @@
     "challenges": [
       {
         "text": "FWHT旋转阵列面积开销大难以部署",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "边缘片上存储不足导致DLM频繁访存",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "长草稿长度下投机解码拒绝率过高",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "分解FWHT局部旋转单元消除激活异常值",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "ReRAM堆叠近存处理与块向量量化",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "自适应并行投机解码与乱序调度器",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "HKUST",
@@ -4783,7 +5531,25 @@
       "target_model": "LLaMA-7B",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.1/"
+    "data_path": "data/31.1/",
+    "analytical_tags": [
+      "CIM",
+      "3D堆叠/HBM",
+      "量化",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "HKUST",
+      "name_zh": "香港科技大学",
+      "type": "academia",
+      "country": "Hong Kong",
+      "country_code": "HK",
+      "logo": "assets/logos/hkust.svg"
+    },
+    "abstract": "This work presents a 55nm speculative decoding-based LLM accelerator with bumping- based face-to-face ReRAM-on-logic stacking technology. It features a local rotation unit for outlier-free low-bit quantization, a stacking-aware PNM architecture co-designed with blockwise vector quantization to reduce weight EMA overheads, and an adaptive parallel speculative decoding scheme with out-of-order scheduler for high resource and bandwidth utilization. Our chip achieves 14.08-to-135.69token/s and 4.46-to-7.17× speedup over vanilla speculative decoding.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.2",
@@ -4827,32 +5593,38 @@
     "challenges": [
       {
         "text": "多阶段精度需双份权重存储开销大",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "非2幂通道旋转需矩阵乘开销高",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "非对称组量化反量化FP逻辑面积大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "阶段感知精度选择与残差编码压缩权重",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "局部旋转谐波对齐置换降低旋转开销",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "切片整数反量化单元实现高效去量化",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -4923,7 +5695,25 @@
       "target_model": "LLM + Diffusion",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.2/"
+    "data_path": "data/31.2/",
+    "analytical_tags": [
+      "量化",
+      "蒸馏/剪枝",
+      "混合精度",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "Revolver is a low-bit GenAI accelerator that enables reasoning and multi-turn chat on edge devices under tight memory and power budgets. It introduces Phase-Aware Precision Selection (PAPS) with Multi-Precision Residual Encoding (MPRE) for memory-efﬁcient multi-phase execution, Local Rotation with Harmonic-Aligned Permutation (LR-HAP) for low-cost rotation, and a Sliced Integer-based Dequantization Unit (SIDU) for efﬁcient dequantization, achieving 3.99× energy savings and 2.10× speedup.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.3",
@@ -4961,32 +5751,38 @@
     "challenges": [
       {
         "text": "旋转算子占用PE阵列导致性能下降",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "组缩放和激活函数频繁中断INT流水",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "位串行MAC利用率低能效不足",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "子空间Hadamard变换独立于PE实现旋转",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "融合缩放-激活单元统一INT数据通路",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "重排位切片LUT引擎提升精度可扩展能效",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Southeast University",
@@ -5051,7 +5847,25 @@
       "target_model": "LLaMA-7B/13B",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.3/"
+    "data_path": "data/31.3/",
+    "analytical_tags": [
+      "量化",
+      "LUT计算",
+      "位串行",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Southeast University",
+      "name_zh": "东南大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/southeast-university.svg"
+    },
+    "abstract": "A 51.6μJ/token accelerator for rotation-based dual-quantized LLMs is presented. A subspace-rotation method with parallel Hadamard transposer reduces on-chip rotation power by 62.3% and area by 59.7%. A fused scale-activation unit lowers energy by 61.5% vs. the naive FP design. Rearranged bit-slice LUT computation achieves 2.28× better energy efﬁciency compared to a direct bit-parallel MAC implementation, while supporting ﬂexible bit-width. The chip reduces per-token energy by 32.6% over SOTA under an equal accuracy constraint.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.4",
@@ -5089,32 +5903,38 @@
     "challenges": [
       {
         "text": "VAR逐步插值导致计算量急剧增长",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "激活数据动态范围宽精度需求多变",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "注意力KV缓存访存开销占比超60%",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "性能可扩展混合PE-LUT核适配计算需求",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "运行时分布感知多精度并行处理",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "基于网格相似性的注意力图压缩方案",
         "type": "sw",
-        "color": "#2ecc71"
+        "color": "#2ecc71",
+        "text_en": ""
       }
     ],
     "affiliation": "Peking University",
@@ -5180,7 +6000,24 @@
       "target_model": "VAR (Visual Autoregressive)",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.4/"
+    "data_path": "data/31.4/",
+    "analytical_tags": [
+      "LUT计算",
+      "稀疏化",
+      "生成式AI",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Peking University",
+      "name_zh": "北京大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/peking-university.svg"
+    },
+    "abstract": "This paper presents VARSA, a 22nm visual autoregressive accelerator for efﬁcient text-to- image generation, featuring: 1) a performance-scalable hybrid PE-LUT core; 2) multi-precision parallel processing with runtime precision management; 3) attention map compression leveraging inter-grid similarity. The innovations enable VARSA to achieve 503mJ/inference for 512×512 image generation, which is 2.7-to-8.9× better than prior diffusion-based SOTA accelerators.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.5",
@@ -5218,32 +6055,38 @@
     "challenges": [
       {
         "text": "RAG增强上下文使预填充延迟超标",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "用户反馈微调中冗余梯度计算耗能高",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "MXFP格式位稀疏性低计算功耗占比大",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "混合秩Token处理按重要性分配计算量",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "相似性感知序列处理跳过冗余梯度",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       },
       {
         "text": "布尔原语MX张量核降低浮点MAC功耗",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -5316,7 +6159,23 @@
       "target_model": "LLaMA3.2-1B",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.5/"
+    "data_path": "data/31.5/",
+    "analytical_tags": [
+      "片外访存优化",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "This work presents SoulMate, a fully on-device mobile intelligence system-on-chip, integrating retrieval-augmented generation (RAG) and ﬁne tuning of a personal LLM. SoulMate is fabricated in 28nm CMOS with a novel mixed-rank token processing and similarity-aware sequence processing architecture. It demonstrates real-time user interaction consumining only 9.8-to-180.5mW power, and state-of-the-art energy efﬁciency, such as 26.3μJ/token for inference and 56.8μJ/token for ﬁne-tuning.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.6",
@@ -5354,32 +6213,38 @@
     "challenges": [
       {
         "text": "高分辨率图像导致VLM令牌数量爆炸",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "注意力头冗余且GQA负载不均衡",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "门控FFN产生大量近零值浪费计算",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "基于符号位相似度的运行时令牌合并",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "注意力头类型预测与集群负载均衡",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "离群符号位近零值预测跳过FFN计算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -5452,7 +6317,24 @@
     },
     "supply_voltage": "1.1V",
     "frequency_mhz": "580",
-    "data_path": "data/31.6/"
+    "data_path": "data/31.6/",
+    "analytical_tags": [
+      "稀疏化",
+      "LLM/NLP",
+      "视觉/CV",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "This paper presents Tri-Oracle, a VLM accelerator exploiting token, attention, and weight redundancies. A Token Merging Unit (TMU) merges 68% of redundant tokens. An Attention Head Prediction Unit (AHPU) predicts streaming heads and skips them, reducing attention latency by 44% and balancing load. A Strip-wise SNZV Computation Unit (SSCU) predicts near-zero values, cutting FFN latency by 45% and EMA by 57%. Fabricated in 28nm CMOS, Tri-Oracle achieves 17.78μJ/token and 1.19 to 3.99TOPS/mm2 without ﬁne tuning.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.7",
@@ -5496,32 +6378,38 @@
     "challenges": [
       {
         "text": "多对一LUT架构面积冗余写入低效",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "SSM隐状态更新需顺序FP逐元素操作",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "列式量化引入额外缩放乘法开销",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "多对多LUT-ACC架构实现空间LUT复用",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "基于LUT的逐元素层融合减少数据搬移",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "缩放反映LUT生成器支持列式量化",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       }
     ],
     "affiliation": "KAIST",
@@ -5590,7 +6478,23 @@
       "target_model": "Mamba/Samba/Hymba",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.7/"
+    "data_path": "data/31.7/",
+    "analytical_tags": [
+      "LUT计算",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "KAIST",
+      "name_zh": "韩国科学技术院",
+      "type": "academia",
+      "country": "South Korea",
+      "country_code": "KR",
+      "logo": "assets/logos/kaist.svg"
+    },
+    "abstract": "State-space models (SSMs) and weight-only quantization alleviate huge external memory access with a minimal accuracy degradation. To support both efﬁciently, we propose LUT- SSM, a LUT-based SSM accelerator with a many-to-many LUT-ACC and an element-wise (EW) layer fusion. LUT-SSM efﬁciently supports INT-FP GEMM and sequential EW operations in the SSM blocks. Fabricated in 28nm FD-SOI, LUT-SSM achieves 99.3TFLOPS/W peak efﬁciency and 96.1TFLOPS/W on Mamba 1.4B, improving energy efﬁciency by 1.28× over recent designs.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.8",
@@ -5634,32 +6538,38 @@
     "challenges": [
       {
         "text": "草稿模型重复令牌产生指数位冗余",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "目标模型含大量低效权重与KV缓存",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "草稿-验证串行执行导致硬件利用率低",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "指数双重复用MAC节省浮点运算能耗",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "草稿反向传播指导目标模型混合精度",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "草稿提前启动实现草稿验证并行计算",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       }
     ],
     "affiliation": "Tsinghua University",
@@ -5728,7 +6638,23 @@
       "target_model": "TinyLLaMA 1B / Llama 13B",
       "source_figure": "fig_7"
     },
-    "data_path": "data/31.8/"
+    "data_path": "data/31.8/",
+    "analytical_tags": [
+      "稀疏化",
+      "LLM/NLP",
+      "学界"
+    ],
+    "affiliation_info": {
+      "name": "Tsinghua University",
+      "name_zh": "清华大学",
+      "type": "academia",
+      "country": "China",
+      "country_code": "CN",
+      "logo": "assets/logos/tsinghua-university.svg"
+    },
+    "abstract": "LLMs face decoding bottlenecks. Speculative Decoding (SD) reduces latency via a small draft model for serial decoding and a large target model to verify in parallel. Despite this advantage, it still suffers from exponent redundancy, inefﬁcient weights/KV, and hardware underutilization. We propose an SD LLM processor with three innovations: an exponent dual-reuse MAC, draft back-propagation target mixed-precision dataﬂow, and draft early start parallel compute, achieving 10.29× speed increase.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   },
   {
     "id": "31.9",
@@ -5766,41 +6692,49 @@
     "challenges": [
       {
         "text": "GPU边缘SoC功耗过高无法常开视觉",
-        "related_idea_idx": 0
+        "related_idea_idx": 0,
+        "text_en": ""
       },
       {
         "text": "非GEMM操作成为端到端推理延迟瓶颈",
-        "related_idea_idx": 1
+        "related_idea_idx": 1,
+        "text_en": ""
       },
       {
         "text": "高性能工艺SRAM漏电主导常开功耗",
-        "related_idea_idx": 2
+        "related_idea_idx": 2,
+        "text_en": ""
       },
       {
         "text": "模型过大需外部存储访问增加功耗",
-        "related_idea_idx": 3
+        "related_idea_idx": 3,
+        "text_en": ""
       }
     ],
     "ideas": [
       {
         "text": "竞速休眠低功耗子系统独立于主SoC",
         "type": "system",
-        "color": "#3498db"
+        "color": "#3498db",
+        "text_en": ""
       },
       {
         "text": "近存储向量处理器加速非GEMM操作",
         "type": "hw-arch",
-        "color": "#e74c3c"
+        "color": "#e74c3c",
+        "text_en": ""
       },
       {
         "text": "细粒度SRAM分组电源门控降低漏电",
         "type": "hw-circuit",
-        "color": "#e67e22"
+        "color": "#e67e22",
+        "text_en": ""
       },
       {
         "text": "HW/SW协同设计QAT实现全片上执行",
         "type": "co-design",
-        "color": "#9b59b6"
+        "color": "#9b59b6",
+        "text_en": ""
       }
     ],
     "affiliation": "Nvidia",
@@ -5874,6 +6808,21 @@
       "source_figure": "fig_7"
     },
     "frequency_mhz": "359",
-    "data_path": "data/31.9/"
+    "data_path": "data/31.9/",
+    "analytical_tags": [
+      "视觉/CV",
+      "业界"
+    ],
+    "affiliation_info": {
+      "name": "Nvidia",
+      "name_zh": "英伟达",
+      "type": "industry",
+      "country": "United States",
+      "country_code": "US",
+      "logo": "assets/logos/nvidia.svg"
+    },
+    "abstract": "ALPhA-Vision is an always-on low-power subsystem for DNN-inference-based vision tasks in edge SoCs. Flexible and programmable, the subsystem supports CNN and ViT inference and employs hardware/software co-design to enable fully end-to-end execution with no external memory accesses. Fine-grained power management features to mitigate leakage enable the subsystem to perform face detection with 787μs latency and 99.3% detection accuracy with 4.6mW average power at 60fps.",
+    "metrics_detailed": {},
+    "figure_paragraphs": []
   }
 ]

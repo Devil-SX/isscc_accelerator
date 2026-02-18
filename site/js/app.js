@@ -14,6 +14,7 @@
       process: '',
       application: '',
       innovationType: '',
+      analyticalTags: [],
       search: ''
     },
     sortCol: null,
@@ -21,7 +22,8 @@
     lightboxImages: [],
     lightboxCaptions: [],
     lightboxLabels: [],
-    lightboxIndex: 0
+    lightboxIndex: 0,
+    privateMode: false
   };
 
   // Base path for data files (relative to server root)

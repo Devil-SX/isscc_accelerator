@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#003366" stroke="#003366" stroke-width="1" opacity="0.9"/>
+  <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
+        font-family="Arial, Helvetica, sans-serif" font-weight="bold"
+        font-size="11" fill="white">HKUST</text>
+</svg>

@@ -54,6 +54,11 @@
     return num + ' mW';
   }
 
+  function countryFlag(code) {
+    if (!code) return '';
+    return String.fromCodePoint.apply(null, code.toUpperCase().split('').map(function (c) { return c.charCodeAt(0) + 127397; }));
+  }
+
   function applyFilters() {
     var papers = window.APP.papers;
     var s = window.APP.currentSession;
@@ -71,6 +76,14 @@
           return inn.type === f.innovationType;
         });
         if (!hasType) return false;
+      }
+
+      if (f.analyticalTags && f.analyticalTags.length > 0) {
+        var paperTags = p.analytical_tags || [];
+        var allMatch = f.analyticalTags.every(function (tag) {
+          return paperTags.indexOf(tag) !== -1;
+        });
+        if (!allMatch) return false;
       }
 
       if (f.search) {
@@ -206,8 +219,79 @@
     });
     html += '</div>';
 
+    // Academia/Industry pie chart
+    var typeCounts = {};
+    papers.forEach(function (p) {
+      var info = p.affiliation_info;
+      var t = (info && info.type) ? info.type : 'unknown';
+      typeCounts[t] = (typeCounts[t] || 0) + 1;
+    });
+    var typeColors = { academia: '#58a6ff', industry: '#e74c3c', research_inst: '#2ecc71', unknown: '#6e7681' };
+    var typeLabels = { academia: '学界', industry: '业界', research_inst: '研究所', unknown: '未知' };
+    var typeEntries = Object.keys(typeCounts).map(function (k) {
+      return { key: k, count: typeCounts[k], color: typeColors[k] || '#6e7681', label: typeLabels[k] || k };
+    }).sort(function (a, b) { return b.count - a.count; });
+    var typeTotal = typeEntries.reduce(function (s, e) { return s + e.count; }, 0);
+
+    html += '<div class="stat-card"><h3>学界 / 业界分布</h3>';
+    html += '<div class="pie-chart-container">';
+    html += buildDonutSVG(typeEntries, typeTotal);
+    html += '<div class="pie-legend">';
+    typeEntries.forEach(function (e) {
+      html += '<div class="pie-legend-item">';
+      html += '<span class="pie-legend-dot" style="background:' + e.color + '"></span>';
+      html += '<span>' + escapeHtml(e.label) + '</span>';
+      html += '<span class="pie-legend-count">' + e.count + '</span>';
+      html += '</div>';
+    });
+    html += '</div></div></div>';
+
+    // Country distribution pie chart
+    var countryCounts = {};
+    papers.forEach(function (p) {
+      var info = p.affiliation_info;
+      var c = (info && info.country) ? info.country : 'Unknown';
+      countryCounts[c] = (countryCounts[c] || 0) + 1;
+    });
+    var countryColors = ['#58a6ff', '#e74c3c', '#2ecc71', '#e67e22', '#9b59b6', '#f1c40f', '#1abc9c', '#3498db', '#e91e63', '#00bcd4', '#ff9800', '#8bc34a'];
+    var countryEntries = Object.keys(countryCounts).map(function (k) {
+      return { key: k, count: countryCounts[k], label: k };
+    }).sort(function (a, b) { return b.count - a.count; });
+    countryEntries.forEach(function (e, i) { e.color = countryColors[i % countryColors.length]; });
+    var countryTotal = countryEntries.reduce(function (s, e) { return s + e.count; }, 0);
+
+    html += '<div class="stat-card"><h3>国家/地区分布</h3>';
+    html += '<div class="pie-chart-container">';
+    html += buildDonutSVG(countryEntries, countryTotal);
+    html += '<div class="pie-legend">';
+    countryEntries.forEach(function (e) {
+      html += '<div class="pie-legend-item">';
+      html += '<span class="pie-legend-dot" style="background:' + e.color + '"></span>';
+      html += '<span>' + escapeHtml(e.label) + '</span>';
+      html += '<span class="pie-legend-count">' + e.count + '</span>';
+      html += '</div>';
+    });
+    html += '</div></div></div>';
+
     html += '</div>';
     return html;
+  }
+
+  function buildDonutSVG(entries, total) {
+    var r = 42;
+    var circumference = 2 * Math.PI * r; // ~263.89
+    var svg = '<svg viewBox="0 0 120 120" class="pie-chart">';
+    var offset = 0;
+    entries.forEach(function (e) {
+      var segLen = (e.count / total) * circumference;
+      svg += '<circle cx="60" cy="60" r="' + r + '" fill="none" stroke="' + e.color + '" stroke-width="28"' +
+        ' stroke-dasharray="' + segLen.toFixed(2) + ' ' + circumference.toFixed(2) + '"' +
+        ' stroke-dashoffset="' + (-offset).toFixed(2) + '"' +
+        ' transform="rotate(-90 60 60)" />';
+      offset += segLen;
+    });
+    svg += '</svg>';
+    return svg;
   }
 
   function buildSessionTabs() {
@@ -262,6 +346,30 @@
     return html;
   }
 
+  function buildAnalyticalTagsFilter(papers) {
+    var seen = {};
+    var allTags = [];
+    papers.forEach(function (p) {
+      (p.analytical_tags || []).forEach(function (tag) {
+        if (!seen[tag]) {
+          seen[tag] = true;
+          allTags.push(tag);
+        }
+      });
+    });
+    allTags.sort();
+
+    var selected = window.APP.filters.analyticalTags || [];
+    var html = '<div class="analytical-tags-filter" id="analytical-tags-filter">';
+    allTags.forEach(function (tag) {
+      var isActive = selected.indexOf(tag) !== -1;
+      var cls = isActive ? ' active' : '';
+      html += '<button class="analytical-tag-btn' + cls + '" data-tag="' + escapeHtml(tag) + '">' + escapeHtml(tag) + '</button>';
+    });
+    html += '</div>';
+    return html;
+  }
+
   function buildTable(papers) {
     var html = '<div class="table-wrapper"><div class="comp-table" id="comp-table">';
 
@@ -294,7 +402,16 @@
       html += '</div>';
 
       // Affiliation
-      html += '<div class="td">' + escapeHtml(p.affiliation || '-') + '</div>';
+      var affilInfo = p.affiliation_info || {};
+      var affilHtml = '';
+      if (affilInfo.logo) {
+        affilHtml += '<img class="affil-logo" src="' + escapeHtml(window.APP.basePath + affilInfo.logo) + '" alt="" onerror="this.style.display=\'none\'">';
+      }
+      affilHtml += escapeHtml(p.affiliation || '-');
+      if (affilInfo.country_code) {
+        affilHtml += ' ' + countryFlag(affilInfo.country_code);
+      }
+      html += '<div class="td">' + affilHtml + '</div>';
 
       // Process
       html += '<div class="td">' + escapeHtml(getMetricValue(p, 'process_node') || '-') + '</div>';
@@ -383,6 +500,25 @@
       });
     }
 
+    // Analytical tags filter
+    var tagsFilter = document.getElementById('analytical-tags-filter');
+    if (tagsFilter) {
+      tagsFilter.addEventListener('click', function (e) {
+        var btn = e.target.closest('.analytical-tag-btn');
+        if (!btn) return;
+        var tag = btn.dataset.tag;
+        var tags = window.APP.filters.analyticalTags || [];
+        var idx = tags.indexOf(tag);
+        if (idx === -1) {
+          tags.push(tag);
+        } else {
+          tags.splice(idx, 1);
+        }
+        window.APP.filters.analyticalTags = tags;
+        rerender();
+      });
+    }
+
     // Table header sort
     var table = document.getElementById('comp-table');
     if (table) {
@@ -420,6 +556,7 @@
     var html = '';
     html += buildSessionTabs();
     html += buildFilterPanel(window.APP.papers);
+    html += buildAnalyticalTagsFilter(window.APP.papers);
     html += buildStatsBar(window.APP.papers);
     html += buildTable(papers);
 
