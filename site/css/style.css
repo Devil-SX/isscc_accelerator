@@ -999,11 +999,11 @@ img {
    Affiliation Logo
    ============================================= */
 .affil-logo {
-  width: 20px;
-  height: 20px;
-  border-radius: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
   vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 6px;
   object-fit: contain;
 }
 
