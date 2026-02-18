@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="30" fill="#FF5722" stroke="#FF5722" stroke-width="1" opacity="0.9"/>
-  <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
-        font-family="Arial, Helvetica, sans-serif" font-weight="bold"
-        font-size="20" fill="white">RB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="20" fill="#0A0A0A"/>
+  <text x="100" y="90" text-anchor="middle" fill="#00E5FF" font-family="sans-serif" font-size="60" font-weight="bold">R</text>
+  <text x="100" y="130" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="bold" letter-spacing="4">REBELLIONS</text>
+  <text x="100" y="155" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="10">AI Semiconductor</text>
 </svg>

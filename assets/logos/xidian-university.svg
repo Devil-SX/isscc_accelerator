@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="30" fill="#0D47A1" stroke="#0D47A1" stroke-width="1" opacity="0.9"/>
-  <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
-        font-family="Arial, Helvetica, sans-serif" font-weight="bold"
-        font-size="16" fill="white">XDU</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#003399" stroke="#FFD700" stroke-width="4"/>
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <text x="100" y="75" text-anchor="middle" fill="#FFD700" font-family="serif" font-size="16" font-weight="bold">XIDIAN</text>
+  <text x="100" y="95" text-anchor="middle" fill="#FFD700" font-family="serif" font-size="14" font-weight="bold">UNIVERSITY</text>
+  <text x="100" y="125" text-anchor="middle" fill="white" font-family="serif" font-size="18">西安电子科技大学</text>
+  <text x="100" y="155" text-anchor="middle" fill="#FFD700" font-family="serif" font-size="12">Est. 1931</text>
 </svg>
