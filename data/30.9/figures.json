@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.9.1",
+    "figure_num": 1,
+    "caption": "DCiM accelerator organization supporting zero-point quantized 8b unsigned/ signed activation and weights.",
+    "image_path": "images/30.9/fig_1.png"
+  },
+  {
+    "figure_id": "30.9.2",
+    "figure_num": 2,
+    "caption": "Radix-4 Booth encoded weights, interruptible 12T multibit latch storage with static 2:1 multiplexor read, S-bit compute, and modiﬁed Booth encoder.",
+    "image_path": "images/30.9/fig_2.png"
+  },
+  {
+    "figure_id": "30.9.3",
+    "figure_num": 3,
+    "caption": "Intrinsic zero-point compute with unsigned-signed mapping within the DCiM dataﬂow.",
+    "image_path": "images/30.9/fig_3.png"
+  },
+  {
+    "figure_id": "30.9.4",
+    "figure_num": 4,
+    "caption": "Area/power breakdown and weight storage area savings.",
+    "image_path": "images/30.9/fig_4.png"
+  },
+  {
+    "figure_id": "30.9.5",
+    "figure_num": 5,
+    "caption": "Frequency, power, and energy efﬁciency measurements in Intel 18A technology.",
+    "image_path": "images/30.9/fig_5.png"
+  },
+  {
+    "figure_id": "30.9.6",
+    "figure_num": 6,
+    "caption": "Power, performance, area summary, and comparison to prior work.",
+    "image_path": "images/30.9/fig_6.png"
+  },
+  {
+    "figure_id": "30.9.7",
+    "figure_num": 7,
+    "caption": "Packaged Intel 18A test-chip photograph, die dimensions, and performance summary table.",
+    "image_path": "images/30.9/fig_7.png"
+  }
+]

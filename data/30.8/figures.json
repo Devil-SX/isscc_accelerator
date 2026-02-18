@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.8.1",
+    "figure_num": 1,
+    "caption": "Motivation and challenges for hybrid SNN-CNN SRAM-CIM.",
+    "image_path": "images/30.8/fig_1.png"
+  },
+  {
+    "figure_id": "30.8.2",
+    "figure_num": 2,
+    "caption": "Structure of proposed SRAM-DCIM macro and CFD-SC-RC operation. 527 30 [7] H. Fujiwara et al., “A 3nm, 32.5TOPS/W, 55.0TOPS/mm2 and 3.78Mb/mm2 Fully- Digital Compute-in-Memory Macro Supporting INT12 × INT12 with a Parallel-MAC Architecture and Foundry 6T-SRAM Bit Cell,” ISSCC, pp.",
+    "image_path": "images/30.8/fig_2.png"
+  },
+  {
+    "figure_id": "30.8.3",
+    "figure_num": 3,
+    "caption": "CMDM-LCC and DM-MPDBU structure and operation.",
+    "image_path": "images/30.8/fig_3.png"
+  },
+  {
+    "figure_id": "30.8.4",
+    "figure_num": 4,
+    "caption": "PS-WR-ODM operational concept.",
+    "image_path": "images/30.8/fig_4.png"
+  },
+  {
+    "figure_id": "30.8.5",
+    "figure_num": 5,
+    "caption": "Simulated performance of proposed schemes.",
+    "image_path": "images/30.8/fig_5.png"
+  },
+  {
+    "figure_id": "30.8.6",
+    "figure_num": 6,
+    "caption": "Measurement results and position chart.",
+    "image_path": "images/30.8/fig_6.png"
+  },
+  {
+    "figure_id": "30.8.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and performance summary table.",
+    "image_path": "images/30.8/fig_7.png"
+  }
+]

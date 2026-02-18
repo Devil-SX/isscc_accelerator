@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.2.1",
+    "figure_num": 1,
+    "caption": "Ever-higher single-core performance demands and aging limitations of maximum voltage in 3nm-plus mobile ﬂagship smartphone CPU.",
+    "image_path": "images/10.2/fig_1.png"
+  },
+  {
+    "figure_id": "10.2.2",
+    "figure_num": 2,
+    "caption": "The DMPA of the CPU with BDC/ATC block diagram and architecture in 3nm-plus SoC.",
+    "image_path": "images/10.2/fig_2.png"
+  },
+  {
+    "figure_id": "10.2.3",
+    "figure_num": 3,
+    "caption": "The CPU performance boost with CPP efﬁciency and design margin optimization to achieve higher OPP0+.",
+    "image_path": "images/10.2/fig_3.png"
+  },
+  {
+    "figure_id": "10.2.4",
+    "figure_num": 4,
+    "caption": "The proposed Boosting-Duty Control (BDC) with a digital A-sensor to leverage available aging-budget in CPU.",
+    "image_path": "images/10.2/fig_4.png"
+  },
+  {
+    "figure_id": "10.2.5",
+    "figure_num": 5,
+    "caption": "The digital T-sensor with proposed Differential-Voltage-based Temperature Compensation (DVTC) achieving fast and accurate temperature sensing in silicon for the CPU.",
+    "image_path": "images/10.2/fig_5.png"
+  },
+  {
+    "figure_id": "10.2.6",
+    "figure_num": 6,
+    "caption": "The Dynamic Mobile-Performance Augmentation (DMPA) contains the ATC and BDC for the CPU with silicon measurement results.",
+    "image_path": "images/10.2/fig_6.png"
+  },
+  {
+    "figure_id": "10.2.7",
+    "figure_num": 7,
+    "caption": "The 3nm-plus CPU die-photo with DMPA feature summary and on-phone benchmark demonstration.",
+    "image_path": "images/10.2/fig_7.png"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.9.1",
+    "figure_num": 1,
+    "caption": "Motivation and high-level design principles for the ALPhA-Vision subsystem.",
+    "image_path": "images/31.9/fig_1.png"
+  },
+  {
+    "figure_id": "31.9.2",
+    "figure_num": 2,
+    "caption": "Block diagram of the ALPhA-Vision architecture. 549 31 using just 21% of active cycles.",
+    "image_path": "images/31.9/fig_2.png"
+  },
+  {
+    "figure_id": "31.9.3",
+    "figure_num": 3,
+    "caption": "Overview of power-saving features in the ALPhA-Vision subsystem.",
+    "image_path": "images/31.9/fig_3.png"
+  },
+  {
+    "figure_id": "31.9.4",
+    "figure_num": 4,
+    "caption": "The ALPhA-Vision application software ﬂow and impact of quantization of Yolov5 face detection.",
+    "image_path": "images/31.9/fig_4.png"
+  },
+  {
+    "figure_id": "31.9.5",
+    "figure_num": 5,
+    "caption": "ALPhA-Vision measurement results on end-to-end Yolov5 face detection at 60fps.",
+    "image_path": "images/31.9/fig_5.png"
+  },
+  {
+    "figure_id": "31.9.6",
+    "figure_num": 6,
+    "caption": "Comparison table. All measurements for this work report full system power, including leakage power.",
+    "image_path": "images/31.9/fig_6.png"
+  },
+  {
+    "figure_id": "31.9.7",
+    "figure_num": 7,
+    "caption": "Annotated die plot and evaluation summary of DNN inference kernels (50% weight/activation sparsity).",
+    "image_path": "images/31.9/fig_7.png"
+  }
+]

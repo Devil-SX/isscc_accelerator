@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.2.1",
+    "figure_num": 1,
+    "caption": "Full-chip block diagram with four NPU chiplets, four HBM3E modules and four ISCs.",
+    "image_path": "images/2.2/fig_1.png"
+  },
+  {
+    "figure_id": "2.2.2",
+    "figure_num": 2,
+    "caption": "Full-chip scale mesh with neural cores, DMA, synchronization manager connected with three logically independent channels.",
+    "image_path": "images/2.2/fig_2.png"
+  },
+  {
+    "figure_id": "2.2.3",
+    "figure_num": 3,
+    "caption": "Chiplet interface subsystem with advanced UCIe die-to-die links. Bathtub and eye diagram snapshots at target speed during silicon bring-up.",
+    "image_path": "images/2.2/fig_3.png"
+  },
+  {
+    "figure_id": "2.2.4",
+    "figure_num": 4,
+    "caption": "Hardware-based staggering technique and core-group closed-loop control for voltage droop and temperature, with per-cluster DVFS control loop.",
+    "image_path": "images/2.2/fig_4.png"
+  },
+  {
+    "figure_id": "2.2.5",
+    "figure_num": 5,
+    "caption": "ISC for power integrity enhancement of HBM3E operation. Measured bandwidth performance and eye diagram; the eye diagram at the target speed (9.6Gbps) will be updated after silicon bring-up.",
+    "image_path": "images/2.2/fig_5.png"
+  },
+  {
+    "figure_id": "2.2.6",
+    "figure_num": 6,
+    "caption": "Performance (TPS) and power efﬁciency (TPS/W) comparison on silicon vs. ﬂagship AI processors. Weight-only quantization applied due to DRAM limits on the 70B model.",
+    "image_path": "images/2.2/fig_6.png"
+  },
+  {
+    "figure_id": "2.2.7",
+    "figure_num": 7,
+    "caption": "Package photo with four NPU chiplets, four HBM3E modules and four ISC dies. Various package conﬁgurations are being developed in parallel with the NPU chiplet.",
+    "image_path": "images/2.2/fig_7.png"
+  }
+]

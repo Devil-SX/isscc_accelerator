@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.7.1",
+    "figure_num": 1,
+    "caption": "Client-side LLM application challenges and the presented 3D integrated near-DRAM computing design.",
+    "image_path": "images/30.7/fig_1.png"
+  },
+  {
+    "figure_id": "30.7.2",
+    "figure_num": 2,
+    "caption": "Overall design architecture and the extended DDR4 command list. 525 30 show that the 3D near-memory architecture substantially reduces memory latency, beneﬁting latency-sensitive edge LLM workloads.",
+    "image_path": "images/30.7/fig_2.png"
+  },
+  {
+    "figure_id": "30.7.3",
+    "figure_num": 3,
+    "caption": "Datapath and access timing for 3D DRAM, and dataﬂow and performance test for GEMM.",
+    "image_path": "images/30.7/fig_3.png"
+  },
+  {
+    "figure_id": "30.7.4",
+    "figure_num": 4,
+    "caption": "Measurement system architecture and 3D DRAM measurement results.",
+    "image_path": "images/30.7/fig_4.png"
+  },
+  {
+    "figure_id": "30.7.5",
+    "figure_num": 5,
+    "caption": "D integration details, area and power breakdown, and design measurements.",
+    "image_path": "images/30.7/fig_5.png"
+  },
+  {
+    "figure_id": "30.7.6",
+    "figure_num": 6,
+    "caption": "Comparison with prior works.",
+    "image_path": "images/30.7/fig_6.png"
+  },
+  {
+    "figure_id": "30.7.7",
+    "figure_num": 7,
+    "caption": "Die micrographs and design speciﬁcations.",
+    "image_path": "images/30.7/fig_7.png"
+  }
+]

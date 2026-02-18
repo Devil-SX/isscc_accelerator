@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.3.1",
+    "figure_num": 1,
+    "caption": "Advantages of Non-Linear MLC, challenges and proposed High-Retention Multi-Mode ReRAM CIM macro.",
+    "image_path": "images/30.3/fig_1.png"
+  },
+  {
+    "figure_id": "30.3.2",
+    "figure_num": 2,
+    "caption": "Accumulation number breakdown of recent models and proposed DTCO reconﬁgurable compute mode with TNLCM and DMDC. 517 30",
+    "image_path": "images/30.3/fig_2.png"
+  },
+  {
+    "figure_id": "30.3.3",
+    "figure_num": 3,
+    "caption": "Flow chart and illustrations of proposed ISE-HF.",
+    "image_path": "images/30.3/fig_3.png"
+  },
+  {
+    "figure_id": "30.3.4",
+    "figure_num": 4,
+    "caption": "Illustration and waveform of proposed S2R-Db ADC.",
+    "image_path": "images/30.3/fig_4.png"
+  },
+  {
+    "figure_id": "30.3.5",
+    "figure_num": 5,
+    "caption": "Simulated performance of proposed schemes.",
+    "image_path": "images/30.3/fig_5.png"
+  },
+  {
+    "figure_id": "30.3.6",
+    "figure_num": 6,
+    "caption": "Simulated inference accuracy over years, measured shmoo plot and comparison table of recent ReRAM CIM macros.",
+    "image_path": "images/30.3/fig_6.png"
+  },
+  {
+    "figure_id": "30.3.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and chip performance summary.",
+    "image_path": "images/30.3/fig_7.png"
+  }
+]

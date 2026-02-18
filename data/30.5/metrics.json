@@ -1,0 +1,6 @@
+{
+  "energy_efficiency": "120.5TFLOPS/W",
+  "technology": "16nm",
+  "target_model": "General AI (LLM/FFT/CNN)",
+  "source_figure": "fig_7"
+}

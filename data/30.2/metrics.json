@@ -1,0 +1,8 @@
+{
+  "technology": "12nm",
+  "supply_voltage": "0.8V",
+  "energy_efficiency": "137.75TFLOPS/W",
+  "throughput": "3.2GB/S",
+  "target_model": "CNN/Transformer",
+  "source_figure": "fig_7"
+}

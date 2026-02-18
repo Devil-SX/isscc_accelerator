@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.10.1",
+    "figure_num": 1,
+    "caption": "Basic concepts of K-SAT; introduction to the new multi-variable update SAT algorithm; challenges with prior SAT solver ASICs and design highlights of our solver architecture.",
+    "image_path": "images/10.10/fig_1.png"
+  },
+  {
+    "figure_id": "10.10.2",
+    "figure_num": 2,
+    "caption": "Top-level architecture and workﬂow of proposed solver. ❑ \u0001 = \u00021\u0002 ڀ3 \u0002 ڀ5ٿ\u00021 \u0002 ڀ2 ٿ\u00021ڀ\u00024 \u0002 ڀ5 ⇒(\u00021, \u00022, \u00023, \u00024, \u00025) = 1, 1,0, 0,1 \u0001 ❑ \u0004 = −\u00021\u00023\u00025 + \u00021\u00024\u00025 + \u00021\u00023 + \u00023\u00025 + \u00021\u00025 −\u00021\u00022 −\u00021\u00024 −\u00024\u00025 −\u00023 + \u00024 −\u00025 + 1, \u0002\u0006 ∈0,1 ❑∆\u0004\u0006 = \u0004 \u0002\u0006 →1 −\u0002\u0006 −\u0004 \u0002\u0006 ⇒−∆\u0004\u0006 = ∆ \u0006 = \u0006 − \u0006 ❑∆\u0004\u0006 \u0002\u0006 \u0006 \u0002\u0006 \u0002\u0006 \u0006 \u0002\u0006 \u0002\u0006 ∆\u00041 ∆\u00042 ∆\u0004 \u000e −∆\u00041 \u000f \u000e −∆\u00042 \u000f \u000e −∆\u0004 \u000f \u0006 = 0 \u0006 = \u0010\u0006\u0011 ⟶ \u000e −∆\u0004\u0006/\u000f \u0013 \u0006 \u0014 \u0006 \u0014 \u0006 \u000e −∆\u0004\u0006/\u000f 187 10 In summary, PCIM-SAT can natively map arbitrary-order K-SAT problems and accelerate efﬁcient multi/parallel-variable update heuristics.",
+    "image_path": "images/10.10/fig_2.png"
+  },
+  {
+    "figure_id": "10.10.3",
+    "figure_num": 3,
+    "caption": "Detailed schematic of the mixed-signal in-memory computing fabric and probabilistic bit.",
+    "image_path": "images/10.10/fig_3.png"
+  },
+  {
+    "figure_id": "10.10.4",
+    "figure_num": 4,
+    "caption": "Measurement results of the probabilistic-bits; schematic of variable update logic and timing diagram of solver. ∈{0,1,2,3,..} ∈{0,1,2,3,..} \u0002 \u0003 Τ \u0005\u0006 −\b\u0006 \u0002 \u0003 Τ \u0005\u0006 −\b\u0006 ∆G=",
+    "image_path": "images/10.10/fig_4.png"
+  },
+  {
+    "figure_id": "10.10.5",
+    "figure_num": 5,
+    "caption": "Measurement results of PCIM-SAT on different SAT benchmarks and comparison with other solvers. Multi-thread mode implemented for comparison.",
+    "image_path": "images/10.10/fig_5.png"
+  },
+  {
+    "figure_id": "10.10.6",
+    "figure_num": 6,
+    "caption": "Feature and performance comparison with prior SAT solver ASICs.",
+    "image_path": "images/10.10/fig_6.png"
+  },
+  {
+    "figure_id": "10.10.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and performance summary.",
+    "image_path": "images/10.10/fig_7.png"
+  }
+]

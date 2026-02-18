@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.3.1",
+    "figure_num": 1,
+    "caption": "Overview of end-to-end driving (EED) model and design challenges.",
+    "image_path": "images/2.3/fig_1.png"
+  },
+  {
+    "figure_id": "2.3.2",
+    "figure_num": 2,
+    "caption": "Overall chip architecture. 47 2 processing speed, achieving real-time performance for multi-sensor fusion (>10fps), while reducing energy per frame by 218×.",
+    "image_path": "images/2.3/fig_2.png"
+  },
+  {
+    "figure_id": "2.3.3",
+    "figure_num": 3,
+    "caption": "Details of operations and architecture of the sparsity reasoning unit (SRU) with past-future guided sparsity speculation and generation.",
+    "image_path": "images/2.3/fig_3.png"
+  },
+  {
+    "figure_id": "2.3.4",
+    "figure_num": 4,
+    "caption": "Core orchestrator and segmented aggregation network with sparsity-aware adaptive core orchestration and dynamic tile reordering.",
+    "image_path": "images/2.3/fig_4.png"
+  },
+  {
+    "figure_id": "2.3.5",
+    "figure_num": 5,
+    "caption": "Long-/short-term memory unit (LSTMU) with temporal attention pipeline and progressive memory pruning.",
+    "image_path": "images/2.3/fig_5.png"
+  },
+  {
+    "figure_id": "2.3.6",
+    "figure_num": 6,
+    "caption": "Measurement results and performance comparison table.",
+    "image_path": "images/2.3/fig_6.png"
+  },
+  {
+    "figure_id": "2.3.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/2.3/fig_7.png"
+  }
+]

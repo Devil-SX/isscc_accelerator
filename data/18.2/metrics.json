@@ -1,0 +1,6 @@
+{
+  "technology": "22nm",
+  "energy_efficiency": "1.87ms/frame",
+  "target_model": "MS-ASR (RNN-T + AED)",
+  "source_figure": "fig_7"
+}

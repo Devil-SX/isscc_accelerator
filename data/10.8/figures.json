@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.8.1",
+    "figure_num": 1,
+    "caption": "Introduction to COP problems, prior Ising works, and the fully digital Ising chip (COBI) with reconﬁgurability, dense connectivity, and high precision.",
+    "image_path": "images/10.8/fig_1.png"
+  },
+  {
+    "figure_id": "10.8.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the fabricated 65nm test chip, detailed spin structure, and a single spin layout.",
+    "image_path": "images/10.8/fig_2.png"
+  },
+  {
+    "figure_id": "10.8.3",
+    "figure_num": 3,
+    "caption": "Sequential activation of spin column: Transmit (Tx) and receive (Rx) operations, coefﬁcient readout, and MAC operation.",
+    "image_path": "images/10.8/fig_3.png"
+  },
+  {
+    "figure_id": "10.8.4",
+    "figure_num": 4,
+    "caption": "Measurement results of Max-Cut problems with transient Ising Hamiltonians (top-left) and transient spin maps (top-right), and hard Max-Cut problems with transient Ising Hamiltonians (bottom-left) and statistical distributions (bottom- right).",
+    "image_path": "images/10.8/fig_4.png"
+  },
+  {
+    "figure_id": "10.8.5",
+    "figure_num": 5,
+    "caption": "Mapping (left) and evaluated results (right) of 64-node community detection (top) and 24×24 BPSK MIMO detection (bottom) problems.",
+    "image_path": "images/10.8/fig_5.png"
+  },
+  {
+    "figure_id": "10.8.6",
+    "figure_num": 6,
+    "caption": "A comparison table with the state-of-the-art CMOS Ising machines.",
+    "image_path": "images/10.8/fig_6.png"
+  },
+  {
+    "figure_id": "10.8.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and a summary table.",
+    "image_path": "images/10.8/fig_7.png"
+  }
+]

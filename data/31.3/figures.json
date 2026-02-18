@@ -1,0 +1,38 @@
+[
+  {
+    "figure_id": "31.3.1",
+    "figure_num": 1,
+    "caption": "Rotation-based dual-quantized LLM inference and three main challenges.",
+    "image_path": "images/31.3/fig_1.png"
+  },
+  {
+    "figure_id": "31.3.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the LLM accelerator. 537 31 the-art (SOTA) works focus on conventional transformer models or quantization deployment [11-14], our chip accelerates rotation-based dual-quantized LLMs with negligible accuracy loss (e.g., 0.56 at LLaMA2-7B), achieving 32.6% system-level energy savings compared to the SOTA on LLaMA2-7B [11].",
+    "image_path": "images/31.3/fig_2.png"
+  },
+  {
+    "figure_id": "31.3.3",
+    "figure_num": 3,
+    "caption": "Subspace Hadamard quantization for rotation and its hardware details. Figure 31.3.4: Fused scale-activation for INT data path and its implementation.",
+    "image_path": "images/31.3/fig_3.png"
+  },
+  {
+    "figure_id": "31.3.5",
+    "figure_num": 5,
+    "caption": "Rearranged bit-slice LUT computation for precision ﬂexible PE.",
+    "image_path": "images/31.3/fig_5.png"
+  },
+  {
+    "figure_id": "31.3.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison with the state-of-the-art accelerators.",
+    "image_path": "images/31.3/fig_6.png"
+  },
+  {
+    "figure_id": "31.3.7",
+    "figure_num": 7,
+    "caption": "Chip summary and detailed performance sheet.",
+    "image_path": "images/31.3/fig_7.png"
+  }
+]

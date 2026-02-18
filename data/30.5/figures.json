@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.5.1",
+    "figure_num": 1,
+    "caption": "The proposed VF-DR GC-CIM and challenges of designing a general purposed CIM macro.",
+    "image_path": "images/30.5/fig_1.png"
+  },
+  {
+    "figure_id": "30.5.2",
+    "figure_num": 2,
+    "caption": "Proposed CiWSB with SGU, PSWC, and CiWSB function ﬂow. 521 30 MX-LNS-FP-INT formats and providing support for LNS.",
+    "image_path": "images/30.5/fig_2.png"
+  },
+  {
+    "figure_id": "30.5.3",
+    "figure_num": 3,
+    "caption": "Proposed IDA-MXQ structure and its operation.",
+    "image_path": "images/30.5/fig_3.png"
+  },
+  {
+    "figure_id": "30.5.4",
+    "figure_num": 4,
+    "caption": "Proposed MFA-CC structure and operation for versatile-format MAC support.",
+    "image_path": "images/30.5/fig_4.png"
+  },
+  {
+    "figure_id": "30.5.5",
+    "figure_num": 5,
+    "caption": "Simulated performance of proposed schemes.",
+    "image_path": "images/30.5/fig_5.png"
+  },
+  {
+    "figure_id": "30.5.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/30.5/fig_6.png"
+  },
+  {
+    "figure_id": "30.5.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and chip performance summary table.",
+    "image_path": "images/30.5/fig_7.png"
+  }
+]

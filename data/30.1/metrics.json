@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "energy_efficiency": "127.54TFLOPS/W",
+  "throughput": "1TFLOPS",
+  "target_model": "MXFP CNN/Transformer",
+  "source_figure": "fig_7"
+}

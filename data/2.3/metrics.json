@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "die_area_mm2": "10.5",
+  "energy_efficiency": "71.3mJ/frame",
+  "target_model": "EED Model",
+  "source_figure": "fig_7"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.4.1",
+    "figure_num": 1,
+    "caption": "Challenges of bit-parallel CIM macro and the proposed solution.",
+    "image_path": "images/30.4/fig_1.png"
+  },
+  {
+    "figure_id": "30.4.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the proposed TCL-based digital-SRAM CIM macro. 519 30 and 0.9V supply voltages, respectively, with 90% input sparsity and 10% toggle rate, while the weight sparsity is 50%.",
+    "image_path": "images/30.4/fig_2.png"
+  },
+  {
+    "figure_id": "30.4.3",
+    "figure_num": 3,
+    "caption": "The structures and workﬂows of the TCL and the 10-phase generator.",
+    "image_path": "images/30.4/fig_3.png"
+  },
+  {
+    "figure_id": "30.4.4",
+    "figure_num": 4,
+    "caption": "Embedded sign-bit extension in bus TCL-14 and the enabling-circuit structure for Combine Adder and In-Block Adder Tree.",
+    "image_path": "images/30.4/fig_4.png"
+  },
+  {
+    "figure_id": "30.4.5",
+    "figure_num": 5,
+    "caption": "Simulated MAC computing cell performance and measured energy efﬁciencies of the proposed CIM macro.",
+    "image_path": "images/30.4/fig_5.png"
+  },
+  {
+    "figure_id": "30.4.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/30.4/fig_6.png"
+  },
+  {
+    "figure_id": "30.4.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and summary of key performance metrics.",
+    "image_path": "images/30.4/fig_7.png"
+  }
+]

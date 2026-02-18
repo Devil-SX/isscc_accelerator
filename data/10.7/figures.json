@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.7.1",
+    "figure_num": 1,
+    "caption": "Overview of the K-SAT concept and the challenges of efﬁcient SAT inference in ASIC.",
+    "image_path": "images/10.7/fig_1.png"
+  },
+  {
+    "figure_id": "10.7.2",
+    "figure_num": 2,
+    "caption": "The overall architecture of the proposed CDCL K-SAT solver and three pivotal features.",
+    "image_path": "images/10.7/fig_2.png"
+  },
+  {
+    "figure_id": "10.7.3",
+    "figure_num": 3,
+    "caption": "The schematic of CAM-based propagation unit (CAM-PU) and its operation ﬂow.",
+    "image_path": "images/10.7/fig_3.png"
+  },
+  {
+    "figure_id": "10.7.4",
+    "figure_num": 4,
+    "caption": "CIM-based learning unit (CIM-LU) for conﬂict analysis and learned clause management.",
+    "image_path": "images/10.7/fig_4.png"
+  },
+  {
+    "figure_id": "10.7.5",
+    "figure_num": 5,
+    "caption": "Mode-reconﬁgurable architecture: the split-mode for thread-level parallelism on small formulas, and the merge-mode for data-level parallelism on large formulas.",
+    "image_path": "images/10.7/fig_5.png"
+  },
+  {
+    "figure_id": "10.7.6",
+    "figure_num": 6,
+    "caption": "Measurement results and the comparison with state-of-the-art ASIC K-SAT solvers.",
+    "image_path": "images/10.7/fig_6.png"
+  },
+  {
+    "figure_id": "10.7.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and performance summary of the proposed solver across different formula sizes.",
+    "image_path": "images/10.7/fig_7.png"
+  }
+]

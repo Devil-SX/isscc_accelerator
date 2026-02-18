@@ -1,0 +1,8 @@
+{
+  "technology": "28nm CMOS",
+  "frequency_mhz": "1200",
+  "energy_efficiency": "12.77GB/s/mm²",
+  "throughput": "1.2TFLOPS",
+  "target_model": "LLM (Edge)",
+  "source_figure": "fig_7"
+}

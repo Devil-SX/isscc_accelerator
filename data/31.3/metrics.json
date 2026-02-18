@@ -1,0 +1,6 @@
+{
+  "energy_efficiency": "51.6μJ/token",
+  "technology": "28nm",
+  "target_model": "LLaMA-7B/13B",
+  "source_figure": "fig_7"
+}

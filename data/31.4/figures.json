@@ -1,0 +1,38 @@
+[
+  {
+    "figure_id": "31.4.1",
+    "figure_num": 1,
+    "caption": "Architecture and deployment challenges of visual autoregressive model. Figure 31.4.2: Overall chip architecture of VARSA.",
+    "image_path": "images/31.4/fig_1.png"
+  },
+  {
+    "figure_id": "31.4.3",
+    "figure_num": 3,
+    "caption": "Performance-scalable hybrid PE-LUT core with efﬁcient dual-function LUTs.",
+    "image_path": "images/31.4/fig_3.png"
+  },
+  {
+    "figure_id": "31.4.4",
+    "figure_num": 4,
+    "caption": "Multi-precision parallel processing and efﬁcient multi-precision LUTs.",
+    "image_path": "images/31.4/fig_4.png"
+  },
+  {
+    "figure_id": "31.4.5",
+    "figure_num": 5,
+    "caption": "Inter-grid similarity in attention map and our compression scheme.",
+    "image_path": "images/31.4/fig_5.png"
+  },
+  {
+    "figure_id": "31.4.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/31.4/fig_6.png"
+  },
+  {
+    "figure_id": "31.4.7",
+    "figure_num": 7,
+    "caption": "Chip photograph and more speciﬁcations.",
+    "image_path": "images/31.4/fig_7.png"
+  }
+]

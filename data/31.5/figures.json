@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.5.1",
+    "figure_num": 1,
+    "caption": "Proposed mobile intelligence system and its design challenges.",
+    "image_path": "images/31.5/fig_1.png"
+  },
+  {
+    "figure_id": "31.5.2",
+    "figure_num": 2,
+    "caption": "Overall architecture. 541 31 [12-14]. Also, integrating SMU, MRNE, and BPMX reduces UA energy by 82.9%.",
+    "image_path": "images/31.5/fig_2.png"
+  },
+  {
+    "figure_id": "31.5.3",
+    "figure_num": 3,
+    "caption": "Mixed-rank token processing with TMU and MRNE for UI latency reduction.",
+    "image_path": "images/31.5/fig_3.png"
+  },
+  {
+    "figure_id": "31.5.4",
+    "figure_num": 4,
+    "caption": "Similarity-aware sequence processing with SMU for UA energy reduction.",
+    "image_path": "images/31.5/fig_4.png"
+  },
+  {
+    "figure_id": "31.5.5",
+    "figure_num": 5,
+    "caption": "BPMX tensor core for peak power reduction.",
+    "image_path": "images/31.5/fig_5.png"
+  },
+  {
+    "figure_id": "31.5.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/31.5/fig_6.png"
+  },
+  {
+    "figure_id": "31.5.7",
+    "figure_num": 7,
+    "caption": "Chip photograph and performance summary.",
+    "image_path": "images/31.5/fig_7.png"
+  }
+]

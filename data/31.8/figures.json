@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.8.1",
+    "figure_num": 1,
+    "caption": "Speculative decoding LLM achieves performance advantages with rapid drafting and parallel veriﬁcation, but suffers from three challenges.",
+    "image_path": "images/31.8/fig_1.png"
+  },
+  {
+    "figure_id": "31.8.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the proposed energy-efﬁcient speculative decoding LLM processor for billion-scale LLM applications with three key features.",
+    "image_path": "images/31.8/fig_2.png"
+  },
+  {
+    "figure_id": "31.8.3",
+    "figure_num": 3,
+    "caption": "Exponent Dual-Reuse MAC (EDRM) for saving MAC energy by reusing exponent processing of semantically identical, but positionally distinct tokens.",
+    "image_path": "images/31.8/fig_3.png"
+  },
+  {
+    "figure_id": "31.8.4",
+    "figure_num": 4,
+    "caption": "Draft Back-propagation Target Mixed-precision (DBTM) for reducing cost of the inefﬁcient weights and KV cache identiﬁed by gradients of draft model.",
+    "image_path": "images/31.8/fig_4.png"
+  },
+  {
+    "figure_id": "31.8.5",
+    "figure_num": 5,
+    "caption": "Draft Early-start Parallel Compute (DEPC) for improving hardware utilization by early start draft decoding in parallel with target veriﬁcation.",
+    "image_path": "images/31.8/fig_5.png"
+  },
+  {
+    "figure_id": "31.8.6",
+    "figure_num": 6,
+    "caption": "Measurement results of the SD LLM processor for billion-scale models and performance comparison with state-of-the-art LLM processors.",
+    "image_path": "images/31.8/fig_6.png"
+  },
+  {
+    "figure_id": "31.8.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/31.8/fig_7.png"
+  }
+]

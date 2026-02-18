@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.6.1",
+    "figure_num": 1,
+    "caption": "Redundancies in Vision-Language Models (VLMs) and proposed solutions for efﬁcient on-device VLMs.",
+    "image_path": "images/31.6/fig_1.png"
+  },
+  {
+    "figure_id": "31.6.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of Tri-Oracle. 543 31",
+    "image_path": "images/31.6/fig_2.png"
+  },
+  {
+    "figure_id": "31.6.3",
+    "figure_num": 3,
+    "caption": "Details of the Token Merging Unit (TMU) for token-level redundancy.",
+    "image_path": "images/31.6/fig_3.png"
+  },
+  {
+    "figure_id": "31.6.4",
+    "figure_num": 4,
+    "caption": "Details of the Attention Head Prediction Unit (AHPU) and workload balancing, for attention-level redundancy.",
+    "image_path": "images/31.6/fig_4.png"
+  },
+  {
+    "figure_id": "31.6.5",
+    "figure_num": 5,
+    "caption": "Details of the Strip-wise SNZV Computation Unit (SSCU) for weight-level redundancy.",
+    "image_path": "images/31.6/fig_5.png"
+  },
+  {
+    "figure_id": "31.6.6",
+    "figure_num": 6,
+    "caption": "Measurement results and performance comparison table.",
+    "image_path": "images/31.6/fig_6.png"
+  },
+  {
+    "figure_id": "31.6.7",
+    "figure_num": 7,
+    "caption": "Chip photograph and performance summary.",
+    "image_path": "images/31.6/fig_7.png"
+  }
+]

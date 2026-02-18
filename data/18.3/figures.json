@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "18.3.1",
+    "figure_num": 1,
+    "caption": "MoE-based speculative decoding LLM and its design challenges.",
+    "image_path": "images/18.3/fig_1.png"
+  },
+  {
+    "figure_id": "18.3.2",
+    "figure_num": 2,
+    "caption": "Overall architecture. 313 18 two groups per 4 weights, all workloads are fully covered by the RDL-CIM.",
+    "image_path": "images/18.3/fig_2.png"
+  },
+  {
+    "figure_id": "18.3.3",
+    "figure_num": 3,
+    "caption": "Operation of TaER and implementation of the MMU.",
+    "image_path": "images/18.3/fig_3.png"
+  },
+  {
+    "figure_id": "18.3.4",
+    "figure_num": 4,
+    "caption": "Operation and implementation of the TSU and ANC.",
+    "image_path": "images/18.3/fig_4.png"
+  },
+  {
+    "figure_id": "18.3.5",
+    "figure_num": 5,
+    "caption": "The RDL-CIM with BCD and operation ﬂow of the reconﬁgurable LUT.",
+    "image_path": "images/18.3/fig_5.png"
+  },
+  {
+    "figure_id": "18.3.6",
+    "figure_num": 6,
+    "caption": "Measurement results and performance comparison table.",
+    "image_path": "images/18.3/fig_6.png"
+  },
+  {
+    "figure_id": "18.3.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/18.3/fig_7.png"
+  }
+]

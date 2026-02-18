@@ -1,0 +1,7 @@
+{
+  "supply_voltage": "0.7V",
+  "technology": "2nm GAA",
+  "energy_efficiency": "30% clock power reduction",
+  "target_model": "NPU MXU",
+  "source_figure": "fig_7"
+}

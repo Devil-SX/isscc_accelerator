@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "energy_efficiency": "33.45TOPS/W",
+  "throughput": "0.435TOPS",
+  "target_model": "VAR (Visual Autoregressive)",
+  "source_figure": "fig_7"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.2.1",
+    "figure_num": 1,
+    "caption": "GenAI model for edge and hardware challenges.",
+    "image_path": "images/31.2/fig_1.png"
+  },
+  {
+    "figure_id": "31.2.2",
+    "figure_num": 2,
+    "caption": "Overall chip architecture of proposed Revolver. 535 31 without over-width datapaths.",
+    "image_path": "images/31.2/fig_2.png"
+  },
+  {
+    "figure_id": "31.2.3",
+    "figure_num": 3,
+    "caption": "Concept of PAPS and MPRE with MP-Loader.",
+    "image_path": "images/31.2/fig_3.png"
+  },
+  {
+    "figure_id": "31.2.4",
+    "figure_num": 4,
+    "caption": "Concept and implementation of LR-HAP and PUB.",
+    "image_path": "images/31.2/fig_4.png"
+  },
+  {
+    "figure_id": "31.2.5",
+    "figure_num": 5,
+    "caption": "Details of quantization method and the SIDU.",
+    "image_path": "images/31.2/fig_5.png"
+  },
+  {
+    "figure_id": "31.2.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/31.2/fig_6.png"
+  },
+  {
+    "figure_id": "31.2.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/31.2/fig_7.png"
+  }
+]

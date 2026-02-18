@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "30.2.1",
+    "figure_num": 1,
+    "caption": "Challenges and the presented 12nm 4Mb hybrid-domain CTT nvCIM macro.",
+    "image_path": "images/30.2/fig_1.png"
+  },
+  {
+    "figure_id": "30.2.2",
+    "figure_num": 2,
+    "caption": "CTT MAC array organization and its operational waveforms for the APDC ﬂow. 515 30 Compared to previous nvCIM works (Fig.",
+    "image_path": "images/30.2/fig_2.png"
+  },
+  {
+    "figure_id": "30.2.3",
+    "figure_num": 3,
+    "caption": "The structure of SMP-AD and its computing ﬂow for analog prediction.",
+    "image_path": "images/30.2/fig_3.png"
+  },
+  {
+    "figure_id": "30.2.4",
+    "figure_num": 4,
+    "caption": "The structure of INT/FP4-DD and its computing ﬂow with LUT-FP4 pre- processing.",
+    "image_path": "images/30.2/fig_4.png"
+  },
+  {
+    "figure_id": "30.2.5",
+    "figure_num": 5,
+    "caption": "Measurement results of the fabricated 12nm CTT nvCIM macro.",
+    "image_path": "images/30.2/fig_5.png"
+  },
+  {
+    "figure_id": "30.2.6",
+    "figure_num": 6,
+    "caption": "Comparison to previous nvCIM works.",
+    "image_path": "images/30.2/fig_6.png"
+  },
+  {
+    "figure_id": "30.2.7",
+    "figure_num": 7,
+    "caption": "Die micrograph, position chart and chip performance summary table.",
+    "image_path": "images/30.2/fig_7.png"
+  }
+]

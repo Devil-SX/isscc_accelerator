@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.10.1",
+    "figure_num": 1,
+    "caption": "Overview of feedforward 3D Gaussian splatting modeling and challenges of traditional 3D GS processor.",
+    "image_path": "images/2.10/fig_1.png"
+  },
+  {
+    "figure_id": "2.10.2",
+    "figure_num": 2,
+    "caption": "Overall chip architecture and key features of the proposed modeling/rendering uniﬁed 3D GS processor.",
+    "image_path": "images/2.10/fig_2.png"
+  },
+  {
+    "figure_id": "2.10.3",
+    "figure_num": 3,
+    "caption": "Locality-aware dynamic ﬁne-grained rendering engine featuring a scanline-based traversal unit for reduced redundant computation.",
+    "image_path": "images/2.10/fig_3.png"
+  },
+  {
+    "figure_id": "2.10.4",
+    "figure_num": 4,
+    "caption": "Locality-optimized uniﬁed rendering workﬂow adopting sliding window- based canvas and scale-penalized gaussians to reduce EMA.",
+    "image_path": "images/2.10/fig_4.png"
+  },
+  {
+    "figure_id": "2.10.5",
+    "figure_num": 5,
+    "caption": "Uniﬁed reconﬁgurable architecture for neural modeling and Gaussian splatting rendering via exploitation of dataﬂow similarity.",
+    "image_path": "images/2.10/fig_5.png"
+  },
+  {
+    "figure_id": "2.10.6",
+    "figure_num": 6,
+    "caption": "Measurement results and performance comparison table.",
+    "image_path": "images/2.10/fig_6.png"
+  },
+  {
+    "figure_id": "2.10.7",
+    "figure_num": 7,
+    "caption": "Die photo and chip summary.",
+    "image_path": "images/2.10/fig_7.png"
+  }
+]

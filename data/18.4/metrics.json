@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "power_mw": "8.28",
+  "energy_efficiency": "48.1pW/synapse/bit",
+  "target_model": "SNN (sCNN + sFC)",
+  "source_figure": "fig_7"
+}

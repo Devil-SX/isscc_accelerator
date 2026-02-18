@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISSCC 2026 Accelerator Survey</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-brand">
+      <a href="#overview">ISSCC 2026 Accelerator Survey</a>
+    </div>
+  </nav>
+  <div id="app"></div>
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+    <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-info">
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/overview.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

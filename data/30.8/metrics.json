@@ -1,0 +1,7 @@
+{
+  "technology": "16nm",
+  "sram_kb": "2kb SRAM",
+  "energy_efficiency": "444.21TOPS/W",
+  "target_model": "SNN-CNN Hybrid",
+  "source_figure": "fig_7"
+}

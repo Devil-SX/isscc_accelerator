@@ -1,0 +1,5879 @@
+[
+  {
+    "id": "2.1",
+    "session": 2,
+    "title": "AMD Instinct MI350 Series GPUs: CDNA 4-Based 3D-Stacked 3nm XCDs and 6nm IODs for AI Applications",
+    "title_zh": "AMD Instinct MI350系列GPU：基于CDNA 4架构的3D堆叠3nm XCD与6nm IOD AI处理器",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "AMD Instinct MI350",
+          "meaning": "AMD旗舰AI加速卡系列",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "CDNA 4",
+          "meaning": "第4代计算DNA架构",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "3D-Stacked",
+          "meaning": "三维堆叠封装",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "3nm XCDs",
+          "meaning": "3nm加速计算芯粒",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "6nm IODs",
+          "meaning": "6nm I/O芯粒",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "AI算力需求增长但功耗受限于封装散热",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "3nm高密度设计导致电流密度和电压跌落加剧",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "数据搬运功耗占比大制约HBM带宽能效",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "计算单元动态功耗随吞吐提升显著增加",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "异构3D堆叠架构集成8个3nm XCD与6nm IOD",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "自适应时钟与去耦电容协同抑制电压跌落",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "IOD合并与互连拓扑优化降低数据搬运功耗",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "低功耗触发器与ML驱动的CAC优化降低动态功耗",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "AMD",
+    "authors": "AMD",
+    "process_node": "3nm/6nm",
+    "die_area_mm2": "CoWoS-S",
+    "power_mw": "1000000",
+    "energy_efficiency": "3x gen-over-gen inference",
+    "target_model": "LLM/AI Training",
+    "application": "数据中心AI训练与推理",
+    "innovations": [
+      {
+        "tag": "CDNA 4架构 FP6/FP4支持",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "3D堆叠异构XCD+IOD",
+        "type": "system"
+      },
+      {
+        "tag": "HBM3E高带宽内存集成",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "GPU",
+      "AI",
+      "3D堆叠",
+      "HBM3E",
+      "数据中心",
+      "CDNA"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "AMD Instinct MI300 vs. AMD Instinct MI350 power, performance and area comparison."
+      },
+      {
+        "num": 2,
+        "caption": "AMD Instinct MI350 XCD. 43 2 [4] MI350-036 (n.d.). Based on testing by AMD Performance Labs in June 2025, on the AMD Instinct MI350X vs."
+      },
+      {
+        "num": 3,
+        "caption": "AMD Instinct MI350 IOD."
+      },
+      {
+        "num": 4,
+        "caption": "Generational peak theoretical performance improvement."
+      },
+      {
+        "num": 5,
+        "caption": "AMD Instinct MI350 XCD Cac breakdown."
+      },
+      {
+        "num": 6,
+        "caption": "Inference throughput comparison between AMD Instinct MI355X (FP4) and AMD Instinct MI300X(FP8)."
+      },
+      {
+        "num": 7,
+        "caption": "Inference throughput comparison between AMD Instinct MI355X vs. Nvidia B200 and Nvidia GB200."
+      }
+    ],
+    "metrics": {
+      "technology": "3nm/6nm",
+      "die_area_mm2": "CoWoS-S",
+      "power_mw": "1000000",
+      "energy_efficiency": "3x gen-over-gen inference",
+      "target_model": "LLM/AI Training",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.1/"
+  },
+  {
+    "id": "2.2",
+    "session": 2,
+    "title": "A Quad-Chiplet AI SoC with Full-Chip Scalable Mesh Over 16Gb/s UCIe-Advanced Die-to-Die Interface for LLM Applications",
+    "title_zh": "四芯粒AI SoC：基于16Gb/s UCIe-Advanced互连的全芯片可扩展Mesh架构LLM处理器",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Quad-Chiplet",
+          "meaning": "四芯粒封装",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Scalable Mesh",
+          "meaning": "可扩展网格互连",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "16Gb/s UCIe-Advanced",
+          "meaning": "16Gb/s通用芯粒互连",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "LLM Applications",
+          "meaning": "大语言模型应用",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "LLM预填充阶段需要海量浮点算力",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "百万Token上下文KV缓存带宽受限",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "多芯粒间数据同步与一致性开销大",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "高瞬态电流导致供电网络电压波动",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "四芯粒可扩展Mesh互连与混合精度统一计算单元",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "512MB片上SRAM分层存储架构支撑KV缓存",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "UCIe低延迟Load-Store语义实现虚拟单片互连",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "硬件交错启动与集成硅电容抑制瞬态电压噪声",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Samsung",
+    "authors": "Samsung",
+    "process_node": "advanced",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "56.8TPS on Llama 3.3 70B",
+    "target_model": "Llama 3.3 70B",
+    "application": "LLM推理",
+    "innovations": [
+      {
+        "tag": "四芯粒可扩展Mesh架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "UCIe-Advanced Die-to-Die",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "HBM3E集成与同步机制",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "芯粒",
+      "UCIe",
+      "NPU",
+      "HBM3E",
+      "可扩展"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Full-chip block diagram with four NPU chiplets, four HBM3E modules and four ISCs."
+      },
+      {
+        "num": 2,
+        "caption": "Full-chip scale mesh with neural cores, DMA, synchronization manager connected with three logically independent channels."
+      },
+      {
+        "num": 3,
+        "caption": "Chiplet interface subsystem with advanced UCIe die-to-die links. Bathtub and eye diagram snapshots at target speed during silicon bring-up."
+      },
+      {
+        "num": 4,
+        "caption": "Hardware-based staggering technique and core-group closed-loop control for voltage droop and temperature, with per-cluster DVFS control loop."
+      },
+      {
+        "num": 5,
+        "caption": "ISC for power integrity enhancement of HBM3E operation. Measured bandwidth performance and eye diagram; the eye diagram at the target speed (9.6Gbps) will be updated after silicon bring-up."
+      },
+      {
+        "num": 6,
+        "caption": "Performance (TPS) and power efﬁciency (TPS/W) comparison on silicon vs. ﬂagship AI processors. Weight-only quantization applied due to DRAM limits on the 70B model."
+      },
+      {
+        "num": 7,
+        "caption": "Package photo with four NPU chiplets, four HBM3E modules and four ISC dies. Various package conﬁgurations are being developed in parallel with the NPU chiplet."
+      }
+    ],
+    "metrics": {
+      "sram_kb": "512MB of on-chip SRAM",
+      "throughput": "128TOPS",
+      "technology": "advanced",
+      "energy_efficiency": "56.8TPS on Llama 3.3 70B",
+      "target_model": "Llama 3.3 70B",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.2/"
+  },
+  {
+    "id": "2.3",
+    "session": 2,
+    "title": "A 71.3mJ/Frame End-to-End Driving Processor with Flexible Heterogeneous Core Orchestration via Sparsity-Aware Reconfiguration",
+    "title_zh": "71.3mJ/帧端到端自动驾驶处理器：基于稀疏感知重配置的灵活异构核协调",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "71.3mJ/Frame",
+          "meaning": "每帧能耗71.3毫焦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "End-to-End Driving",
+          "meaning": "端到端自动驾驶",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Heterogeneous Core",
+          "meaning": "异构计算核",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Sparsity-Aware Reconfiguration",
+          "meaning": "稀疏感知动态重配置",
+          "color": "#9b59b6",
+          "type": "co-design"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "多模态融合层稀疏性剧烈波动难以利用",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "固定稀疏-密集核比例限制硬件利用率",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "时序注意力长短期记忆需大量片外访存",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "基于帧间相关性的稀疏推理单元预测并生成稀疏性",
+        "type": "sw",
+        "color": "#2ecc71"
+      },
+      {
+        "text": "稀疏感知自适应核编排与分段聚合网络",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "ROI渐进式记忆剪枝减少92.8%时序注意力访存",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "71.3mJ/frame",
+    "target_model": "EED Model",
+    "application": "自动驾驶",
+    "innovations": [
+      {
+        "tag": "稀疏感知异构核重配置",
+        "type": "co-design"
+      },
+      {
+        "tag": "时序注意力片外访存优化",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "CNN+Transformer融合加速",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "自动驾驶",
+      "异构",
+      "稀疏",
+      "Transformer",
+      "CNN",
+      "BEV"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of end-to-end driving (EED) model and design challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall chip architecture. 47 2 processing speed, achieving real-time performance for multi-sensor fusion (>10fps), while reducing energy per frame by 218×."
+      },
+      {
+        "num": 3,
+        "caption": "Details of operations and architecture of the sparsity reasoning unit (SRU) with past-future guided sparsity speculation and generation."
+      },
+      {
+        "num": 4,
+        "caption": "Core orchestrator and segmented aggregation network with sparsity-aware adaptive core orchestration and dynamic tile reordering."
+      },
+      {
+        "num": 5,
+        "caption": "Long-/short-term memory unit (LSTMU) with temporal attention pipeline and progressive memory pruning."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and performance comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "10.5",
+      "energy_efficiency": "71.3mJ/frame",
+      "target_model": "EED Model",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.3/"
+  },
+  {
+    "id": "2.4",
+    "session": 2,
+    "title": "UniC-Vision: A 14.4Gb/s 7.3pJ/b Universal Vision Transformer OFDM Channel Estimation Accelerator for B5G/6G",
+    "title_zh": "UniC-Vision：14.4Gb/s 7.3pJ/b通用ViT OFDM信道估计加速器(面向B5G/6G)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "14.4Gb/s 7.3pJ/b",
+          "meaning": "吞吐14.4Gbps，能效7.3pJ/bit",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Vision Transformer",
+          "meaning": "视觉Transformer模型",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "OFDM Channel Estimation",
+          "meaning": "正交频分复用信道估计",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "B5G/6G",
+          "meaning": "超5G/6G通信",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "ViT信道估计模型参数量大无法片上存储",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "Softmax等非线性运算需外部处理器增加延迟",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "B5G/6G多频段覆盖需通用高效估计器",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "信道感知压缩将权重参数缩减95%实现片上存储",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "松弛自注意力用Taylor展开消除非线性查找表",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "频段模式切换与四Patch并行架构提升吞吐量5倍",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "7.3pJ/b",
+    "target_model": "ViT",
+    "application": "6G通信信道估计",
+    "innovations": [
+      {
+        "tag": "通用多频段ViT信道估计",
+        "type": "co-design"
+      },
+      {
+        "tag": "低延迟高吞吐加速架构",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "6G",
+      "ViT",
+      "信道估计",
+      "OFDM",
+      "MIMO",
+      "通信"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "AI-RAN OFDM channel estimation accelerator solutions to meet B5G/6G system requirements."
+      },
+      {
+        "num": 2,
+        "caption": "System architecture of the proposed UniC-Vision OFDM channel estimation accelerator."
+      },
+      {
+        "num": 3,
+        "caption": "CAC and RSA algorithm-hardware co-optimization eliminating external access for real-time processing."
+      },
+      {
+        "num": 4,
+        "caption": "Mode switching to support FR2 and FR3 bands with the maximum utilization of the on-chip PE."
+      },
+      {
+        "num": 5,
+        "caption": "Channel estimation performance evaluation and efﬁciency analysis with SOTA wireless system fabrics, and channel estimation circuits."
+      },
+      {
+        "num": 6,
+        "caption": "Link-level performance evaluation and comparison with silicon-proven SOTA wireless communications system."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "supply_voltage": "1.0V",
+      "frequency_mhz": "250",
+      "power_mw": "104.6",
+      "energy_efficiency": "7.3pJ/b",
+      "throughput": "throughput of 14.4Gb/s",
+      "target_model": "ViT",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "1.0V",
+    "frequency_mhz": "250",
+    "data_path": "data/2.4/"
+  },
+  {
+    "id": "2.5",
+    "session": 2,
+    "title": "A 1.1mm² 14.4ns 13.1pJ/b Forward Error Correction with Ordered-Statistics Post Processing for Ultra-Reliable Low-Latency Communication",
+    "title_zh": "1.1mm² 14.4ns 13.1pJ/b前向纠错译码器：基于有序统计后处理的超可靠低延迟通信",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "1.1mm² 14.4ns",
+          "meaning": "面积1.1mm²，延迟14.4ns",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Forward Error Correction",
+          "meaning": "前向纠错编码",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Ordered-Statistics",
+          "meaning": "有序统计译码(OSD)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Ultra-Reliable Low-Latency",
+          "meaning": "超可靠低延迟(URLLC)",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "OSD高阶译码候选数指数增长延迟过高",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "高斯消元固有串行性占译码延迟60%以上",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "URLLC要求亚毫秒最坏延迟与高可靠性兼顾",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "Chase+1阶OSD两级互补译码降低复杂度156倍",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "预排序基更新替代完整高斯消元减少75%延迟",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "四级提前退出机制实现14.4ns平均译码延迟",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "EPFL",
+    "authors": "EPFL",
+    "process_node": "28nm",
+    "die_area_mm2": "1.1",
+    "power_mw": "",
+    "energy_efficiency": "13.1pJ/b",
+    "target_model": "Short codes (≤128b)",
+    "application": "URLLC/6G通信",
+    "innovations": [
+      {
+        "tag": "Chase+OSD两阶段译码",
+        "type": "sw"
+      },
+      {
+        "tag": "确定性低延迟流水线",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "FEC",
+      "URLLC",
+      "6G",
+      "译码器",
+      "OSD",
+      "短码"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "SOTA FECs for URLLC and OSD. (MRB: most reliable bit; WHD: weighted Hamming distance)."
+      },
+      {
+        "num": 2,
+        "caption": "Design challenges for OSD hardware implementations and design features. 51 2 for high-rate codes."
+      },
+      {
+        "num": 3,
+        "caption": "Two-stage decoding and BLER and latency evaluations. (Pf,Chase: failure probability of Chase decoder)."
+      },
+      {
+        "num": 4,
+        "caption": "Pre-sorted basis update (PSBU) and comparisons with full GE and reduced GE."
+      },
+      {
+        "num": 5,
+        "caption": "Architecture block diagram and latency evaluation."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison of state-of-the-art FECs."
+      },
+      {
+        "num": 7,
+        "caption": "Die photo and measurement results."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "supply_voltage": "0.9V",
+      "energy_efficiency": "13.1pJ/b",
+      "throughput": "throughput of 83Mbps",
+      "die_area_mm2": "1.1",
+      "target_model": "Short codes (≤128b)",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.9V",
+    "data_path": "data/2.5/"
+  },
+  {
+    "id": "2.6",
+    "session": 2,
+    "title": "Spyre: An Inference-Optimized Scalable AI Accelerator for Enterprise Workloads",
+    "title_zh": "Spyre：面向企业工作负载的推理优化可扩展AI加速器",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Spyre",
+          "meaning": "IBM企业级AI加速器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Inference-Optimized",
+          "meaning": "推理优化",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Scalable",
+          "meaning": "可扩展(PCIe多卡)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Enterprise Workloads",
+          "meaning": "企业级工作负载",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "单槽PCIe功耗预算限制加速器性能",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "单环路功率控制浪费短时功耗余量",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "多卡推理扩展依赖专有互连方案",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "硅前功耗建模不准导致频率次优",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "双电压域设计(0.55V/0.75V)降低功耗",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "双环路峰值电流控制提升吞吐28%",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "标准PCIe Fabric实现多卡弹性扩展",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "工作负载驱动的物理设计功耗优化",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "IBM",
+    "authors": "IBM",
+    "process_node": "5nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "Granite/Foundation Models",
+    "application": "企业AI推理",
+    "innovations": [
+      {
+        "tag": "32核AI加速器+混合精度",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "PCIe Gen5多卡扩展",
+        "type": "system"
+      },
+      {
+        "tag": "n:4结构化稀疏",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "企业AI",
+      "IBM",
+      "PCIe",
+      "混合精度",
+      "稀疏",
+      "LPDDR5"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Spyre chip, card and system diagrams."
+      },
+      {
+        "num": 2,
+        "caption": "Chip ﬂoorplan annotated with voltage domains, ring bus, core and IP blocks. Design metrics from frequency scaling experiments: power and cell area vs."
+      },
+      {
+        "num": 3,
+        "caption": "(a) Peak power speciﬁcation across different systems; (b) Dual loop control for peak current management."
+      },
+      {
+        "num": 4,
+        "caption": "(a) Performance enhancement with dual-loop control; (b) performance against core frequency; (c) measured waves with and without a micro-controller-based loop."
+      },
+      {
+        "num": 5,
+        "caption": "(a) Measured normalized performance (1/ITL) as a function of Spyre instance count; (b) Inference with 1, 2, and 4 Spyres, identical time scales, showing TTFT and ITL improvements."
+      },
+      {
+        "num": 6,
+        "caption": "Spyre technical speciﬁcations."
+      },
+      {
+        "num": 7,
+        "caption": "Photos of the die and the PCIe card."
+      }
+    ],
+    "metrics": {
+      "throughput": "629 TOPS",
+      "technology": "5nm",
+      "target_model": "Granite/Foundation Models",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.6/"
+  },
+  {
+    "id": "2.7",
+    "session": 2,
+    "title": "Tiamat: A 98-to-134ms/Step Transformer-Based Diffusion Model Processor Supporting Classifier-Free Guidance for Image Generation",
+    "title_zh": "Tiamat：98~134ms/步Transformer扩散模型处理器(支持无分类器引导图像生成)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Tiamat",
+          "meaning": "处理器代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "98-to-134ms/Step",
+          "meaning": "每步推理98~134毫秒",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Transformer-Based Diffusion",
+          "meaning": "基于Transformer的扩散模型",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Classifier-Free Guidance",
+          "meaning": "无分类器引导(CFG)",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "CFG双样本推理使权重访存翻倍",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "MX量化沿输入通道截断误差大",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "浮点残差连接需要大容量片上缓存",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "CFG批差分处理减少50%权重访存",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "权重重排量化配合两阶段特征对齐",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "混合MX分块数据通路降低缓存37%",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "98-134ms/step",
+    "target_model": "DiT (Diffusion Transformer)",
+    "application": "图像生成(扩散模型)",
+    "innovations": [
+      {
+        "tag": "CFG批差分处理(CBDP)",
+        "type": "sw"
+      },
+      {
+        "tag": "权重重排量化(WRQ)",
+        "type": "co-design"
+      },
+      {
+        "tag": "混合MX分块数据通路",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "扩散模型",
+      "Transformer",
+      "CFG",
+      "量化",
+      "图像生成",
+      "MX格式"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of transformer-based diffusion models and design challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Proposed classiﬁer-free guidance batch difference processing (CBDP) ﬂow and overall system architecture."
+      },
+      {
+        "num": 3,
+        "caption": "Proposed weight-reordered quantization (WRQ) and two-stage block- aware feature map alignment (TSBFA)."
+      },
+      {
+        "num": 4,
+        "caption": "Proposed hybrid microscaling blocking datapath (HMBD) and two-stage quantization (TSQ)."
+      },
+      {
+        "num": 5,
+        "caption": "Measurement and inference results of Tiamat."
+      },
+      {
+        "num": 6,
+        "caption": "Performance comparison table and EMA optimization summary."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "98-134ms/step",
+      "throughput": "7.37TOPS",
+      "target_model": "DiT (Diffusion Transformer)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.7/"
+  },
+  {
+    "id": "2.8",
+    "session": 2,
+    "title": "MADiC: A 3nm 7.4TOPS/mm² 17.4TOPS/W Generative Diffusion Accelerator Enabled by Hardware-Compiler Co-Design",
+    "title_zh": "MADiC：3nm 7.4TOPS/mm² 17.4TOPS/W生成式扩散模型加速器(硬件-编译器协同设计)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "MADiC",
+          "meaning": "加速器代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "3nm",
+          "meaning": "3nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "7.4TOPS/mm²",
+          "meaning": "面积效率7.4TOPS/mm²",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Hardware-Compiler Co-Design",
+          "meaning": "硬件-编译器协同设计",
+          "color": "#9b59b6",
+          "type": "co-design"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "先进工艺SRAM面积缩放滞后于逻辑",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "跨循环特征图存储导致外部访存高",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "输入加载与缩放串行执行利用率低",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "编译器驱动L1/L2存储联合面积优化",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "细粒度写覆盖读松弛的L2分配策略",
+        "type": "sw",
+        "color": "#2ecc71"
+      },
+      {
+        "text": "激活感知预加载与并行缩放提升利用率",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "MediaTek",
+    "authors": "MediaTek",
+    "process_node": "3nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "17.4TOPS/W",
+    "target_model": "DiCo (Diffusion ConvNet)",
+    "application": "图像生成(扩散模型)",
+    "innovations": [
+      {
+        "tag": "硬件-编译器协同设计",
+        "type": "co-design"
+      },
+      {
+        "tag": "3nm高密度加速器",
+        "type": "system"
+      },
+      {
+        "tag": "多尺度特征复用优化",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "扩散模型",
+      "3nm",
+      "编译器",
+      "协同设计",
+      "DiCo",
+      "图像生成"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of diffusion model evolution and challenges in area and utilization for efﬁcient deployment."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of MADiC. 57 2 exceeds available space. For the DiCo model, enabling input preloading and concurrent resizing reduces resizer time by 41% and input loading time by 45%."
+      },
+      {
+        "num": 3,
+        "caption": "Design-time L1/L2 memory size optimization for minimizing SRAM cost."
+      },
+      {
+        "num": 4,
+        "caption": "Cross-loop data storage allocation and Write-over-Read (WoR) relaxation."
+      },
+      {
+        "num": 5,
+        "caption": "Activation-aware input preloading and concurrent resizing."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "3nm",
+      "die_area_mm2": "0.338",
+      "supply_voltage": "0.575V",
+      "sram_kb": "512KB on-chip memory",
+      "energy_efficiency": "17.4TOPS/W",
+      "target_model": "DiCo (Diffusion ConvNet)",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.575V",
+    "data_path": "data/2.8/"
+  },
+  {
+    "id": "2.9",
+    "session": 2,
+    "title": "A 0.24mJ/Frame Quadratic Interpolation 4DGS Processor with Recursive Computation Reuse and Tree-Based Memory Optimization",
+    "title_zh": "0.24mJ/帧二次插值4DGS处理器：递归计算复用与树状内存优化",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "0.24mJ/Frame",
+          "meaning": "每帧能耗0.24毫焦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Quadratic Interpolation",
+          "meaning": "二次插值优化",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "4DGS",
+          "meaning": "4D高斯溅射(动态场景渲染)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Recursive Computation Reuse",
+          "meaning": "递归计算复用",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Tree-Based Memory",
+          "meaning": "树状内存优化",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "4DGS预处理阶段存储访问开销巨大",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "不透明度计算存在O(N²)冗余运算",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "像素渲染负载不均导致PE利用率低",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "自适应二次帧插值替代预处理减62%访存",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "融合递归不透明度计算消除冗余运算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "树形自适应精度并行渲染提升利用率2.6倍",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "0.24mJ/frame",
+    "target_model": "4DGS",
+    "application": "动态3D场景渲染(VR/AR)",
+    "innovations": [
+      {
+        "tag": "二次插值4DGS优化",
+        "type": "sw"
+      },
+      {
+        "tag": "递归计算复用",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "树状内存访问优化",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "4DGS",
+      "高斯溅射",
+      "VR",
+      "AR",
+      "动态渲染",
+      "3D"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Illustration of 4DGS rendering process and three main challenges of efﬁcient 4DGS rendering."
+      },
+      {
+        "num": 2,
+        "caption": "The overall architecture of the 4DGS processor. 59 2 SOTA NeRF processor [18], and 2.42× less than the SOTA 3DGS processor [20]."
+      },
+      {
+        "num": 3,
+        "caption": "Adaptive quadratic frame interpolation (AQFI) unit with quadratic interpolation of neighbor frames."
+      },
+      {
+        "num": 4,
+        "caption": "Fused recursive opacity computation (FROC) unit recursively reuses redundant computations."
+      },
+      {
+        "num": 5,
+        "caption": "Tree-based adaptive-precision pixel rendering (TAPR) core with tree- based parallel pixel rendering."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison with state-of- the-art processors."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "sram_kb": "204KB SRAM",
+      "power_mw": "699.2",
+      "energy_efficiency": "0.24mJ/frame",
+      "target_model": "4DGS",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/2.9/"
+  },
+  {
+    "id": "2.10",
+    "session": 2,
+    "title": "A 1286fps 0.39mJ/Frame Modeling/Rendering Unified 3D GS Processor with Locality-Optimized Computation and Memory",
+    "title_zh": "1286fps 0.39mJ/帧建模/渲染统一3D GS处理器：局部性优化计算与内存",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "1286fps",
+          "meaning": "每秒1286帧",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Modeling/Rendering Unified",
+          "meaning": "建模与渲染统一架构",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "3D GS",
+          "meaning": "3D高斯溅射",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Locality-Optimized",
+          "meaning": "局部性优化",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "小高斯分布使粗粒度光栅化冗余严重",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "Gather步骤产生大量2D中间数据访存",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "建模与渲染异构架构带来额外面积开销",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "动态细粒度渲染引擎减89%冗余计算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "滑动窗口局部性优化消除Gather访存",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "建模渲染统一可重构架构减40%面积",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "0.39mJ/frame",
+    "target_model": "3DGS (feedforward)",
+    "application": "3D高斯溅射建模与渲染",
+    "innovations": [
+      {
+        "tag": "建模/渲染统一架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "局部性优化内存访问",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "自适应细粒度光栅化",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "3DGS",
+      "高斯溅射",
+      "VR",
+      "建模",
+      "渲染",
+      "统一架构"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of feedforward 3D Gaussian splatting modeling and challenges of traditional 3D GS processor."
+      },
+      {
+        "num": 2,
+        "caption": "Overall chip architecture and key features of the proposed modeling/rendering uniﬁed 3D GS processor."
+      },
+      {
+        "num": 3,
+        "caption": "Locality-aware dynamic ﬁne-grained rendering engine featuring a scanline-based traversal unit for reduced redundant computation."
+      },
+      {
+        "num": 4,
+        "caption": "Locality-optimized uniﬁed rendering workﬂow adopting sliding window- based canvas and scale-penalized gaussians to reduce EMA."
+      },
+      {
+        "num": 5,
+        "caption": "Uniﬁed reconﬁgurable architecture for neural modeling and Gaussian splatting rendering via exploitation of dataﬂow similarity."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and performance comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Die photo and chip summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "4.76",
+      "supply_voltage": "1.01V",
+      "sram_kb": "122KB of SRAM",
+      "power_mw": "507.0",
+      "throughput": "throughput of 1286fps",
+      "energy_efficiency": "0.39mJ/frame",
+      "target_model": "3DGS (feedforward)",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "1.01V",
+    "data_path": "data/2.10/"
+  },
+  {
+    "id": "10.1",
+    "session": 10,
+    "title": "A 3nm 400TOPS 1080k DMIPS SoC with Chiplet Support for ASIL D Automotive Cross-Domain Applications",
+    "title_zh": "3nm 400TOPS 1080k DMIPS汽车SoC：支持ASIL D跨域应用的芯粒架构",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "3nm",
+          "meaning": "3纳米工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "400TOPS",
+          "meaning": "400万亿次/秒AI算力",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Chiplet Support",
+          "meaning": "芯粒扩展支持",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "ASIL D",
+          "meaning": "最高汽车安全完整性等级",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Cross-Domain",
+          "meaning": "跨域融合(自动驾驶+座舱)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "Chiplet互联缺乏功能安全FFI机制",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "大规模NPU时钟延迟超出时序窗口",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "高功耗密度下IR-drop影响可靠性",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "多功能汽车SoC需精细功耗模式管理",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "基于RegionID的UCIe FFI架构",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "分层mCPG时钟分配与统一调谐",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "Ring+Row双模式功率开关降IR-drop",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "90+电源域精细功率门控管理",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Samsung",
+    "authors": "Samsung",
+    "process_node": "3nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "400TOPS",
+    "target_model": "N/A",
+    "application": "汽车跨域SoC(SDV)",
+    "innovations": [
+      {
+        "tag": "跨域自动驾驶+座舱融合SoC",
+        "type": "system"
+      },
+      {
+        "tag": "ASIL D功能安全架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "芯粒扩展支持",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "汽车",
+      "SoC",
+      "3nm",
+      "ASIL D",
+      "自动驾驶",
+      "芯粒"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "What the automotive SoC aims to achieve for SDVs."
+      },
+      {
+        "num": 2,
+        "caption": "SoC block diagram showing the highly integrated high-performance cores on a single chip."
+      },
+      {
+        "num": 3,
+        "caption": "ASIL D capable FFI architecture with RegionID for chiplet."
+      },
+      {
+        "num": 4,
+        "caption": "Clock distribution for the advanced large-scale and high-performance chip enabled by the layer tuning method."
+      },
+      {
+        "num": 5,
+        "caption": "Automotive power scenarios enabled by multiple power-saving operation modes."
+      },
+      {
+        "num": 6,
+        "caption": "Hybrid power gating for compensating voltage-drop in a high-power consumption chip with ASIL D capability."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and speciﬁcation overview with the Shmoo plot result."
+      }
+    ],
+    "metrics": {
+      "technology": "3nm",
+      "energy_efficiency": "400TOPS",
+      "throughput": "400TOPS,",
+      "target_model": "N/A",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/10.1/"
+  },
+  {
+    "id": "10.2",
+    "session": 10,
+    "title": "A Dynamic Performance Augmentation in a 3nm-Plus Mobile CPU",
+    "title_zh": "3nm+ 移动CPU动态性能增强技术",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Dynamic Performance Augmentation",
+          "meaning": "动态性能增强(DMPA)",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "3nm-Plus",
+          "meaning": "3nm+工艺节点",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Mobile CPU",
+          "meaning": "移动端CPU",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "高电压提升单核性能受老化预算限制",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "性能提升引发CPU热点温度飙升",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "温度传感器受电压缩放影响精度下降",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "数字老化传感器管控升压占空比",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "自适应硬件热控制器25ms快速响应",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "差分电压温度补偿消除DIBL误差",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Samsung",
+    "authors": "Samsung",
+    "process_node": "3nm+",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "N/A",
+    "application": "移动端SoC/游戏",
+    "innovations": [
+      {
+        "tag": "动态性能增强(DMPA)",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "增强占空控制(BDC)",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "硬件自适应电压频率(HAVFS)",
+        "type": "hw-circuit"
+      }
+    ],
+    "tags": [
+      "CPU",
+      "移动端",
+      "3nm",
+      "性能增强",
+      "电压调节",
+      "游戏"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Ever-higher single-core performance demands and aging limitations of maximum voltage in 3nm-plus mobile ﬂagship smartphone CPU."
+      },
+      {
+        "num": 2,
+        "caption": "The DMPA of the CPU with BDC/ATC block diagram and architecture in 3nm-plus SoC."
+      },
+      {
+        "num": 3,
+        "caption": "The CPU performance boost with CPP efﬁciency and design margin optimization to achieve higher OPP0+."
+      },
+      {
+        "num": 4,
+        "caption": "The proposed Boosting-Duty Control (BDC) with a digital A-sensor to leverage available aging-budget in CPU."
+      },
+      {
+        "num": 5,
+        "caption": "The digital T-sensor with proposed Differential-Voltage-based Temperature Compensation (DVTC) achieving fast and accurate temperature sensing in silicon for the CPU."
+      },
+      {
+        "num": 6,
+        "caption": "The Dynamic Mobile-Performance Augmentation (DMPA) contains the ATC and BDC for the CPU with silicon measurement results."
+      },
+      {
+        "num": 7,
+        "caption": "The 3nm-plus CPU die-photo with DMPA feature summary and on-phone benchmark demonstration."
+      }
+    ],
+    "metrics": {
+      "technology": "3nm+",
+      "frequency_mhz": "3500",
+      "target_model": "N/A",
+      "source_figure": "fig_7"
+    },
+    "frequency_mhz": "3500",
+    "data_path": "data/10.2/"
+  },
+  {
+    "id": "10.3",
+    "session": 10,
+    "title": "A 2nm Clock-Edge Architecture for Processor Clock-Power Reduction",
+    "title_zh": "2nm时钟边沿架构：处理器时钟功耗降低",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "2nm",
+          "meaning": "2nm GAA工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Clock-Edge Architecture",
+          "meaning": "双沿触发时钟架构",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Clock-Power Reduction",
+          "meaning": "时钟功耗降低",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "传统单沿触发浪费一半动态时钟功耗",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "时钟占空比失真严重降低DET性能",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "已有DET触发器缺少复位与DFT功能",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "已有DET时钟门控引入周期间DCD",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "双沿触发架构半频运行降低时钟功耗",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "自适应时钟占空比控制器校正DCD",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "带复位和DFT功能的低功耗DET触发器",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "基于XNOR的DET时钟门控最小化DCD",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Intel",
+    "authors": "Intel",
+    "process_node": "2nm GAA",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "30% clock power reduction",
+    "target_model": "NPU MXU",
+    "application": "处理器时钟功耗优化",
+    "innovations": [
+      {
+        "tag": "双沿触发FF(DET)量产化",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "自适应占空比控制器",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "2nm GAA工艺验证",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "时钟",
+      "2nm",
+      "GAA",
+      "DET FF",
+      "功耗",
+      "NPU"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Conventional (CNV) design and clock-edge architecture (CEA) timing diagrams with a clock-gating circuit (CGC) and test-chip block diagram, containing the adaptive clock duty-cycle controller (DCC) and two NPU MXUs with CNV and CEA designs."
+      },
+      {
+        "num": 2,
+        "caption": "CEA dual-edge-triggered (DET) ﬂip-ﬂop (FF) and DET CGC circuit schematics. Q CKI CKB CKI CKB D NSHIFT SHIFT NSHIFT SHIFT SIN SIN CKB CKI CKB CKI CKI CLK CKB SHIFT NSHIFT SIN RST RST XNOR ENB ENI CLKIN ENI ENB EN ENB ENI ENI ENB ENB ENI XOR CKB CLKOUT CP CKB Proposed DET FF Input Mux Negative Latch Positive Latch Output Mux Latch #1 Latch #2 Proposed DET CGC CKI CKB nn1 RST RST CKI CKB pn1 RST RST nn2 pn2 clk_in clk_cnv CGC BIST CGC MAC1 MAC16 MAC Array #1 …..."
+      },
+      {
+        "num": 3,
+        "caption": "DCC block diagram, consisting of the duty-cycle monitor (DCM), duty- cycle adjuster (DCA), and DCA adaptive control, and measured normalized CEA MXU throughput (TP) vs."
+      },
+      {
+        "num": 4,
+        "caption": "Measured MXU minimum VDD (VMIN) for CNV and CEA vs. TP, MXU VMIN distribution for CNV and CEA vs."
+      },
+      {
+        "num": 5,
+        "caption": "Measured MXU clock power vs. operating condition, MXU total dynamic power vs. workload, and CEA MXU total dynamic power reduction vs."
+      },
+      {
+        "num": 6,
+        "caption": "Measured distributions of CEA MXU total dynamic power reduction vs. operating condition for peak-performance and typical workloads across 40 parts while capturing the ΔVMIN impact for each part."
+      },
+      {
+        "num": 7,
+        "caption": "Test-chip microphotograph, characteristics, and comparisons of the SET FF vs. the proposed DET FF and the prior-art DET CGC [18] vs."
+      }
+    ],
+    "metrics": {
+      "supply_voltage": "0.7V",
+      "technology": "2nm GAA",
+      "energy_efficiency": "30% clock power reduction",
+      "target_model": "NPU MXU",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.7V",
+    "data_path": "data/10.3/"
+  },
+  {
+    "id": "10.4",
+    "session": 10,
+    "title": "A 0.008mm² 16-to-1600MHz All-Digital Fractional Divider Using AUX-DLL for Background LMS-Based DTC Calibration",
+    "title_zh": "0.008mm² 16~1600MHz全数字分频器：基于辅助DLL的后台LMS DTC校准",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "0.008mm²",
+          "meaning": "极小面积0.008mm²",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "All-Digital Fractional Divider",
+          "meaning": "全数字分数分频器",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "AUX-DLL",
+          "meaning": "辅助延迟锁定环",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "LMS-Based DTC Calibration",
+          "meaning": "基于LMS算法的DTC校准",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "多PLL时钟生成面积和功耗开销大",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "DTC增益校准受路径失配精度受限",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "宽频数字DLL易出现锁定失败问题",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "开环分频器替代多PLL生成多路时钟",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "辅助DLL实现无副本LMS增益校准",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "三态PFD防止DLL谐波和卡死锁定",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Qualcomm",
+    "authors": "Qualcomm",
+    "process_node": "7nm CMOS",
+    "die_area_mm2": "0.008",
+    "power_mw": "11.2",
+    "energy_efficiency": "",
+    "target_model": "N/A",
+    "application": "时钟生成(SoC)",
+    "innovations": [
+      {
+        "tag": "辅助DLL后台LMS校准",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "超紧凑0.008mm²分频器",
+        "type": "hw-circuit"
+      }
+    ],
+    "tags": [
+      "时钟",
+      "PLL",
+      "分频器",
+      "DTC",
+      "LMS",
+      "校准"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Block diagrams of conventional FDIVs and the proposed FDIV."
+      },
+      {
+        "num": 2,
+        "caption": "FDIV implementation details. 175 10 DLL and LMS measured results of 550 parts from corner-wafers."
+      },
+      {
+        "num": 3,
+        "caption": "False-locking prevention technique for wide-range digital DLL."
+      },
+      {
+        "num": 4,
+        "caption": "Measured phase-noise in integer- and fractional-N modes of operation."
+      },
+      {
+        "num": 5,
+        "caption": "Measured spurs and integrated jitter across fractional division factor (α) and supply voltage (top), measured IDACG and IDACD codes of 550 parts (bottom)."
+      },
+      {
+        "num": 6,
+        "caption": "Performance summary and comparison with state-of-the art."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph."
+      }
+    ],
+    "metrics": {
+      "technology": "7nm CMOS",
+      "supply_voltage": "0.9V",
+      "die_area_mm2": "0.008",
+      "power_mw": "11.2",
+      "target_model": "N/A",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.9V",
+    "data_path": "data/10.4/"
+  },
+  {
+    "id": "10.5",
+    "session": 10,
+    "title": "Proactive Power Management-Based Supply Regulation with Online Learning for Variation-Tolerant High-Performance Microprocessors",
+    "title_zh": "基于在线学习的前瞻式电源管理与供电调节：面向容变高性能微处理器",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Proactive Power Management",
+          "meaning": "前瞻式电源管理",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Online Learning",
+          "meaning": "在线机器学习",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Variation-Tolerant",
+          "meaning": "容忍工艺/电压/温度变化",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Supply Regulation",
+          "meaning": "供电调节",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "PDN阻抗PVT变化导致压降预测不准",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "时钟节流缓解压降带来严重性能损失",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "功率转换器效率与响应速度难以兼顾",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "在线迁移学习适应PDN与负载变化",
+        "type": "sw",
+        "color": "#2ecc71"
+      },
+      {
+        "text": "神经网络前馈预测实现主动压降调控",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "双电感Buck转换器兼顾效率与速度",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Intel",
+    "authors": "Intel",
+    "process_node": "Intel 3",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "N/A",
+    "application": "微处理器电源管理",
+    "innovations": [
+      {
+        "tag": "ML前瞻式电源管理",
+        "type": "sw"
+      },
+      {
+        "tag": "在线学习PDN阻抗适应",
+        "type": "co-design"
+      },
+      {
+        "tag": "集成DC-DC转换器",
+        "type": "hw-circuit"
+      }
+    ],
+    "tags": [
+      "电源管理",
+      "ML",
+      "在线学习",
+      "DC-DC",
+      "供电跌落",
+      "处理器"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Existing challenges in droop mitigation and key contributions of the proposed regulation framework."
+      },
+      {
+        "num": 2,
+        "caption": "System-level diagram of the proposed proactive supply regulation scheme with online learning, including the architecture of the Neural Droop Management Unit (NDMU)."
+      },
+      {
+        "num": 3,
+        "caption": "Proposed feedforward control of the DC–DC converter employing dual- switch modulation for rapid droop mitigation."
+      },
+      {
+        "num": 4,
+        "caption": "Droop prediction variation across digital SoCs and the proposed online transfer learning scheme for adaptive model update."
+      },
+      {
+        "num": 5,
+        "caption": "Measured performance of the Neural Droop Management Unit (NDMU) and Online Learning Engine (OLE)."
+      },
+      {
+        "num": 6,
+        "caption": "Measured regulator efﬁciency and mitigation performance across benchmarks, with comparison to prior works."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and packaging/bonding conﬁgurations of the fabricated chip."
+      }
+    ],
+    "metrics": {
+      "technology": "Intel 3",
+      "sram_kb": "32KB on-chip memory",
+      "target_model": "N/A",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/10.5/"
+  },
+  {
+    "id": "10.6",
+    "session": 10,
+    "title": "A Hybrid-Bonded 12.1TOPS/mm² 56-Core DNN Processor with 2.5Tb/s/mm² 3D Network on Chip",
+    "title_zh": "混合键合12.1TOPS/mm² 56核DNN处理器：2.5Tb/s/mm² 3D片上网络",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Hybrid-Bonded",
+          "meaning": "混合键合3D堆叠",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "12.1TOPS/mm²",
+          "meaning": "面积效率12.1TOPS/mm²",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "56-Core",
+          "meaning": "56个RISC-V核心",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "3D Network on Chip",
+          "meaning": "3D片上网络",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "跨芯片数据搬运成为性能瓶颈",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "3D堆叠双芯片间时钟偏斜影响时序",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "多核DNN负载映射需兼顾延迟与能效",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "14×4×2混合键合3D NoC网络",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "转发时钟设计配合异步FIFO跨芯片接口",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "并行与数据流两种可切换负载映射策略",
+        "type": "sw",
+        "color": "#2ecc71"
+      }
+    ],
+    "affiliation": "Intel",
+    "authors": "Intel",
+    "process_node": "Intel 3/18A",
+    "die_area_mm2": "9",
+    "power_mw": "",
+    "energy_efficiency": "16.1TOPS/W",
+    "target_model": "DNN",
+    "application": "DNN加速(3D堆叠)",
+    "innovations": [
+      {
+        "tag": "混合键合3D堆叠DNN处理器",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "56核RISC-V+DNN加速器",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "3D NoC 2.5Tb/s/mm²",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "3D堆叠",
+      "混合键合",
+      "RISC-V",
+      "NoC",
+      "DNN",
+      "Intel"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Block diagram of manycore 3D DNN processor and motivation for HBI."
+      },
+      {
+        "num": 2,
+        "caption": "Mesh 3D network on chip and hybrid-bonded interface. HBI In HBI Out HBI Interface {N,S,E,W,Local,Up/Down} Out Port {N,S,E,W,Local,Up/Down} In Port ready valid data 64 length D C Q N In N Out S In S Out Local In Local Out Up/Down In Up/Down Out E Out E In W Out W In to Core/DNN NoC Router Tile HBI Floorplan (24×23 Pads) 216μm 207μm VCC VSS Data Data Req, Ack, Φ Other Signals Other Signals clk Arbiter FF sel Tail Detect clk clk D C Q D C Q CG ready data valid ready valid data 64 addr D C Q clk FF sel Decode clk clk D C Q D C Q CG ready data valid length Tail Detect HBI Out Interface HBI In Interface ready valid data clk data ack req ΦRX ΦTX ack req data ΦTX 64 data ready valid clk !180° != ΦRX !empty clk wr addr FF FF FF TX Gray Counter rd addr 64 sync."
+      },
+      {
+        "num": 3,
+        "caption": "Block diagram of DNN accelerator in the top tile."
+      },
+      {
+        "num": 4,
+        "caption": "Chip measurements and comparison of 2D vs. 3D trafﬁc. 0 0.2 0.4 0.6 0.8 1 1.2 100 200 300 400 500 600 700 800 9001000 Energy per Byte (norm.) Throughput (GB/s) 3D 2D 0 200 400 600 800 1000 1200 1400 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 Frequency (MHz) Supply Voltage (V) 7.7 13.7 24.1 27.9 19.3 33.0 Peak TOPS Intel 18A / Intel 3 CMOS, 25°C 2D 3D Intel 18A / Intel 3 CMOS, 25°C 39% 30.7 0 2 4 6 8 10 12 14 16 18 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 Dynamic TOPS/W Supply Voltage (V) 10 15 20 25 30 8 16 32 64 128 256 512 1024 Throughput (GB/s) Transfer Size (B) Intel 18A / Intel 3 CMOS, 25°C Intel 18A / Intel 3 CMOS, 25°C 0.9V, 1GHz Random Uniform Core Traffic Nearest-neighbor DMA Traffic im2col .T Input offset Y 16×4×4 k×{h×w} 8b RF Y 16×4×4 k×{h×w} 8b RF Data pointers (X, Y, W) Layer dims."
+      },
+      {
+        "num": 5,
+        "caption": "Image classiﬁcation measurements for parallel and dataﬂow mappings."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison tables to hybrid bonded chips and manycore DNN processors. ISSCC22 [12] 7nm 7nm 81 ISSCC22 [13] 25nm 55nm 602.22 ISSCC24 [14] 5nm 6nm 4× ½Reticle Top Process Bottom Process Area, mm2 This Work Intel 18A Intel 3 2.74 Hybrid Bonded Chips HBI 9μm - - HBI 3μm 1.1, 1.2 0.15, 0.3 HBI 9μm - 2.1 Bonding Technology Voltage, V Frequency, GHz HBI 9μm 0.5-1.1 0.280-1.205 - 16 - - 11.04 - 1.4 M* - - 3D Signal Count Peak 3D Bandwidth, Tb/s 3D Signal Density, / mm2 21.5 k 7.0 7.9 k ISSCC24 [14] 5nm, 6nm 4× ½Reticle - Process Area, mm2 Voltage, V This Work Intel 18A, Intel 3 2.74 0.5-1.1 DNN Processors 2.1 256* Frequency, GHz SRAM Capacity, MB 0.280-1.205 5.25 BF16 1307 - Data Precision Peak Perf., TOPS/TFLOPS Comp."
+      },
+      {
+        "num": 7,
+        "caption": "Top and bottom die photos of 3D stacked DNN processor."
+      }
+    ],
+    "metrics": {
+      "technology": "Intel 3/18A",
+      "sram_kb": "5.25MB SRAM",
+      "energy_efficiency": "16.1TOPS/W",
+      "throughput": "33.0TOPS",
+      "die_area_mm2": "9",
+      "target_model": "DNN",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/10.6/"
+  },
+  {
+    "id": "10.7",
+    "session": 10,
+    "title": "A 28nm Mode-Reconfigurable CAM-CIM Hybrid Complete 3-SAT Solver Supporting Conflict-Driven Clause Learning with 100% Solvability",
+    "title_zh": "28nm模式可重构CAM-CIM混合完备3-SAT求解器：支持冲突驱动子句学习，100%可解性",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "28nm",
+          "meaning": "28nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "CAM-CIM Hybrid",
+          "meaning": "内容寻址+存内计算混合",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Complete 3-SAT Solver",
+          "meaning": "完备3-SAT求解器",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Conflict-Driven Clause Learning",
+          "meaning": "冲突驱动子句学习(CDCL)",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "交叉开关映射PE开销达O(n²)效率低",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "缺乏冲突学习无法利用公式社区结构",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "固定宏尺寸难以适配不同规模SAT问题",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "CAM二进制编码将PE开销降至O(nlogn)",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "CIM宏实时追踪学习子句支持CDCL",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "模式可重构四核架构适配公式规模",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "3-SAT",
+    "application": "SAT求解/形式验证",
+    "innovations": [
+      {
+        "tag": "CAM-CIM混合SAT架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "硬件CDCL子句学习",
+        "type": "co-design"
+      },
+      {
+        "tag": "100%完备可解性",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "SAT",
+      "CAM",
+      "CIM",
+      "CDCL",
+      "形式验证",
+      "求解器"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of the K-SAT concept and the challenges of efﬁcient SAT inference in ASIC."
+      },
+      {
+        "num": 2,
+        "caption": "The overall architecture of the proposed CDCL K-SAT solver and three pivotal features."
+      },
+      {
+        "num": 3,
+        "caption": "The schematic of CAM-based propagation unit (CAM-PU) and its operation ﬂow."
+      },
+      {
+        "num": 4,
+        "caption": "CIM-based learning unit (CIM-LU) for conﬂict analysis and learned clause management."
+      },
+      {
+        "num": 5,
+        "caption": "Mode-reconﬁgurable architecture: the split-mode for thread-level parallelism on small formulas, and the merge-mode for data-level parallelism on large formulas."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and the comparison with state-of-the-art ASIC K-SAT solvers."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and performance summary of the proposed solver across different formula sizes."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "0.65",
+      "supply_voltage": "0.95V",
+      "target_model": "3-SAT",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.95V",
+    "data_path": "data/10.7/"
+  },
+  {
+    "id": "10.8",
+    "session": 10,
+    "title": "COBI: A Degree-of-56 Column-Bipartite Densely Connected Digital Ising Chip with 8b Spin Coefficients",
+    "title_zh": "COBI：度数56列二部图密连接数字Ising芯片(8位自旋系数)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "COBI",
+          "meaning": "芯片代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Degree-of-56",
+          "meaning": "自旋连接度56",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Column-Bipartite",
+          "meaning": "列二部图拓扑",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Digital Ising Chip",
+          "meaning": "数字Ising计算芯片",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "8b Spin Coefficients",
+          "meaning": "8位自旋系数精度",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "已有Ising机硬件拓扑度数低映射受限",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "低精度系数限制实际优化问题求解",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "复杂拓扑需大量预处理映射开销大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "列二部图拓扑实现度数56的密集连接",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "嵌入式SRAM存储8位自旋交互系数",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "近存储MAC与总线控制器并行列激活",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Georgia Tech",
+    "authors": "Georgia Tech",
+    "process_node": "12nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "Ising Model",
+    "application": "组合优化问题求解",
+    "innovations": [
+      {
+        "tag": "列二部图高连接度Ising拓扑",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "8位系数数字Ising芯片",
+        "type": "hw-circuit"
+      }
+    ],
+    "tags": [
+      "Ising",
+      "组合优化",
+      "退火",
+      "数字芯片",
+      "拓扑",
+      "求解器"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Introduction to COP problems, prior Ising works, and the fully digital Ising chip (COBI) with reconﬁgurability, dense connectivity, and high precision."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the fabricated 65nm test chip, detailed spin structure, and a single spin layout."
+      },
+      {
+        "num": 3,
+        "caption": "Sequential activation of spin column: Transmit (Tx) and receive (Rx) operations, coefﬁcient readout, and MAC operation."
+      },
+      {
+        "num": 4,
+        "caption": "Measurement results of Max-Cut problems with transient Ising Hamiltonians (top-left) and transient spin maps (top-right), and hard Max-Cut problems with transient Ising Hamiltonians (bottom-left) and statistical distributions (bottom- right)."
+      },
+      {
+        "num": 5,
+        "caption": "Mapping (left) and evaluated results (right) of 64-node community detection (top) and 24×24 BPSK MIMO detection (bottom) problems."
+      },
+      {
+        "num": 6,
+        "caption": "A comparison table with the state-of-the-art CMOS Ising machines."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and a summary table."
+      }
+    ],
+    "metrics": {
+      "technology": "12nm",
+      "target_model": "Ising Model",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/10.8/"
+  },
+  {
+    "id": "10.9",
+    "session": 10,
+    "title": "SharpSAT: A Heuristic-Learning-Based SAT Accelerator Achieving 0.8μs/16.1μs Solution Time in SAT/UNSAT",
+    "title_zh": "SharpSAT：基于启发式学习的SAT加速器(SAT/UNSAT求解时间0.8μs/16.1μs)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "SharpSAT",
+          "meaning": "加速器代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Heuristic-Learning-Based",
+          "meaning": "基于启发式学习",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "SAT Accelerator",
+          "meaning": "SAT问题加速器",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "0.8μs/16.1μs",
+          "meaning": "SAT/UNSAT求解时间",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "完备求解器搜索空间大收敛速度慢",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "布尔约束传播BCP速度成为性能瓶颈",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "确定性探索策略缺乏搜索多样性",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "前向VarCause构建实现快速子句学习",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "双BCP仲裁器并行发射两条传播结果",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "PRNG启发式决策器引入随机性搜索",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "Georgia Tech",
+    "authors": "Georgia Tech",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "SAT/UNSAT",
+    "application": "SAT求解/形式验证",
+    "innovations": [
+      {
+        "tag": "启发式学习SAT加速",
+        "type": "co-design"
+      },
+      {
+        "tag": "快速子句学习硬件",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "双模式搜索引擎",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "SAT",
+      "启发式",
+      "子句学习",
+      "完备求解",
+      "形式验证",
+      "加速器"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Introduction to the SAT problem and design highlights of proposed clause learning SAT design (SharpSAT)."
+      },
+      {
+        "num": 2,
+        "caption": "The top-level architecture and workﬂow of SharpSAT. 185 10 Acknowledgement: This work is supported by the National Key R&D Program of China (No."
+      },
+      {
+        "num": 3,
+        "caption": "Proposed clause learner and its workﬂow."
+      },
+      {
+        "num": 4,
+        "caption": "Design of the proposed dual-BCP unit and PRNG-based heuristic decider."
+      },
+      {
+        "num": 5,
+        "caption": "Measured solution time, the trend of the number of learning clauses, energy efﬁciency, frequency voltage plot, and comparison with prior ASICs and an HPC CPU."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison with state-of-the-art ASIC SAT solvers."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph, summary table, and area/power breakdown."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "0.78",
+      "frequency_mhz": "375",
+      "target_model": "SAT/UNSAT",
+      "source_figure": "fig_7"
+    },
+    "frequency_mhz": "375",
+    "data_path": "data/10.9/"
+  },
+  {
+    "id": "10.10",
+    "session": 10,
+    "title": "PCIM-SAT: A 55nm Probabilistic K-SAT Solver with p-Bit-Based Parallel-Variable Update on a Mixed-Signal CIM Architecture",
+    "title_zh": "PCIM-SAT：55nm概率K-SAT求解器(基于p-bit并行变量更新的混合信号CIM架构)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "55nm",
+          "meaning": "55nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Probabilistic",
+          "meaning": "概率计算",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "K-SAT Solver",
+          "meaning": "K-SAT求解器(K≥3)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "p-Bit",
+          "meaning": "概率比特(可控随机翻转)",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Mixed-Signal CIM",
+          "meaning": "混合信号存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "已有求解器仅支持3-SAT高阶需变量膨胀",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "单变量更新导航效率低收敛缓慢",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "模拟梯度计算需ADC增加面积和延迟",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "阶次无关混合信号CIM直接映射K-SAT",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "p-bit概率采样实现多变量并行更新",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "11T SRAM单周期计算make/break梯度",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Purdue",
+    "authors": "Purdue Univ.",
+    "process_node": "55nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "K-SAT (K≥3)",
+    "application": "SAT求解(概率计算)",
+    "innovations": [
+      {
+        "tag": "概率p-bit并行K-SAT求解",
+        "type": "co-design"
+      },
+      {
+        "tag": "混合信号CIM架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "原生高阶K-SAT支持",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "SAT",
+      "概率计算",
+      "p-bit",
+      "CIM",
+      "混合信号",
+      "求解器"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Basic concepts of K-SAT; introduction to the new multi-variable update SAT algorithm; challenges with prior SAT solver ASICs and design highlights of our solver architecture."
+      },
+      {
+        "num": 2,
+        "caption": "Top-level architecture and workﬂow of proposed solver. ❑ \u0001 = \u00021\u0002 ڀ3 \u0002 ڀ5ٿ\u00021 \u0002 ڀ2 ٿ\u00021ڀ\u00024 \u0002 ڀ5 ⇒(\u00021, \u00022, \u00023, \u00024, \u00025) = 1, 1,0, 0,1 \u0001 ❑ \u0004 = −\u00021\u00023\u00025 + \u00021\u00024\u00025 + \u00021\u00023 + \u00023\u00025 + \u00021\u00025 −\u00021\u00022 −\u00021\u00024 −\u00024\u00025 −\u00023 + \u00024 −\u00025 + 1, \u0002\u0006 ∈0,1 ❑∆\u0004\u0006 = \u0004 \u0002\u0006 →1 −\u0002\u0006 −\u0004 \u0002\u0006 ⇒−∆\u0004\u0006 = ∆ \u0006 = \u0006 − \u0006 ❑∆\u0004\u0006 \u0002\u0006 \u0006 \u0002\u0006 \u0002\u0006 \u0006 \u0002\u0006 \u0002\u0006 ∆\u00041 ∆\u00042 ∆\u0004 \u000e −∆\u00041 \u000f \u000e −∆\u00042 \u000f \u000e −∆\u0004 \u000f \u0006 = 0 \u0006 = \u0010\u0006\u0011 ⟶ \u000e −∆\u0004\u0006/\u000f \u0013 \u0006 \u0014 \u0006 \u0014 \u0006 \u000e −∆\u0004\u0006/\u000f 187 10 In summary, PCIM-SAT can natively map arbitrary-order K-SAT problems and accelerate efﬁcient multi/parallel-variable update heuristics."
+      },
+      {
+        "num": 3,
+        "caption": "Detailed schematic of the mixed-signal in-memory computing fabric and probabilistic bit."
+      },
+      {
+        "num": 4,
+        "caption": "Measurement results of the probabilistic-bits; schematic of variable update logic and timing diagram of solver. ∈{0,1,2,3,..} ∈{0,1,2,3,..} \u0002 \u0003 Τ \u0005\u0006 −\b\u0006 \u0002 \u0003 Τ \u0005\u0006 −\b\u0006 ∆G="
+      },
+      {
+        "num": 5,
+        "caption": "Measurement results of PCIM-SAT on different SAT benchmarks and comparison with other solvers. Multi-thread mode implemented for comparison."
+      },
+      {
+        "num": 6,
+        "caption": "Feature and performance comparison with prior SAT solver ASICs."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "55nm",
+      "target_model": "K-SAT (K≥3)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/10.10/"
+  },
+  {
+    "id": "18.1",
+    "session": 18,
+    "title": "A 3.19pJ/b Electro-Optical Router with 18ns Setup Frame-Level Routing and 1-to-6 Wavelength-Flexible Link",
+    "title_zh": "3.19pJ/b电光路由器：18ns建立帧级路由与1~6波长灵活链路",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "3.19pJ/b",
+          "meaning": "能效3.19pJ/bit",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Electro-Optical Router",
+          "meaning": "电光路由器",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "18ns Setup",
+          "meaning": "18ns路由建立时间",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Wavelength-Flexible Link",
+          "meaning": "波长灵活光链路",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "Interposer全局互连受限于近邻通信",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "有源中介层远距通信时钟同步延迟高",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "长距离SerDes驱动器复杂且功耗大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "光子中介层微环动态路由实现灵活互连",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "18ns帧级光路由与波长复用低延迟链路",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "标准单元SerDes与紧凑光驱动器降低开销",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "CEA-Leti",
+    "authors": "CEA-Leti",
+    "process_node": "22nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "3.19pJ/b",
+    "target_model": "N/A",
+    "application": "芯粒光互连",
+    "innovations": [
+      {
+        "tag": "电光动态路由器",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "波长灵活光链路",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "光子interposer集成",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "光互连",
+      "芯粒",
+      "路由器",
+      "光子",
+      "interposer",
+      "波长"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Scaling perspectives for 3D-stacking technologies and proposed routed optical links on interposer."
+      },
+      {
+        "num": 2,
+        "caption": "Rx front-end with routing using resonance shift and dynamic threshold adjustment during preamble."
+      },
+      {
+        "num": 3,
+        "caption": "Frame decoding with data alignment on end of preamble, and dynamic remapping on 1 to 6 wavelengths."
+      },
+      {
+        "num": 4,
+        "caption": "Performance measurements up to 4Gbaud showing BER for optical data, optical clock and digital SerDes."
+      },
+      {
+        "num": 5,
+        "caption": "Tx/Rx cell layout, area and power breakdown, and long-packet routing performance."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison table. Metric this work ISSCC25 [1] ISSCC24 [2] JSSC21 [3] HotChips25 OFC25[5,6] ISSCC23 [7] VLSI24 [8] ISSCC18 [9] Type Photonic Interposer Active Interposer Active Interposer Active Interposer Photonic Interposer Photonic links Photonic links Photonic link Tech node 28nm 28nm 6nm 65nm 45nm 7nm 45nm 65nm Integration 3D μbump 3D μbump hybrid bnd."
+      },
+      {
+        "num": 7,
+        "caption": "Die photographs with E/O route, looped-back interposer and 8-port ONoC interposer."
+      }
+    ],
+    "metrics": {
+      "technology": "22nm",
+      "energy_efficiency": "3.19pJ/b",
+      "throughput": "50Gb/s",
+      "target_model": "N/A",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/18.1/"
+  },
+  {
+    "id": "18.2",
+    "session": 18,
+    "title": "A 22nm 1.87ms/Frame Streaming Multi-Speaker ASR Accelerator Leveraging Contextual-Aware Redundancy Skipping with 2D-Writable Microscaling CIM and Similarity-Aware TCAM",
+    "title_zh": "22nm 1.87ms/帧流式多说话人ASR加速器：上下文感知冗余跳过+2D可写微缩放CIM+相似性TCAM",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "22nm",
+          "meaning": "22nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Multi-Speaker ASR",
+          "meaning": "多说话人语音识别",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Contextual-Aware Redundancy Skipping",
+          "meaning": "上下文感知冗余跳过",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Microscaling CIM",
+          "meaning": "微缩放存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "TCAM",
+          "meaning": "三态内容寻址存储器",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "多人对话中静默和相似块造成计算冗余",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "两遍解码对计算和存储需求差异大",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "说话人切换和N-best重评分后处理开销大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "上下文感知冗余跳过实现在线稀疏块预测",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "2D可写CIM静态页存权重动态页支持转置",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "相似度感知TCAM加速说话人搜索与重评分",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "22nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "1.87ms/frame",
+    "target_model": "MS-ASR (RNN-T + AED)",
+    "application": "流式多说话人语音识别",
+    "innovations": [
+      {
+        "tag": "上下文感知冗余跳过",
+        "type": "sw"
+      },
+      {
+        "tag": "2D可写微缩放CIM",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "相似性感知TCAM",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "ASR",
+      "语音识别",
+      "CIM",
+      "TCAM",
+      "多说话人",
+      "流式"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Overview of two-pass ASR model for multi-speaker and the deployment challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the proposed ASR accelerator and three main features. 311 18"
+      },
+      {
+        "num": 3,
+        "caption": "The two-skip-one-trigger scheme and detailed implementation of CARS."
+      },
+      {
+        "num": 4,
+        "caption": "Static and dynamic page-based 2D writable (STDY-2D) CIM macro supporting microscaling format."
+      },
+      {
+        "num": 5,
+        "caption": "Speaker-aware approximation search and reuse-aware rescoring with proposed SA-TCAM."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and performance comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and speciﬁcations."
+      }
+    ],
+    "metrics": {
+      "technology": "22nm",
+      "energy_efficiency": "1.87ms/frame",
+      "target_model": "MS-ASR (RNN-T + AED)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/18.2/"
+  },
+  {
+    "id": "18.3",
+    "session": 18,
+    "title": "SMoLPU: 122.1μJ/Token Sparse MoE-Based Speculative Decoding Language Processing Unit with Computation Reconfiguration",
+    "title_zh": "SMoLPU：122.1μJ/Token稀疏MoE投机解码语言处理单元(计算重配置)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "SMoLPU",
+          "meaning": "稀疏MoE语言处理单元",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "122.1μJ/Token",
+          "meaning": "每token能耗122.1微焦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Sparse MoE",
+          "meaning": "稀疏混合专家模型",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Speculative Decoding",
+          "meaning": "投机解码",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Computation Reconfiguration",
+          "meaning": "计算重配置",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "MoE投机解码中被拒绝token冗余取权重",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "动态INT-FP比例变化导致硬件利用率低",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "可重构加法树支持可变输入尺寸功耗大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "Token自适应专家精炼消除冗余权重访问",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "自适应卸载NPU-CIM核平衡INT-FP利用率",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "双极编码DRAM-LUT-CIM降低加法树开销",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "122.1μJ/token",
+    "target_model": "MoE-SD LLM",
+    "application": "移动端LLM推理",
+    "innovations": [
+      {
+        "tag": "MoE+投机解码协同优化",
+        "type": "co-design"
+      },
+      {
+        "tag": "NPU-CIM计算重配置",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "稀疏专家冗余消除",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "MoE",
+      "投机解码",
+      "CIM",
+      "稀疏",
+      "移动端"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "MoE-based speculative decoding LLM and its design challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture. 313 18 two groups per 4 weights, all workloads are fully covered by the RDL-CIM."
+      },
+      {
+        "num": 3,
+        "caption": "Operation of TaER and implementation of the MMU."
+      },
+      {
+        "num": 4,
+        "caption": "Operation and implementation of the TSU and ANC."
+      },
+      {
+        "num": 5,
+        "caption": "The RDL-CIM with BCD and operation ﬂow of the reconﬁgurable LUT."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and performance comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "20.25",
+      "energy_efficiency": "122.1μJ/token",
+      "target_model": "MoE-SD LLM",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/18.3/"
+  },
+  {
+    "id": "18.4",
+    "session": 18,
+    "title": "SpikeRAM: A 48.1pW/Synapse/Bit Event-Driven Spiking Compute-Near/In-Memory Processor with Neuromorphic On-Chip Learning",
+    "title_zh": "SpikeRAM：48.1pW/突触/位事件驱动脉冲近存/存内计算处理器(片上神经形态学习)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "SpikeRAM",
+          "meaning": "脉冲存内计算处理器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "48.1pW/Synapse/Bit",
+          "meaning": "超低功耗48.1pW/突触/位",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Event-Driven Spiking",
+          "meaning": "事件驱动脉冲神经网络",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Compute-Near/In-Memory",
+          "meaning": "近存/存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "On-Chip Learning",
+          "meaning": "片上学习",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "感存算分离导致数据搬运与帧转换开销大",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "时空在线学习功耗和存储随时间窗深度缩放",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "eNVM写耐久有限制约在线学习寿命",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "EVS集成异步近存脉冲计算消除帧转换",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "e-OTBP单时间窗反向传播降低学习开销",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "灰码权重与三值梯度减少存储编程次数",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "NTU",
+    "authors": "NTU",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "48.1pW/synapse/bit",
+    "target_model": "SNN (sCNN + sFC)",
+    "application": "神经形态事件驱动感知",
+    "innovations": [
+      {
+        "tag": "EVS集成脉冲近存计算",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "资格一次反传片上学习",
+        "type": "sw"
+      },
+      {
+        "tag": "ReRAM CIM脉冲全连接层",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "SNN",
+      "脉冲",
+      "神经形态",
+      "CIM",
+      "片上学习",
+      "事件驱动"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Motivation of edge perceptual SoC with high energy efﬁciency, privacy and adaptability (top), challenges (middle), and our solutions in SpikeRAM (bottom)."
+      },
+      {
+        "num": 2,
+        "caption": "Architecture of SpikeRAM system (top), and event-driven convolution workﬂow in EVS-sCNN core (bottom)."
+      },
+      {
+        "num": 3,
+        "caption": "System diagram of sFC-OCL core (top), event ﬁlter, shift-adder with weighed spikes and conﬁgurable neurons (top right), and handshake-based pipeline (bottom)."
+      },
+      {
+        "num": 4,
+        "caption": "e-OTBP on-chip learning algorithm and ternary gradient implementations (top), and gray-code dataﬂow with weight updating and optional learning in MRAM (bottom)."
+      },
+      {
+        "num": 5,
+        "caption": "Event-based signature veriﬁcation system based on SpikeRAM for few- shot on-chip learning (top), and chip measurement results (bottom)."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison with state-of-the-art neuromorphic processors."
+      },
+      {
+        "num": 7,
+        "caption": "Summary table (top left), voltage characteristics and chip micrograph (top right), and measurement system (bottom)."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "power_mw": "8.28",
+      "energy_efficiency": "48.1pW/synapse/bit",
+      "target_model": "SNN (sCNN + sFC)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/18.4/"
+  },
+  {
+    "id": "18.5",
+    "session": 18,
+    "title": "A 28nm 47.3TFLOPs/W 894mJ/Inference Visual Autoregressive Accelerator with Differential-Amplifier Speculation and MXINT PE",
+    "title_zh": "28nm 47.3TFLOPs/W 894mJ/推理视觉自回归加速器：差分放大器投机+MXINT PE",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "28nm",
+          "meaning": "28nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "47.3TFLOPs/W",
+          "meaning": "能效47.3TFLOPs/W",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Visual Autoregressive",
+          "meaning": "视觉自回归模型(VAR)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Differential-Amplifier Speculation",
+          "meaning": "差分放大器投机预测",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "MXINT PE",
+          "meaning": "微缩放整数处理单元",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "注意力噪声计算冗余且难区分有效元素",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "图像数据偏斜分布导致全精度硬件冗余",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "自回归逐像素生成迭代多延迟高",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "差分注意力放大器投机识别关键token",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "分布感知MXINT PE全路径精度自适应优化",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "链式反应并行生成利用空间相关性降低延迟",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "47.3TFLOPs/W",
+    "target_model": "VAR (Visual Autoregressive)",
+    "application": "视觉自回归图像生成",
+    "innovations": [
+      {
+        "tag": "差分视觉注意力放大器",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "全路径MXINT PE",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "投机跳过模型计算",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "VAR",
+      "视觉自回归",
+      "注意力",
+      "投机",
+      "MXINT",
+      "图像生成"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Existing VAR models and challenges of deploying VAR models on hardware."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the chip and three special features. 317 18 is subsequently updated."
+      },
+      {
+        "num": 3,
+        "caption": "Operation of differential visual attention ampliﬁer and optimization of model processing."
+      },
+      {
+        "num": 4,
+        "caption": "Design of data distribution-aware full path optimized MXINT PE."
+      },
+      {
+        "num": 5,
+        "caption": "Implementation of chain-reaction-like parallel generation and skewed sort acceleration."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip speciﬁcation and die photo."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "47.3TFLOPs/W",
+      "target_model": "VAR (Visual Autoregressive)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/18.5/"
+  },
+  {
+    "id": "30.1",
+    "session": 30,
+    "title": "A 28nm 127.54TFLOPS/W MXFP6 and 117.42TFLOPS/W MXFP8 Compute-in-Memory Macro with Serial Dual-Bit-Sliding and Harmless Data Mapping",
+    "title_zh": "28nm 127.54TFLOPS/W MXFP6 / 117.42TFLOPS/W MXFP8 存内计算宏：串行双位滑动+无害数据映射",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "28nm",
+          "meaning": "28nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "MXFP6/MXFP8",
+          "meaning": "微缩放浮点6/8位格式",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Compute-in-Memory",
+          "meaning": "存内计算(CIM)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Dual-Bit-Sliding",
+          "meaning": "双位滑动计算方案",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Harmless Data Mapping",
+          "meaning": "无害数据映射(不浪费存储)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "输入对齐方案算术效率低，浪费计算资源",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "可变位宽重配置导致存储容量利用率低",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "固定保留位宽限制多样化工作负载适配",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "串行双位滑动方案消除冗余乘累加操作",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "无损数据映射与分层隐藏位解码器",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "双阶段分配实现层级和组级自适应位宽",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "127.54TFLOPS/W",
+    "target_model": "MXFP CNN/Transformer",
+    "application": "AI边缘推理(浮点CIM)",
+    "innovations": [
+      {
+        "tag": "串行双位滑动FP-MAC",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "无害数据映射MXFP6/8",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "自适应保留位宽",
+        "type": "co-design"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "MXFP",
+      "浮点",
+      "SRAM",
+      "存内计算",
+      "28nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Motivations, design challenges, and solutions of the proposed MXFP- CIM."
+      },
+      {
+        "num": 2,
+        "caption": "Conﬁguration table, overall structure and dual-bit sliding computation ﬂow. 513 30 preserving near-lossless end-to-end model accuracy."
+      },
+      {
+        "num": 3,
+        "caption": "Details of SDBS FP-MAC ﬂow, implementations of the DBSU, the product compressor, and the channel-wise adder tree."
+      },
+      {
+        "num": 4,
+        "caption": "Mapping scheme for MXFP6 and MXFP8 reconﬁguration, hierarchical hidden-bit decoder and layer-group twin-stage allocation scheme."
+      },
+      {
+        "num": 5,
+        "caption": "Simulated performance of the proposed work."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and chip summary table."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "127.54TFLOPS/W",
+      "throughput": "1TFLOPS",
+      "target_model": "MXFP CNN/Transformer",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/30.1/"
+  },
+  {
+    "id": "30.2",
+    "session": 30,
+    "title": "A 12nm 4Mb 104.56-to-137.75TFLOPS/W Charge-Trap Transistor-Based Computing-in-Memory Macro Using Computation-Skipping and FP-Friendly Scheme",
+    "title_zh": "12nm 4Mb 104.56~137.75TFLOPS/W电荷俘获晶体管CIM宏：计算跳过+浮点友好方案",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "12nm 4Mb",
+          "meaning": "12nm工艺 4Mb容量",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Charge-Trap Transistor",
+          "meaning": "电荷俘获晶体管(CTT)",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Computing-in-Memory",
+          "meaning": "存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Computation-Skipping",
+          "meaning": "计算跳过(跳过零值)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "FP-Friendly",
+          "meaning": "浮点友好方案",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "电荷俘获晶体管阈值偏移小难以实现数字CIM",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "激活后大量零值MAC运算浪费能耗",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "浮点预对齐和存储开销导致硬件成本高",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "差分增益CTT阵列支持模拟与数字MAC",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "符号幅度预测模拟通路跳过无效运算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "LUT-FP4预处理降低浮点对齐硬件开销",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "TSMC",
+    "authors": "TSMC",
+    "process_node": "12nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "137.75TFLOPS/W",
+    "target_model": "CNN/Transformer",
+    "application": "非易失存内计算",
+    "innovations": [
+      {
+        "tag": "CTT高密度非易失CIM",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "零值计算跳过",
+        "type": "sw"
+      },
+      {
+        "tag": "浮点友好存内计算",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "CTT",
+      "非易失",
+      "12nm",
+      "浮点",
+      "TSMC"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Challenges and the presented 12nm 4Mb hybrid-domain CTT nvCIM macro."
+      },
+      {
+        "num": 2,
+        "caption": "CTT MAC array organization and its operational waveforms for the APDC ﬂow. 515 30 Compared to previous nvCIM works (Fig."
+      },
+      {
+        "num": 3,
+        "caption": "The structure of SMP-AD and its computing ﬂow for analog prediction."
+      },
+      {
+        "num": 4,
+        "caption": "The structure of INT/FP4-DD and its computing ﬂow with LUT-FP4 pre- processing."
+      },
+      {
+        "num": 5,
+        "caption": "Measurement results of the fabricated 12nm CTT nvCIM macro."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison to previous nvCIM works."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph, position chart and chip performance summary table."
+      }
+    ],
+    "metrics": {
+      "technology": "12nm",
+      "supply_voltage": "0.8V",
+      "energy_efficiency": "137.75TFLOPS/W",
+      "throughput": "3.2GB/S",
+      "target_model": "CNN/Transformer",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.8V",
+    "data_path": "data/30.2/"
+  },
+  {
+    "id": "30.3",
+    "session": 30,
+    "title": "A 22nm 96Mb 50.6-to-90.2TFLOPS/W Non-Linear MLC ReRAM CIM Macro with High-Retention for Mamba/Transformer/CNN",
+    "title_zh": "22nm 96Mb 50.6~90.2TFLOPS/W非线性MLC ReRAM CIM宏：高保持力 支持Mamba/Transformer/CNN",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "22nm 96Mb",
+          "meaning": "22nm工艺 96Mb大容量",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Non-Linear MLC ReRAM",
+          "meaning": "非线性多级单元ReRAM",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "CIM Macro",
+          "meaning": "存内计算宏单元",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "High-Retention",
+          "meaning": "高数据保持力",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Mamba/Transformer/CNN",
+          "meaning": "支持多种模型架构",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "SLC/MLC模式间精度、能耗与面积权衡困难",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "GeLU/SiLU激活函数导致输入稀疏性低",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "非线性MLC器件精确低功耗读出困难",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "DTCO可重构计算模式融合NL-MLC/SLC",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "输入稀疏增强混合格式提升位稀疏性",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "单自参考双位ADC实现低功耗MLC读出",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "NTHU",
+    "authors": "NTHU",
+    "process_node": "22nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "90.2TFLOPS/W",
+    "target_model": "Mamba/Transformer/CNN",
+    "application": "AI边缘推理(ReRAM CIM)",
+    "innovations": [
+      {
+        "tag": "DTCO可重构NL-MLC ReRAM",
+        "type": "co-design"
+      },
+      {
+        "tag": "高保持力多模型支持",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "能效优化读出电路",
+        "type": "hw-circuit"
+      }
+    ],
+    "tags": [
+      "ReRAM",
+      "CIM",
+      "MLC",
+      "Mamba",
+      "非易失",
+      "22nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Advantages of Non-Linear MLC, challenges and proposed High-Retention Multi-Mode ReRAM CIM macro."
+      },
+      {
+        "num": 2,
+        "caption": "Accumulation number breakdown of recent models and proposed DTCO reconﬁgurable compute mode with TNLCM and DMDC. 517 30"
+      },
+      {
+        "num": 3,
+        "caption": "Flow chart and illustrations of proposed ISE-HF."
+      },
+      {
+        "num": 4,
+        "caption": "Illustration and waveform of proposed S2R-Db ADC."
+      },
+      {
+        "num": 5,
+        "caption": "Simulated performance of proposed schemes."
+      },
+      {
+        "num": 6,
+        "caption": "Simulated inference accuracy over years, measured shmoo plot and comparison table of recent ReRAM CIM macros."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and chip performance summary."
+      }
+    ],
+    "metrics": {
+      "energy_efficiency": "90.2TFLOPS/W",
+      "throughput": "14.74TOPS",
+      "technology": "22nm",
+      "target_model": "Mamba/Transformer/CNN",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/30.3/"
+  },
+  {
+    "id": "30.4",
+    "session": 30,
+    "title": "A 28nm 106.85TOPS/W and 77.68TFLOPS/W CIM Macro with Stage-Wise-Enabled Lossless Compressors Based on Transition-Counting Lines",
+    "title_zh": "28nm 106.85TOPS/W 77.68TFLOPS/W CIM宏：基于跳变计数线的分级无损压缩器",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "28nm",
+          "meaning": "28nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "106.85TOPS/W",
+          "meaning": "整数能效106.85TOPS/W",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "CIM Macro",
+          "meaning": "存内计算宏单元",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Transition-Counting Lines",
+          "meaning": "跳变计数线(TCL)",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Lossless Compressors",
+          "meaning": "无损压缩器",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "8位并行CIM布线拥塞与面积开销权衡",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "二补码符号位处理需额外面积或周期",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "中间结果引起高扇入加法器无效翻转功耗大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "跳变计数线实现无损稀疏自适应列压缩",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "总线TCL嵌入符号位扩展仅增2.95%面积",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "共享10相发生器分阶段使能避免无效翻转",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "106.85TOPS/W",
+    "target_model": "INT8/FP CNN",
+    "application": "数字位并行存内计算",
+    "innovations": [
+      {
+        "tag": "跳变计数线无损压缩",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "总线TCL符号扩展",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "分级流水计算",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "SRAM",
+      "位并行",
+      "无损压缩",
+      "TCL",
+      "28nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Challenges of bit-parallel CIM macro and the proposed solution."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the proposed TCL-based digital-SRAM CIM macro. 519 30 and 0.9V supply voltages, respectively, with 90% input sparsity and 10% toggle rate, while the weight sparsity is 50%."
+      },
+      {
+        "num": 3,
+        "caption": "The structures and workﬂows of the TCL and the 10-phase generator."
+      },
+      {
+        "num": 4,
+        "caption": "Embedded sign-bit extension in bus TCL-14 and the enabling-circuit structure for Combine Adder and In-Block Adder Tree."
+      },
+      {
+        "num": 5,
+        "caption": "Simulated MAC computing cell performance and measured energy efﬁciencies of the proposed CIM macro."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and summary of key performance metrics."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "supply_voltage": "0.9V",
+      "energy_efficiency": "106.85TOPS/W",
+      "target_model": "INT8/FP CNN",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "0.9V",
+    "data_path": "data/30.4/"
+  },
+  {
+    "id": "30.5",
+    "session": 30,
+    "title": "A 16nm 72kb 120.5TFLOPS/W Versatile-Format Dual-Representation Gain-Cell CIM Macro for General Purpose AI",
+    "title_zh": "16nm 72kb 120.5TFLOPS/W多格式双表示增益单元CIM宏：面向通用AI",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "16nm 72kb",
+          "meaning": "16nm工艺 72kb容量",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Versatile-Format",
+          "meaning": "多格式(MX-LNS-FP-INT)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Dual-Representation",
+          "meaning": "双表示(2补码+符号幅度)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Gain-Cell CIM",
+          "meaning": "增益单元存内计算",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "二补码与符号幅度表示的面积功耗权衡",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "固定MX块大小无法适配不同输入分布",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "对数数制CIM硬件开销大且跨格式复用难",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "极性转移权重稀疏增强器统一2C/SM计算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "输入分布感知MX量化器自适应选择块大小",
+        "type": "sw",
+        "color": "#2ecc71"
+      },
+      {
+        "text": "多格式自适应计算单元跨LNS/FP/INT复用",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "NTU",
+    "authors": "NTU",
+    "process_node": "16nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "120.5TFLOPS/W",
+    "target_model": "General AI (LLM/FFT/CNN)",
+    "application": "通用AI存内计算",
+    "innovations": [
+      {
+        "tag": "多格式MX-LNS-FP-INT CIM",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "双表示增益单元",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "极性偏移权重控制",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "增益单元",
+      "多格式",
+      "LNS",
+      "浮点",
+      "16nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "The proposed VF-DR GC-CIM and challenges of designing a general purposed CIM macro."
+      },
+      {
+        "num": 2,
+        "caption": "Proposed CiWSB with SGU, PSWC, and CiWSB function ﬂow. 521 30 MX-LNS-FP-INT formats and providing support for LNS."
+      },
+      {
+        "num": 3,
+        "caption": "Proposed IDA-MXQ structure and its operation."
+      },
+      {
+        "num": 4,
+        "caption": "Proposed MFA-CC structure and operation for versatile-format MAC support."
+      },
+      {
+        "num": 5,
+        "caption": "Simulated performance of proposed schemes."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and chip performance summary table."
+      }
+    ],
+    "metrics": {
+      "energy_efficiency": "120.5TFLOPS/W",
+      "technology": "16nm",
+      "target_model": "General AI (LLM/FFT/CNN)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/30.5/"
+  },
+  {
+    "id": "30.6",
+    "session": 30,
+    "title": "A 16Mb 166.8TOPS/W Near-Memory Phase-Domain-Computing Ferroelectric NAND Flash for Approximate Nearest Neighbor Search on Edge Devices",
+    "title_zh": "16Mb 166.8TOPS/W近存相域计算铁电NAND闪存：边缘设备近似最近邻搜索",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "16Mb",
+          "meaning": "16Mb存储容量",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Near-Memory Phase-Domain-Computing",
+          "meaning": "近存相域计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Ferroelectric NAND Flash",
+          "meaning": "铁电NAND闪存(FeNAND)",
+          "color": "#e67e22",
+          "type": "hw-circuit"
+        },
+        {
+          "text": "Approximate Nearest Neighbor Search",
+          "meaning": "近似最近邻搜索(ANNS)",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "NAND小单元间距限制近存计算单元面积和功耗",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "位线大电容导致读出能量延迟积过高",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "无法支持多比特有符号稀疏向量搜索",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "相位域计算单元紧邻BEOL FeNAND阵列",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "充放电交织感知与自动极性切换放大器",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "多比特符号感知PDC与稀疏感知输入处理",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Peking Univ.",
+    "authors": "Peking Univ.",
+    "process_node": "",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "166.8TOPS/W",
+    "target_model": "ANNS (Vector Search)",
+    "application": "边缘向量搜索",
+    "innovations": [
+      {
+        "tag": "近存相域计算FeNAND",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "充放电交替读出",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "图基ANNS加速",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "FeNAND",
+      "近存计算",
+      "ANNS",
+      "向量搜索",
+      "铁电",
+      "边缘"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Challenges for developing NMC NAND for ANNS and the presented 16Mb HZO-based NM-PDC FeNAND."
+      },
+      {
+        "num": 2,
+        "caption": "Structure of the NM-PDC FeNAND, the computing ﬂow for ANNS, and vector dimension optimization."
+      },
+      {
+        "num": 3,
+        "caption": "Structure and operation of the APS-SA with CDI-sensing scheme for FeNAND readout."
+      },
+      {
+        "num": 4,
+        "caption": "Structure and operation of the NM-PDC Units, including SA-IPVU, MS- PDCU, and the SDCU."
+      },
+      {
+        "num": 5,
+        "caption": "Measurement results of the fabricated NM-PDC FeNAND chip."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison with previous works on phase domain MAC units and IMC"
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and chip performance summary."
+      }
+    ],
+    "metrics": {
+      "energy_efficiency": "166.8TOPS/W",
+      "throughput": "471.0GOPS",
+      "target_model": "ANNS (Vector Search)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/30.6/"
+  },
+  {
+    "id": "30.7",
+    "session": 30,
+    "title": "A 1.2GHz 12.77GB/s/mm² 3D Two-DRAM-One-Logic Process-Near-Memory Chip for Edge LLM Applications",
+    "title_zh": "1.2GHz 12.77GB/s/mm² 3D两层DRAM+一层逻辑近存芯片：边缘LLM应用",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "1.2GHz",
+          "meaning": "1.2GHz工作频率",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "3D Two-DRAM-One-Logic",
+          "meaning": "3D堆叠两层DRAM一层逻辑",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Process-Near-Memory",
+          "meaning": "近存处理(PNM)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Edge LLM",
+          "meaning": "边缘端大语言模型",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "边缘LLM小批量推理受限于内存带宽瓶颈",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "DRAM工艺内集成计算逻辑能力受限",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "近存计算芯片难以兼容现有主机平台",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "3D混合键合与mini-TSV实现高带宽密度互连",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "逻辑与DRAM分离的两层DRAM一层逻辑架构",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "DDR4兼容接口与DMA辅助近存数据通路",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "Samsung",
+    "authors": "Samsung",
+    "process_node": "28nm CMOS",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "12.77GB/s/mm²",
+    "target_model": "LLM (Edge)",
+    "application": "边缘LLM推理(PNM)",
+    "innovations": [
+      {
+        "tag": "3D 2-DRAM-1-Logic堆叠",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "混合键合+mini-TSV互连",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "1GB片上DRAM容量",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "PNM",
+      "3D堆叠",
+      "DRAM",
+      "LLM",
+      "边缘",
+      "混合键合"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Client-side LLM application challenges and the presented 3D integrated near-DRAM computing design."
+      },
+      {
+        "num": 2,
+        "caption": "Overall design architecture and the extended DDR4 command list. 525 30 show that the 3D near-memory architecture substantially reduces memory latency, beneﬁting latency-sensitive edge LLM workloads."
+      },
+      {
+        "num": 3,
+        "caption": "Datapath and access timing for 3D DRAM, and dataﬂow and performance test for GEMM."
+      },
+      {
+        "num": 4,
+        "caption": "Measurement system architecture and 3D DRAM measurement results."
+      },
+      {
+        "num": 5,
+        "caption": "D integration details, area and power breakdown, and design measurements."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison with prior works."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrographs and design speciﬁcations."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm CMOS",
+      "frequency_mhz": "1200",
+      "energy_efficiency": "12.77GB/s/mm²",
+      "throughput": "1.2TFLOPS",
+      "target_model": "LLM (Edge)",
+      "source_figure": "fig_7"
+    },
+    "frequency_mhz": "1200",
+    "data_path": "data/30.7/"
+  },
+  {
+    "id": "30.8",
+    "session": 30,
+    "title": "A 16nm 1Mb 1-to-8b-Configurable 444.21TOPS/W Fully Digital SRAM Compute-In-Memory Macro for Hybrid SNN-CNN Models",
+    "title_zh": "16nm 1Mb 1~8b可配置444.21TOPS/W全数字SRAM存内计算宏：混合SNN-CNN模型",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "16nm 1Mb",
+          "meaning": "16nm工艺 1Mb容量",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "1-to-8b-Configurable",
+          "meaning": "1~8位精度可配置",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "444.21TOPS/W",
+          "meaning": "能效444.21TOPS/W(SNN模式)",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Fully Digital SRAM CIM",
+          "meaning": "全数字SRAM存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Hybrid SNN-CNN",
+          "meaning": "混合脉冲-卷积神经网络",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "SNN与CNN双模式支持带来额外硬件开销",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "部分和存储与权重更新之间的面积能耗权衡",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "单一膜电位动态模型限制SNN模型灵活性",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "SNN-CNN共享MAC电路的紧凑可重构架构",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "部分和存储与权重复用优化数据映射方案",
+        "type": "sw",
+        "color": "#2ecc71"
+      },
+      {
+        "text": "支持IF/LIF/IQIF多模式数字膜电位单元",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "TSMC",
+    "authors": "TSMC",
+    "process_node": "16nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "444.21TOPS/W",
+    "target_model": "SNN-CNN Hybrid",
+    "application": "混合SNN-CNN边缘AI",
+    "innovations": [
+      {
+        "tag": "SNN-CNN可重构全数字CIM",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "部分和-权重复用数据映射",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "自适应模型精度选择",
+        "type": "co-design"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "SRAM",
+      "SNN",
+      "CNN",
+      "混合模型",
+      "16nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Motivation and challenges for hybrid SNN-CNN SRAM-CIM."
+      },
+      {
+        "num": 2,
+        "caption": "Structure of proposed SRAM-DCIM macro and CFD-SC-RC operation. 527 30 [7] H. Fujiwara et al., “A 3nm, 32.5TOPS/W, 55.0TOPS/mm2 and 3.78Mb/mm2 Fully- Digital Compute-in-Memory Macro Supporting INT12 × INT12 with a Parallel-MAC Architecture and Foundry 6T-SRAM Bit Cell,” ISSCC, pp."
+      },
+      {
+        "num": 3,
+        "caption": "CMDM-LCC and DM-MPDBU structure and operation."
+      },
+      {
+        "num": 4,
+        "caption": "PS-WR-ODM operational concept."
+      },
+      {
+        "num": 5,
+        "caption": "Simulated performance of proposed schemes."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and position chart."
+      },
+      {
+        "num": 7,
+        "caption": "Die micrograph and performance summary table."
+      }
+    ],
+    "metrics": {
+      "technology": "16nm",
+      "sram_kb": "2kb SRAM",
+      "energy_efficiency": "444.21TOPS/W",
+      "target_model": "SNN-CNN Hybrid",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/30.8/"
+  },
+  {
+    "id": "30.9",
+    "session": 30,
+    "title": "A 147TOPS/W 250TOPS/mm² Fully Synthesizable Digital Compute-in-Memory Accelerator Supporting INT8×INT8 in Intel 18A",
+    "title_zh": "147TOPS/W 250TOPS/mm²全可综合数字存内计算加速器：Intel 18A工艺INT8×INT8",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "147TOPS/W 250TOPS/mm²",
+          "meaning": "能效147TOPS/W 面积效率250TOPS/mm²",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Fully Synthesizable",
+          "meaning": "全可综合(标准单元)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Digital Compute-in-Memory",
+          "meaning": "数字存内计算",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Intel 18A",
+          "meaning": "Intel 18A先进工艺",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "零点量化扩展至9比特增加面积与功耗",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "Booth编码器开销限制低位宽下功耗收益",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "CIM中权重存储面积占比过大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "无符号转有符号映射将9b乘法降至8b",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "权重驻留Booth编码复用摊销编码器开销",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "高密度可中断12T多比特锁存器存储单元",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "Intel",
+    "authors": "Intel",
+    "process_node": "Intel 18A",
+    "die_area_mm2": "0.0856",
+    "power_mw": "6.1",
+    "energy_efficiency": "147TOPS/W",
+    "target_model": "INT8 DNN",
+    "application": "全可综合AI加速器",
+    "innovations": [
+      {
+        "tag": "全可综合数字CIM",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "Booth编码静态权重",
+        "type": "hw-circuit"
+      },
+      {
+        "tag": "Intel 18A工艺验证",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "CIM",
+      "可综合",
+      "Intel 18A",
+      "Booth",
+      "INT8",
+      "数字"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "DCiM accelerator organization supporting zero-point quantized 8b unsigned/ signed activation and weights."
+      },
+      {
+        "num": 2,
+        "caption": "Radix-4 Booth encoded weights, interruptible 12T multibit latch storage with static 2:1 multiplexor read, S-bit compute, and modiﬁed Booth encoder."
+      },
+      {
+        "num": 3,
+        "caption": "Intrinsic zero-point compute with unsigned-signed mapping within the DCiM dataﬂow."
+      },
+      {
+        "num": 4,
+        "caption": "Area/power breakdown and weight storage area savings."
+      },
+      {
+        "num": 5,
+        "caption": "Frequency, power, and energy efﬁciency measurements in Intel 18A technology."
+      },
+      {
+        "num": 6,
+        "caption": "Power, performance, area summary, and comparison to prior work."
+      },
+      {
+        "num": 7,
+        "caption": "Packaged Intel 18A test-chip photograph, die dimensions, and performance summary table."
+      }
+    ],
+    "metrics": {
+      "die_area_mm2": "0.0856",
+      "supply_voltage": "1.1V",
+      "frequency_mhz": "2620",
+      "power_mw": "6.1",
+      "energy_efficiency": "147TOPS/W",
+      "throughput": "21.5TOPS,",
+      "technology": "Intel 18A",
+      "target_model": "INT8 DNN",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "1.1V",
+    "frequency_mhz": "2620",
+    "data_path": "data/30.9/"
+  },
+  {
+    "id": "31.1",
+    "session": 31,
+    "title": "A 14.08-to-135.69Token/s ReRAM-on-Logic Stacked Outlier-Free Large-Language-Model Accelerator with Adaptive Parallel Speculative Decoding",
+    "title_zh": "14.08~135.69Token/s ReRAM-on-Logic堆叠无异常值LLM加速器：自适应并行投机解码",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "ReRAM-on-Logic",
+          "meaning": "将ReRAM直接堆叠在逻辑芯片上",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Outlier-Free",
+          "meaning": "消除激活异常值",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "LLM Accelerator",
+          "meaning": "大语言模型加速器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Adaptive Parallel Speculative Decoding",
+          "meaning": "自适应并行投机解码",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "FWHT旋转阵列面积开销大难以部署",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "边缘片上存储不足导致DLM频繁访存",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "长草稿长度下投机解码拒绝率过高",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "分解FWHT局部旋转单元消除激活异常值",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "ReRAM堆叠近存处理与块向量量化",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "自适应并行投机解码与乱序调度器",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "HKUST",
+    "authors": "HKUST",
+    "process_node": "55nm",
+    "die_area_mm2": "25",
+    "power_mw": "",
+    "energy_efficiency": "14.08-135.69 token/s",
+    "target_model": "LLaMA-7B",
+    "application": "LLM推理",
+    "innovations": [
+      {
+        "tag": "ReRAM-on-Logic 3D堆叠",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "自适应并行投机解码",
+        "type": "sw"
+      },
+      {
+        "tag": "分解FWHT无异常值量化",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "ReRAM",
+      "CIM",
+      "3D堆叠",
+      "投机解码",
+      "量化"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Challenges raised by target and draft large language model (LLM) in speculative decoding (SD) and proposed solutions."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture and three main features of the LLM accelerator with bumping-based ReRAM die on logic wafer face-to-face stacking technology."
+      },
+      {
+        "num": 3,
+        "caption": "Local rotation unit (LRU) with proposed decomposed Fast Walsh- Hadamard Transform (FWHT) for outlier-free low-bit target LLM quantization."
+      },
+      {
+        "num": 4,
+        "caption": "ReRAM-stacked processing-near-memory (RS-PNM) architecture with blockwise vector quantization (BVQ) to avoid draft LLM external memory access (EMA)."
+      },
+      {
+        "num": 5,
+        "caption": "Adaptive parallel speculative decoding (APSD) with workload-decoupled out-of-order scheduler (WDOS) to achieve intra-chip parallel draft-and-verify with high resource utilization."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison with state-of-the-art LLM accelerators."
+      },
+      {
+        "num": 7,
+        "caption": "Die photos, speciﬁcations, 4-chip system, SEM/TEM images of the ReRAM-on-logic stacking interface/ReRAM chip, and ReRAM resistance distribution curve."
+      }
+    ],
+    "metrics": {
+      "technology": "55nm",
+      "sram_kb": "3.43MB SRAM",
+      "power_mw": "49.54",
+      "energy_efficiency": "14.08-135.69 token/s",
+      "throughput": "2.33TOPS",
+      "die_area_mm2": "25",
+      "target_model": "LLaMA-7B",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.1/"
+  },
+  {
+    "id": "31.2",
+    "session": 31,
+    "title": "Revolver: Low-Bit GenAI Accelerator for Distilled-Model and CoT with Phase-Aware-Quantization and Mixed-Precision MAC",
+    "title_zh": "Revolver：低位GenAI加速器(蒸馏模型+CoT)：阶段感知量化+混合精度MAC",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Revolver",
+          "meaning": "加速器代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Low-Bit GenAI",
+          "meaning": "低位宽生成式AI",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Distilled-Model and CoT",
+          "meaning": "蒸馏模型与思维链推理",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Phase-Aware-Quantization",
+          "meaning": "阶段感知量化",
+          "color": "#9b59b6",
+          "type": "co-design"
+        },
+        {
+          "text": "Mixed-Precision MAC",
+          "meaning": "混合精度乘累加",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "多阶段精度需双份权重存储开销大",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "非2幂通道旋转需矩阵乘开销高",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "非对称组量化反量化FP逻辑面积大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "阶段感知精度选择与残差编码压缩权重",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "局部旋转谐波对齐置换降低旋转开销",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "切片整数反量化单元实现高效去量化",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "LLM + Diffusion",
+    "application": "生成式AI边缘推理",
+    "innovations": [
+      {
+        "tag": "阶段感知量化(PAQ)",
+        "type": "co-design"
+      },
+      {
+        "tag": "混合精度MAC引擎",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "蒸馏模型+CoT支持",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "GenAI",
+      "量化",
+      "CoT",
+      "蒸馏",
+      "混合精度",
+      "LLM"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "GenAI model for edge and hardware challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall chip architecture of proposed Revolver. 535 31 without over-width datapaths."
+      },
+      {
+        "num": 3,
+        "caption": "Concept of PAPS and MPRE with MP-Loader."
+      },
+      {
+        "num": 4,
+        "caption": "Concept and implementation of LR-HAP and PUB."
+      },
+      {
+        "num": 5,
+        "caption": "Details of quantization method and the SIDU."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "20.25",
+      "energy_efficiency": "13.73TOPS/W",
+      "throughput": "32Gb/s",
+      "target_model": "LLM + Diffusion",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.2/"
+  },
+  {
+    "id": "31.3",
+    "session": 31,
+    "title": "A 51.6μJ/Token Subspace-Rotation-Based Dual-Quantized Large-Language-Model Accelerator with Fused INT Pipeline",
+    "title_zh": "51.6μJ/Token子空间旋转双量化LLM加速器：融合INT流水线",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "51.6μJ/Token",
+          "meaning": "每token能耗51.6微焦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Subspace-Rotation",
+          "meaning": "子空间旋转(消除异常值)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Dual-Quantized",
+          "meaning": "权重+激活双量化",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Fused INT Pipeline",
+          "meaning": "融合整数流水线",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "旋转算子占用PE阵列导致性能下降",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "组缩放和激活函数频繁中断INT流水",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "位串行MAC利用率低能效不足",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "子空间Hadamard变换独立于PE实现旋转",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "融合缩放-激活单元统一INT数据通路",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "重排位切片LUT引擎提升精度可扩展能效",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "51.6μJ/token",
+    "target_model": "LLaMA-7B/13B",
+    "application": "LLM双量化推理",
+    "innovations": [
+      {
+        "tag": "子空间旋转量化",
+        "type": "sw"
+      },
+      {
+        "tag": "融合INT端到端流水线",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "双量化(权重+激活)加速",
+        "type": "co-design"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "量化",
+      "旋转",
+      "INT",
+      "流水线",
+      "Hadamard"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Rotation-based dual-quantized LLM inference and three main challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the LLM accelerator. 537 31 the-art (SOTA) works focus on conventional transformer models or quantization deployment [11-14], our chip accelerates rotation-based dual-quantized LLMs with negligible accuracy loss (e.g., 0.56 at LLaMA2-7B), achieving 32.6% system-level energy savings compared to the SOTA on LLaMA2-7B [11]."
+      },
+      {
+        "num": 3,
+        "caption": "Subspace Hadamard quantization for rotation and its hardware details. Figure 31.3.4: Fused scale-activation for INT data path and its implementation."
+      },
+      {
+        "num": 5,
+        "caption": "Rearranged bit-slice LUT computation for precision ﬂexible PE."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison with the state-of-the-art accelerators."
+      },
+      {
+        "num": 7,
+        "caption": "Chip summary and detailed performance sheet."
+      }
+    ],
+    "metrics": {
+      "energy_efficiency": "51.6μJ/token",
+      "technology": "28nm",
+      "target_model": "LLaMA-7B/13B",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.3/"
+  },
+  {
+    "id": "31.4",
+    "session": 31,
+    "title": "VARSA: A Visual Autoregressive Generation Accelerator Using Performance-Scalable Multi-Precision PE-LUT and Sparse Attention",
+    "title_zh": "VARSA：视觉自回归生成加速器(性能可扩展多精度PE-LUT+稀疏注意力)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "VARSA",
+          "meaning": "加速器代号",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Visual Autoregressive",
+          "meaning": "视觉自回归生成",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Multi-Precision PE-LUT",
+          "meaning": "多精度处理单元查找表",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "Sparse Attention",
+          "meaning": "稀疏注意力",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "VAR逐步插值导致计算量急剧增长",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "激活数据动态范围宽精度需求多变",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "注意力KV缓存访存开销占比超60%",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "性能可扩展混合PE-LUT核适配计算需求",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "运行时分布感知多精度并行处理",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "基于网格相似性的注意力图压缩方案",
+        "type": "sw",
+        "color": "#2ecc71"
+      }
+    ],
+    "affiliation": "Tsinghua",
+    "authors": "Tsinghua Univ.",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "",
+    "target_model": "VAR (Visual Autoregressive)",
+    "application": "视觉自回归图像生成",
+    "innovations": [
+      {
+        "tag": "性能可扩展多精度PE-LUT",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "稀疏注意力加速",
+        "type": "sw"
+      },
+      {
+        "tag": "VAR专用数据流",
+        "type": "hw-arch"
+      }
+    ],
+    "tags": [
+      "VAR",
+      "视觉自回归",
+      "LUT",
+      "稀疏",
+      "注意力",
+      "图像生成"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Architecture and deployment challenges of visual autoregressive model. Figure 31.4.2: Overall chip architecture of VARSA."
+      },
+      {
+        "num": 3,
+        "caption": "Performance-scalable hybrid PE-LUT core with efﬁcient dual-function LUTs."
+      },
+      {
+        "num": 4,
+        "caption": "Multi-precision parallel processing and efﬁcient multi-precision LUTs."
+      },
+      {
+        "num": 5,
+        "caption": "Inter-grid similarity in attention map and our compression scheme."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip photograph and more speciﬁcations."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "33.45TOPS/W",
+      "throughput": "0.435TOPS",
+      "target_model": "VAR (Visual Autoregressive)",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.4/"
+  },
+  {
+    "id": "31.5",
+    "session": 31,
+    "title": "SoulMate: A 9.8mW Mobile Intelligence System-on-Chip with Mixed-Rank Architecture for On-Device LLM Personalization",
+    "title_zh": "SoulMate：9.8mW移动智能SoC(混合秩架构实现设备端LLM个性化)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "SoulMate",
+          "meaning": "移动AI伴侣芯片",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "9.8mW",
+          "meaning": "超低功耗9.8毫瓦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Mixed-Rank Architecture",
+          "meaning": "混合秩架构",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "On-Device LLM Personalization",
+          "meaning": "设备端LLM个性化",
+          "color": "#9b59b6",
+          "type": "co-design"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "RAG增强上下文使预填充延迟超标",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "用户反馈微调中冗余梯度计算耗能高",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "MXFP格式位稀疏性低计算功耗占比大",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "混合秩Token处理按重要性分配计算量",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "相似性感知序列处理跳过冗余梯度",
+        "type": "co-design",
+        "color": "#9b59b6"
+      },
+      {
+        "text": "布尔原语MX张量核降低浮点MAC功耗",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "9.8",
+    "energy_efficiency": "9.8mW",
+    "target_model": "LLaMA3.2-1B",
+    "application": "移动端LLM个性化",
+    "innovations": [
+      {
+        "tag": "混合秩推理/微调架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "设备端RAG+LoRA个性化",
+        "type": "co-design"
+      },
+      {
+        "tag": "超低功耗移动LLM SoC",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "移动端",
+      "个性化",
+      "LoRA",
+      "RAG",
+      "低功耗"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Proposed mobile intelligence system and its design challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture. 541 31 [12-14]. Also, integrating SMU, MRNE, and BPMX reduces UA energy by 82.9%."
+      },
+      {
+        "num": 3,
+        "caption": "Mixed-rank token processing with TMU and MRNE for UI latency reduction."
+      },
+      {
+        "num": 4,
+        "caption": "Similarity-aware sequence processing with SMU for UA energy reduction."
+      },
+      {
+        "num": 5,
+        "caption": "BPMX tensor core for peak power reduction."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip photograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "die_area_mm2": "20.25",
+      "sram_kb": "3.9MB \nof on-chip SRAM",
+      "power_mw": "9.8",
+      "energy_efficiency": "9.8mW",
+      "throughput": "2.2TFLOPS",
+      "target_model": "LLaMA3.2-1B",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.5/"
+  },
+  {
+    "id": "31.6",
+    "session": 31,
+    "title": "Tri-Oracle: A 17.78μJ/Token Vision-Language Model Accelerator with Token-Attention-Weight Redundancy Prediction",
+    "title_zh": "Tri-Oracle：17.78μJ/Token视觉语言模型加速器(Token-注意力-权重三重冗余预测)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "Tri-Oracle",
+          "meaning": "三重预言(三层冗余预测)",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "17.78μJ/Token",
+          "meaning": "每token能耗17.78微焦",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Vision-Language Model",
+          "meaning": "视觉语言模型(VLM)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Token-Attention-Weight Redundancy",
+          "meaning": "Token/注意力/权重三层冗余",
+          "color": "#9b59b6",
+          "type": "co-design"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "高分辨率图像导致VLM令牌数量爆炸",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "注意力头冗余且GQA负载不均衡",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "门控FFN产生大量近零值浪费计算",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "基于符号位相似度的运行时令牌合并",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "注意力头类型预测与集群负载均衡",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "离群符号位近零值预测跳过FFN计算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "17.78μJ/token",
+    "target_model": "VLM (ViT + LLM)",
+    "application": "视觉语言模型推理",
+    "innovations": [
+      {
+        "tag": "三重冗余预测(Token/Attn/Weight)",
+        "type": "co-design"
+      },
+      {
+        "tag": "自适应注意力头负载均衡",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "门控FFN权重跳过",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "VLM",
+      "视觉语言",
+      "冗余预测",
+      "注意力",
+      "GQA",
+      "多模态"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Redundancies in Vision-Language Models (VLMs) and proposed solutions for efﬁcient on-device VLMs."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of Tri-Oracle. 543 31"
+      },
+      {
+        "num": 3,
+        "caption": "Details of the Token Merging Unit (TMU) for token-level redundancy."
+      },
+      {
+        "num": 4,
+        "caption": "Details of the Attention Head Prediction Unit (AHPU) and workload balancing, for attention-level redundancy."
+      },
+      {
+        "num": 5,
+        "caption": "Details of the Strip-wise SNZV Computation Unit (SSCU) for weight-level redundancy."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and performance comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip photograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "supply_voltage": "1.1V",
+      "frequency_mhz": "580",
+      "energy_efficiency": "17.78μJ/token",
+      "target_model": "VLM (ViT + LLM)",
+      "source_figure": "fig_7"
+    },
+    "supply_voltage": "1.1V",
+    "frequency_mhz": "580",
+    "data_path": "data/31.6/"
+  },
+  {
+    "id": "31.7",
+    "session": 31,
+    "title": "LUT-SSM: A 99.3TFLOPS/W LUT-Based State-Space Model Accelerator Using Energy-Efficient Element-Wise Layer Fusion",
+    "title_zh": "LUT-SSM：99.3TFLOPS/W基于LUT的状态空间模型加速器(高效逐元素层融合)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "LUT-SSM",
+          "meaning": "基于查找表的SSM加速器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "99.3TFLOPS/W",
+          "meaning": "能效99.3TFLOPS/W",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "LUT-Based",
+          "meaning": "查找表计算(替代乘法)",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        },
+        {
+          "text": "State-Space Model",
+          "meaning": "状态空间模型(Mamba等)",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "Element-Wise Layer Fusion",
+          "meaning": "逐元素层融合",
+          "color": "#e74c3c",
+          "type": "hw-arch"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "多对一LUT架构面积冗余写入低效",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "SSM隐状态更新需顺序FP逐元素操作",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "列式量化引入额外缩放乘法开销",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "多对多LUT-ACC架构实现空间LUT复用",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "基于LUT的逐元素层融合减少数据搬移",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "缩放反映LUT生成器支持列式量化",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "99.3TFLOPS/W",
+    "target_model": "Mamba/Samba/Hymba",
+    "application": "SSM/Mamba模型推理",
+    "innovations": [
+      {
+        "tag": "一对一LUT-ACC架构",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "逐元素层融合",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "列量化缩放支持",
+        "type": "sw"
+      }
+    ],
+    "tags": [
+      "SSM",
+      "Mamba",
+      "LUT",
+      "状态空间",
+      "层融合",
+      "能效"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Motivation and challenges in designing a state-space model (SSM) accelerator with weight-only quantization."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the LUT-SSM with many-to-many LUT-based PEs (MM-LPEs) supporting INT–FP matrix multiplication."
+      },
+      {
+        "num": 3,
+        "caption": "LUT reuse scheme of MM-LPE, and LUT stationary dataﬂows for different weight shapes in the SSM block."
+      },
+      {
+        "num": 4,
+        "caption": "LUT-based layer fusion and reusable elementwise multiplications for two FP–FP operation types in the MM-LPE."
+      },
+      {
+        "num": 5,
+        "caption": "Implementation details of the scale-reﬂected LUT generator to support LUT-friendly column-wise quantization, and mixed-precision evaluation."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results and comparison table."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary of LUT-SSM, including a comparison with previous Mamba accelerators."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "99.3TFLOPS/W",
+      "target_model": "Mamba/Samba/Hymba",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.7/"
+  },
+  {
+    "id": "31.8",
+    "session": 31,
+    "title": "A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685μs/Token Latency for Billion-Parameter Models",
+    "title_zh": "28nm投机解码LLM处理器：十亿参数模型105~685μs/Token延迟",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "28nm",
+          "meaning": "28nm工艺",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Speculative-Decoding",
+          "meaning": "投机解码",
+          "color": "#2ecc71",
+          "type": "sw"
+        },
+        {
+          "text": "LLM Processor",
+          "meaning": "大语言模型处理器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "105-to-685μs/Token",
+          "meaning": "每token延迟105~685微秒",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Billion-Parameter",
+          "meaning": "十亿参数量级",
+          "color": "#2ecc71",
+          "type": "sw"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "草稿模型重复令牌产生指数位冗余",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "目标模型含大量低效权重与KV缓存",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "草稿-验证串行执行导致硬件利用率低",
+        "related_idea_idx": 2
+      }
+    ],
+    "ideas": [
+      {
+        "text": "指数双重复用MAC节省浮点运算能耗",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "草稿反向传播指导目标模型混合精度",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "草稿提前启动实现草稿验证并行计算",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      }
+    ],
+    "affiliation": "KAIST",
+    "authors": "KAIST",
+    "process_node": "28nm",
+    "die_area_mm2": "",
+    "power_mw": "",
+    "energy_efficiency": "105-685μs/token",
+    "target_model": "TinyLLaMA 1B / Llama 13B",
+    "application": "LLM投机解码推理",
+    "innovations": [
+      {
+        "tag": "指数去重共享MAC",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "树注意力剪枝",
+        "type": "sw"
+      },
+      {
+        "tag": "投机解码专用处理器",
+        "type": "system"
+      }
+    ],
+    "tags": [
+      "LLM",
+      "投机解码",
+      "指数去重",
+      "树注意力",
+      "草稿模型",
+      "28nm"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Speculative decoding LLM achieves performance advantages with rapid drafting and parallel veriﬁcation, but suffers from three challenges."
+      },
+      {
+        "num": 2,
+        "caption": "Overall architecture of the proposed energy-efﬁcient speculative decoding LLM processor for billion-scale LLM applications with three key features."
+      },
+      {
+        "num": 3,
+        "caption": "Exponent Dual-Reuse MAC (EDRM) for saving MAC energy by reusing exponent processing of semantically identical, but positionally distinct tokens."
+      },
+      {
+        "num": 4,
+        "caption": "Draft Back-propagation Target Mixed-precision (DBTM) for reducing cost of the inefﬁcient weights and KV cache identiﬁed by gradients of draft model."
+      },
+      {
+        "num": 5,
+        "caption": "Draft Early-start Parallel Compute (DEPC) for improving hardware utilization by early start draft decoding in parallel with target veriﬁcation."
+      },
+      {
+        "num": 6,
+        "caption": "Measurement results of the SD LLM processor for billion-scale models and performance comparison with state-of-the-art LLM processors."
+      },
+      {
+        "num": 7,
+        "caption": "Chip micrograph and performance summary."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm",
+      "energy_efficiency": "105-685μs/token",
+      "target_model": "TinyLLaMA 1B / Llama 13B",
+      "source_figure": "fig_7"
+    },
+    "data_path": "data/31.8/"
+  },
+  {
+    "id": "31.9",
+    "session": 31,
+    "title": "ALPhA-Vision: A Real-Time Always-On Vision Processor with 787μs Face Detection Latency in <5mW",
+    "title_zh": "ALPhA-Vision：实时常开视觉处理器(人脸检测787μs延迟 <5mW功耗)",
+    "title_annotation": {
+      "segments": [
+        {
+          "text": "ALPhA-Vision",
+          "meaning": "常开低功耗视觉加速器",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "Always-On",
+          "meaning": "常开(持续运行)",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "787μs Face Detection",
+          "meaning": "人脸检测延迟787微秒",
+          "color": "#3498db",
+          "type": "system"
+        },
+        {
+          "text": "<5mW",
+          "meaning": "功耗低于5毫瓦",
+          "color": "#3498db",
+          "type": "system"
+        }
+      ]
+    },
+    "challenges": [
+      {
+        "text": "GPU边缘SoC功耗过高无法常开视觉",
+        "related_idea_idx": 0
+      },
+      {
+        "text": "非GEMM操作成为端到端推理延迟瓶颈",
+        "related_idea_idx": 1
+      },
+      {
+        "text": "高性能工艺SRAM漏电主导常开功耗",
+        "related_idea_idx": 2
+      },
+      {
+        "text": "模型过大需外部存储访问增加功耗",
+        "related_idea_idx": 3
+      }
+    ],
+    "ideas": [
+      {
+        "text": "竞速休眠低功耗子系统独立于主SoC",
+        "type": "system",
+        "color": "#3498db"
+      },
+      {
+        "text": "近存储向量处理器加速非GEMM操作",
+        "type": "hw-arch",
+        "color": "#e74c3c"
+      },
+      {
+        "text": "细粒度SRAM分组电源门控降低漏电",
+        "type": "hw-circuit",
+        "color": "#e67e22"
+      },
+      {
+        "text": "HW/SW协同设计QAT实现全片上执行",
+        "type": "co-design",
+        "color": "#9b59b6"
+      }
+    ],
+    "affiliation": "Apple",
+    "authors": "Apple",
+    "process_node": "28nm CMOS",
+    "die_area_mm2": "",
+    "power_mw": "5",
+    "energy_efficiency": "<5mW",
+    "target_model": "CNN + ViT",
+    "application": "常开视觉(人脸检测/手势)",
+    "innovations": [
+      {
+        "tag": "常开低功耗视觉子系统",
+        "type": "system"
+      },
+      {
+        "tag": "非GEMM操作硬件加速",
+        "type": "hw-arch"
+      },
+      {
+        "tag": "全栈编译器流程",
+        "type": "co-design"
+      }
+    ],
+    "tags": [
+      "常开视觉",
+      "低功耗",
+      "人脸检测",
+      "CNN",
+      "ViT",
+      "移动端"
+    ],
+    "figures": [
+      {
+        "num": 1,
+        "caption": "Motivation and high-level design principles for the ALPhA-Vision subsystem."
+      },
+      {
+        "num": 2,
+        "caption": "Block diagram of the ALPhA-Vision architecture. 549 31 using just 21% of active cycles."
+      },
+      {
+        "num": 3,
+        "caption": "Overview of power-saving features in the ALPhA-Vision subsystem."
+      },
+      {
+        "num": 4,
+        "caption": "The ALPhA-Vision application software ﬂow and impact of quantization of Yolov5 face detection."
+      },
+      {
+        "num": 5,
+        "caption": "ALPhA-Vision measurement results on end-to-end Yolov5 face detection at 60fps."
+      },
+      {
+        "num": 6,
+        "caption": "Comparison table. All measurements for this work report full system power, including leakage power."
+      },
+      {
+        "num": 7,
+        "caption": "Annotated die plot and evaluation summary of DNN inference kernels (50% weight/activation sparsity)."
+      }
+    ],
+    "metrics": {
+      "technology": "28nm CMOS",
+      "sram_kb": "2.125MB of SRAM",
+      "frequency_mhz": "359",
+      "power_mw": "5",
+      "energy_efficiency": "<5mW",
+      "throughput": "36GOPS",
+      "target_model": "CNN + ViT",
+      "source_figure": "fig_7"
+    },
+    "frequency_mhz": "359",
+    "data_path": "data/31.9/"
+  }
+]

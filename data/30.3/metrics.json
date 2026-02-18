@@ -1,0 +1,7 @@
+{
+  "energy_efficiency": "90.2TFLOPS/W",
+  "throughput": "14.74TOPS",
+  "technology": "22nm",
+  "target_model": "Mamba/Transformer/CNN",
+  "source_figure": "fig_7"
+}

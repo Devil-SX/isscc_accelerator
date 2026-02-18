@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.8.1",
+    "figure_num": 1,
+    "caption": "Overview of diffusion model evolution and challenges in area and utilization for efﬁcient deployment.",
+    "image_path": "images/2.8/fig_1.png"
+  },
+  {
+    "figure_id": "2.8.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of MADiC. 57 2 exceeds available space. For the DiCo model, enabling input preloading and concurrent resizing reduces resizer time by 41% and input loading time by 45%.",
+    "image_path": "images/2.8/fig_2.png"
+  },
+  {
+    "figure_id": "2.8.3",
+    "figure_num": 3,
+    "caption": "Design-time L1/L2 memory size optimization for minimizing SRAM cost.",
+    "image_path": "images/2.8/fig_3.png"
+  },
+  {
+    "figure_id": "2.8.4",
+    "figure_num": 4,
+    "caption": "Cross-loop data storage allocation and Write-over-Read (WoR) relaxation.",
+    "image_path": "images/2.8/fig_4.png"
+  },
+  {
+    "figure_id": "2.8.5",
+    "figure_num": 5,
+    "caption": "Activation-aware input preloading and concurrent resizing.",
+    "image_path": "images/2.8/fig_5.png"
+  },
+  {
+    "figure_id": "2.8.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/2.8/fig_6.png"
+  },
+  {
+    "figure_id": "2.8.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/2.8/fig_7.png"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "energy_efficiency": "98-134ms/step",
+  "throughput": "7.37TOPS",
+  "target_model": "DiT (Diffusion Transformer)",
+  "source_figure": "fig_7"
+}

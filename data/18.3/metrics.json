@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "die_area_mm2": "20.25",
+  "energy_efficiency": "122.1μJ/token",
+  "target_model": "MoE-SD LLM",
+  "source_figure": "fig_7"
+}

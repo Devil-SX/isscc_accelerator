@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.3.1",
+    "figure_num": 1,
+    "caption": "Conventional (CNV) design and clock-edge architecture (CEA) timing diagrams with a clock-gating circuit (CGC) and test-chip block diagram, containing the adaptive clock duty-cycle controller (DCC) and two NPU MXUs with CNV and CEA designs.",
+    "image_path": "images/10.3/fig_1.png"
+  },
+  {
+    "figure_id": "10.3.2",
+    "figure_num": 2,
+    "caption": "CEA dual-edge-triggered (DET) ﬂip-ﬂop (FF) and DET CGC circuit schematics. Q CKI CKB CKI CKB D NSHIFT SHIFT NSHIFT SHIFT SIN SIN CKB CKI CKB CKI CKI CLK CKB SHIFT NSHIFT SIN RST RST XNOR ENB ENI CLKIN ENI ENB EN ENB ENI ENI ENB ENB ENI XOR CKB CLKOUT CP CKB Proposed DET FF Input Mux Negative Latch Positive Latch Output Mux Latch #1 Latch #2 Proposed DET CGC CKI CKB nn1 RST RST CKI CKB pn1 RST RST nn2 pn2 clk_in clk_cnv CGC BIST CGC MAC1 MAC16 MAC Array #1 …...",
+    "image_path": "images/10.3/fig_2.png"
+  },
+  {
+    "figure_id": "10.3.3",
+    "figure_num": 3,
+    "caption": "DCC block diagram, consisting of the duty-cycle monitor (DCM), duty- cycle adjuster (DCA), and DCA adaptive control, and measured normalized CEA MXU throughput (TP) vs.",
+    "image_path": "images/10.3/fig_3.png"
+  },
+  {
+    "figure_id": "10.3.4",
+    "figure_num": 4,
+    "caption": "Measured MXU minimum VDD (VMIN) for CNV and CEA vs. TP, MXU VMIN distribution for CNV and CEA vs.",
+    "image_path": "images/10.3/fig_4.png"
+  },
+  {
+    "figure_id": "10.3.5",
+    "figure_num": 5,
+    "caption": "Measured MXU clock power vs. operating condition, MXU total dynamic power vs. workload, and CEA MXU total dynamic power reduction vs.",
+    "image_path": "images/10.3/fig_5.png"
+  },
+  {
+    "figure_id": "10.3.6",
+    "figure_num": 6,
+    "caption": "Measured distributions of CEA MXU total dynamic power reduction vs. operating condition for peak-performance and typical workloads across 40 parts while capturing the ΔVMIN impact for each part.",
+    "image_path": "images/10.3/fig_6.png"
+  },
+  {
+    "figure_id": "10.3.7",
+    "figure_num": 7,
+    "caption": "Test-chip microphotograph, characteristics, and comparisons of the SET FF vs. the proposed DET FF and the prior-art DET CGC [18] vs.",
+    "image_path": "images/10.3/fig_7.png"
+  }
+]

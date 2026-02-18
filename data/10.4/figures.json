@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.4.1",
+    "figure_num": 1,
+    "caption": "Block diagrams of conventional FDIVs and the proposed FDIV.",
+    "image_path": "images/10.4/fig_1.png"
+  },
+  {
+    "figure_id": "10.4.2",
+    "figure_num": 2,
+    "caption": "FDIV implementation details. 175 10 DLL and LMS measured results of 550 parts from corner-wafers.",
+    "image_path": "images/10.4/fig_2.png"
+  },
+  {
+    "figure_id": "10.4.3",
+    "figure_num": 3,
+    "caption": "False-locking prevention technique for wide-range digital DLL.",
+    "image_path": "images/10.4/fig_3.png"
+  },
+  {
+    "figure_id": "10.4.4",
+    "figure_num": 4,
+    "caption": "Measured phase-noise in integer- and fractional-N modes of operation.",
+    "image_path": "images/10.4/fig_4.png"
+  },
+  {
+    "figure_id": "10.4.5",
+    "figure_num": 5,
+    "caption": "Measured spurs and integrated jitter across fractional division factor (α) and supply voltage (top), measured IDACG and IDACD codes of 550 parts (bottom).",
+    "image_path": "images/10.4/fig_5.png"
+  },
+  {
+    "figure_id": "10.4.6",
+    "figure_num": 6,
+    "caption": "Performance summary and comparison with state-of-the art.",
+    "image_path": "images/10.4/fig_6.png"
+  },
+  {
+    "figure_id": "10.4.7",
+    "figure_num": 7,
+    "caption": "Die micrograph.",
+    "image_path": "images/10.4/fig_7.png"
+  }
+]

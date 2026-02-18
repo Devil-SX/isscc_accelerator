@@ -1,0 +1,8 @@
+{
+  "technology": "28nm",
+  "supply_voltage": "1.1V",
+  "frequency_mhz": "580",
+  "energy_efficiency": "17.78μJ/token",
+  "target_model": "VLM (ViT + LLM)",
+  "source_figure": "fig_7"
+}

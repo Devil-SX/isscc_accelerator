@@ -1,0 +1,10 @@
+{
+  "technology": "28nm CMOS",
+  "sram_kb": "2.125MB of SRAM",
+  "frequency_mhz": "359",
+  "power_mw": "5",
+  "energy_efficiency": "<5mW",
+  "throughput": "36GOPS",
+  "target_model": "CNN + ViT",
+  "source_figure": "fig_7"
+}

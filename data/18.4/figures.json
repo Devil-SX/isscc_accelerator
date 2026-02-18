@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "18.4.1",
+    "figure_num": 1,
+    "caption": "Motivation of edge perceptual SoC with high energy efﬁciency, privacy and adaptability (top), challenges (middle), and our solutions in SpikeRAM (bottom).",
+    "image_path": "images/18.4/fig_1.png"
+  },
+  {
+    "figure_id": "18.4.2",
+    "figure_num": 2,
+    "caption": "Architecture of SpikeRAM system (top), and event-driven convolution workﬂow in EVS-sCNN core (bottom).",
+    "image_path": "images/18.4/fig_2.png"
+  },
+  {
+    "figure_id": "18.4.3",
+    "figure_num": 3,
+    "caption": "System diagram of sFC-OCL core (top), event ﬁlter, shift-adder with weighed spikes and conﬁgurable neurons (top right), and handshake-based pipeline (bottom).",
+    "image_path": "images/18.4/fig_3.png"
+  },
+  {
+    "figure_id": "18.4.4",
+    "figure_num": 4,
+    "caption": "e-OTBP on-chip learning algorithm and ternary gradient implementations (top), and gray-code dataﬂow with weight updating and optional learning in MRAM (bottom).",
+    "image_path": "images/18.4/fig_4.png"
+  },
+  {
+    "figure_id": "18.4.5",
+    "figure_num": 5,
+    "caption": "Event-based signature veriﬁcation system based on SpikeRAM for few- shot on-chip learning (top), and chip measurement results (bottom).",
+    "image_path": "images/18.4/fig_5.png"
+  },
+  {
+    "figure_id": "18.4.6",
+    "figure_num": 6,
+    "caption": "Comparison with state-of-the-art neuromorphic processors.",
+    "image_path": "images/18.4/fig_6.png"
+  },
+  {
+    "figure_id": "18.4.7",
+    "figure_num": 7,
+    "caption": "Summary table (top left), voltage characteristics and chip micrograph (top right), and measurement system (bottom).",
+    "image_path": "images/18.4/fig_7.png"
+  }
+]

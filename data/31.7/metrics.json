@@ -1,0 +1,6 @@
+{
+  "technology": "28nm",
+  "energy_efficiency": "99.3TFLOPS/W",
+  "target_model": "Mamba/Samba/Hymba",
+  "source_figure": "fig_7"
+}

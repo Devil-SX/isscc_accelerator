@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "18.1.1",
+    "figure_num": 1,
+    "caption": "Scaling perspectives for 3D-stacking technologies and proposed routed optical links on interposer.",
+    "image_path": "images/18.1/fig_1.png"
+  },
+  {
+    "figure_id": "18.1.2",
+    "figure_num": 2,
+    "caption": "Rx front-end with routing using resonance shift and dynamic threshold adjustment during preamble.",
+    "image_path": "images/18.1/fig_2.png"
+  },
+  {
+    "figure_id": "18.1.3",
+    "figure_num": 3,
+    "caption": "Frame decoding with data alignment on end of preamble, and dynamic remapping on 1 to 6 wavelengths.",
+    "image_path": "images/18.1/fig_3.png"
+  },
+  {
+    "figure_id": "18.1.4",
+    "figure_num": 4,
+    "caption": "Performance measurements up to 4Gbaud showing BER for optical data, optical clock and digital SerDes.",
+    "image_path": "images/18.1/fig_4.png"
+  },
+  {
+    "figure_id": "18.1.5",
+    "figure_num": 5,
+    "caption": "Tx/Rx cell layout, area and power breakdown, and long-packet routing performance.",
+    "image_path": "images/18.1/fig_5.png"
+  },
+  {
+    "figure_id": "18.1.6",
+    "figure_num": 6,
+    "caption": "Comparison table. Metric this work ISSCC25 [1] ISSCC24 [2] JSSC21 [3] HotChips25 OFC25[5,6] ISSCC23 [7] VLSI24 [8] ISSCC18 [9] Type Photonic Interposer Active Interposer Active Interposer Active Interposer Photonic Interposer Photonic links Photonic links Photonic link Tech node 28nm 28nm 6nm 65nm 45nm 7nm 45nm 65nm Integration 3D μbump 3D μbump hybrid bnd.",
+    "image_path": "images/18.1/fig_6.png"
+  },
+  {
+    "figure_id": "18.1.7",
+    "figure_num": 7,
+    "caption": "Die photographs with E/O route, looped-back interposer and 8-port ONoC interposer.",
+    "image_path": "images/18.1/fig_7.png"
+  }
+]

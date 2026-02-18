@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.9.1",
+    "figure_num": 1,
+    "caption": "Illustration of 4DGS rendering process and three main challenges of efﬁcient 4DGS rendering.",
+    "image_path": "images/2.9/fig_1.png"
+  },
+  {
+    "figure_id": "2.9.2",
+    "figure_num": 2,
+    "caption": "The overall architecture of the 4DGS processor. 59 2 SOTA NeRF processor [18], and 2.42× less than the SOTA 3DGS processor [20].",
+    "image_path": "images/2.9/fig_2.png"
+  },
+  {
+    "figure_id": "2.9.3",
+    "figure_num": 3,
+    "caption": "Adaptive quadratic frame interpolation (AQFI) unit with quadratic interpolation of neighbor frames.",
+    "image_path": "images/2.9/fig_3.png"
+  },
+  {
+    "figure_id": "2.9.4",
+    "figure_num": 4,
+    "caption": "Fused recursive opacity computation (FROC) unit recursively reuses redundant computations.",
+    "image_path": "images/2.9/fig_4.png"
+  },
+  {
+    "figure_id": "2.9.5",
+    "figure_num": 5,
+    "caption": "Tree-based adaptive-precision pixel rendering (TAPR) core with tree- based parallel pixel rendering.",
+    "image_path": "images/2.9/fig_5.png"
+  },
+  {
+    "figure_id": "2.9.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison with state-of- the-art processors.",
+    "image_path": "images/2.9/fig_6.png"
+  },
+  {
+    "figure_id": "2.9.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/2.9/fig_7.png"
+  }
+]

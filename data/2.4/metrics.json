@@ -1,0 +1,10 @@
+{
+  "technology": "28nm",
+  "supply_voltage": "1.0V",
+  "frequency_mhz": "250",
+  "power_mw": "104.6",
+  "energy_efficiency": "7.3pJ/b",
+  "throughput": "throughput of 14.4Gb/s",
+  "target_model": "ViT",
+  "source_figure": "fig_7"
+}

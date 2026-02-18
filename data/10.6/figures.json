@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.6.1",
+    "figure_num": 1,
+    "caption": "Block diagram of manycore 3D DNN processor and motivation for HBI.",
+    "image_path": "images/10.6/fig_1.png"
+  },
+  {
+    "figure_id": "10.6.2",
+    "figure_num": 2,
+    "caption": "Mesh 3D network on chip and hybrid-bonded interface. HBI In HBI Out HBI Interface {N,S,E,W,Local,Up/Down} Out Port {N,S,E,W,Local,Up/Down} In Port ready valid data 64 length D C Q N In N Out S In S Out Local In Local Out Up/Down In Up/Down Out E Out E In W Out W In to Core/DNN NoC Router Tile HBI Floorplan (24×23 Pads) 216μm 207μm VCC VSS Data Data Req, Ack, Φ Other Signals Other Signals clk Arbiter FF sel Tail Detect clk clk D C Q D C Q CG ready data valid ready valid data 64 addr D C Q clk FF sel Decode clk clk D C Q D C Q CG ready data valid length Tail Detect HBI Out Interface HBI In Interface ready valid data clk data ack req ΦRX ΦTX ack req data ΦTX 64 data ready valid clk !180° != ΦRX !empty clk wr addr FF FF FF TX Gray Counter rd addr 64 sync.",
+    "image_path": "images/10.6/fig_2.png"
+  },
+  {
+    "figure_id": "10.6.3",
+    "figure_num": 3,
+    "caption": "Block diagram of DNN accelerator in the top tile.",
+    "image_path": "images/10.6/fig_3.png"
+  },
+  {
+    "figure_id": "10.6.4",
+    "figure_num": 4,
+    "caption": "Chip measurements and comparison of 2D vs. 3D trafﬁc. 0 0.2 0.4 0.6 0.8 1 1.2 100 200 300 400 500 600 700 800 9001000 Energy per Byte (norm.) Throughput (GB/s) 3D 2D 0 200 400 600 800 1000 1200 1400 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 Frequency (MHz) Supply Voltage (V) 7.7 13.7 24.1 27.9 19.3 33.0 Peak TOPS Intel 18A / Intel 3 CMOS, 25°C 2D 3D Intel 18A / Intel 3 CMOS, 25°C 39% 30.7 0 2 4 6 8 10 12 14 16 18 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 Dynamic TOPS/W Supply Voltage (V) 10 15 20 25 30 8 16 32 64 128 256 512 1024 Throughput (GB/s) Transfer Size (B) Intel 18A / Intel 3 CMOS, 25°C Intel 18A / Intel 3 CMOS, 25°C 0.9V, 1GHz Random Uniform Core Traffic Nearest-neighbor DMA Traffic im2col .T Input offset Y 16×4×4 k×{h×w} 8b RF Y 16×4×4 k×{h×w} 8b RF Data pointers (X, Y, W) Layer dims.",
+    "image_path": "images/10.6/fig_4.png"
+  },
+  {
+    "figure_id": "10.6.5",
+    "figure_num": 5,
+    "caption": "Image classiﬁcation measurements for parallel and dataﬂow mappings.",
+    "image_path": "images/10.6/fig_5.png"
+  },
+  {
+    "figure_id": "10.6.6",
+    "figure_num": 6,
+    "caption": "Comparison tables to hybrid bonded chips and manycore DNN processors. ISSCC22 [12] 7nm 7nm 81 ISSCC22 [13] 25nm 55nm 602.22 ISSCC24 [14] 5nm 6nm 4× ½Reticle Top Process Bottom Process Area, mm2 This Work Intel 18A Intel 3 2.74 Hybrid Bonded Chips HBI 9μm - - HBI 3μm 1.1, 1.2 0.15, 0.3 HBI 9μm - 2.1 Bonding Technology Voltage, V Frequency, GHz HBI 9μm 0.5-1.1 0.280-1.205 - 16 - - 11.04 - 1.4 M* - - 3D Signal Count Peak 3D Bandwidth, Tb/s 3D Signal Density, / mm2 21.5 k 7.0 7.9 k ISSCC24 [14] 5nm, 6nm 4× ½Reticle - Process Area, mm2 Voltage, V This Work Intel 18A, Intel 3 2.74 0.5-1.1 DNN Processors 2.1 256* Frequency, GHz SRAM Capacity, MB 0.280-1.205 5.25 BF16 1307 - Data Precision Peak Perf., TOPS/TFLOPS Comp.",
+    "image_path": "images/10.6/fig_6.png"
+  },
+  {
+    "figure_id": "10.6.7",
+    "figure_num": 7,
+    "caption": "Top and bottom die photos of 3D stacked DNN processor.",
+    "image_path": "images/10.6/fig_7.png"
+  }
+]

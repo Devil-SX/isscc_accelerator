@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.4.1",
+    "figure_num": 1,
+    "caption": "AI-RAN OFDM channel estimation accelerator solutions to meet B5G/6G system requirements.",
+    "image_path": "images/2.4/fig_1.png"
+  },
+  {
+    "figure_id": "2.4.2",
+    "figure_num": 2,
+    "caption": "System architecture of the proposed UniC-Vision OFDM channel estimation accelerator.",
+    "image_path": "images/2.4/fig_2.png"
+  },
+  {
+    "figure_id": "2.4.3",
+    "figure_num": 3,
+    "caption": "CAC and RSA algorithm-hardware co-optimization eliminating external access for real-time processing.",
+    "image_path": "images/2.4/fig_3.png"
+  },
+  {
+    "figure_id": "2.4.4",
+    "figure_num": 4,
+    "caption": "Mode switching to support FR2 and FR3 bands with the maximum utilization of the on-chip PE.",
+    "image_path": "images/2.4/fig_4.png"
+  },
+  {
+    "figure_id": "2.4.5",
+    "figure_num": 5,
+    "caption": "Channel estimation performance evaluation and efﬁciency analysis with SOTA wireless system fabrics, and channel estimation circuits.",
+    "image_path": "images/2.4/fig_5.png"
+  },
+  {
+    "figure_id": "2.4.6",
+    "figure_num": 6,
+    "caption": "Link-level performance evaluation and comparison with silicon-proven SOTA wireless communications system.",
+    "image_path": "images/2.4/fig_6.png"
+  },
+  {
+    "figure_id": "2.4.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and summary.",
+    "image_path": "images/2.4/fig_7.png"
+  }
+]

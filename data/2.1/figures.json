@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.1.1",
+    "figure_num": 1,
+    "caption": "AMD Instinct MI300 vs. AMD Instinct MI350 power, performance and area comparison.",
+    "image_path": "images/2.1/fig_1.png"
+  },
+  {
+    "figure_id": "2.1.2",
+    "figure_num": 2,
+    "caption": "AMD Instinct MI350 XCD. 43 2 [4] MI350-036 (n.d.). Based on testing by AMD Performance Labs in June 2025, on the AMD Instinct MI350X vs.",
+    "image_path": "images/2.1/fig_2.png"
+  },
+  {
+    "figure_id": "2.1.3",
+    "figure_num": 3,
+    "caption": "AMD Instinct MI350 IOD.",
+    "image_path": "images/2.1/fig_3.png"
+  },
+  {
+    "figure_id": "2.1.4",
+    "figure_num": 4,
+    "caption": "Generational peak theoretical performance improvement.",
+    "image_path": "images/2.1/fig_4.png"
+  },
+  {
+    "figure_id": "2.1.5",
+    "figure_num": 5,
+    "caption": "AMD Instinct MI350 XCD Cac breakdown.",
+    "image_path": "images/2.1/fig_5.png"
+  },
+  {
+    "figure_id": "2.1.6",
+    "figure_num": 6,
+    "caption": "Inference throughput comparison between AMD Instinct MI355X (FP4) and AMD Instinct MI300X(FP8).",
+    "image_path": "images/2.1/fig_6.png"
+  },
+  {
+    "figure_id": "2.1.7",
+    "figure_num": 7,
+    "caption": "Inference throughput comparison between AMD Instinct MI355X vs. Nvidia B200 and Nvidia GB200.",
+    "image_path": "images/2.1/fig_7.png"
+  }
+]

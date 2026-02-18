@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.7.1",
+    "figure_num": 1,
+    "caption": "Motivation and challenges in designing a state-space model (SSM) accelerator with weight-only quantization.",
+    "image_path": "images/31.7/fig_1.png"
+  },
+  {
+    "figure_id": "31.7.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the LUT-SSM with many-to-many LUT-based PEs (MM-LPEs) supporting INT–FP matrix multiplication.",
+    "image_path": "images/31.7/fig_2.png"
+  },
+  {
+    "figure_id": "31.7.3",
+    "figure_num": 3,
+    "caption": "LUT reuse scheme of MM-LPE, and LUT stationary dataﬂows for different weight shapes in the SSM block.",
+    "image_path": "images/31.7/fig_3.png"
+  },
+  {
+    "figure_id": "31.7.4",
+    "figure_num": 4,
+    "caption": "LUT-based layer fusion and reusable elementwise multiplications for two FP–FP operation types in the MM-LPE.",
+    "image_path": "images/31.7/fig_4.png"
+  },
+  {
+    "figure_id": "31.7.5",
+    "figure_num": 5,
+    "caption": "Implementation details of the scale-reﬂected LUT generator to support LUT-friendly column-wise quantization, and mixed-precision evaluation.",
+    "image_path": "images/31.7/fig_5.png"
+  },
+  {
+    "figure_id": "31.7.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison table.",
+    "image_path": "images/31.7/fig_6.png"
+  },
+  {
+    "figure_id": "31.7.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary of LUT-SSM, including a comparison with previous Mamba accelerators.",
+    "image_path": "images/31.7/fig_7.png"
+  }
+]

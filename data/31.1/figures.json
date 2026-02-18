@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "31.1.1",
+    "figure_num": 1,
+    "caption": "Challenges raised by target and draft large language model (LLM) in speculative decoding (SD) and proposed solutions.",
+    "image_path": "images/31.1/fig_1.png"
+  },
+  {
+    "figure_id": "31.1.2",
+    "figure_num": 2,
+    "caption": "Overall architecture and three main features of the LLM accelerator with bumping-based ReRAM die on logic wafer face-to-face stacking technology.",
+    "image_path": "images/31.1/fig_2.png"
+  },
+  {
+    "figure_id": "31.1.3",
+    "figure_num": 3,
+    "caption": "Local rotation unit (LRU) with proposed decomposed Fast Walsh- Hadamard Transform (FWHT) for outlier-free low-bit target LLM quantization.",
+    "image_path": "images/31.1/fig_3.png"
+  },
+  {
+    "figure_id": "31.1.4",
+    "figure_num": 4,
+    "caption": "ReRAM-stacked processing-near-memory (RS-PNM) architecture with blockwise vector quantization (BVQ) to avoid draft LLM external memory access (EMA).",
+    "image_path": "images/31.1/fig_4.png"
+  },
+  {
+    "figure_id": "31.1.5",
+    "figure_num": 5,
+    "caption": "Adaptive parallel speculative decoding (APSD) with workload-decoupled out-of-order scheduler (WDOS) to achieve intra-chip parallel draft-and-verify with high resource utilization.",
+    "image_path": "images/31.1/fig_5.png"
+  },
+  {
+    "figure_id": "31.1.6",
+    "figure_num": 6,
+    "caption": "Measurement results and comparison with state-of-the-art LLM accelerators.",
+    "image_path": "images/31.1/fig_6.png"
+  },
+  {
+    "figure_id": "31.1.7",
+    "figure_num": 7,
+    "caption": "Die photos, speciﬁcations, 4-chip system, SEM/TEM images of the ReRAM-on-logic stacking interface/ReRAM chip, and ReRAM resistance distribution curve.",
+    "image_path": "images/31.1/fig_7.png"
+  }
+]

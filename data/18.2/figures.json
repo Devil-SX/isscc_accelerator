@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "18.2.1",
+    "figure_num": 1,
+    "caption": "Overview of two-pass ASR model for multi-speaker and the deployment challenges.",
+    "image_path": "images/18.2/fig_1.png"
+  },
+  {
+    "figure_id": "18.2.2",
+    "figure_num": 2,
+    "caption": "Overall architecture of the proposed ASR accelerator and three main features. 311 18",
+    "image_path": "images/18.2/fig_2.png"
+  },
+  {
+    "figure_id": "18.2.3",
+    "figure_num": 3,
+    "caption": "The two-skip-one-trigger scheme and detailed implementation of CARS.",
+    "image_path": "images/18.2/fig_3.png"
+  },
+  {
+    "figure_id": "18.2.4",
+    "figure_num": 4,
+    "caption": "Static and dynamic page-based 2D writable (STDY-2D) CIM macro supporting microscaling format.",
+    "image_path": "images/18.2/fig_4.png"
+  },
+  {
+    "figure_id": "18.2.5",
+    "figure_num": 5,
+    "caption": "Speaker-aware approximation search and reuse-aware rescoring with proposed SA-TCAM.",
+    "image_path": "images/18.2/fig_5.png"
+  },
+  {
+    "figure_id": "18.2.6",
+    "figure_num": 6,
+    "caption": "Measurement results and performance comparison table.",
+    "image_path": "images/18.2/fig_6.png"
+  },
+  {
+    "figure_id": "18.2.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and speciﬁcations.",
+    "image_path": "images/18.2/fig_7.png"
+  }
+]

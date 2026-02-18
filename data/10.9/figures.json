@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.9.1",
+    "figure_num": 1,
+    "caption": "Introduction to the SAT problem and design highlights of proposed clause learning SAT design (SharpSAT).",
+    "image_path": "images/10.9/fig_1.png"
+  },
+  {
+    "figure_id": "10.9.2",
+    "figure_num": 2,
+    "caption": "The top-level architecture and workﬂow of SharpSAT. 185 10 Acknowledgement: This work is supported by the National Key R&D Program of China (No.",
+    "image_path": "images/10.9/fig_2.png"
+  },
+  {
+    "figure_id": "10.9.3",
+    "figure_num": 3,
+    "caption": "Proposed clause learner and its workﬂow.",
+    "image_path": "images/10.9/fig_3.png"
+  },
+  {
+    "figure_id": "10.9.4",
+    "figure_num": 4,
+    "caption": "Design of the proposed dual-BCP unit and PRNG-based heuristic decider.",
+    "image_path": "images/10.9/fig_4.png"
+  },
+  {
+    "figure_id": "10.9.5",
+    "figure_num": 5,
+    "caption": "Measured solution time, the trend of the number of learning clauses, energy efﬁciency, frequency voltage plot, and comparison with prior ASICs and an HPC CPU.",
+    "image_path": "images/10.9/fig_5.png"
+  },
+  {
+    "figure_id": "10.9.6",
+    "figure_num": 6,
+    "caption": "Comparison with state-of-the-art ASIC SAT solvers.",
+    "image_path": "images/10.9/fig_6.png"
+  },
+  {
+    "figure_id": "10.9.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph, summary table, and area/power breakdown.",
+    "image_path": "images/10.9/fig_7.png"
+  }
+]

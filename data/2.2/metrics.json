@@ -1,0 +1,8 @@
+{
+  "sram_kb": "512MB of on-chip SRAM",
+  "throughput": "128TOPS",
+  "technology": "advanced",
+  "energy_efficiency": "56.8TPS on Llama 3.3 70B",
+  "target_model": "Llama 3.3 70B",
+  "source_figure": "fig_7"
+}

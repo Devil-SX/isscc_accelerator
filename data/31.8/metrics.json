@@ -1,0 +1,6 @@
+{
+  "technology": "28nm",
+  "energy_efficiency": "105-685μs/token",
+  "target_model": "TinyLLaMA 1B / Llama 13B",
+  "source_figure": "fig_7"
+}

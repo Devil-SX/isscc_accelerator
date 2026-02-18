@@ -1,0 +1,8 @@
+{
+  "technology": "28nm",
+  "sram_kb": "204KB SRAM",
+  "power_mw": "699.2",
+  "energy_efficiency": "0.24mJ/frame",
+  "target_model": "4DGS",
+  "source_figure": "fig_7"
+}

@@ -1,0 +1,7 @@
+{
+  "technology": "28nm",
+  "supply_voltage": "0.9V",
+  "energy_efficiency": "106.85TOPS/W",
+  "target_model": "INT8/FP CNN",
+  "source_figure": "fig_7"
+}

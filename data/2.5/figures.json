@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.5.1",
+    "figure_num": 1,
+    "caption": "SOTA FECs for URLLC and OSD. (MRB: most reliable bit; WHD: weighted Hamming distance).",
+    "image_path": "images/2.5/fig_1.png"
+  },
+  {
+    "figure_id": "2.5.2",
+    "figure_num": 2,
+    "caption": "Design challenges for OSD hardware implementations and design features. 51 2 for high-rate codes.",
+    "image_path": "images/2.5/fig_2.png"
+  },
+  {
+    "figure_id": "2.5.3",
+    "figure_num": 3,
+    "caption": "Two-stage decoding and BLER and latency evaluations. (Pf,Chase: failure probability of Chase decoder).",
+    "image_path": "images/2.5/fig_3.png"
+  },
+  {
+    "figure_id": "2.5.4",
+    "figure_num": 4,
+    "caption": "Pre-sorted basis update (PSBU) and comparisons with full GE and reduced GE.",
+    "image_path": "images/2.5/fig_4.png"
+  },
+  {
+    "figure_id": "2.5.5",
+    "figure_num": 5,
+    "caption": "Architecture block diagram and latency evaluation.",
+    "image_path": "images/2.5/fig_5.png"
+  },
+  {
+    "figure_id": "2.5.6",
+    "figure_num": 6,
+    "caption": "Comparison of state-of-the-art FECs.",
+    "image_path": "images/2.5/fig_6.png"
+  },
+  {
+    "figure_id": "2.5.7",
+    "figure_num": 7,
+    "caption": "Die photo and measurement results.",
+    "image_path": "images/2.5/fig_7.png"
+  }
+]

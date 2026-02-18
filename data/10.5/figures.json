@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "10.5.1",
+    "figure_num": 1,
+    "caption": "Existing challenges in droop mitigation and key contributions of the proposed regulation framework.",
+    "image_path": "images/10.5/fig_1.png"
+  },
+  {
+    "figure_id": "10.5.2",
+    "figure_num": 2,
+    "caption": "System-level diagram of the proposed proactive supply regulation scheme with online learning, including the architecture of the Neural Droop Management Unit (NDMU).",
+    "image_path": "images/10.5/fig_2.png"
+  },
+  {
+    "figure_id": "10.5.3",
+    "figure_num": 3,
+    "caption": "Proposed feedforward control of the DC–DC converter employing dual- switch modulation for rapid droop mitigation.",
+    "image_path": "images/10.5/fig_3.png"
+  },
+  {
+    "figure_id": "10.5.4",
+    "figure_num": 4,
+    "caption": "Droop prediction variation across digital SoCs and the proposed online transfer learning scheme for adaptive model update.",
+    "image_path": "images/10.5/fig_4.png"
+  },
+  {
+    "figure_id": "10.5.5",
+    "figure_num": 5,
+    "caption": "Measured performance of the Neural Droop Management Unit (NDMU) and Online Learning Engine (OLE).",
+    "image_path": "images/10.5/fig_5.png"
+  },
+  {
+    "figure_id": "10.5.6",
+    "figure_num": 6,
+    "caption": "Measured regulator efﬁciency and mitigation performance across benchmarks, with comparison to prior works.",
+    "image_path": "images/10.5/fig_6.png"
+  },
+  {
+    "figure_id": "10.5.7",
+    "figure_num": 7,
+    "caption": "Die micrograph and packaging/bonding conﬁgurations of the fabricated chip.",
+    "image_path": "images/10.5/fig_7.png"
+  }
+]

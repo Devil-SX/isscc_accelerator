@@ -1,0 +1,33 @@
+# ============================================
+# Public release: exclude all copyrighted content
+# ============================================
+
+# Source PDFs
+pdfs/
+
+# All figure images (original + compressed)
+images/
+images_web/
+
+# Paper full text
+data/markdown/
+data/*/text.md
+
+# Screenshots from E2E tests
+screenshots/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

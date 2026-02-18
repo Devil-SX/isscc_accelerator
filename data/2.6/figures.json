@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.6.1",
+    "figure_num": 1,
+    "caption": "Spyre chip, card and system diagrams.",
+    "image_path": "images/2.6/fig_1.png"
+  },
+  {
+    "figure_id": "2.6.2",
+    "figure_num": 2,
+    "caption": "Chip ﬂoorplan annotated with voltage domains, ring bus, core and IP blocks. Design metrics from frequency scaling experiments: power and cell area vs.",
+    "image_path": "images/2.6/fig_2.png"
+  },
+  {
+    "figure_id": "2.6.3",
+    "figure_num": 3,
+    "caption": "(a) Peak power speciﬁcation across different systems; (b) Dual loop control for peak current management.",
+    "image_path": "images/2.6/fig_3.png"
+  },
+  {
+    "figure_id": "2.6.4",
+    "figure_num": 4,
+    "caption": "(a) Performance enhancement with dual-loop control; (b) performance against core frequency; (c) measured waves with and without a micro-controller-based loop.",
+    "image_path": "images/2.6/fig_4.png"
+  },
+  {
+    "figure_id": "2.6.5",
+    "figure_num": 5,
+    "caption": "(a) Measured normalized performance (1/ITL) as a function of Spyre instance count; (b) Inference with 1, 2, and 4 Spyres, identical time scales, showing TTFT and ITL improvements.",
+    "image_path": "images/2.6/fig_5.png"
+  },
+  {
+    "figure_id": "2.6.6",
+    "figure_num": 6,
+    "caption": "Spyre technical speciﬁcations.",
+    "image_path": "images/2.6/fig_6.jpeg"
+  },
+  {
+    "figure_id": "2.6.7",
+    "figure_num": 7,
+    "caption": "Photos of the die and the PCIe card.",
+    "image_path": "images/2.6/fig_7.png"
+  }
+]

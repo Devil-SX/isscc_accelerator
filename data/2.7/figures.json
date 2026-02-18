@@ -1,0 +1,44 @@
+[
+  {
+    "figure_id": "2.7.1",
+    "figure_num": 1,
+    "caption": "Overview of transformer-based diffusion models and design challenges.",
+    "image_path": "images/2.7/fig_1.png"
+  },
+  {
+    "figure_id": "2.7.2",
+    "figure_num": 2,
+    "caption": "Proposed classiﬁer-free guidance batch difference processing (CBDP) ﬂow and overall system architecture.",
+    "image_path": "images/2.7/fig_2.png"
+  },
+  {
+    "figure_id": "2.7.3",
+    "figure_num": 3,
+    "caption": "Proposed weight-reordered quantization (WRQ) and two-stage block- aware feature map alignment (TSBFA).",
+    "image_path": "images/2.7/fig_3.png"
+  },
+  {
+    "figure_id": "2.7.4",
+    "figure_num": 4,
+    "caption": "Proposed hybrid microscaling blocking datapath (HMBD) and two-stage quantization (TSQ).",
+    "image_path": "images/2.7/fig_4.png"
+  },
+  {
+    "figure_id": "2.7.5",
+    "figure_num": 5,
+    "caption": "Measurement and inference results of Tiamat.",
+    "image_path": "images/2.7/fig_5.png"
+  },
+  {
+    "figure_id": "2.7.6",
+    "figure_num": 6,
+    "caption": "Performance comparison table and EMA optimization summary.",
+    "image_path": "images/2.7/fig_6.png"
+  },
+  {
+    "figure_id": "2.7.7",
+    "figure_num": 7,
+    "caption": "Chip micrograph and performance summary.",
+    "image_path": "images/2.7/fig_7.png"
+  }
+]
