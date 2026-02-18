@@ -23,7 +23,7 @@
     { key: 'power_mw', label: '功耗', sortable: true },
     { key: 'energy_efficiency', label: '能效', sortable: false },
     { key: 'target_model', label: '目标模型', sortable: true },
-    { key: 'innovations', label: '创新点', sortable: false }
+    { key: 'analytical_tags', label: '标签', sortable: false }
   ];
 
   // Session color palette for stats bar
@@ -349,9 +349,10 @@
   function buildAnalyticalTagsFilter(papers) {
     var seen = {};
     var allTags = [];
+    var skipTags = { '学界': true, '业界': true };
     papers.forEach(function (p) {
       (p.analytical_tags || []).forEach(function (tag) {
-        if (!seen[tag]) {
+        if (!seen[tag] && !skipTags[tag]) {
           seen[tag] = true;
           allTags.push(tag);
         }
@@ -430,11 +431,11 @@
       // Target model
       html += '<div class="td">' + escapeHtml(p.target_model || '-') + '</div>';
 
-      // Innovations with tooltip
+      // Analytical tags
       html += '<div class="td tags-cell">';
-      (p.innovations || []).forEach(function (inn) {
-        var cls = getTypeClass(inn.type);
-        html += '<span class="tag-pill ' + cls + '" title="' + escapeHtml(inn.tag) + '">' + escapeHtml(inn.tag) + '</span>';
+      (p.analytical_tags || []).forEach(function (tag) {
+        if (tag === '学界' || tag === '业界') return; // skip affiliation type tags
+        html += '<span class="tag-pill tag-analytical">' + escapeHtml(tag) + '</span>';
       });
       html += '</div>';
 

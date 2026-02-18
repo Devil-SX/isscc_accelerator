@@ -1119,8 +1119,8 @@
       "name": "NTHU",
       "name_zh": "国立清华大学",
       "type": "academia",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/nthu.svg"
     },
     "abstract": "National Tsing Hua University, Hsinchu, Taiwan A 16nm FinFET transformer-based diffusion model processor chip is fabricated for supporting class-conditional DiT-XL/2 and text-to-image PixArt-α with 98ms and 134ms generation time per step with 7.37TOPS and 1477mW at 400MHz. Classiﬁer-free guidance batching reduces external memory access (EMA) for weights by 50%, and weight-reordered quantization brings another 37% reduction. Hybrid microscaling blocking reduces feature- map buffer size by 37%, while approaching ﬂoating-point quality.",
@@ -1277,8 +1277,8 @@
       "name": "MediaTek",
       "name_zh": "联发科",
       "type": "industry",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/mediatek.svg"
     },
     "abstract": "This work presents MADiC, a 3nm 0.338mm2 diffusion accelerator for generative image editing on edge devices. MADiC features design-time L1/L2 memory optimization, cross- loop feature map allocation with write-over-read relaxation, and activation-aware input preloading with concurrent resizing. Operating at 0.575V and 546MHz, it delivers 7.4TOPS/mm2 and 17.4TOPS/W when running the Diffusion ConvNet model.",
@@ -1439,7 +1439,7 @@
       "name": "Tsinghua University",
       "name_zh": "清华大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/tsinghua-university.svg"
     },
@@ -1599,7 +1599,7 @@
       "name": "Tsinghua University",
       "name_zh": "清华大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/tsinghua-university.svg"
     },
@@ -1917,8 +1917,8 @@
       "name": "MediaTek",
       "name_zh": "联发科",
       "type": "industry",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/mediatek.svg"
     },
     "abstract": "This work presents dynamic mobile-performance augmentation (DMPA), featuring boosting- duty control (BDC) and an adaptive thermal cooler (ATC) to augment CPU maximum performance. The BDC uses an aging sensor (A-sensor) to leverage an aging budget for performance boosting. For thermal, the ATC integrates temperature sensors (T-sensors) across the CPU and works with multiple sensors and a throttler to optimize clock speed effectively cooling hotspots. The DMPA offers a score of 3917 in the GeekBenchv6 single- core benchmark on a ﬂagship smartphone, consuming 0.078% or less total power, while occupying only 0.0122% of the CPU area.",
@@ -2690,7 +2690,7 @@
       "name": "Peking University",
       "name_zh": "北京大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/peking-university.svg"
     },
@@ -2997,7 +2997,7 @@
       "name": "Tsinghua University",
       "name_zh": "清华大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/tsinghua-university.svg"
     },
@@ -3469,7 +3469,7 @@
       "name": "Peking University",
       "name_zh": "北京大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/peking-university.svg"
     },
@@ -3791,7 +3791,7 @@
       "name": "HKUST(GZ)",
       "name_zh": "香港科技大学(广州)",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/hkust-gz.svg"
     },
@@ -3951,7 +3951,7 @@
       "name": "Tsinghua University",
       "name_zh": "清华大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/tsinghua-university.svg"
     },
@@ -4112,7 +4112,7 @@
       "name": "Southeast University",
       "name_zh": "东南大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/southeast-university.svg"
     },
@@ -4274,8 +4274,8 @@
       "name": "TSMC",
       "name_zh": "台积电",
       "type": "industry",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/tsmc.svg"
     },
     "abstract": "Previous non-volatile CIM (nvCIM) macros suffer from low storage density, unnecessary multiply-and-accumulate (MAC) operations, and large hardware cost for ﬂoating point computations. A 4Mb CTT nvCIM macro, fabricated in 12nm CMOS, supports INT/FP4 MAC operations with the analog-predict-digital-compute scheme for power saving, achieving an energy-efﬁciency of 137.75TFLOPS/W and >40 times improved density FoM (storage density×computing density).",
@@ -4435,8 +4435,8 @@
       "name": "NTHU",
       "name_zh": "国立清华大学",
       "type": "academia",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/nthu.svg"
     },
     "abstract": "We present a DTCO-designed high-retention multi-mode ReRAM nvCIM macro supporting linear MLC (L-MLC), non-linear MLC (NL-MLC), and SLC modes for Mamba, Transformer, and CNN workloads, addressing key challenges in inference accuracy, energy, and readout robustness. The proposed macro incorporates: 1) a reconﬁgurable compute mode for accuracy/efﬁciency tradeoff, 2) ISE-HF encoding to enhance input sparsity and save energy, 3) an S2R-Db ADC that enables high-yield, low-power NL-MLC readout. The design achieves 50.6-to-90.2TFLOPS/W (BF16) with ImageNet accuracy loss that is 79.17% lower than L- MLC after 10 years of retention.",
@@ -4597,7 +4597,7 @@
       "name": "Xidian University",
       "name_zh": "西安电子科技大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/xidian-university.svg"
     },
@@ -4751,8 +4751,8 @@
       "name": "NTHU",
       "name_zh": "国立清华大学",
       "type": "academia",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/nthu.svg"
     },
     "abstract": "Diverse AI workloads require ﬂexible data representations and numerical formats. In this work, we present a reconﬁgurable 2’s-complement and sign-magnitude scheme integrated within a versatile-format CIM macro supporting MX, LNS, FP, and INT for MAC operations. Implemented in a 16nm 72kb gain-cell array, the macro achieves record energy efﬁciency (120.5TFLOPS/W) and throughput density (3.18 TOPS/mm2) in MXINT8 mode.",
@@ -4904,7 +4904,7 @@
       "name": "IMECAS",
       "name_zh": "中科院微电子所",
       "type": "research_inst",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/imecas.svg"
     },
@@ -5062,7 +5062,7 @@
       "name": "Fudan University",
       "name_zh": "复旦大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/fudan-university.svg"
     },
@@ -5223,8 +5223,8 @@
       "name": "NTHU",
       "name_zh": "国立清华大学",
       "type": "academia",
-      "country": "Taiwan",
-      "country_code": "TW",
+      "country": "中国台湾",
+      "country_code": "CN",
       "logo": "assets/logos/nthu.svg"
     },
     "abstract": "We present a silicon-veriﬁed fully digital SRAM-CIM macro that supports multi-bit hybrid SNN-CNN processing. Key innovations include: (1) a compact CFD-SC-RC architecture that shares SNN-CNN MAC hardware to minimize area and energy overhead while enabling adaptive model and precision selection; and (2) a PS-WR-ODM scheme that balances partial- sum storage and weight-update energy. Fabricated in 16nm FinFET CMOS, the test chip achieves 444.21TOPS/W (1bIN-8bW-14bOUT, SNN) and 62.84TOPS/W (8bIN-8bW- 22bOUT, CNN).",
@@ -5543,8 +5543,8 @@
       "name": "HKUST",
       "name_zh": "香港科技大学",
       "type": "academia",
-      "country": "Hong Kong",
-      "country_code": "HK",
+      "country": "中国香港",
+      "country_code": "CN",
       "logo": "assets/logos/hkust.svg"
     },
     "abstract": "This work presents a 55nm speculative decoding-based LLM accelerator with bumping- based face-to-face ReRAM-on-logic stacking technology. It features a local rotation unit for outlier-free low-bit quantization, a stacking-aware PNM architecture co-designed with blockwise vector quantization to reduce weight EMA overheads, and an adaptive parallel speculative decoding scheme with out-of-order scheduler for high resource and bandwidth utilization. Our chip achieves 14.08-to-135.69token/s and 4.46-to-7.17× speedup over vanilla speculative decoding.",
@@ -5859,7 +5859,7 @@
       "name": "Southeast University",
       "name_zh": "东南大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/southeast-university.svg"
     },
@@ -6011,7 +6011,7 @@
       "name": "Peking University",
       "name_zh": "北京大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/peking-university.svg"
     },
@@ -6648,7 +6648,7 @@
       "name": "Tsinghua University",
       "name_zh": "清华大学",
       "type": "academia",
-      "country": "China",
+      "country": "中国大陆",
       "country_code": "CN",
       "logo": "assets/logos/tsinghua-university.svg"
     },
