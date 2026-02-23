@@ -1,0 +1,112 @@
+{
+  "technology": "16nm FinFET (Intel 16)",
+  "die_area": {
+    "value": "1.1",
+    "unit": "mm²",
+    "note": "total silicon area with Chase decoder 0.8mm² and order-1 OSD 0.3mm²"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "950",
+        "unit": "MHz",
+        "condition": "operating frequency at room temperature and 0.9V"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.9",
+        "unit": "V",
+        "condition": "nominal supply voltage"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "15.2",
+        "unit": "Gbps",
+        "condition": "information throughput for BCH (127,64) code"
+      }
+    ]
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "14.4",
+        "unit": "ns",
+        "condition": "average latency for BCH (127,64) at 5dB SNR"
+      },
+      {
+        "value": "132.6",
+        "unit": "ns",
+        "condition": "worst-case latency for BCH (127,64) at 5dB SNR"
+      },
+      {
+        "value": "53x improvement",
+        "unit": "average latency reduction",
+        "condition": "vs state-of-the-art HDD + order-3 OSD decoder [5]"
+      },
+      {
+        "value": "5 orders of magnitude",
+        "unit": "worst-case latency reduction",
+        "condition": "vs state-of-the-art decoder"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "13.1",
+        "unit": "pJ/b",
+        "condition": "energy efficiency at peak throughput"
+      },
+      {
+        "value": "26x lower",
+        "unit": "energy",
+        "condition": "vs state-of-the-art HDD + order-3 OSD decoder"
+      }
+    ]
+  },
+  "error_correction_performance": {
+    "values": [
+      {
+        "value": "10-5",
+        "unit": "BLER",
+        "condition": "block error rate target"
+      },
+      {
+        "value": "183x higher",
+        "unit": "information throughput",
+        "condition": "vs state-of-the-art decoder"
+      }
+    ]
+  },
+  "decoder_architecture": {
+    "values": [
+      {
+        "value": "14.4 ns average, 132.6 ns worst-case",
+        "unit": "latency",
+        "condition": "two-stage Chase + order-1 OSD"
+      },
+      {
+        "value": "156x reduction",
+        "unit": "average latency improvement",
+        "condition": "two-stage vs single-stage order-2 OSD at 5dB SNR"
+      }
+    ]
+  },
+  "code_support": {
+    "values": [
+      {
+        "value": "BCH (127,64), BCH (127,85)",
+        "unit": "short codes",
+        "condition": "supported code lengths ≤128b"
+      }
+    ]
+  },
+  "comparison": "Two-stage FEC decoder combining soft-decision Chase decoding with order-1 OSD achieves ultra-low latency (14.4ns average, 132.6ns worst-case) and high energy efficiency (13.1pJ/b) for URLLC, improving on prior work by 53x average and 5 orders of magnitude worst-case latency with 26x better energy.",
+  "quantization": "Not explicitly stated"
+}

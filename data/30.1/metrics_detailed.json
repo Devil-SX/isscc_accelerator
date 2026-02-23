@@ -1,0 +1,80 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "54",
+    "unit": "kb",
+    "note": "CIM macro capacity: 24×18×128b (54kb) MXFP-CIM macro"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "1.2",
+        "unit": "ns",
+        "condition": "clock cycle at 0.9V"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.55",
+        "unit": "V",
+        "condition": "peak energy efficiency measurement"
+      },
+      {
+        "value": "0.9",
+        "unit": "V",
+        "condition": "peak area efficiency measurement"
+      }
+    ]
+  },
+  "quantization": "MXFP6 (E2M3) and MXFP8 (E4M3) formats",
+  "sram": {
+    "value": "54",
+    "unit": "kb",
+    "note": "6T-SRAM array with 24 banks, 18-row×128-column per bank"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "127.54",
+        "unit": "TFLOPS/W",
+        "condition": "MXFP6/6 mode, peak"
+      },
+      {
+        "value": "117.42",
+        "unit": "TFLOPS/W",
+        "condition": "MXFP8/8 mode at 0.55V"
+      },
+      {
+        "value": "49.53",
+        "unit": "TFLOPS/W",
+        "condition": "inference mode (LLaMA-3.1 8B)"
+      },
+      {
+        "value": "19.11",
+        "unit": "TFLOPS/W",
+        "condition": "training mode (ResNet-18)"
+      }
+    ]
+  },
+  "compute_density": {
+    "values": [
+      {
+        "value": "4.44",
+        "unit": "TFLOPS/mm2",
+        "condition": "peak area efficiency at 0.9V"
+      }
+    ]
+  },
+  "preserved_bit_width": {
+    "values": [
+      {
+        "value": "3-27",
+        "unit": "bits",
+        "condition": "adaptive range depending on layer/application"
+      }
+    ]
+  },
+  "comparison": "2.8× to 123× improvement in FoM (energy efficiency×normalized area efficiency×memory density) versus prior SRAM-based FP-CIM designs"
+}

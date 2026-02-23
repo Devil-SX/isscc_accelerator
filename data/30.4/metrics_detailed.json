@@ -1,0 +1,73 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "32",
+    "unit": "kb",
+    "note": "CIM macro capacity"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.55",
+        "unit": "V",
+        "condition": "minimum operating voltage for BF16"
+      },
+      {
+        "value": "0.9",
+        "unit": "V",
+        "condition": "maximum area efficiency measurement"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "4.1",
+        "unit": "ns",
+        "condition": "access time for BF16 at 0.9V"
+      }
+    ]
+  },
+  "quantization": "INT8 and BF16 MAC operations",
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "106.85",
+        "unit": "TOPS/W",
+        "condition": "INT8 mode, peak"
+      },
+      {
+        "value": "77.68",
+        "unit": "TFLOPS/W",
+        "condition": "BF16 mode at 0.55V and 0.9V with 90% input sparsity and 10% toggle rate"
+      }
+    ]
+  },
+  "compute_density": {
+    "values": [
+      {
+        "value": "1.24",
+        "unit": "TFLOPS/mm2",
+        "condition": "BF16 mode at 0.9V"
+      }
+    ]
+  },
+  "comparison": "1.25 to 2.88× improvement in FoM1 (output precision×TOPS/W×TOPS/mm2) and 2.20 to 19.9× improvement in FoM2 (TFLOPS/W×TFLOPS/mm2) versus prior signed CIM macros",
+  "model_benchmarks": [
+    {
+      "model": "ViT-B @ImageNetV2",
+      "metric": "81.05%",
+      "detail": "inference accuracy in BF16 mode"
+    },
+    {
+      "model": "ResNet50 @ImageNetV2",
+      "metric": "81.19%",
+      "detail": "inference accuracy in BF16 mode"
+    }
+  ],
+  "key_features": {
+    "tcl_based_compression": "lossless digital local compressors based on transition-counting-lines",
+    "sign_extension": "2.95% extra area for sign-bit extension",
+    "stage_wise_enabling": "42% energy efficiency improvement via stage-wise enabling"
+  }
+}

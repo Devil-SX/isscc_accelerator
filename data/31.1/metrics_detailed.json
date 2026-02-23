@@ -1,0 +1,131 @@
+{
+  "paper_id": "31.1",
+  "title": "A 14.08-to-135.69Token/s ReRAM-on-Logic Stacked Outlier-Free Large-Language-Model Accelerator with Block-Clustered Weight-Compression and Adaptive Parallel-Speculative-Decoding",
+  "technology": "55nm",
+  "die_area": {
+    "value": "logic die + 4 ReRAM dies",
+    "unit": "mm²",
+    "note": "stacked ReRAM-on-logic configuration"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.89-1.40",
+        "unit": "V",
+        "condition": "logic die"
+      },
+      {
+        "value": "1.1",
+        "unit": "V",
+        "condition": "ReRAM die"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "63.5-285",
+        "unit": "MHz",
+        "condition": "logic die"
+      },
+      {
+        "value": "100",
+        "unit": "MHz",
+        "condition": "ReRAM die"
+      }
+    ]
+  },
+  "memory": {
+    "sram": {
+      "value": "3.43",
+      "unit": "MB",
+      "note": "total on-chip SRAM: 64KB ISA buffer, 1MB weight buffer, 2MB global token buffer"
+    },
+    "reram": {
+      "value": "8",
+      "unit": "MB",
+      "condition": "single chip",
+      "note": "25.6GB/s bandwidth at 100MHz"
+    },
+    "reram_scaled": {
+      "value": "32",
+      "unit": "MB",
+      "condition": "4-chip system",
+      "note": "102.4GB/s total bandwidth"
+    }
+  },
+  "peak_performance": {
+    "value": "2.33",
+    "unit": "TOPS",
+    "condition": "at 285MHz, 1.40V"
+  },
+  "power": {
+    "values": [
+      {
+        "value": "49.54",
+        "unit": "mW",
+        "condition": "per ReRAM die at 100MHz, 1.1V"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "123.41",
+        "unit": "mJ/token",
+        "condition": "LLaMA2-7B, MT-Bench, includes EMA"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "17.82",
+        "unit": "tokens/s",
+        "condition": "LLaMA2-7B decoding, high throughput point"
+      },
+      {
+        "value": "14.08-135.69",
+        "unit": "tokens/s",
+        "condition": "range across different settings"
+      }
+    ]
+  },
+  "speedup": {
+    "values": [
+      {
+        "value": "4.46-7.17",
+        "unit": "x",
+        "condition": "vs BF16 speculative decoding baseline"
+      }
+    ]
+  },
+  "energy_savings": {
+    "values": [
+      {
+        "value": "3.74-4.85",
+        "unit": "x",
+        "condition": "vs BF16 speculative decoding baseline"
+      },
+      {
+        "value": "32.6",
+        "unit": "%",
+        "condition": "system-level vs SOTA on LLaMA2-7B"
+      }
+    ]
+  },
+  "quantization": "W4A8 with local rotation unit for outlier elimination",
+  "key_features": [
+    "Local Rotation Unit (LRU) for outlier-free low-bit quantization",
+    "ReRAM-stacked process-near-memory (RS-PNM) with blockwise vector quantization (BVQ)",
+    "Adaptive parallel speculative decoding (APSD) with out-of-order scheduler",
+    "3.82-3.93x speedup over vanilla speculative decoding"
+  ],
+  "model_benchmarks": [
+    {
+      "model": "LLaMA2-7B",
+      "metric": "17.82 tokens/s",
+      "dataset": "MT-Bench"
+    }
+  ]
+}

@@ -9,9 +9,10 @@ pdfs/
 images/
 images_web/
 
-# Paper full text
+# Paper full text (copyrighted)
 data/markdown/
 data/*/text.md
+data/*/text.json
 
 # Screenshots from E2E tests
 screenshots/
@@ -29,5 +30,4 @@ Thumbs.db
 *.swp
 *.swo
 *~
-.vscode/
 .idea/

@@ -1,0 +1,192 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "4.76",
+    "unit": "mm²",
+    "note": "unified 3D Gaussian Splatting processor for modeling and rendering"
+  },
+  "on_chip_memory": {
+    "values": [
+      {
+        "value": "122",
+        "unit": "KB",
+        "condition": "SRAM for Gaussian parameters, images, features, weights, and output"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "80-680",
+        "unit": "MHz",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.58-1.01",
+        "unit": "V",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "rendering_throughput": {
+    "values": [
+      {
+        "value": "1286",
+        "unit": "fps",
+        "condition": "at 680MHz on both optimization-based and feedforward 3D GS models"
+      }
+    ]
+  },
+  "rendering_power": {
+    "values": [
+      {
+        "value": "507",
+        "unit": "mW",
+        "condition": "at 680MHz for rendering"
+      }
+    ]
+  },
+  "rendering_energy": {
+    "values": [
+      {
+        "value": "0.15",
+        "unit": "mJ/frame",
+        "condition": "at 80MHz for efficient operation"
+      },
+      {
+        "value": "0.39",
+        "unit": "mJ/frame",
+        "condition": "typical per-frame energy"
+      }
+    ]
+  },
+  "rendering_efficiency": {
+    "values": [
+      {
+        "value": "11.7x improvement",
+        "unit": "throughput over NeRF accelerators",
+        "condition": "at peak 680MHz"
+      },
+      {
+        "value": "3.4x improvement",
+        "unit": "throughput over 3D GS accelerators",
+        "condition": "at peak throughput"
+      },
+      {
+        "value": "74.1% lower",
+        "unit": "energy per frame",
+        "condition": "vs SOTA rendering accelerator at 80MHz"
+      }
+    ]
+  },
+  "modeling_performance": {
+    "values": [
+      {
+        "value": "0.30",
+        "unit": "seconds",
+        "condition": "feedforward 3D GS modeling inference time"
+      },
+      {
+        "value": "order of magnitude reduction",
+        "unit": "latency improvement",
+        "condition": "vs optimization-based modeling accelerators"
+      }
+    ]
+  },
+  "modeling_power": {
+    "values": [
+      {
+        "value": "1067",
+        "unit": "mW",
+        "condition": "at 680MHz for modeling mode"
+      },
+      {
+        "value": "0.3%",
+        "unit": "of GPU power",
+        "condition": "modeling power relative to GPU"
+      }
+    ]
+  },
+  "architecture_efficiency": {
+    "values": [
+      {
+        "value": "40.2% reduction",
+        "unit": "area overhead",
+        "condition": "unified architecture vs heterogeneous"
+      },
+      {
+        "value": "4.04x higher",
+        "unit": "throughput improvement",
+        "condition": "sparse FP8 vs dense FP16 computation"
+      },
+      {
+        "value": "8.26x better",
+        "unit": "energy efficiency",
+        "condition": "sparse FP8 vs dense FP16 in modeling"
+      }
+    ]
+  },
+  "rendering_optimization": {
+    "values": [
+      {
+        "value": "89.2% reduction",
+        "unit": "computational load",
+        "condition": "DFGRE with AABB vs 16x16 static array"
+      },
+      {
+        "value": "8.4x improvement",
+        "unit": "efficiency",
+        "condition": "with AABB boundary detection"
+      },
+      {
+        "value": "58.1% additional reduction",
+        "unit": "computation",
+        "condition": "adding scanline-based boundary detection"
+      },
+      {
+        "value": "63.6x efficiency improvement",
+        "unit": "with SBTU",
+        "condition": "vs static coarse-grained approach"
+      }
+    ]
+  },
+  "memory_optimization": {
+    "values": [
+      {
+        "value": "42.6% reduction",
+        "unit": "external memory access",
+        "condition": "on Synthetic NeRF dataset via LOUR"
+      },
+      {
+        "value": "34.1% reduction",
+        "unit": "external memory access",
+        "condition": "on RE10K dataset via LOUR"
+      },
+      {
+        "value": "5.36",
+        "unit": "dB quality recovery",
+        "condition": "via SWB canvas and SPG method"
+      }
+    ]
+  },
+  "quantization_capability": {
+    "values": [
+      {
+        "value": "8b activations and weights",
+        "unit": "precision",
+        "condition": "maintains high output quality in rendering"
+      },
+      {
+        "value": "FP16/FP8 reconfigurable",
+        "unit": "precision support",
+        "condition": "neural multiply-accumulators"
+      }
+    ]
+  },
+  "comparison": "Unified 3D Gaussian Splatting processor achieving 11.7x higher throughput than NeRF and 3.4x over conventional 3D GS accelerators, with 74.1% lower energy per frame, supporting both optimization-based and feedforward modeling/rendering with minimal area overhead for mobile deployment.",
+  "quantization": "FP16 and FP8 mixed-precision with sparse computation support"
+}

@@ -1,0 +1,66 @@
+{
+  "technology": "65nm CMOS",
+  "die_area": {
+    "value": "test chip",
+    "unit": "chip",
+    "note": "64 spin processing elements"
+  },
+  "spin_architecture": {
+    "value": "64",
+    "unit": "spin PEs",
+    "note": "column-bipartite topology"
+  },
+  "spin_connectivity": {
+    "value": "56",
+    "unit": "degree",
+    "condition": "spins densely connected"
+  },
+  "spin_coefficient_precision": {
+    "value": "8",
+    "unit": "bits",
+    "note": "J and h coefficients"
+  },
+  "frequency": {
+    "values": [
+      { "value": "8 clock cycles", "unit": "per full spin interaction", "condition": "column-sequential activation" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "518", "unit": "μW", "condition": "at 1.2V, solving hard Max-Cut" }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "1.2", "unit": "V", "condition": "nominal operation" }
+    ]
+  },
+  "max_cut_performance": {
+    "values": [
+      { "value": "2 cycles", "unit": "to convergence", "condition": "easy max-cut problems (ground state)" }
+    ]
+  },
+  "max_cut_speedup": {
+    "value": "107×",
+    "unit": "vs CPU Metropolis",
+    "condition": "hard max-cut problems"
+  },
+  "spin_pe_area": {
+    "value": "120.75 × 62.5",
+    "unit": "μm²",
+    "note": "per spin processing element"
+  },
+  "mimo_detection": {
+    "values": [
+      { "value": "24×24 BPSK", "unit": "MIMO problem", "condition": "wireless detection" },
+      { "value": "<72", "unit": "ns", "condition": "solution time" }
+    ]
+  },
+  "community_detection": {
+    "values": [
+      { "value": "64-node", "unit": "graph", "condition": "bisection and multi-partition detection" }
+    ]
+  },
+  "comparison": "Digital Ising chip with degree-56 column-bipartite topology for dense connectivity and high precision",
+  "reconfigurability": "Flexible SRAM-based coefficient storage for various optimization problems"
+}

@@ -1,0 +1,182 @@
+{
+  "paper_id": "18.5",
+  "title": "A 28nm 47.3TFLOPs/W 894mJ/Inference Visual Autoregressive Accelerator with Differential-Amplifier Speculation and Chain-Reaction-Like Parallel Generation",
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "5.76",
+    "unit": "mm²",
+    "note": "total chip area"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "400",
+        "unit": "MHz",
+        "condition": "peak operating frequency"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "47.3",
+        "unit": "TFLOPs/W",
+        "condition": "system energy efficiency"
+      }
+    ]
+  },
+  "area_efficiency": {
+    "value": "2.75",
+    "unit": "TFLOPs/mm²",
+    "note": "area efficiency"
+  },
+  "energy_per_inference": {
+    "value": "894",
+    "unit": "mJ",
+    "note": "per inference"
+  },
+  "inference_latency": {
+    "values": [
+      {
+        "value": "37.6",
+        "unit": "x",
+        "condition": "acceleration of generation"
+      },
+      {
+        "value": "23.7",
+        "unit": "x",
+        "condition": "latency reduction from parallel generation alone"
+      }
+    ]
+  },
+  "accuracy": {
+    "fid_loss": {
+      "value": "<0.6",
+      "unit": "%",
+      "note": "FID loss compared to baseline"
+    }
+  },
+  "architecture": {
+    "core_count": {
+      "value": "3",
+      "unit": "cores",
+      "note": "differential amplifier core (DAC), formal acceleration core (FAC), top-K sort core (TSC)"
+    },
+    "pe_clusters": {
+      "value": "4",
+      "unit": "clusters",
+      "note": "in FAC"
+    },
+    "pe_pairs_per_cluster": {
+      "value": "8",
+      "unit": "pairs",
+      "note": "for 16 parallel MACs"
+    }
+  },
+  "differential_visual_attention_amplifier": {
+    "ratio_improvement": {
+      "value": "3.21",
+      "unit": "x",
+      "note": "RMSTop-64/RMSNon-Top-64 vs non-differential"
+    },
+    "computation_reduction": {
+      "value": "47.2",
+      "unit": "%",
+      "note": "Top-K mask reduces computations"
+    },
+    "energy_efficiency_improvement": {
+      "value": "1.93",
+      "unit": "x",
+      "note": "including differential speculation"
+    }
+  },
+  "attention_mechanism": {
+    "log_pe_approximation": {
+      "value": "shift-and-add",
+      "note": "eliminates multipliers for leading-1 approximation"
+    },
+    "softmax_approximation": {
+      "value": "S2Max",
+      "note": "base-2 implementation avoiding non-linear operations"
+    },
+    "pe_utilization_without_conflicts": {
+      "value": ">90.1",
+      "unit": "%",
+      "note": "with conflict rate <49.6%"
+    }
+  },
+  "mxint_pe_optimization": {
+    "compression_aware_dadda_multiplier": {
+      "value": "1.21",
+      "unit": "x",
+      "note": "power reduction via triple-mode 4:2 compressor"
+    },
+    "combining_adder_tree_area": {
+      "value": "4.7",
+      "unit": "%",
+      "note": "area efficiency improvement"
+    },
+    "fp_accumulator_activity_reduction": {
+      "value": "6.85",
+      "unit": "x",
+      "note": "via exponent partitioning hot-cold accumulator"
+    },
+    "accumulation_power_reduction": {
+      "value": "1.38",
+      "unit": "x"
+    },
+    "dynamic_exponent_interval": {
+      "value": ">32",
+      "note": "with ring buffer management"
+    },
+    "exponent_error_bound": {
+      "value": "<2^-31",
+      "note": "when exponent gap exceeds 32"
+    }
+  },
+  "parallel_generation": {
+    "latency_improvement": {
+      "value": "23.7",
+      "unit": "x",
+      "note": "from chain-reaction-like parallel generation"
+    },
+    "bit_slice_sorting": {
+      "value": "early-exit",
+      "note": "optimized for large K"
+    },
+    "skewed_scheduler_improvement": {
+      "value": "1.16",
+      "unit": "x",
+      "note": "latency improvement for Top-K sorting"
+    }
+  },
+  "qkv_operations": {
+    "skippable_operations": {
+      "value": "entire row/column",
+      "note": "when Top-K mask is all zeros"
+    },
+    "sparse_aware_acceleration": {
+      "value": "enabled",
+      "note": "via differential allocator"
+    }
+  },
+  "model_benchmarks": [
+    {
+      "model": "DeiT VAR",
+      "metric": "37.6x",
+      "detail": "acceleration"
+    },
+    {
+      "model": "ViT VAR",
+      "metric": "37.6x",
+      "detail": "acceleration"
+    },
+    {
+      "model": "512x512 resolution baseline",
+      "metric": "332.8",
+      "detail": "seconds per inference (unaccelerated)"
+    }
+  ],
+  "comparison": "Combines model redundancy (attention noise), hardware redundancy (data distribution bias), and data redundancy (spatial correlations) for significant improvements.",
+  "notes": "Features differential visual attention amplifier for speculative execution, full-path MXINT PE with data-distribution awareness, and chain-reaction-like parallel generation exploiting spatial correlation in images."
+}

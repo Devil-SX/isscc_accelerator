@@ -1,0 +1,64 @@
+{
+  "technology": "16nm FinFET CMOS",
+  "die_area": {
+    "value": "1",
+    "unit": "Mb",
+    "note": "SRAM-DCIM macro with 16 64kb banks"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.8",
+        "unit": "V",
+        "condition": "measurement condition"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "1.3",
+        "unit": "ns",
+        "condition": "MAC latency (TMAC) at 0.8V with 8bIN-8bW-22bOUT"
+      }
+    ]
+  },
+  "quantization": {
+    "snn_mode": "1b input, 8b weight, 14b output",
+    "cnn_mode": "8b input, 8b weight, 22b output"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "444.21",
+        "unit": "TOPS/W",
+        "condition": "SNN mode with 1bIN-8bW-14bOUT"
+      },
+      {
+        "value": "62.84",
+        "unit": "TOPS/W",
+        "condition": "CNN mode with 8bIN-8bW-22bOUT"
+      }
+    ]
+  },
+  "membrane_potential_modes": [
+    {
+      "name": "IF",
+      "description": "integrate-and-fire mode for simple spike generation"
+    },
+    {
+      "name": "LIF",
+      "description": "leaky integrate-and-fire mode with leakage dynamics"
+    },
+    {
+      "name": "IQIF",
+      "description": "integer quadratic integrate-and-fire mode with nonlinear integration"
+    }
+  ],
+  "comparison": "8.2× improvement in FoM3 (IN precision×W precision×energy efficiency) over prior works; first silicon-verified fully digital SRAM-CIM macro supporting multi-bit hybrid SNN-CNN",
+  "key_features": {
+    "architecture_reduction": "33% macro area reduction vs prior hybrid SNN-CNN CIM design",
+    "energy_improvement": "2.31× energy efficiency improvement",
+    "fom2_improvement": "5.48× FoM2 (inference accuracy×energy efficiency/(area×latency)) over baseline designs"
+  }
+}

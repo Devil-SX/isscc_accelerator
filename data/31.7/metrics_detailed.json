@@ -1,0 +1,93 @@
+{
+  "paper_id": "31.7",
+  "title": "LUT-SSM: A 99.3TFLOPS/W LUT-Based State-Space Model Accelerator Using Energy-Efficient Element-Wise Layer Fusion and LUT-Friendly Weight-Only Quantization",
+  "technology": "28nm FD-SOI",
+  "die_area": {
+    "value": "16.0",
+    "unit": "mm²"
+  },
+  "supply_voltage": {
+    "value": "1.0",
+    "unit": "V"
+  },
+  "frequency": {
+    "value": "200",
+    "unit": "MHz"
+  },
+  "power": {
+    "values": [
+      {
+        "value": "54.46",
+        "unit": "mW",
+        "condition": "at 1.0V, 200MHz"
+      }
+    ]
+  },
+  "peak_energy_efficiency": {
+    "value": "99.3",
+    "unit": "TFLOPS/W",
+    "condition": "peak efficiency"
+  },
+  "model_efficiency": {
+    "value": "96.1",
+    "unit": "TFLOPS/W",
+    "condition": "Mamba-1.4B with 4-bit quantization"
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "0.55",
+        "unit": "s/token",
+        "condition": "Mamba model inference"
+      }
+    ]
+  },
+  "comparative_improvements": {
+    "vs_a100": "faster than NVIDIA A100 for Mamba models",
+    "vs_prior_designs": {
+      "energy_efficiency_vs_design_10": "3.92x",
+      "energy_efficiency_vs_design_11": "1.28x",
+      "energy_efficiency_vs_design_12": "1.12x"
+    }
+  },
+  "quantization": "Weight-only quantization (W3-W4 mixed-precision), FP16 activations, INT weights",
+  "precision_modes": [
+    "W3/W4 mixed-precision quantization",
+    "Layer-wise mixed-precision support"
+  ],
+  "mm_lpe_optimization": {
+    "power_reduction": "72.3%",
+    "area_reduction": "62.8%",
+    "core_energy_reduction": "28.5%",
+    "vs_many_to_one": "comparison baseline"
+  },
+  "dataflow_optimization": {
+    "soli_energy_improvement": "42%",
+    "losi_energy_improvement": "18%",
+    "note": "weight shape-aware LUT-stationary dataflows"
+  },
+  "ew_layer_fusion": {
+    "on_chip_energy_reduction": "40%",
+    "ema_reduction": "73%",
+    "vs_simd_architecture": "comparison baseline"
+  },
+  "sr_lut_generator": {
+    "power_increase": "42%",
+    "vs_straightforward_implementation": "baseline comparison",
+    "overall_energy_reduction": "31%",
+    "support": "column-wise group quantization with 4 FP multipliers"
+  },
+  "key_features": [
+    "Many-to-Many LUT-based Processing Elements (MM-LPEs)",
+    "Scale-Reflected LUT (SR-LUT) generator for column-wise quantization",
+    "Element-wise layer fusion for sequential FP-FP operations",
+    "LUT-friendly weight-only quantization"
+  ],
+  "model_architecture": "Mamba-1.4B",
+  "accuracy_notes": "Perplexity trade-off evaluation with mixed-precision quantization",
+  "computational_support": [
+    "INT-FP matrix multiplication (GEMM/GEMV)",
+    "Sequential floating-point element-wise operations",
+    "State update loops in SSM blocks"
+  ]
+}

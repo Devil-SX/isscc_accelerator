@@ -1,0 +1,108 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "not explicitly stated",
+    "unit": "mm²",
+    "note": "chip photo referenced in Fig 2.4.7"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "250",
+        "unit": "MHz",
+        "condition": "maximum operating frequency"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "1.0",
+        "unit": "V",
+        "condition": "nominal supply voltage"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "14.4",
+        "unit": "Gb/s",
+        "condition": "steady throughput"
+      }
+    ]
+  },
+  "power_consumption": {
+    "value": "104.6",
+    "unit": "mW",
+    "note": "at 250MHz, 1.0V"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "7.3",
+        "unit": "pJ/b",
+        "condition": "energy efficiency at peak throughput"
+      },
+      {
+        "value": "5.4x better",
+        "unit": "energy efficiency improvement",
+        "condition": "vs latest SOTA channel estimation fabric [9]"
+      }
+    ]
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "0.28-0.7",
+        "unit": "ms",
+        "condition": "end-to-end latency per PRB"
+      }
+    ]
+  },
+  "channel_estimation_performance": {
+    "values": [
+      {
+        "value": "24",
+        "unit": "dB",
+        "condition": "maximum estimation gain"
+      },
+      {
+        "value": "7.7-18.9",
+        "unit": "dB improvement",
+        "condition": "in reliability vs SOTA systems"
+      },
+      {
+        "value": "16-39x improvement",
+        "unit": "throughput",
+        "condition": "vs SOTA channel estimation systems"
+      },
+      {
+        "value": "5% MSE loss",
+        "unit": "from baseline",
+        "condition": "with all cost optimizations applied"
+      }
+    ]
+  },
+  "quantization_efficiency": {
+    "values": [
+      {
+        "value": "95% reduction",
+        "unit": "storage",
+        "condition": "via channel-aware compression (CAC)"
+      },
+      {
+        "value": "83% reduction",
+        "unit": "MHA latency",
+        "condition": "via relaxed self-attention (RSA)"
+      }
+    ]
+  },
+  "universal_coverage": {
+    "value": "FR1/FR2/FR3 frequency bands",
+    "unit": "spectrum range",
+    "note": "mode switching enables universal frequency range coverage"
+  },
+  "comparison": "AI-RAN channel estimation accelerator for B5G/6G achieving hyper-reliability, low-latency performance with universal frequency range coverage, surpassing SOTA systems by 7.7-18.9dB in reliability and 16-39x in throughput.",
+  "quantization": "12b fixed-point 2's complement with iterative quantization-aware training"
+}

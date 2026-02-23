@@ -1,0 +1,116 @@
+{
+  "paper_id": "31.3",
+  "title": "A 51.6μJ/Token Subspace-Rotation-Based Dual-Quantized Large-Language-Model Accelerator with Fused Scale-Activation INT Datapath and Rearranged Bit-Slice LUT Computation",
+  "technology": "not specified (inferred 28nm from comparison context)",
+  "energy_per_token": {
+    "values": [
+      {
+        "value": "51.6",
+        "unit": "μJ/token",
+        "condition": "LLaMA2-7B, 1024 tokens"
+      },
+      {
+        "value": "267.1",
+        "unit": "μJ/token",
+        "condition": "LLaMA3-8B best case"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.6-1.0",
+        "unit": "V"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "up to 450",
+        "unit": "MHz"
+      }
+    ]
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "2628",
+        "unit": "ms",
+        "condition": "LLaMA3-8B at best performance point, 1024 tokens"
+      },
+      {
+        "value": "621",
+        "unit": "ms",
+        "condition": "at best efficiency point, 1024 tokens"
+      }
+    ]
+  },
+  "peak_performance": {
+    "value": "118.6",
+    "unit": "TOPS/W",
+    "condition": "A4W4KV4 at 1.0V, LLaMA2-13B"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "118.6",
+        "unit": "TOPS/W",
+        "condition": "A4W4KV4, 1.0V, LLaMA2-13B"
+      }
+    ]
+  },
+  "energy_savings": {
+    "values": [
+      {
+        "value": "32.6",
+        "unit": "%",
+        "condition": "system-level vs SOTA on LLaMA2-7B under equal accuracy"
+      }
+    ]
+  },
+  "component_speedup": {
+    "values": [
+      {
+        "value": "1.41",
+        "unit": "x",
+        "condition": "SHQ contribution vs 4b baseline"
+      },
+      {
+        "value": "1.92",
+        "unit": "x",
+        "condition": "FSA contribution"
+      },
+      {
+        "value": "3.17",
+        "unit": "x",
+        "condition": "RBLUT contribution"
+      }
+    ]
+  },
+  "shq_rotation": {
+    "area_reduction": "59.7%",
+    "power_reduction": "62.3%",
+    "operation_reduction_mha": "33.14%",
+    "operation_reduction_ffn": "47.06%",
+    "speedup": "1.74x"
+  },
+  "fsa_scale_activation": {
+    "group_scaling_power_reduction": "59.9%",
+    "activation_power_reduction": "61.5%"
+  },
+  "rblut_bit_slice": {
+    "w2_energy_improvement": "1.75x",
+    "w2_vs_parallel_improvement": "2.28x"
+  },
+  "quantization": "Rotation-based dual-quantized: W4A4, W4A8, W8A4, W8A8 with flexible bit-width",
+  "accuracy": {
+    "note": "0.56 perplexity loss at LLaMA2-7B, negligible accuracy loss"
+  },
+  "key_features": [
+    "Subspace Hadamard Quantization (SHQ) for rotation",
+    "Fused Scale-Activation (FSA) unit in INT domain",
+    "Rearranged Bit-Slice LUT (RBLUT) engine",
+    "Table size reduction: 66.7% with canonical patterns"
+  ]
+}

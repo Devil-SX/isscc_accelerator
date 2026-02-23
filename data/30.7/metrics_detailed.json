@@ -1,0 +1,107 @@
+{
+  "technology": "Process-near-memory design with DRAM and logic stack",
+  "memory_capacity": {
+    "value": "1",
+    "unit": "GB",
+    "note": "on-chip DRAM capacity from two stacked DRAM dies"
+  },
+  "memory_density": {
+    "value": "99.4",
+    "unit": "Mb/mm2",
+    "note": "DRAM memory density"
+  },
+  "frequency": {
+    "value": "1.2",
+    "unit": "GHz",
+    "condition": "compute frequency on 28nm logic die"
+  },
+  "bandwidth": {
+    "values": [
+      {
+        "value": "12.77",
+        "unit": "GB/s/mm2",
+        "condition": "bandwidth density via 3D HB + mini-TSV interconnect"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "1.2",
+        "unit": "V",
+        "condition": "measurement condition at 526Mbps"
+      }
+    ]
+  },
+  "dram_performance": {
+    "values": [
+      {
+        "value": "526",
+        "unit": "Mbps",
+        "condition": "data rate at 1.2V"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "value": "0.67",
+    "unit": "pJ/b",
+    "note": "memory energy efficiency, 9% of GDDR6 and 28% of HBM3E"
+  },
+  "memory_latency": {
+    "values": [
+      {
+        "value": "3.21",
+        "unit": "ns",
+        "condition": "write latency for consecutive access"
+      },
+      {
+        "value": "3.24",
+        "unit": "ns",
+        "condition": "read latency for consecutive access"
+      },
+      {
+        "value": "45.12",
+        "unit": "ns",
+        "condition": "write latency for random access"
+      },
+      {
+        "value": "50.01",
+        "unit": "ns",
+        "condition": "read latency for random access"
+      }
+    ]
+  },
+  "latency_reduction": {
+    "values": [
+      {
+        "value": "90%",
+        "unit": "reduction",
+        "condition": "write latency vs scaled LPDDR4"
+      },
+      {
+        "value": "93%",
+        "unit": "reduction",
+        "condition": "read latency vs scaled LPDDR4"
+      }
+    ]
+  },
+  "gemm_performance": {
+    "values": [
+      {
+        "value": "86%",
+        "unit": "execution time reduction",
+        "condition": "128×128×128 GEMM vs Intel i7-13700F"
+      },
+      {
+        "value": "98%",
+        "unit": "execution time reduction",
+        "condition": "when scaled to 8-chip DIMM with 8GB DRAM"
+      }
+    ]
+  },
+  "comparison": "FoM 7.33× higher than prior 3D PNM design; 5.13× higher than active-interposer design",
+  "key_features": {
+    "interconnect": "HB pitch=3μm, TSV pitch=5μm",
+    "yield": "0.58% additional failure rate after 3D integration"
+  }
+}

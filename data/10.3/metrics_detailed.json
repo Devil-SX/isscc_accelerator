@@ -1,0 +1,42 @@
+{
+  "technology": "2nm CMOS with GAA",
+  "die_area": {
+    "value": "test chip integration",
+    "unit": "chip",
+    "note": "CNV and CEA MXU comparison"
+  },
+  "architecture": "Clock-Edge Architecture (CEA) with dual-edge-triggered flip-flops",
+  "frequency": {
+    "values": [
+      { "value": "half FCLK", "unit": "CEA vs CNV", "condition": "for iso-throughput" }
+    ]
+  },
+  "clock_power": {
+    "values": [
+      { "value": "39-40", "unit": "% reduction", "condition": "at iso-VDD and iso-TP" }
+    ]
+  },
+  "dynamic_power": {
+    "values": [
+      { "value": "9", "unit": "% reduction", "condition": "peak-performance workload, SVS-turbo" },
+      { "value": "17", "unit": "% reduction", "condition": "typical workload, SVS-turbo" }
+    ]
+  },
+  "dynamic_power_with_vmin": {
+    "values": [
+      { "value": "7-8", "unit": "% reduction", "condition": "peak-performance with ΔVMIN compensation" },
+      { "value": "16-17", "unit": "% reduction", "condition": "typical workload with ΔVMIN compensation" }
+    ]
+  },
+  "vmin_penalty": {
+    "values": [
+      { "value": "4", "unit": "mV higher", "condition": "CEA vs CNV at SVS" },
+      { "value": "4", "unit": "mV higher", "condition": "CEA vs CNV at nominal" },
+      { "value": "9", "unit": "mV higher", "condition": "CEA vs CNV at turbo" }
+    ]
+  },
+  "comparison": "Dual-edge-triggered flip-flops achieve 7-17% dynamic power reduction at iso-throughput",
+  "clock_duty_cycle_distortion": {
+    "value": "2.6×", "unit": "reduction in cycle-to-cycle DCD", "condition": "proposed DET CGC vs prior-art"
+  }
+}

@@ -19,6 +19,37 @@
     };
   }
 
+  function buildSidebar(currentId) {
+    var papers = window.APP.papers || [];
+    // Group papers by session
+    var sessions = {};
+    var sessionOrder = [];
+    papers.forEach(function (p) {
+      var s = p.session || 'Other';
+      if (!sessions[s]) {
+        sessions[s] = [];
+        sessionOrder.push(s);
+      }
+      sessions[s].push(p);
+    });
+
+    var html = '<aside class="detail-sidebar" id="detail-sidebar">';
+    sessionOrder.forEach(function (s) {
+      html += '<div class="sidebar-session">';
+      html += '<div class="sidebar-session-title">Session ' + escapeHtml(String(s)) + '</div>';
+      sessions[s].forEach(function (p) {
+        var cls = p.id === currentId ? ' active' : '';
+        var label = p.id + ' ' + (p.title || '').substring(0, 30);
+        html += '<a class="sidebar-item' + cls + '" href="#paper/' + escapeHtml(p.id) + '" title="' + escapeHtml(p.title || '') + '">';
+        html += escapeHtml(label);
+        html += '</a>';
+      });
+      html += '</div>';
+    });
+    html += '</aside>';
+    return html;
+  }
+
   function buildDetailNav(currentId) {
     var adj = getAdjacentPapers(currentId);
     var html = '<div class="detail-nav">';
@@ -355,9 +386,8 @@
 
   function buildReaderContainer(paper) {
     var figures = paper.figures || [];
-    var figureParagraphs = paper.figure_paragraphs || [];
     var hasFigures = figures.some(function (f) { return f.path; });
-    if (!hasFigures && !paper.markdown_path) return '';
+    if (!hasFigures) return '';
 
     var html = '<div class="reader-container" id="reader-container">';
 
@@ -388,36 +418,96 @@
 
     var basePath = window.APP.basePath;
     var figures = (paper.figures || []).filter(function (f) { return f.path; });
-    var figureParagraphs = paper.figure_paragraphs || [];
     var currentSlide = 0;
     var currentMode = 'paired';
 
-    // Build slides data for paired mode
+    // Build a figNum -> image path lookup
+    var figPathMap = {};
+    figures.forEach(function (fig) {
+      figPathMap[fig.num] = basePath + resolveImagePath(fig.path);
+    });
+
     var slides = [];
-    if (figureParagraphs.length > 0) {
-      figureParagraphs.forEach(function (fp) {
-        slides.push({
-          imgSrc: fp.figure_path ? basePath + resolveImagePath(fp.figure_path) : '',
-          label: fp.figure_label || '',
-          text: fp.paragraph || ''
+    var textSections = null;
+    var dataLoaded = false;
+
+    // Fetch text.json for structured content
+    var textJsonUrl = basePath + 'data/' + paper.id + '/text.json';
+    fetch(textJsonUrl)
+      .then(function (res) {
+        if (!res.ok) throw new Error('No text.json');
+        return res.json();
+      })
+      .then(function (data) {
+        textSections = data.sections || [];
+        dataLoaded = true;
+
+        // Build slides from body sections grouped by figure number
+        var figGroups = {};
+        var figOrder = [];
+        textSections.forEach(function (sec) {
+          if (sec.type === 'body' && sec.figure) {
+            var fn = sec.figure;
+            if (!figGroups[fn]) {
+              figGroups[fn] = [];
+              figOrder.push(fn);
+            }
+            figGroups[fn].push(sec.text);
+          }
         });
-      });
-    } else {
-      // Fallback: use figures with captions
-      figures.forEach(function (fig) {
-        slides.push({
-          imgSrc: basePath + resolveImagePath(fig.path),
-          label: 'Fig. ' + fig.num,
-          text: fig.caption || ''
+
+        slides = figOrder.map(function (fn) {
+          return {
+            figNum: fn,
+            imgSrc: figPathMap[fn] || '',
+            label: 'Fig. ' + fn,
+            text: figGroups[fn].join('\n\n')
+          };
         });
+
+        // Add figures that have no corresponding body sections
+        figures.forEach(function (fig) {
+          var hasSlide = slides.some(function (s) { return s.figNum === fig.num; });
+          if (!hasSlide) {
+            slides.push({
+              figNum: fig.num,
+              imgSrc: figPathMap[fig.num] || '',
+              label: 'Fig. ' + fig.num,
+              text: fig.caption || ''
+            });
+          }
+        });
+
+        // Sort by figure number
+        slides.sort(function (a, b) { return a.figNum - b.figNum; });
+
+        if (currentMode === 'paired') renderPairedMode();
+      })
+      .catch(function () {
+        // Fallback: use figures with captions only
+        dataLoaded = true;
+        textSections = [];
+        slides = figures.map(function (fig) {
+          return {
+            figNum: fig.num,
+            imgSrc: figPathMap[fig.num] || '',
+            label: 'Fig. ' + fig.num,
+            text: fig.caption || ''
+          };
+        });
+        if (currentMode === 'paired') renderPairedMode();
       });
-    }
 
     var contentEl = document.getElementById('reader-content');
     var navEl = document.getElementById('reader-nav');
     var dotsEl = document.getElementById('reader-dots');
 
     function renderPairedMode() {
+      if (!dataLoaded) {
+        contentEl.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div>加载论文内容...</div></div>';
+        navEl.style.display = 'none';
+        return;
+      }
       if (slides.length === 0) {
         contentEl.innerHTML = '<div style="padding:20px;color:var(--text-muted);">暂无图文内容</div>';
         navEl.style.display = 'none';
@@ -435,7 +525,12 @@
       if (s.label) {
         html += '<div class="reader-text-label">' + escapeHtml(s.label) + '</div>';
       }
-      html += '<div>' + escapeHtml(s.text) + '</div>';
+      var paras = s.text.split('\n\n');
+      paras.forEach(function (para) {
+        if (para.trim()) {
+          html += '<p class="reader-paragraph">' + escapeHtml(para.trim()) + '</p>';
+        }
+      });
       html += '</div>';
       html += '</div>';
       contentEl.innerHTML = html;
@@ -453,7 +548,7 @@
       if (readerImg) {
         readerImg.addEventListener('click', function () {
           var allImgs = slides.map(function (sl) { return sl.imgSrc; });
-          var allCaptions = slides.map(function (sl) { return sl.label + ': ' + sl.text; });
+          var allCaptions = slides.map(function (sl) { return sl.label; });
           window.openLightbox(allImgs, currentSlide, allCaptions);
         });
       }
@@ -465,33 +560,55 @@
       ftEl.className = 'reader-fulltext';
       ftEl.id = 'reader-fulltext';
 
-      if (!paper.markdown_path) {
-        ftEl.innerHTML = '<div style="padding:20px;color:var(--text-muted);">全文内容不可用</div>';
+      if (!dataLoaded) {
+        ftEl.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div>加载全文...</div></div>';
+        contentEl.innerHTML = '';
+        contentEl.appendChild(ftEl);
+        setTimeout(function () { renderFulltextMode(); }, 500);
+        return;
+      }
+
+      // Use text.json body sections if available
+      if (textSections && textSections.length > 0) {
+        var html = '<div class="markdown-content">';
+        textSections.forEach(function (sec) {
+          if (sec.type === 'body') {
+            html += '<p class="reader-paragraph">' + escapeHtml(sec.text) + '</p>';
+          }
+        });
+        html += '</div>';
+        ftEl.innerHTML = html;
         contentEl.innerHTML = '';
         contentEl.appendChild(ftEl);
         return;
       }
 
-      ftEl.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div>加载全文...</div></div>';
+      // Fallback: load raw text.md (private mode only)
+      if (paper.id) {
+        ftEl.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div>加载全文...</div></div>';
+        contentEl.innerHTML = '';
+        contentEl.appendChild(ftEl);
+        fetch(basePath + 'data/' + paper.id + '/text.md')
+          .then(function (res) {
+            if (!res.ok) throw new Error('Failed');
+            return res.text();
+          })
+          .then(function (md) {
+            if (typeof marked !== 'undefined' && marked.parse) {
+              ftEl.innerHTML = '<div class="markdown-content">' + marked.parse(md) + '</div>';
+            } else {
+              ftEl.innerHTML = '<div class="markdown-content"><pre>' + escapeHtml(md) + '</pre></div>';
+            }
+          })
+          .catch(function () {
+            ftEl.innerHTML = '<div style="padding:20px;color:var(--text-muted);">全文内容加载失败</div>';
+          });
+        return;
+      }
+
+      ftEl.innerHTML = '<div style="padding:20px;color:var(--text-muted);">全文内容不可用</div>';
       contentEl.innerHTML = '';
       contentEl.appendChild(ftEl);
-
-      var url = basePath + paper.markdown_path;
-      fetch(url)
-        .then(function (res) {
-          if (!res.ok) throw new Error('Failed to load markdown');
-          return res.text();
-        })
-        .then(function (md) {
-          if (typeof marked !== 'undefined' && marked.parse) {
-            ftEl.innerHTML = '<div class="markdown-content">' + marked.parse(md) + '</div>';
-          } else {
-            ftEl.innerHTML = '<div class="markdown-content"><pre>' + escapeHtml(md) + '</pre></div>';
-          }
-        })
-        .catch(function () {
-          ftEl.innerHTML = '<div style="padding:20px;color:var(--text-muted);">全文内容加载失败</div>';
-        });
     }
 
     function renderGalleryMode() {
@@ -568,7 +685,7 @@
       }
     });
 
-    // Keyboard navigation (only for reader, not lightbox)
+    // Keyboard navigation
     document.addEventListener('keydown', function (e) {
       var lightbox = document.getElementById('lightbox');
       if (lightbox && lightbox.classList.contains('active')) return;
@@ -590,57 +707,19 @@
   }
 
   function buildImageGallery(paper) {
-    var basePath = window.APP.basePath;
     var figures = paper.figures || [];
-    var pageImages = paper.page_images || paper.images || [];
+    if (figures.length === 0) return '';
 
-    // If we have individual figures, show those with captions
-    if (figures.length > 0) {
-      var hasPaths = figures.some(function (f) { return f.path; });
-      var html = '<h2 class="section-heading">论文图表</h2>';
-      html += '<div class="figure-gallery" id="image-gallery">';
-      figures.forEach(function (fig, idx) {
-        if (hasPaths && !fig.path) return;
-        html += '<div class="figure-card" data-idx="' + idx + '" data-type="figure">';
-        if (fig.path) {
-          var src = basePath + resolveImagePath(fig.path);
-          html += '<img src="' + escapeHtml(src) + '" alt="Fig. ' + fig.num + '" loading="lazy">';
-        } else {
-          html += '<div class="figure-placeholder">Fig. ' + fig.num + '</div>';
-        }
-        html += '<div class="figure-label">Fig. ' + fig.num + '</div>';
-        if (fig.caption) {
-          html += '<div class="figure-caption">' + escapeHtml(fig.caption) + '</div>';
-        }
-        html += '</div>';
-      });
-      html += '</div>';
-
-      // Also show page images in a collapsible section
-      if (pageImages.length > 0) {
-        html += '<h2 class="section-heading">论文页面</h2>';
-        html += '<div class="image-gallery" id="page-gallery">';
-        pageImages.forEach(function (imgPath, idx) {
-          var src = basePath + imgPath;
-          html += '<div class="gallery-thumb" data-idx="' + idx + '" data-type="page">';
-          html += '<img src="' + escapeHtml(src) + '" alt="Page ' + (idx + 1) + '" loading="lazy">';
-          html += '</div>';
-        });
-        html += '</div>';
+    // Public mode: show placeholders + captions only (images are not deployed)
+    var html = '<h2 class="section-heading">论文图表</h2>';
+    html += '<div class="figure-gallery" id="image-gallery">';
+    figures.forEach(function (fig, idx) {
+      html += '<div class="figure-card" data-idx="' + idx + '" data-type="figure">';
+      html += '<div class="figure-placeholder">Fig. ' + fig.num + '</div>';
+      html += '<div class="figure-label">Fig. ' + fig.num + '</div>';
+      if (fig.caption) {
+        html += '<div class="figure-caption">' + escapeHtml(fig.caption) + '</div>';
       }
-
-      return html;
-    }
-
-    // Fallback: show page images only (original behavior)
-    if (pageImages.length === 0) return '';
-
-    var html = '<h2 class="section-heading">论文页面</h2>';
-    html += '<div class="image-gallery" id="image-gallery">';
-    pageImages.forEach(function (imgPath, idx) {
-      var src = basePath + imgPath;
-      html += '<div class="gallery-thumb" data-idx="' + idx + '">';
-      html += '<img src="' + escapeHtml(src) + '" alt="Page ' + (idx + 1) + '" loading="lazy">';
       html += '</div>';
     });
     html += '</div>';
@@ -662,34 +741,6 @@
     }
     html += '</div>';
     return html;
-  }
-
-  function loadMarkdownContent(paper, container) {
-    if (!paper.markdown_path) return;
-
-    var mdEl = document.getElementById('markdown-section');
-    if (!mdEl) return;
-
-    var basePath = window.APP.basePath;
-    var url = basePath + paper.markdown_path;
-
-    mdEl.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div>加载详细内容...</div></div>';
-
-    fetch(url)
-      .then(function (res) {
-        if (!res.ok) throw new Error('Failed to load markdown');
-        return res.text();
-      })
-      .then(function (md) {
-        if (typeof marked !== 'undefined' && marked.parse) {
-          mdEl.innerHTML = '<div class="markdown-content">' + marked.parse(md) + '</div>';
-        } else {
-          mdEl.innerHTML = '<div class="markdown-content"><pre>' + escapeHtml(md) + '</pre></div>';
-        }
-      })
-      .catch(function () {
-        mdEl.innerHTML = '';
-      });
   }
 
   function bindDetailEvents(paper) {
@@ -743,14 +794,16 @@
     var paper = window.findPaper(id);
 
     if (!paper) {
-      container.innerHTML = '<div class="detail-page">' +
+      container.innerHTML = '<div class="detail-layout"><div class="detail-page">' +
         '<div class="detail-nav"><a class="back-link" href="#overview">\u2190 返回总览</a></div>' +
-        '<div class="empty-state"><p>未找到论文: ' + escapeHtml(id) + '</p></div></div>';
+        '<div class="empty-state"><p>未找到论文: ' + escapeHtml(id) + '</p></div></div></div>';
       return;
     }
 
     var isPrivate = window.APP.privateMode === true;
-    var html = '<div class="detail-page">';
+    var html = '<div class="detail-layout">';
+    html += buildSidebar(id);
+    html += '<div class="detail-page">';
 
     html += buildDetailNav(id);
 
@@ -782,17 +835,23 @@
       // Reader replaces both markdown-section and figure gallery
       html += buildReaderContainer(paper);
     } else {
-      // Non-private: show markdown section and image gallery as before
-      html += '<div id="markdown-section"></div>';
+      // Public: placeholders + captions only (no full text, no images)
       html += buildImageGallery(paper);
     }
 
     // Bottom nav
     html += buildBottomNav(id);
 
-    html += '</div>';
+    html += '</div>'; // close .detail-page
+    html += '</div>'; // close .detail-layout
 
     container.innerHTML = html;
+
+    // Scroll active sidebar item into view
+    var activeSidebarItem = document.querySelector('.sidebar-item.active');
+    if (activeSidebarItem) {
+      activeSidebarItem.scrollIntoView({ block: 'center', behavior: 'instant' });
+    }
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -800,9 +859,6 @@
     if (isPrivate) {
       // Initialize reader
       initReader(paper);
-    } else {
-      // Load markdown async
-      loadMarkdownContent(paper, container);
     }
 
     // Bind events (for non-private gallery)

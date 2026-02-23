@@ -1,0 +1,135 @@
+{
+  "paper_id": "31.9",
+  "title": "ALPhA-Vision: A Real-Time Always-On Vision Processor with 787μs Face Detection Latency in <5mW",
+  "technology": "16nm FinFET",
+  "die_area": {
+    "value": "4.20",
+    "unit": "mm²"
+  },
+  "supply_voltage": {
+    "value": "0.6",
+    "unit": "V",
+    "condition": "measurement point"
+  },
+  "frequency": {
+    "value": "359",
+    "unit": "MHz",
+    "condition": "logic core"
+  },
+  "frequency_riscv": {
+    "value": "718",
+    "unit": "MHz",
+    "condition": "RISC-V processor double-clock mode"
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "787",
+        "unit": "μs",
+        "condition": "face detection (Yolov5) at 0.6V, 359MHz"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "1270",
+        "unit": "fps",
+        "condition": "peak throughput"
+      },
+      {
+        "value": "60",
+        "unit": "fps",
+        "condition": "realistic use case operating point"
+      }
+    ]
+  },
+  "power": {
+    "values": [
+      {
+        "value": "4.6",
+        "unit": "mW",
+        "condition": "average at 60fps with 95.3% sleep time"
+      },
+      {
+        "value": "1.8",
+        "unit": "mW",
+        "condition": "unavoidable leakage with clocks halted"
+      }
+    ]
+  },
+  "sleep_mode_savings": {
+    "active_energy_reduction": "21%",
+    "sleep_energy_reduction": "94%",
+    "active_energy_savings_from_kernels": "10%"
+  },
+  "frame_sleep_ratio": {
+    "value": "95.3%",
+    "condition": "at 60fps"
+  },
+  "memory": {
+    "total_sram": {
+      "value": "2.125",
+      "unit": "MB"
+    },
+    "global_weight_memory": {
+      "value": "16 banks",
+      "bandwidth": "68 B/cycle read"
+    },
+    "global_scratchpad": {
+      "value": "64 banks",
+      "bandwidth": "136 B/cycle read, 65 B/cycle write"
+    }
+  },
+  "model_footprints": {
+    "model": "Yolov5n-0.5",
+    "weight_memory": "318 KB",
+    "activation_memory": "461 KB",
+    "note": "fully on-chip, no external memory access"
+  },
+  "accuracy": {
+    "face_detection_accuracy": "99.3%",
+    "dataset": "WiderFace",
+    "test_input": "192×192 grayscale"
+  },
+  "accelerator_compute": {
+    "dla_mac_throughput": "1024",
+    "unit": "MACs/cycle (INT8)",
+    "dla_mac_throughput_int4": "2048",
+    "nmp_depthwise_conv": "32",
+    "unit_nmp": "MACs/cycle"
+  },
+  "compute_utilization": {
+    "dla_average": "81%",
+    "nmp_average": "86% (bandwidth)"
+  },
+  "non_gemm_operations": {
+    "active_cycles_ratio": "21%",
+    "operations": "groupnorm, softmax, elementwise, perspective warp"
+  },
+  "quantization": "INT8 and INT4 with microscaling (block size 32)",
+  "power_management_features": [
+    "Independent SRAM bank retention/sleep modes",
+    "Leaf-level clock gating (hardware-managed)",
+    "Block-level clock gating (software-controlled)",
+    "Root clock gating with 31-bit counter timer",
+    "Fine-grained SRAM sleep state control per DNN layer"
+  ],
+  "dataflow": "Output-stationary, local-weight-stationary for high reuse",
+  "software_stack": [
+    "PyTorch quantization with per-layer configuration",
+    "Quantization-aware training (QAT)",
+    "Timeloop for GEMM mapping and loop nest optimization",
+    "Kernel fusion (up to 384 kernels fused)"
+  ],
+  "key_features": [
+    "Deep-Learning Accelerator (DLA) for GEMM/convolution",
+    "Near-Memory Processor (NMP) for low-compute-intensity kernels",
+    "Dedicated perspective warp engine for classical CV",
+    "Race-to-sleep optimization for sub-5mW power budget",
+    "Fully resident weights and activations in on-chip SRAM"
+  ],
+  "comparison_vs_sota": {
+    "note": "Enabled end-to-end AoV execution without external memory"
+  }
+}

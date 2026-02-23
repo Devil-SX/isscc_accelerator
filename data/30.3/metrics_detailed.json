@@ -1,0 +1,75 @@
+{
+  "technology": "22nm CMOS",
+  "die_area": {
+    "value": "96",
+    "unit": "Mb",
+    "note": "ReRAM CIM macro capacity with multi-mode operation"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.8",
+        "unit": "V",
+        "condition": "measurement condition for shmoo"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "5.0",
+        "unit": "ns",
+        "condition": "cycle time at 0.8V"
+      }
+    ]
+  },
+  "quantization": "BF16 format with multi-precision modes (SLC, L-MLC, NL-MLC)",
+  "memory_modes": {
+    "values": [
+      {
+        "value": "SLC",
+        "description": "single-level cell for high retention"
+      },
+      {
+        "value": "L-MLC",
+        "description": "linear multi-level cell for balanced operation"
+      },
+      {
+        "value": "NL-MLC",
+        "description": "non-linear multi-level cell for high density"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "50.6-90.2",
+        "unit": "TFLOPS/W",
+        "condition": "range across different modes and conditions"
+      }
+    ]
+  },
+  "retention": {
+    "value": "10",
+    "unit": "years",
+    "note": "measured device retention time"
+  },
+  "accuracy_preservation": {
+    "value": "79.17%",
+    "unit": "improvement",
+    "condition": "vs L-MLC at 10 years retention, TinyViM-S (Mamba) with BF16"
+  },
+  "comparison": "High-retention multi-mode ReRAM CIM addressing Mamba, Transformer, and CNN workloads with improved accuracy retention over pure L-MLC approach",
+  "model_benchmarks": [
+    {
+      "model": "TinyViM-S (Mamba)",
+      "metric": "79.17% higher accuracy vs L-MLC",
+      "detail": "at 10 years retention with BF16 precision"
+    },
+    {
+      "model": "ImageNet inference",
+      "metric": "near-lossless accuracy",
+      "detail": "with ISE-HF and S2R-Db ADC schemes"
+    }
+  ]
+}

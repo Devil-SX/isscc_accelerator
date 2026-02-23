@@ -1,0 +1,202 @@
+{
+  "paper_id": "18.4",
+  "title": "SpikeRAM: A 48.1pW/Synapse/Bit Event-Driven Spiking Compute-Near/In-Memory Processor with Neuromorphic Sensor Enabling Life-Long On-Chip Learning",
+  "technology": "28nm CMOS",
+  "power_efficiency": {
+    "values": [
+      {
+        "value": "48.1",
+        "unit": "pW/Synapse/Bit",
+        "condition": "power density"
+      },
+      {
+        "value": "2.7",
+        "unit": "x",
+        "condition": "improvement over [2]"
+      }
+    ]
+  },
+  "power": {
+    "values": [
+      {
+        "value": "1.26",
+        "unit": "mW",
+        "condition": "static power"
+      },
+      {
+        "value": "8.28",
+        "unit": "mW",
+        "condition": "dynamic power for real-time processing"
+      }
+    ]
+  },
+  "system_power": {
+    "value": "8.28",
+    "unit": "mW",
+    "note": "total system power in real-time tasks"
+  },
+  "network_capacity": {
+    "synapses": {
+      "value": "464",
+      "unit": "M",
+      "note": "total number of synapses"
+    },
+    "neurons": {
+      "value": "328",
+      "unit": "K",
+      "note": "total number of neurons"
+    },
+    "network_density": {
+      "value": "441.9",
+      "unit": "Synapse/Byte",
+      "note": "improvement of 24.3x over [10]"
+    }
+  },
+  "event_sensor": {
+    "event_rate": {
+      "value": "3.8",
+      "unit": "MEps",
+      "note": "maximum event rate from on-chip EVS"
+    },
+    "dynamic_range": {
+      "value": "130.9",
+      "unit": "dB",
+      "note": "dynamic range of EVS"
+    },
+    "frequency": {
+      "value": "200",
+      "unit": "Hz",
+      "note": "infrared pen capture frequency for signature verification"
+    }
+  },
+  "cim_architecture": {
+    "first_sfc_pe_macros": {
+      "value": "8",
+      "unit": "CIM macros",
+      "note": "with 32KB RAM each"
+    },
+    "first_sfc_pe_output_neurons": {
+      "value": "16",
+      "unit": "configurable neurons",
+      "note": "per macro"
+    },
+    "second_sfc_pe_macros": {
+      "value": "10",
+      "unit": "CIM macros",
+      "note": "with 10KB total"
+    },
+    "second_sfc_pe_output_neurons": {
+      "value": "10",
+      "unit": "output neurons"
+    }
+  },
+  "neuromorphic_core": {
+    "weight_precision": {
+      "value": "8",
+      "unit": "bits",
+      "note": "weight bit width"
+    },
+    "membrane_potential_precision": {
+      "value": "16",
+      "unit": "bits",
+      "note": "Vmem bit width"
+    }
+  },
+  "sparsity": {
+    "input_sparsity_exploitation": {
+      "value": "92.4",
+      "unit": "%",
+      "note": "redundant computations skipped in DVS Gesture"
+    }
+  },
+  "on_chip_learning": {
+    "e_otbp_memory_overhead": {
+      "value": "4.3",
+      "unit": "%",
+      "note": "compared to BPTT"
+    },
+    "e_otbp_computation_overhead": {
+      "value": "3.1",
+      "unit": "%",
+      "note": "compared to BPTT"
+    },
+    "time_window_reduction": {
+      "value": "73.1",
+      "unit": "%",
+      "note": "memory requirement reduction at 32 TWs"
+    }
+  },
+  "memory_endurance": {
+    "programming_time_reduction_nmnist": {
+      "value": "89.1",
+      "unit": "%",
+      "note": "reduction via ternary gradients and gray-code weights"
+    },
+    "programming_time_reduction_gesture": {
+      "value": "88.4",
+      "unit": "%",
+      "note": "reduction on DVS Gesture"
+    },
+    "memory_write_reduction": {
+      "value": "92.8",
+      "unit": "%",
+      "note": "maximum devices written reduction across four datasets"
+    },
+    "total_write_time_reduction": {
+      "value": "86.3",
+      "unit": "%",
+      "note": "per sample average reduction"
+    },
+    "mram_update_reduction": {
+      "value": "10.9",
+      "unit": "x",
+      "note": "mean update times reduction in DVS Gesture"
+    },
+    "mram_lifetime_extension": {
+      "value": "13.9",
+      "unit": "x",
+      "note": "during OCL with MRAM chip"
+    }
+  },
+  "model_benchmarks": [
+    {
+      "model": "NMNIST",
+      "metric": "96.4%",
+      "detail": "accuracy with 1 OCL epoch"
+    },
+    {
+      "model": "DVS Gesture",
+      "metric": "92.9%",
+      "detail": "accuracy with 1 OCL epoch"
+    },
+    {
+      "model": "DailyDVS",
+      "metric": "90.5%",
+      "detail": "accuracy with 1 OCL epoch"
+    },
+    {
+      "model": "Event-based Signature Verification (EHSV)",
+      "metric": "94.3%",
+      "detail": "authenticity verification accuracy with 2-shot OCL"
+    }
+  ],
+  "convergence": {
+    "value": "1",
+    "unit": "epoch",
+    "note": "rapid convergence to 90-96% accuracy from random initialization"
+  },
+  "external_memory": {
+    "mram_integration": {
+      "value": "4",
+      "unit": "Mb",
+      "note": "40nm MRAM chip for extended learning"
+    },
+    "parameter_expansion": {
+      "value": "5.4",
+      "unit": "x",
+      "note": "for N-Caltech101 101-class tasks"
+    }
+  },
+  "comparison": "2.7x power density improvement over [2]. 24.3x network density improvement over [10]. Outstanding learning efficiency with comparable energy consumption to on-chip SRAM.",
+  "notes": "Features EVS-integrated spiking convolution core with near-memory computing and spiking fully-connected on-chip learning core. Uses eligibility one-time backpropagation (e-OTBP), ternary gradients, and gray-code weights for efficient in-situ training."
+}

@@ -1,0 +1,169 @@
+{
+  "paper_id": "18.1",
+  "title": "A 3.19pJ/b Electro-Optical Router with 18ns Setup Frame-Level Routing and 1-to-6 Wavelength-Flexible Link Capacity for Photonic Interposers",
+  "technology": "28nm FDSOI",
+  "die_area": {
+    "value": "4",
+    "unit": "mm²",
+    "note": "electro-optical chiplet total area"
+  },
+  "active_area": {
+    "value": "0.007",
+    "unit": "mm²",
+    "note": "per link active area"
+  },
+  "tx_rx_area": {
+    "value": "7427",
+    "unit": "μm²",
+    "note": "Tx+Rx total active area"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "1.0",
+        "unit": "V",
+        "condition": "main digital supply"
+      },
+      {
+        "value": "1.0",
+        "unit": "V",
+        "condition": "quiet Rx supply"
+      },
+      {
+        "value": "2.0",
+        "unit": "V",
+        "condition": "Tx supply"
+      },
+      {
+        "value": "1.0-1.5",
+        "unit": "V",
+        "condition": "thermal tuning supply"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "4",
+        "unit": "Gbaud",
+        "condition": "data rate tested"
+      },
+      {
+        "value": "4.5",
+        "unit": "Gbaud",
+        "condition": "clock receiver BER limit"
+      },
+      {
+        "value": "7",
+        "unit": "Gbaud",
+        "condition": "back-to-back electrical SerDes limit"
+      }
+    ]
+  },
+  "bit_error_rate": {
+    "values": [
+      {
+        "value": "1e-6",
+        "unit": "BER",
+        "condition": "up to 4 Gbaud"
+      },
+      {
+        "value": "1e-24",
+        "unit": "undetected error rate",
+        "condition": "checksum decoding"
+      }
+    ]
+  },
+  "power": {
+    "values": [
+      {
+        "value": "2.09",
+        "unit": "pJ/b",
+        "condition": "bare TxRx link"
+      },
+      {
+        "value": "0.36",
+        "unit": "pJ/b",
+        "condition": "SerDes and clock phase generation"
+      },
+      {
+        "value": "0.75",
+        "unit": "pJ/b",
+        "condition": "digital logic including routing and queuing"
+      },
+      {
+        "value": "3.19",
+        "unit": "pJ/b",
+        "condition": "overall end-to-end routed transmission"
+      }
+    ]
+  },
+  "interposer": {
+    "value": "207",
+    "unit": "mm²",
+    "note": "fully populated 8-port ONoC interposer area"
+  },
+  "optical_specifications": {
+    "wavelengths": {
+      "value": "1-6",
+      "note": "wavelength-flexible link capacity via microring resonators"
+    },
+    "reach": {
+      "value": "2.5",
+      "unit": "cm",
+      "note": "reach on interposer"
+    },
+    "microring_count": {
+      "value": "42",
+      "note": "6 microring resonators per Rx bank × 7 Rx banks"
+    }
+  },
+  "routing_performance": {
+    "setup_time": {
+      "value": "18",
+      "unit": "ns",
+      "note": "frame-level routing setup time"
+    },
+    "preamble_length": {
+      "value": "18",
+      "unit": "ns",
+      "note": "minimum preamble to tune rings and average power"
+    },
+    "frame_duration_limit": {
+      "value": "50",
+      "unit": "ns",
+      "note": "target frame duration"
+    }
+  },
+  "memory": {
+    "queue_memory": {
+      "value": "1024",
+      "unit": "words",
+      "note": "frame queue in Rx"
+    }
+  },
+  "transimpedance_amplifier": {
+    "resistance": {
+      "value": "1.8",
+      "unit": "kΩ",
+      "note": "TIA transimpedance"
+    },
+    "lowpass_filter": {
+      "value": "1",
+      "unit": "MΩ",
+      "note": "LPF resistance"
+    },
+    "lowpass_capacitor": {
+      "value": "100",
+      "unit": "fF",
+      "note": "LPF capacitance"
+    },
+    "averaging_capacitor": {
+      "value": "100",
+      "unit": "fF",
+      "note": "dynamic threshold averaging capacitor"
+    }
+  },
+  "comparison": "Combines flexibility of dynamic routing from active CMOS interposers with improved reach and low latency of optical links. Achieves 2.5cm reach while preserving power efficiency close to state-of-the-art.",
+  "notes": "Standard-cell-based SerDes design avoids expensive custom components. Uses microring modulators and filters for wavelength-division multiplexing and dynamic routing."
+}

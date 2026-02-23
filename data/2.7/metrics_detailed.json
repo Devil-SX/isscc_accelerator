@@ -1,0 +1,151 @@
+{
+  "technology": "16nm FinFET",
+  "die_area": {
+    "value": "not explicitly stated",
+    "unit": "mm²",
+    "note": "chip photo provided in Fig 2.7.7"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "400",
+        "unit": "MHz",
+        "condition": "peak performance frequency"
+      },
+      {
+        "value": "100",
+        "unit": "MHz",
+        "condition": "peak energy efficiency frequency"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "1.05",
+        "unit": "V",
+        "condition": "at 400MHz peak performance"
+      },
+      {
+        "value": "0.66",
+        "unit": "V",
+        "condition": "at 100MHz peak energy efficiency"
+      }
+    ]
+  },
+  "compute_throughput": {
+    "values": [
+      {
+        "value": "7.37",
+        "unit": "TOPS",
+        "condition": "at 1.05V and 400MHz"
+      }
+    ]
+  },
+  "power_consumption": {
+    "values": [
+      {
+        "value": "1477",
+        "unit": "mW",
+        "condition": "at 400MHz, 1.05V"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "4.99",
+        "unit": "TOPS/W",
+        "condition": "at 1.05V, 400MHz"
+      },
+      {
+        "value": "11.64",
+        "unit": "TOPS/W",
+        "condition": "peak efficiency at 0.66V, 100MHz"
+      }
+    ]
+  },
+  "generation_time": {
+    "values": [
+      {
+        "value": "98",
+        "unit": "ms/step",
+        "condition": "DiT-XL/2 class-conditional image synthesis"
+      },
+      {
+        "value": "134",
+        "unit": "ms/step",
+        "condition": "PixArt-α text-to-image synthesis"
+      }
+    ]
+  },
+  "generation_energy": {
+    "values": [
+      {
+        "value": "75",
+        "unit": "mJ/step",
+        "condition": "DiT-XL/2 at 0.66V, 100MHz"
+      },
+      {
+        "value": "99",
+        "unit": "mJ/step",
+        "condition": "PixArt-α at 0.66V, 100MHz"
+      },
+      {
+        "value": "121.9",
+        "unit": "mJ/step",
+        "condition": "DiT-XL/2 system energy including DDR4 access"
+      },
+      {
+        "value": "159.2",
+        "unit": "mJ/step",
+        "condition": "PixArt-α system energy including DDR4 access"
+      }
+    ]
+  },
+  "external_memory_optimization": {
+    "values": [
+      {
+        "value": "50% reduction",
+        "unit": "weight external memory access",
+        "condition": "via classifier-free guidance batch difference processing"
+      },
+      {
+        "value": "37% reduction",
+        "unit": "additional weight EMA",
+        "condition": "via weight-reordered quantization"
+      },
+      {
+        "value": "37% reduction",
+        "unit": "feature-map buffer size",
+        "condition": "via hybrid MX blocking"
+      },
+      {
+        "value": "68-66% reduction",
+        "unit": "total EMA",
+        "condition": "for DiT-XL/2 and PixArt-α respectively"
+      }
+    ]
+  },
+  "performance_gain": {
+    "values": [
+      {
+        "value": "3.90-7.48x faster",
+        "unit": "generation time per step",
+        "condition": "vs prior diffusion model processors"
+      },
+      {
+        "value": "1.47-3.35",
+        "unit": "seconds",
+        "condition": "per high-fidelity image with 15-25 diffusion steps"
+      }
+    ]
+  },
+  "quality_preservation": {
+    "value": "Close to FP32 models without fine-tuning",
+    "unit": "image quality",
+    "note": "even with 66-68% EMA reduction"
+  },
+  "comparison": "Memory-efficient transformer-based diffusion model processor achieving fast, realistic image generation with classifier-free guidance support, delivering 3.9-7.5x faster generation than prior processors with high-fidelity output on edge devices.",
+  "quantization": "MXINT5, MXINT8, MXINT11 mixed-format quantization with lossless precision preservation"
+}

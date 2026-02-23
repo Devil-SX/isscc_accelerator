@@ -1,0 +1,47 @@
+{
+  "technology": "7nm CMOS",
+  "die_area": {
+    "value": "0.008",
+    "unit": "mm²",
+    "note": "standalone fractional divider only"
+  },
+  "frequency": {
+    "values": [
+      { "value": "8-32", "unit": "GHz", "condition": "input frequency range" },
+      { "value": "16-1600", "unit": "MHz", "condition": "output frequency range" },
+      { "value": "0.8-1.6", "unit": "GHz", "condition": "DTC/DLL operating frequency after post-divider" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "10", "unit": "mW", "condition": "at 1.6GHz, 0.9V supply" }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.9", "unit": "V", "condition": "nominal supply" }
+    ]
+  },
+  "jitter": {
+    "values": [
+      { "value": "350", "unit": "fs_rms", "condition": "worst-case integrated jitter [100kHz-100MHz]" },
+      { "value": "352", "unit": "fs_rms", "condition": "fractional-N mode" },
+      { "value": "282", "unit": "fs_rms", "condition": "integer-N mode" },
+      { "value": "0.3", "unit": "ps_rms", "condition": "with DTC QNC calibration" },
+      { "value": "1.65", "unit": "ps_rms", "condition": "without DTC QNC" }
+    ]
+  },
+  "spurs": {
+    "values": [
+      { "value": "-69", "unit": "dBc", "condition": "at 0.9GHz output" },
+      { "value": "-50", "unit": "dBc", "condition": "worst-case (α=2-17)" }
+    ]
+  },
+  "frequency_resolution": {
+    "value": "50",
+    "unit": "bits",
+    "note": "very fine resolution"
+  },
+  "comparison": "5× higher output frequency than prior FDIVs; 4× better jitter; 10× smaller area than aux-PLL approach",
+  "calibration": "LMS-based DTC background calibration using compact AUX-DLL, replica-free"
+}

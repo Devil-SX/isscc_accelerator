@@ -1,0 +1,123 @@
+{
+  "paper_id": "31.8",
+  "title": "A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685μs/Token Latency for Billion-Parameter Models",
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "56.82",
+    "unit": "mm²"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.58-1.0",
+        "unit": "V"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "180-550",
+        "unit": "MHz"
+      }
+    ]
+  },
+  "power": {
+    "values": [
+      {
+        "value": "129.8-887.6",
+        "unit": "mW",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "peak_energy_efficiency": {
+    "value": "109.7",
+    "unit": "TFLOPS/W",
+    "condition": "at FP8, 0.68V, 300MHz"
+  },
+  "baseline_performance": {
+    "value": "4.5",
+    "unit": "TFLOPS",
+    "condition": "at FP16, 550MHz"
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "105-685",
+        "unit": "μs/token",
+        "condition": "token-to-token latency range"
+      }
+    ]
+  },
+  "model_latencies": {
+    "values": [
+      {
+        "model": "Gemma-3-1B",
+        "latency_reduction": "9.97x",
+        "condition": "token-to-token latency"
+      },
+      {
+        "model": "Phi-2-2.7B",
+        "latency_reduction": "10.08x"
+      },
+      {
+        "model": "Llama-2-7B",
+        "latency_reduction": "10.29x"
+      }
+    ]
+  },
+  "comparative_improvements": {
+    "vs_prior_work_15": {
+      "energy_efficiency": "2.29x"
+    },
+    "vs_prior_work_6": {
+      "energy_efficiency": "1.24x",
+      "speedup": "3.04x"
+    }
+  },
+  "edrm_optimization": {
+    "mac_energy_reduction": "30.1%",
+    "exponent_processing_reduction": "63.8%",
+    "mac_power_from_exponent": "69.8% of total"
+  },
+  "dbtm_optimization": {
+    "inefficient_weight_kv_reduction": "74.9%",
+    "throughput_improvement": "2.2-2.5x",
+    "speedup": "2.35x"
+  },
+  "depc_optimization": {
+    "throughput_improvement": "1.49-1.89x",
+    "peak_throughput_improvement": "1.69x"
+  },
+  "quantization": "FP8 for draft model, FP16/BF16 for target model, mixed-precision with pruning",
+  "speculative_decoding_parameters": {
+    "draft_model": "1B-scale",
+    "target_model": "Billion-parameter scale",
+    "size_ratio": "10-20x smaller draft vs target",
+    "draft_length": "N typically 4-6",
+    "top_k_candidates": "k typically 2-3"
+  },
+  "duplicate_token_statistics": {
+    "duplicate_ratio": "39.5%",
+    "exponent_duplicate_ratio": "95.7%"
+  },
+  "target_model_inefficiency": {
+    "inefficient_heads_weights": "78.3%",
+    "inefficient_kv_entries": "78.3%"
+  },
+  "hardware_utilization": {
+    "draft_mac_underutilization": "76.7%",
+    "target_bandwidth_underutilization": "49.7%"
+  },
+  "key_features": [
+    "Exponent Dual-Reuse MAC (EDRM) for duplicate token handling",
+    "Draft Back-propagation Target Mixed-precision (DBTM) dataflow",
+    "Draft Early-start Parallel Compute (DEPC) for improved utilization",
+    "Layer-wise early stopping with 4 successive layer consistency"
+  ],
+  "gradient_analysis": {
+    "near_zero_gradients": "86.7%",
+    "distribution_levels": "1-level even, 2-level, 3-level"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "technology": "3nm FinFET (N3P) for XCD, 6nm FinFET (N6) for IOD",
+  "die_area": {
+    "value": "CoWoS-S module",
+    "unit": "multi-die package",
+    "note": "8 XCD accelerator dies + 2 IOD dies + 8 HBM3E stacks"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "various",
+        "unit": "V",
+        "condition": "compute and IO domains"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "boosted",
+        "unit": "GHz",
+        "condition": "target 5% technology process-neutral GPU device-level frequency increase"
+      }
+    ]
+  },
+  "hbm_bandwidth": {
+    "values": [
+      {
+        "value": "1.5x",
+        "unit": "improvement",
+        "condition": "peak HBM bandwidth vs MI300X"
+      }
+    ]
+  },
+  "compute_throughput": {
+    "values": [
+      {
+        "value": "1.9x",
+        "unit": "improvement",
+        "condition": "peak theoretical performance for 16b and 8b formats vs prior generation"
+      },
+      {
+        "value": "3.85x",
+        "unit": "improvement",
+        "condition": "peak theoretical performance for FP4 vs FP8 of previous generation"
+      }
+    ]
+  },
+  "power_efficiency": {
+    "values": [
+      {
+        "value": "30% reduction in process-neutral CAC/op",
+        "unit": "relative improvement",
+        "condition": "vs prior XCD design for critical workloads"
+      },
+      {
+        "value": "2x compute throughput with <2x power",
+        "unit": "power efficiency gain",
+        "condition": "generational improvement"
+      },
+      {
+        "value": "3x",
+        "unit": "generational improvement",
+        "condition": "inference performance increase for broad AI use cases"
+      },
+      {
+        "value": "1.3x better",
+        "unit": "HBM read BW/Watt",
+        "condition": "vs MI300X"
+      }
+    ]
+  },
+  "comparison": "Over 3x generational inference performance increase with improved energy efficiency compared to MI300X, supporting new FP6/FP4 lower-precision datatypes and increased memory bandwidth/capacity.",
+  "quantization": "FP6, FP4, FP8, FP16, INT8 support"
+}

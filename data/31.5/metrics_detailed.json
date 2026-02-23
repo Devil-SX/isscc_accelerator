@@ -1,0 +1,143 @@
+{
+  "paper_id": "31.5",
+  "title": "SoulMate: A 9.8mW Mobile Intelligence System-on-Chip with Mixed-Rank Architecture for On-Device LLM Personalization",
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "20.25",
+    "unit": "mm²"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.58-0.82",
+        "unit": "V",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "25",
+        "unit": "MHz",
+        "condition": "peak energy efficiency point"
+      },
+      {
+        "value": "250",
+        "unit": "MHz",
+        "condition": "peak performance point"
+      }
+    ]
+  },
+  "peak_performance": {
+    "value": "2.2",
+    "unit": "TFLOPS",
+    "condition": "at 250MHz, 0.82V"
+  },
+  "memory": {
+    "on_chip_sram": {
+      "value": "3.9",
+      "unit": "MB"
+    },
+    "weight_buffer": {
+      "value": "512",
+      "unit": "KB",
+      "note": "per MRNE"
+    },
+    "token_buffer": {
+      "value": "64",
+      "unit": "KB",
+      "note": "per MRNE"
+    },
+    "output_buffer": {
+      "value": "128",
+      "unit": "KB",
+      "note": "per MRNE"
+    },
+    "dialogue_database": {
+      "value": "32",
+      "unit": "MB",
+      "condition": "off-chip for RAG"
+    },
+    "replay_buffer": {
+      "value": "4",
+      "unit": "MB",
+      "condition": "off-chip for fine-tuning"
+    }
+  },
+  "power": {
+    "values": [
+      {
+        "value": "9.8",
+        "unit": "mW",
+        "condition": "peak energy efficiency point at 25MHz, 0.58V"
+      },
+      {
+        "value": "180.5",
+        "unit": "mW",
+        "condition": "peak performance point"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "inference": {
+      "value": "26.3",
+      "unit": "μJ/token",
+      "condition": "LLaMA3.2-1B inference (UI)"
+    },
+    "fine_tuning": {
+      "value": "56.8",
+      "unit": "μJ/token",
+      "condition": "LoRA-based fine-tuning (UA)"
+    }
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "216.4",
+        "unit": "ms",
+        "condition": "time-to-first-token (TTFT) for UI"
+      },
+      {
+        "value": "622.9",
+        "unit": "ms",
+        "condition": "UA latency"
+      }
+    ]
+  },
+  "ui_speedup": {
+    "values": [
+      {
+        "value": "75.0-82.5",
+        "unit": "%",
+        "condition": "latency reduction from mixed-rank processing"
+      }
+    ]
+  },
+  "ua_improvements": {
+    "energy_reduction": "61.7-76.2%",
+    "latency_reduction": "70.7%"
+  },
+  "bpmx_core": {
+    "peak_power_reduction": "66.1%",
+    "area_overhead": "3.4%",
+    "multiplier_power_reduction": "85.1%",
+    "adder_power_reduction": "84.1%"
+  },
+  "quantization": "MXFP format: MXFP6 input, MXFP4 weight, MXFP8 gradient",
+  "key_metrics": {
+    "ui_energy_reduction_from_mixed_rank": "69.7-71.4%",
+    "peak_rank_speedup": "3x halving operations"
+  },
+  "model": "LLaMA3.2-1B",
+  "system_features": [
+    "Mixed-rank token processing with Token Management Unit (TMU)",
+    "Mixed-rank Neural Engine (MRNE) supporting token-wise weight ranks",
+    "Similarity-aware sequence processing with Sequence Management Unit (SMU)",
+    "Boolean-Primitive MX (BPMX) tensor core for FP MAC power reduction",
+    "RAG integration: retrieval from 32MB dialogue history database",
+    "On-device training: LoRA-based fine-tuning with user feedback"
+  ],
+  "context_length": "~1K tokens",
+  "comparative_notes": "Only LLM/transformer processor with both inference and on-chip training support"
+}

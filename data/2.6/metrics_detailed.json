@@ -1,0 +1,136 @@
+{
+  "technology": "5nm technology",
+  "die_area": {
+    "value": "330",
+    "unit": "mm²",
+    "note": "single-slot PCIe card form factor"
+  },
+  "transistor_count": {
+    "value": "26",
+    "unit": "billion transistors",
+    "note": "total on chip"
+  },
+  "on_chip_memory": {
+    "values": [
+      {
+        "value": "64",
+        "unit": "MB",
+        "condition": "embedded SRAM on SoC"
+      },
+      {
+        "value": "128",
+        "unit": "GB",
+        "condition": "external DRAM via 16 LPDDR5 interfaces"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "1.2",
+        "unit": "GHz",
+        "condition": "cores and ring maximum"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.55",
+        "unit": "V",
+        "condition": "compute regions domain (42% of die area)"
+      },
+      {
+        "value": "0.75",
+        "unit": "V",
+        "condition": "ring domain"
+      }
+    ]
+  },
+  "memory_bandwidth": {
+    "values": [
+      {
+        "value": "204",
+        "unit": "GB/sec",
+        "condition": "peak bandwidth from 16 LPDDR5 channels @ 6.4Gbps"
+      }
+    ]
+  },
+  "compute_throughput": {
+    "values": [
+      {
+        "value": "98",
+        "unit": "TOPS",
+        "condition": "FP16 precision (dense)"
+      },
+      {
+        "value": "157",
+        "unit": "TOPS",
+        "condition": "FP8 precision (dense)"
+      },
+      {
+        "value": "315",
+        "unit": "TOPS",
+        "condition": "INT8 precision (dense)"
+      },
+      {
+        "value": "629",
+        "unit": "TOPS",
+        "condition": "INT4 precision (dense)"
+      }
+    ]
+  },
+  "power_efficiency": {
+    "values": [
+      {
+        "value": "2-3x better",
+        "unit": "power/performance improvement",
+        "condition": "vs GPU solutions on encoder-class models"
+      },
+      {
+        "value": "8% reduction",
+        "unit": "power savings",
+        "condition": "from power analysis methodology during physical design"
+      },
+      {
+        "value": "6% reduction",
+        "unit": "cell area reduction",
+        "condition": "from opportunistic frequency tuning"
+      }
+    ]
+  },
+  "power_management": {
+    "values": [
+      {
+        "value": "28% improvement",
+        "unit": "throughput enhancement",
+        "condition": "with dual-loop control vs single-loop for relevant enterprise workloads"
+      }
+    ]
+  },
+  "scaling_capability": {
+    "values": [
+      {
+        "value": "up to 8",
+        "unit": "cards",
+        "condition": "in single z17 mainframe server I/O drawer"
+      },
+      {
+        "value": "up to 96",
+        "unit": "Spyres",
+        "condition": "in full system"
+      }
+    ]
+  },
+  "model_support": {
+    "values": [
+      {
+        "value": "Granite v3.3 8B",
+        "unit": "model",
+        "condition": "with good scalability across multi-card configurations"
+      }
+    ]
+  },
+  "comparison": "Scalable, power-efficient AI accelerator for enterprise workloads fitting single-slot PCIe form factor, achieving 2-3x better power/performance than GPUs on encoder-class models with support for mixed-precision FP16/FP8/INT8/INT4 and structured sparsity.",
+  "quantization": "FP16, FP8 (e4m3/e5m2), INT8, INT4 mixed-precision support"
+}

@@ -41,11 +41,33 @@ This public repository contains only **derived metadata** (titles, challenges, i
 
 The site auto-detects available content and gracefully handles missing images/text.
 
+## Public vs Private Mode
+
+The site has two viewing modes, controlled by URL parameter — no code changes needed:
+
+| | Public (default) | Private (`?private=1`) |
+|---|---|---|
+| **URL** | `site/index.html` | `site/index.html?private=1` |
+| **Metadata & Abstract** | Yes | Yes |
+| **Figure captions** | Yes (with placeholder) | Yes (with images) |
+| **Figure images** | No (not deployed) | Yes |
+| **Full paper text** | No | Yes (three-mode reader) |
+| **Deployment** | GitHub Pages | Local only |
+
+**GitHub Pages** serves the public version only — figure images (`images/`, `images_web/`) and paper full text (`data/*/text.md`) are gitignored due to IEEE copyright.
+
+**Private mode** unlocks a three-mode reader per paper: paired figure+paragraph, full text, and image gallery. It requires local image and text files (see [Copyrighted Content](#note-on-copyrighted-content) for setup).
+
 ## Local Development
+
+In VS Code: `Ctrl+Shift+P` → `Tasks: Run Task` → **Serve (Local)** — prints clickable URLs for both modes.
+
+Or manually:
 
 ```bash
 python3 -m http.server 8765
-# Open http://localhost:8765/site/index.html
+# Public:  http://localhost:8765/site/index.html
+# Private: http://localhost:8765/site/index.html?private=1
 ```
 
 ## Data Processing Scripts

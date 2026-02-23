@@ -1,0 +1,63 @@
+{
+  "technology": "180nm logic process with BEOL ferroelectric capacitors",
+  "die_area": {
+    "value": "16",
+    "unit": "Mb",
+    "note": "FeNAND cell array with 128×2048 ferroelectric NAND chains (FNCs)"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "27",
+        "unit": "MHz",
+        "condition": "at peak energy efficiency 166.8 TOPS/W"
+      },
+      {
+        "value": "36",
+        "unit": "MHz",
+        "condition": "at peak throughput 471.0 GOPS"
+      }
+    ]
+  },
+  "quantization": "4b input vector (IV[3:0]) and 4b stored vectors (SV[3:0]) in sign-magnitude format",
+  "sram": {
+    "value": "16",
+    "unit": "Mb",
+    "note": "FeNAND storage capacity"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "166.8",
+        "unit": "TOPS/W",
+        "condition": "peak for VMM operations at 27MHz"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "471.0",
+        "unit": "GOPS",
+        "condition": "peak throughput at 36MHz"
+      }
+    ]
+  },
+  "vector_dimensions": {
+    "value": "256",
+    "unit": "dimensions",
+    "note": "using truncated SVD reduction from original dataset"
+  },
+  "anns_performance": {
+    "value": "12.8",
+    "unit": "× reduction",
+    "detail": "end-to-end search latency with SA-IVPU; recall rates: 92.1% (k=100), 91.9% (k=10) on 20NewsGroup dataset"
+  },
+  "memory_window": {
+    "value": ">0.45",
+    "unit": "V",
+    "condition": "maintained after 10^9 P/E cycles"
+  },
+  "comparison": "1.29× improvement in energy efficiency vs prior phase-domain computing; 2.56× improvement in FoM (Capacity×IV-precision×SV-precision×Signal Margin×EF)",
+  "key_innovation": "Near-memory phase-domain computing with charge-discharge interleaving sensing scheme for ANNS on edge devices"
+}

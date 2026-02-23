@@ -1,0 +1,93 @@
+{
+  "technology": "4nm process",
+  "die_area": {
+    "value": "quad-chiplet",
+    "unit": "multi-chip module",
+    "note": "4 NPU chiplets, 4 HBM3E modules, 4 ISCs in advanced package"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "design-target configuration",
+        "unit": "GHz",
+        "condition": "multiple chiplets"
+      }
+    ]
+  },
+  "compute_throughput": {
+    "values": [
+      {
+        "value": "2",
+        "unit": "PFLOPS",
+        "condition": "FP8 compute capability"
+      }
+    ]
+  },
+  "on_chip_memory": {
+    "values": [
+      {
+        "value": "512",
+        "unit": "MB",
+        "condition": "total on-chip SRAM"
+      },
+      {
+        "value": "256",
+        "unit": "MB",
+        "condition": "high-density scratchpad memory with 128TB/s aggregated bandwidth"
+      },
+      {
+        "value": "256",
+        "unit": "MB",
+        "condition": "shared memory with 64TB/s aggregated bandwidth"
+      }
+    ]
+  },
+  "interconnect": {
+    "values": [
+      {
+        "value": "16",
+        "unit": "Gbps",
+        "condition": "UCIe die-to-die interface per channel"
+      },
+      {
+        "value": "11",
+        "unit": "ns",
+        "condition": "FDI-to-FDI latency at 16Gbps"
+      }
+    ]
+  },
+  "dma_bandwidth": {
+    "values": [
+      {
+        "value": "2.6",
+        "unit": "TB/s",
+        "condition": "per-DMA bandwidth sustained"
+      }
+    ]
+  },
+  "model_performance": {
+    "values": [
+      {
+        "value": "56.8",
+        "unit": "TPS",
+        "condition": "LLaMA 3.3 70B with single-batch 2k/2k input/output sequences"
+      }
+    ]
+  },
+  "power_efficiency": {
+    "values": [
+      {
+        "value": "1.7x higher",
+        "unit": "power efficiency",
+        "condition": "vs H200 during silicon bring-up measurements"
+      }
+    ]
+  },
+  "thermal_design_power": {
+    "value": "600",
+    "unit": "W",
+    "note": "TDP specification"
+  },
+  "comparison": "Petaflop-class LLM solution matching/surpassing leading commercial accelerators with efficient chiplet-based design, advanced die-to-die interfaces, and comprehensive power management for datacenters.",
+  "quantization": "Mixed-precision support with per-operand configurability"
+}

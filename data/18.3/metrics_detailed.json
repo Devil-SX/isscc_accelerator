@@ -1,0 +1,194 @@
+{
+  "paper_id": "18.3",
+  "title": "SMoLPU: 122.1μJ/Token Sparse MoE-Based Speculative Decoding Language Processing Unit with Adaptive-Offload NPU-CIM Core",
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "20.25",
+    "unit": "mm²",
+    "note": "total chip area"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "variable",
+        "unit": "Hz",
+        "note": "dynamic based on workload"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "122.1",
+        "unit": "μJ/token",
+        "note": "sparse MoE-based speculative decoding LLM inference"
+      },
+      {
+        "value": "7.8",
+        "unit": "μJ/token/parameter",
+        "note": "per parameter energy"
+      }
+    ]
+  },
+  "energy_per_token": {
+    "values": [
+      {
+        "value": "34.7-99.3",
+        "unit": "mJ/token",
+        "condition": "on MT-bench for 128 input / 64 output tokens"
+      }
+    ]
+  },
+  "energy_savings": {
+    "values": [
+      {
+        "value": "42.7-71.1",
+        "unit": "%",
+        "note": "total energy consumption reduction"
+      },
+      {
+        "value": "43.5",
+        "unit": "%",
+        "note": "improvement over SOTA per parameter energy for 1024 input / 1 output tokens"
+      }
+    ]
+  },
+  "model_parameters": {
+    "total_parameters": {
+      "value": "15.7",
+      "unit": "B",
+      "note": "total parameters in model"
+    },
+    "active_parameters_per_token": {
+      "value": "1.4",
+      "unit": "B",
+      "note": "activated per token in MoE"
+    },
+    "parameter_activation_ratio": {
+      "value": "8.9",
+      "unit": "%",
+      "note": "fraction of parameters active per token"
+    }
+  },
+  "external_memory_access": {
+    "emai_reduction": {
+      "value": "11.2",
+      "unit": "x",
+      "note": "EMA reduction compared to dense models"
+    },
+    "emai_reduction_prefill": {
+      "value": "2.3",
+      "unit": "x",
+      "note": "energy efficiency improvement in prefill via TaER"
+    },
+    "emai_reduction_decode": {
+      "value": "4.2",
+      "unit": "x",
+      "note": "energy efficiency improvement in decode via TaER"
+    }
+  },
+  "token_adaptive_expert_refinement": {
+    "expert_emai_reduction": {
+      "value": "66.3",
+      "unit": "%",
+      "note": "expert EMA reduction via masking"
+    },
+    "expert_computation_reduction": {
+      "value": "80.0",
+      "unit": "%",
+      "note": "expert computation energy reduction"
+    },
+    "psum_emai_reduction": {
+      "value": "67.2",
+      "unit": "%",
+      "note": "PSUM EMA reduction via cache management"
+    },
+    "latency_overhead": {
+      "value": "<3",
+      "unit": "%",
+      "note": "TaER latency overhead"
+    }
+  },
+  "hardware_utilization": {
+    "int_mac_utilization_improvement": {
+      "value": "23.1",
+      "unit": "%",
+      "note": "INT MAC utilization improvement via TSU/ANC"
+    },
+    "fp_mac_utilization_improvement": {
+      "value": "35.2",
+      "unit": "%",
+      "note": "FP MAC utilization improvement"
+    },
+    "end_to_end_speedup": {
+      "value": "3.3",
+      "unit": "x",
+      "note": "achieved via adaptive offload scheduling"
+    }
+  },
+  "memory_architecture": {
+    "global_memory": {
+      "value": "128",
+      "unit": "KB",
+      "note": "GMEM"
+    },
+    "psum_memory": {
+      "value": "512",
+      "unit": "KB",
+      "note": "PSMEM for partial sum caching"
+    }
+  },
+  "cim_design": {
+    "rdl_cim_power_reduction": {
+      "value": "36.8",
+      "unit": "%",
+      "note": "reconfigurable DRAM-based LUT-CIM power savings"
+    },
+    "rdl_cim_area_reduction": {
+      "value": "26.3",
+      "unit": "%",
+      "note": "RDL-CIM area reduction"
+    },
+    "lut_pitch_reduction": {
+      "value": "75.7",
+      "unit": "%",
+      "note": "via bipolar coded DRAM"
+    },
+    "refresh_power_overhead": {
+      "value": "0.13",
+      "unit": "%",
+      "note": "for RDL-CIM"
+    }
+  },
+  "model_benchmarks": [
+    {
+      "model": "OLMoE",
+      "metric": "34.7-99.3",
+      "detail": "mJ/token energy for 128 input / 64 output tokens"
+    },
+    {
+      "model": "DeepSeek-V2",
+      "metric": "34.7-99.3",
+      "detail": "mJ/token energy for 128 input / 64 output tokens"
+    },
+    {
+      "model": "Qwen3",
+      "metric": "34.7-99.3",
+      "detail": "mJ/token energy for 128 input / 64 output tokens"
+    },
+    {
+      "model": "1024 input / 1 output tokens",
+      "metric": "43.5%",
+      "detail": "energy per parameter improvement over SOTA"
+    }
+  ],
+  "accuracy": {
+    "fid_loss": {
+      "value": "<0.2",
+      "unit": "ppl",
+      "note": "negligible accuracy loss"
+    }
+  },
+  "comparison": "Highest EMA reduction (11.2x) among prior works. Lowest energy per parameter (43.5% improvement over SOTA [2]).",
+  "notes": "Supports MoE-based speculative decoding with INT-FP heterogeneous workloads. Features token-adaptive expert refinement, adaptive-offload NPU-CIM core, and reconfigurable DRAM-based LUT-CIM."
+}

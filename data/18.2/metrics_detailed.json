@@ -1,0 +1,205 @@
+{
+  "paper_id": "18.2",
+  "title": "A 22nm 1.87ms/Frame Streaming Multi-Speaker ASR Accelerator Leveraging Contextual-Aware Redundancy Skipping with 2D-Writable Microscaling Compute-in-Memory and Similarity-Aware TCAM Design",
+  "technology": "22nm CMOS",
+  "frequency": {
+    "values": [
+      {
+        "value": "46.4",
+        "unit": "MHz",
+        "condition": "minimum"
+      },
+      {
+        "value": "582",
+        "unit": "MHz",
+        "condition": "maximum"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.55",
+        "unit": "V",
+        "condition": "minimum"
+      },
+      {
+        "value": "1.0",
+        "unit": "V",
+        "condition": "maximum"
+      }
+    ]
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "1.87",
+        "unit": "ms/frame",
+        "condition": "at 1.0V"
+      },
+      {
+        "value": "7.51",
+        "unit": "ms/frame",
+        "condition": "at 0.55V"
+      }
+    ]
+  },
+  "energy": {
+    "values": [
+      {
+        "value": "0.158",
+        "unit": "mJ/frame",
+        "condition": "at 1.0V"
+      },
+      {
+        "value": "1.26",
+        "unit": "mJ/frame",
+        "condition": "at 0.55V"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "37.50",
+        "unit": "TFLOPS/W",
+        "condition": "system efficiency in MXFP8 format"
+      }
+    ]
+  },
+  "performance_improvements": {
+    "speedup_clean_speech": {
+      "value": "12.9",
+      "unit": "x",
+      "note": "vs baseline on clean single speaker audio"
+    },
+    "energy_savings_clean_speech": {
+      "value": "13.6",
+      "unit": "x",
+      "note": "vs baseline on clean single speaker audio"
+    },
+    "speedup_multisp_speech": {
+      "value": "12.2",
+      "unit": "x",
+      "note": "vs baseline on 3-speaker mixed audio"
+    },
+    "energy_savings_multisp_speech": {
+      "value": "18.21",
+      "unit": "x",
+      "note": "vs baseline on 3-speaker mixed audio"
+    },
+    "speedup_vs_prior_asr": {
+      "value": "2.39-3.20",
+      "unit": "x",
+      "note": "compared to prior ASR accelerator [11]"
+    },
+    "energy_reduction_vs_prior": {
+      "value": "1.91-3.84",
+      "unit": "x",
+      "note": "compared to prior ASR accelerator [11]"
+    }
+  },
+  "comparison_sota": "1.2x better system efficiency than prior work [19]",
+  "memory": {
+    "rnn_t_model_size": {
+      "value": "0.234",
+      "unit": "MB",
+      "note": "RNN-T pass model size in CIM"
+    },
+    "joiner_size": {
+      "value": "0.23",
+      "unit": "MB",
+      "note": "lightweight joiner in RNN-T"
+    },
+    "memory_reduction_static_pages": {
+      "value": "65",
+      "unit": "%",
+      "note": "memory access reduction with 17 static pages for joiner weights"
+    },
+    "energy_reduction_static_pages": {
+      "value": "32",
+      "unit": "%",
+      "note": "energy consumption reduction with static pages"
+    }
+  },
+  "cim_architecture": {
+    "clusters": {
+      "value": "3",
+      "note": "computing clusters"
+    },
+    "cim_macros_per_cluster": {
+      "value": "5",
+      "note": "digital CIM macros per cluster"
+    },
+    "tcam_banks": {
+      "value": "32",
+      "note": "SA-TCAM banks"
+    },
+    "static_pages_per_macro": {
+      "value": "17",
+      "note": "528×256 each for stationary weights"
+    },
+    "dynamic_pages_per_macro": {
+      "value": "2",
+      "note": "64×256 each for 2D update and sparse computation"
+    }
+  },
+  "redundancy_skipping": {
+    "mac_reduction": {
+      "value": "57-62",
+      "unit": "%",
+      "note": "MACs reduced by CARS with negligible WER impact"
+    },
+    "similarity_detection": {
+      "value": "92",
+      "unit": "%",
+      "note": "token-level similarity at deeper transformer layers"
+    },
+    "memory_transpose_reduction": {
+      "value": "72",
+      "unit": "%",
+      "note": "2D-writable MX-DCIM memory access reduction"
+    },
+    "energy_savings_two_pass": {
+      "value": "43",
+      "unit": "%",
+      "note": "2D-writable MX-DCIM energy savings for two-pass decoding"
+    }
+  },
+  "tcam_performance": {
+    "power_reduction": {
+      "value": "53",
+      "unit": "%",
+      "note": "search power reduction with ASF dynamic deactivation"
+    },
+    "latency_reduction": {
+      "value": "29",
+      "unit": "%",
+      "note": "latency reduction with ASF dynamic deactivation"
+    },
+    "rescoring_hit_rate_single": {
+      "value": "82",
+      "unit": "%",
+      "note": "N-best rescoring hit rate on single speaker speech"
+    },
+    "rescoring_hit_rate_multi": {
+      "value": "71",
+      "unit": "%",
+      "note": "N-best rescoring hit rate on multi-speaker dialogue"
+    },
+    "latency_reduction_rescoring": {
+      "value": "32",
+      "unit": "%",
+      "note": "overall latency reduction with reuse-aware rescoring"
+    }
+  },
+  "quantization": "MXFP8 format with microscaling (MX)",
+  "accuracy": {
+    "wer_increase": {
+      "value": "<0.1",
+      "unit": "%",
+      "note": "negligible WER increase from optimizations"
+    }
+  },
+  "notes": "Features context-aware redundancy skipping (CARS), 2D-writable MX-DCIM, and similarity-aware TCAM (SA-TCAM). Reuses inference states for on-chip learning with OCL."
+}

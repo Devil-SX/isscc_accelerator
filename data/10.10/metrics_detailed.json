@@ -1,0 +1,60 @@
+{
+  "technology": "55nm CMOS",
+  "memory": {
+    "value": "256×128",
+    "unit": "11T-SRAM array",
+    "note": "bidirectional compute-in-memory fabric"
+  },
+  "supply_voltage": {
+    "values": []
+  },
+  "frequency": {
+    "values": []
+  },
+  "k_sat_solver": {
+    "problem_size": "50 variables, 3-SAT",
+    "solution_time": "5.5",
+    "unit": "ms",
+    "condition": "satisfiable instances, 100% solvability"
+  },
+  "energy_consumption": {
+    "values": [
+      { "value": "265", "unit": "nJ", "condition": "per 50-variable 3-SAT solution" }
+    ]
+  },
+  "speedup_vs_sota": {
+    "values": [
+      { "value": "4-13×", "unit": "speedup", "condition": "vs prior ASIC solvers on uniform 3-SAT" },
+      { "value": "8-13×", "unit": "speedup", "condition": "vs discrete-time incomplete solvers" },
+      { "value": "4-5.6×", "unit": "speedup", "condition": "vs continuous-time solver in 28nm" },
+      { "value": "3×", "unit": "speedup", "condition": "vs DPLL-based complete solver in 28nm" },
+      { "value": "84×", "unit": "speedup (projected)", "condition": "on larger problems (modeled)" }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      { "value": "2-5×", "unit": "more efficient", "condition": "vs discrete-time solvers on uniform 3-SAT" },
+      { "value": "2-14×", "unit": "speedup", "condition": "on higher-order K-SAT problems" }
+    ]
+  },
+  "multi_thread": {
+    "improvement": "1.7×",
+    "unit": "convergence improvement",
+    "condition": "3-thread pipeline vs single-thread"
+  },
+  "sram_crossbar": {
+    "value": "11T-SRAM",
+    "note": "custom design for one-shot make/break-value computation"
+  },
+  "p_bit": {
+    "value": "ADC-less gradient-based sampling",
+    "note": "probabilistic-bit circuits enable parallel variable updates"
+  },
+  "comparison": "Mixed-signal K-SAT solver with parallel-variable update achieves 4-13× speedup over prior ASICs",
+  "key_features": [
+    "Order-invariant architecture for arbitrary K-SAT",
+    "Parallel variable updates in each cycle",
+    "Multi-thread pipeline (3 independent solvers)",
+    "ADC-less probabilistic-bit sampling"
+  ]
+}

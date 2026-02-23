@@ -1,0 +1,48 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "test chip",
+    "unit": "chip",
+    "note": "RISC-V CPU + CNN/Transformer accelerators + NDMU/OLE"
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.5-1.2", "unit": "V", "condition": "DC-DC output range" },
+      { "value": "1.8", "unit": "V", "condition": "IO supply input" }
+    ]
+  },
+  "frequency": {
+    "values": [
+      { "value": "45-185", "unit": "MHz", "condition": "chip operating range" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "up to 2.4", "unit": "% overhead", "condition": "NDMU in high-performance mode" },
+      { "value": "0.64", "unit": "% overhead", "condition": "NDMU in low-power mode" }
+    ]
+  },
+  "regulator_efficiency": {
+    "values": [
+      { "value": "91.7", "unit": "% peak", "condition": "DC-DC converter at 0.5-1.2V output" }
+    ]
+  },
+  "droop_reduction": {
+    "values": [
+      { "value": "79", "unit": "mV reduction", "condition": "average with online learning over 100K cycles" },
+      { "value": "47-59", "unit": "% worst-case magnitude reduction", "condition": "across 4 package configurations" }
+    ]
+  },
+  "clock_throttling": {
+    "values": [
+      { "value": "48.5×", "unit": "reduction in throttling events", "condition": "vs prior throttling-only schemes" },
+      { "value": "24% to ~1%", "unit": "clock gating cycles reduction", "condition": "at lower voltage margins" }
+    ]
+  },
+  "performance_loss": {
+    "values": [
+      { "value": "up to 23×", "unit": "improvement vs clock-throttling penalty", "condition": "reduced from 30% to minimal" }
+    ]
+  },
+  "comparison": "Proactive power management with online learning reduces worst-case droop by 59% vs fixed-model schemes"
+}

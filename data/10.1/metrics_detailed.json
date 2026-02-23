@@ -1,0 +1,45 @@
+{
+  "technology": "3nm CMOS",
+  "die_area": {
+    "value": "1 (single chip)",
+    "unit": "chip",
+    "note": "chiplet support with 9mm HBI inter-chiplet bandwidth"
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.5-1.2", "unit": "V", "condition": "core operating range" }
+    ]
+  },
+  "frequency": {
+    "values": [
+      { "value": "2.7", "unit": "GHz", "condition": "APU operation" },
+      { "value": "1.066", "unit": "GHz", "condition": "NPU operation" }
+    ]
+  },
+  "power": {
+    "values": []
+  },
+  "performance": {
+    "values": [
+      { "value": "1080", "unit": "k DMIPS", "condition": "APU peak" },
+      { "value": "400", "unit": "TOPS", "condition": "NPU peak" }
+    ]
+  },
+  "throughput": {
+    "values": [
+      { "value": "51.2", "unit": "GB/s", "condition": "inter-chip bandwidth via UCIe" }
+    ]
+  },
+  "memory": {
+    "values": [
+      { "value": "90+", "unit": "power domains", "condition": "fine-grained power gating" }
+    ]
+  },
+  "comparison": "ASIL D compliant automotive SoC with RegionID-based FFI over UCIe for zone-based computing",
+  "key_features": [
+    "Heterogeneous APU+NPU architecture",
+    "ASIL D functional safety",
+    "Hierarchical mCPG for clock latency control",
+    "Hybrid power gating with dual-PSW for IR-drop control"
+  ]
+}

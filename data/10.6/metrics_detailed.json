@@ -1,0 +1,76 @@
+{
+  "technology": "Intel 3 (bottom die) + Intel 18A (top die)",
+  "die_area": {
+    "value": "9",
+    "unit": "mm HBI",
+    "note": "hybrid bonding interconnect length"
+  },
+  "cores": {
+    "value": "56 + 56",
+    "unit": "tile pairs",
+    "note": "56 RISC-V cores (bottom) + 56 DNN accelerators (top)"
+  },
+  "risc_v_cores": {
+    "value": "32-bit RV32",
+    "unit": "cores",
+    "note": "modified from open-source RTL"
+  },
+  "dnn_accelerators": {
+    "values": [
+      { "value": "16×16", "unit": "INT8 systolic array", "condition": "per accelerator tile" }
+    ]
+  },
+  "memory": {
+    "values": [
+      { "value": "5.25", "unit": "MB SRAM", "condition": "distributed across stacked dies" }
+    ]
+  },
+  "frequency": {
+    "values": [
+      { "value": "1.205", "unit": "GHz", "condition": "peak performance" },
+      { "value": "280", "unit": "MHz", "condition": "at peak energy efficiency" }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.5-1.1", "unit": "V", "condition": "operating range" }
+    ]
+  },
+  "performance": {
+    "values": [
+      { "value": "33.0", "unit": "TOPS", "condition": "peak dynamic at 1.1V, 1.205GHz" },
+      { "value": "12.1", "unit": "TOPS/mm²", "condition": "peak compute density" }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      { "value": "16.1", "unit": "TOPS/W", "condition": "peak dynamic at 0.5V, 280MHz (excluding leakage)" }
+    ]
+  },
+  "noc_throughput": {
+    "values": [
+      { "value": "2.5", "unit": "Tb/s/mm²", "condition": "3D mesh NoC across HBI" }
+    ]
+  },
+  "noc_memory_improvement": {
+    "value": "39",
+    "unit": "% improvement",
+    "condition": "3D NoC vs 2D NoC"
+  },
+  "inference_latency": {
+    "values": [
+      { "value": "53", "unit": "ms", "condition": "MLPerf image classification (ResNet-8 CIFAR-10) parallel mapping" }
+    ]
+  },
+  "inference_energy": {
+    "values": [
+      { "value": "15.6", "unit": "mJ/inference", "condition": "at 0.5V, dataflow mapping" }
+    ]
+  },
+  "inference_throughput": {
+    "values": [
+      { "value": "27.4", "unit": "k inferences/sec", "condition": "at 1.1V, dataflow mapping" }
+    ]
+  },
+  "comparison": "3D stacking with 9mm HBI enables 39% memory throughput improvement vs equivalent 2D design"
+}

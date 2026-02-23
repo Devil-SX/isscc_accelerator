@@ -26,6 +26,15 @@
     privateMode: false
   };
 
+  // Private mode detection: ?private=1 or #private in URL
+  // GitHub Pages is always public (no parameter). Local/private deploy adds ?private=1.
+  (function detectPrivateMode() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('private') === '1' || params.get('private') === 'true') {
+      window.APP.privateMode = true;
+    }
+  })();
+
   // Base path for data files (relative to server root)
   var basePath = (function () {
     var p = window.location.pathname;

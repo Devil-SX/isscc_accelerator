@@ -1,0 +1,178 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "3.65",
+    "unit": "mm²",
+    "note": "4D Gaussian Splatting rendering processor"
+  },
+  "on_chip_memory": {
+    "values": [
+      {
+        "value": "204",
+        "unit": "KB",
+        "condition": "on-chip SRAM"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "110-500",
+        "unit": "MHz",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.60-1.0",
+        "unit": "V",
+        "condition": "operating range"
+      }
+    ]
+  },
+  "power_consumption": {
+    "values": [
+      {
+        "value": "63.1-699.2",
+        "unit": "mW",
+        "condition": "across voltage and frequency range"
+      },
+      {
+        "value": "87.7",
+        "unit": "mW",
+        "condition": "at 175MHz for real-time rendering"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "1043.6",
+        "unit": "fps",
+        "condition": "at 500MHz with 699.2mW on D-NeRF dataset"
+      },
+      {
+        "value": "365.3",
+        "unit": "fps",
+        "condition": "at 175MHz for real-time rendering"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "16.27",
+        "unit": "TFLOPS/W",
+        "condition": "peak efficiency at 0.65V, 175MHz"
+      }
+    ]
+  },
+  "rendering_energy": {
+    "values": [
+      {
+        "value": "0.24",
+        "unit": "mJ/frame",
+        "condition": "at 175MHz, 87.7mW on D-NeRF"
+      },
+      {
+        "value": "26.4x lower",
+        "unit": "energy reduction",
+        "condition": "vs SOTA NeRF processor [18]"
+      },
+      {
+        "value": "2.42x lower",
+        "unit": "energy reduction",
+        "condition": "vs SOTA 3DGS processor [20]"
+      }
+    ]
+  },
+  "performance_speedup": {
+    "values": [
+      {
+        "value": "2.80x faster",
+        "unit": "speed improvement",
+        "condition": "vs SOTA rendering processor at peak throughput"
+      },
+      {
+        "value": "6.23x speedup",
+        "unit": "on D-NeRF dataset",
+        "condition": "overall performance improvement"
+      },
+      {
+        "value": "6.18x speedup",
+        "unit": "on Immersive dataset",
+        "condition": "overall performance improvement"
+      },
+      {
+        "value": "6.31x speedup",
+        "unit": "on Neu3D dataset",
+        "condition": "overall performance improvement"
+      }
+    ]
+  },
+  "energy_efficiency_improvement": {
+    "values": [
+      {
+        "value": "6.11x improvement",
+        "unit": "energy efficiency",
+        "condition": "on D-NeRF dataset"
+      },
+      {
+        "value": "6.04x improvement",
+        "unit": "energy efficiency",
+        "condition": "on Immersive dataset"
+      },
+      {
+        "value": "6.22x improvement",
+        "unit": "energy efficiency",
+        "condition": "on Neu3D dataset"
+      }
+    ]
+  },
+  "memory_access_optimization": {
+    "values": [
+      {
+        "value": "62.1% reduction",
+        "unit": "memory access energy",
+        "condition": "via adaptive quadratic frame interpolation"
+      },
+      {
+        "value": "59.8% reduction",
+        "unit": "pre-processing time",
+        "condition": "via AQFI optimization"
+      }
+    ]
+  },
+  "computation_optimization": {
+    "values": [
+      {
+        "value": "59.15% reduction",
+        "unit": "rendering computation",
+        "condition": "via fused recursive opacity computation"
+      },
+      {
+        "value": "2.14x improvement",
+        "unit": "rendering throughput",
+        "condition": "via FROC unit"
+      }
+    ]
+  },
+  "pe_utilization": {
+    "values": [
+      {
+        "value": "2.61x improvement",
+        "unit": "PE utilization increase",
+        "condition": "via tree-based adaptive-precision pixel rendering"
+      },
+      {
+        "value": "3.59x improvement",
+        "unit": "TAPR throughput improvement",
+        "condition": "overall rendering throughput"
+      }
+    ]
+  },
+  "comparison": "High-efficiency 4D Gaussian Splatting processor for dynamic scene rendering achieving 2.8x faster performance than SOTA with 26.4x lower energy than NeRF processors, enabling real-time rendering at 365fps with only 87.7mW on mobile/edge VR/AR applications.",
+  "quantization": "FP16 and FP8 mixed-precision support"
+}

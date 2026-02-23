@@ -1,0 +1,55 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "0.65",
+    "unit": "mm²",
+    "note": "solver core area"
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.65-0.95", "unit": "V", "condition": "operating range" }
+    ]
+  },
+  "frequency": {
+    "values": [
+      { "value": "45-185", "unit": "MHz", "condition": "operating range" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "10.4", "unit": "mW", "condition": "split mode average @ 185MHz, 0.95V" },
+      { "value": "11.2", "unit": "mW", "condition": "merge mode average @ 185MHz, 0.95V" }
+    ]
+  },
+  "sat_solver_split_mode": {
+    "values": [
+      { "value": "4.0", "unit": "ms", "condition": "SAT cases average solution time" },
+      { "value": "8.3", "unit": "ms", "condition": "UNSAT cases average solution time" },
+      { "value": "100", "unit": "% solvability", "condition": "on 1000 uf/uuf50-218 benchmarks" }
+    ]
+  },
+  "sat_solver_merge_mode": {
+    "values": [
+      { "value": "91.8", "unit": "ms", "condition": "SAT cases average (872 clauses, 200 variables)" },
+      { "value": "846.0", "unit": "ms", "condition": "UNSAT cases average" },
+      { "value": "100", "unit": "% solvability", "condition": "on structured formulas (150 SAT, 46 UNSAT)" }
+    ]
+  },
+  "speedup_vs_sota": {
+    "values": [
+      { "value": "4.3-5.1×", "unit": "speedup", "condition": "vs state-of-the-art complete solver" }
+    ]
+  },
+  "energy_reduction": {
+    "values": [
+      { "value": "1.4-1.7×", "unit": "reduction", "condition": "vs SOTA complete solver" }
+    ]
+  },
+  "cdcl_speedup": {
+    "value": "45×",
+    "unit": "speedup",
+    "condition": "CDCL vs baseline without CDCL"
+  },
+  "architecture": "CAM-PU + CIM-LU hybrid with mode-reconfigurable split/merge modes",
+  "comparison": "Complete 3-SAT solver with CDCL achieving 4.3-5.1× speedup and 1.4-1.7× energy reduction"
+}

@@ -1,0 +1,93 @@
+{
+  "technology": "Intel 18A FinFET (GAA)",
+  "die_area": {
+    "value": "0.0856",
+    "unit": "mm2",
+    "note": "DCiM accelerator with 128 input channels, 32 output channels, 2 weight sets"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "2.62",
+        "unit": "GHz",
+        "condition": "at 1.1V and 25°C, maximum supply voltage"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "1.1",
+        "unit": "V",
+        "condition": "nominal operating voltage"
+      },
+      {
+        "value": "0.4",
+        "unit": "V",
+        "condition": "minimum operating voltage at 25°C"
+      }
+    ]
+  },
+  "quantization": "INT8×INT8 with zero-point quantization",
+  "throughput": {
+    "values": [
+      {
+        "value": "21.5",
+        "unit": "TOPS",
+        "condition": "peak at 2.62GHz and 1.1V"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "147",
+        "unit": "TOPS/W",
+        "condition": "peak at 400mV, 25°C with 25% input activity and 50% weight sparsity"
+      },
+      {
+        "value": "254",
+        "unit": "TOPS/W",
+        "condition": "at 400mV with 10% input activity"
+      },
+      {
+        "value": "1.23",
+        "unit": "W",
+        "condition": "power consumption at peak throughput"
+      },
+      {
+        "value": "6.1",
+        "unit": "mW",
+        "condition": "power consumption at 400mV, 25% input activity"
+      },
+      {
+        "value": "3.5",
+        "unit": "mW",
+        "condition": "power consumption at 400mV, 10% input activity"
+      }
+    ]
+  },
+  "compute_density": {
+    "values": [
+      {
+        "value": "250",
+        "unit": "TOPS/mm2",
+        "condition": "peak area efficiency at 1.1V and 25°C"
+      }
+    ]
+  },
+  "zero_point_quantization": {
+    "unsigned_to_signed_mapping": "20% power reduction and 17% area reduction vs naive 9b×9b approach",
+    "booth_encoding": "28% reduction in compute power via radix-4 Booth encoding of stationary weights"
+  },
+  "memory_optimization": {
+    "weight_storage": "20% reduction via high-density multibit latch (12T) with 95.5% insertion ratio",
+    "double_buffering": "allows concurrent weight update and compute with 32-cycle write window"
+  },
+  "comparison": "Best-in-class area efficiency (TOPS/mm2) and energy efficiency (TOPS/W) among recent state-of-the-art digital CIM designs",
+  "key_features": {
+    "synthesizable": "fully synthesizable design using Intel 18A standard cell library",
+    "scalability": "voltage scalable from 1.1V down to 400mV",
+    "portability": "enables technology node portability across foundries"
+  }
+}

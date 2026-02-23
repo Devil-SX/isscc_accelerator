@@ -1,0 +1,121 @@
+{
+  "paper_id": "31.4",
+  "title": "VARSA: A Visual Autoregressive Generation Accelerator Using Performance-Scalable Multi-Precision PE-LUT and Grid-Similarity Attention Compression",
+  "technology": "22nm",
+  "die_area": {
+    "note": "chip photo shown in Fig. 31.4.7"
+  },
+  "target_application": "512×512 text-to-image generation",
+  "supply_voltage": {
+    "note": "standard 22nm CMOS operation"
+  },
+  "frequency": {
+    "note": "variable based on precision and workload"
+  },
+  "peak_performance": {
+    "values": [
+      {
+        "value": "0.435-6.96",
+        "unit": "TOPS",
+        "condition": "performance scaling range"
+      }
+    ]
+  },
+  "peak_energy_efficiency": {
+    "value": "33.45",
+    "unit": "TOPS/W",
+    "condition": "W4A4"
+  },
+  "average_energy_efficiency": {
+    "value": "18.38",
+    "unit": "TOPS/W",
+    "condition": "mixed precision"
+  },
+  "energy_per_inference": {
+    "values": [
+      {
+        "value": "503",
+        "unit": "mJ",
+        "condition": "512×512 image generation including EMA"
+      },
+      {
+        "value": "290.5",
+        "unit": "mJ",
+        "condition": "EMA-excluded efficiency vs [16]"
+      }
+    ]
+  },
+  "latency": {
+    "values": [
+      {
+        "value": "1.92",
+        "unit": "s",
+        "condition": "512×512 image generation including EMA"
+      }
+    ]
+  },
+  "comparative_improvements": {
+    "vs_diffusion_sota": {
+      "energy": "2.7-8.9x",
+      "latency": "3.8x",
+      "references": "vs [16] and [17]"
+    },
+    "vs_ar_llm": {
+      "energy_efficiency": "1.8x",
+      "reference": "vs [19]"
+    }
+  },
+  "speedup": {
+    "values": [
+      {
+        "value": "2.3",
+        "unit": "x",
+        "condition": "overall speedup vs FP16 baseline"
+      }
+    ]
+  },
+  "energy_reduction": {
+    "values": [
+      {
+        "value": "1.4",
+        "unit": "x",
+        "condition": "PE-LUT performance-scaling contribution"
+      },
+      {
+        "value": "2.5",
+        "unit": "x",
+        "condition": "mixed-precision processing contribution"
+      },
+      {
+        "value": "1.6",
+        "unit": "x",
+        "condition": "attention compression contribution"
+      }
+    ]
+  },
+  "quantization": "W4A4, W4A8, W4A12 with multi-precision support",
+  "attention_compression": {
+    "memory_savings": "40.5%",
+    "compute_savings": "20.4%"
+  },
+  "pe_lut_design": {
+    "dual_function_lut": "INT4×INT4 multiply or 128b data storage",
+    "power_reduction_address_aware": "48.2%",
+    "power_reduction_clock_gating": "38.8%-33.7%"
+  },
+  "multi_precision_tiles": {
+    "tile_size": "16×8 elements",
+    "precision_levels": 3,
+    "precision_types": ["INT4", "INT8", "INT12"]
+  },
+  "key_features": [
+    "Performance-scalable PE-LUT core with 16x computational scaling",
+    "Multi-precision parallel processing with runtime distribution-aware precision",
+    "Attention map compression with inter-grid similarity exploitation",
+    "Pattern-based compression: top-k sparsity and linear regression for diagonal patterns"
+  ],
+  "comparison_vs_baseline_fp16": {
+    "energy_reduction": "2.3x",
+    "mixed_precision_quality": "negligible FID degradation"
+  }
+}

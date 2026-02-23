@@ -1,0 +1,78 @@
+{
+  "technology": "12nm CMOS",
+  "die_area": {
+    "value": "4",
+    "unit": "Mb",
+    "note": "CTT nvCIM macro with 16 256kb-banks (Bank0-15)"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.8",
+        "unit": "V",
+        "condition": "measurement condition"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "1.25",
+        "unit": "ns",
+        "condition": "access time (TAC) for AP phase"
+      },
+      {
+        "value": "1.34",
+        "unit": "ns",
+        "condition": "access time for one DC cycle"
+      },
+      {
+        "value": "36",
+        "unit": "ns",
+        "condition": "TAC for FP4IN-FP4W-18bOUT at 0.8V"
+      }
+    ]
+  },
+  "quantization": "INT4/8 and FP4 precision; INT16-to-24 precision for output",
+  "sram": {
+    "value": "4",
+    "unit": "Mb",
+    "note": "Charge-trap transistor (CTT) based non-volatile memory"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "137.75",
+        "unit": "TFLOPS/W",
+        "condition": "peak for ResNet-18 processing"
+      },
+      {
+        "value": "104.56",
+        "unit": "TFLOPS/W",
+        "condition": "average for ResNet-18"
+      }
+    ]
+  },
+  "compute_density": {
+    "values": [
+      {
+        "value": "2.61-3.64",
+        "unit": "TFLOPS/mm2",
+        "condition": "range depending on configuration"
+      }
+    ]
+  },
+  "storage_density": {
+    "value": "1.33",
+    "unit": "Mb/mm2",
+    "note": "key advantage of CTT-based approach"
+  },
+  "comparison": "44.49× improvement in FoM1 (Storage Density×Compute Density) over prior INT8 nvCIM designs; 14.62× improvement in FoM2 (Storage Density×Energy Efficiency×Compute Density)",
+  "model_benchmarks": [
+    {
+      "model": "ResNet-18",
+      "metric": "104.56-137.75 TFLOPS/W",
+      "detail": "energy efficiency with INT/FP4 MAC"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "technology": "3nm FinFET",
+  "die_area": {
+    "value": "0.338",
+    "unit": "mm²",
+    "note": "mini accelerator for diffusion ConvNets"
+  },
+  "on_chip_memory": {
+    "values": [
+      {
+        "value": "512",
+        "unit": "KB",
+        "condition": "total on-chip memory"
+      },
+      {
+        "value": "384",
+        "unit": "KB",
+        "condition": "L1 activation memory"
+      },
+      {
+        "value": "128",
+        "unit": "KB",
+        "condition": "L2 memory"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "546",
+        "unit": "MHz",
+        "condition": "operating frequency"
+      }
+    ]
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.575",
+        "unit": "V",
+        "condition": "nominal supply voltage"
+      }
+    ]
+  },
+  "compute_capacity": {
+    "values": [
+      {
+        "value": "2304",
+        "unit": "MAC units",
+        "condition": "convolution core"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "7.4",
+        "unit": "TOPS/mm²",
+        "condition": "area efficiency on DiCo model"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "17.4",
+        "unit": "TOPS/W",
+        "condition": "power efficiency on Diffusion ConvNet model"
+      }
+    ]
+  },
+  "generation_energy": {
+    "values": [
+      {
+        "value": "0.011",
+        "unit": "J/inference",
+        "condition": "DiCo model"
+      }
+    ]
+  },
+  "generation_latency": {
+    "values": [
+      {
+        "value": "0.116",
+        "unit": "s",
+        "condition": "DiCo model inference time"
+      }
+    ]
+  },
+  "memory_optimization": {
+    "values": [
+      {
+        "value": "21% improvement",
+        "unit": "L2 bandwidth",
+        "condition": "optimal FM allocation vs greedy method"
+      },
+      {
+        "value": "15% additional improvement",
+        "unit": "L2 bandwidth",
+        "condition": "with write-over-read relaxation"
+      },
+      {
+        "value": "11% less area",
+        "unit": "memory hierarchy",
+        "condition": "vs naive L1:L2=1:4 allocation"
+      },
+      {
+        "value": "27% lower EMA",
+        "unit": "external memory access",
+        "condition": "vs naive allocation baseline"
+      }
+    ]
+  },
+  "computation_efficiency": {
+    "values": [
+      {
+        "value": "41% reduction",
+        "unit": "resizer time",
+        "condition": "with input preloading and concurrent resizing"
+      },
+      {
+        "value": "45% reduction",
+        "unit": "input loading time",
+        "condition": "with activation-aware preloading"
+      }
+    ]
+  },
+  "quantization_capability": {
+    "values": [
+      {
+        "value": "8b activations and weights",
+        "unit": "precision",
+        "condition": "maintains high output quality vs FP32"
+      }
+    ]
+  },
+  "comparison": "Highly efficient 3nm mini accelerator for edge diffusion model deployment achieving 7.4TOPS/mm² area efficiency and 17.4TOPS/W energy efficiency through hardware-compiler co-optimized memory hierarchy and operator parallelism, enabling low-energy generative AI on mobile devices.",
+  "quantization": "8-bit (8b) activations and weights quantization"
+}

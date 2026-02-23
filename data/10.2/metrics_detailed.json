@@ -1,0 +1,52 @@
+{
+  "technology": "3nm-plus CMOS",
+  "die_area": {
+    "value": "24.69",
+    "unit": "mm²",
+    "note": "multi-core CPU with DMPA"
+  },
+  "supply_voltage": {
+    "values": []
+  },
+  "frequency": {
+    "values": [
+      { "value": "4.21", "unit": "GHz", "condition": "HP core base" },
+      { "value": "4.4-4.5", "unit": "GHz", "condition": "HP core with boost (DMPA)" },
+      { "value": "3.5", "unit": "GHz", "condition": "3x BP cores" },
+      { "value": "2.7", "unit": "GHz", "condition": "4x HE cores" }
+    ]
+  },
+  "cpu_cores": {
+    "value": "8",
+    "unit": "cores",
+    "note": "1x HP + 3x BP + 4x HE, ARMv9.4"
+  },
+  "performance": {
+    "values": [
+      { "value": "3917", "unit": "GeekBenchv6 single-core", "condition": "with DMPA" },
+      { "value": "3762", "unit": "GeekBenchv6 single-core", "condition": "without DMPA" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "0.078", "unit": "% of total CPU power", "condition": "DMPA overhead at max" }
+    ]
+  },
+  "area": {
+    "values": [
+      { "value": "0.0024", "unit": "% of CPU area", "condition": "BDC area" },
+      { "value": "0.0098", "unit": "% of CPU area", "condition": "ATC area" }
+    ]
+  },
+  "thermal": {
+    "values": [
+      { "value": "25", "unit": "ms", "condition": "ATC temperature sensing response time" },
+      { "value": "+2.5/-1.6", "unit": "°C", "condition": "T-sensor accuracy (-40 to 100°C with DVTC)" }
+    ]
+  },
+  "comparison": "4.5% max performance improvement via dynamic mobile performance augmentation with aging budget control",
+  "aging_budget": {
+    "value": "leveraged for boosting duty time",
+    "note": "boosting-duty control (BDC) with aging sensor"
+  }
+}

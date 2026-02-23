@@ -1,0 +1,69 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "0.78",
+    "unit": "mm²",
+    "note": "core area for 64 variables, 384 clauses"
+  },
+  "supply_voltage": {
+    "values": [
+      { "value": "0.9", "unit": "V", "condition": "nominal operation" }
+    ]
+  },
+  "frequency": {
+    "values": [
+      { "value": "375", "unit": "MHz", "condition": "operating frequency" }
+    ]
+  },
+  "power": {
+    "values": [
+      { "value": "99.1", "unit": "mW", "condition": "at 375MHz, 0.9V" }
+    ]
+  },
+  "sat_solver": {
+    "sat_cases": {
+      "solution_time": "0.8",
+      "unit": "μs",
+      "condition": "50 variables, 218 clauses"
+    },
+    "unsat_cases": {
+      "solution_time": "16.1",
+      "unit": "μs",
+      "condition": "50 variables, 218 clauses"
+    }
+  },
+  "solvability": {
+    "value": "100",
+    "unit": "%",
+    "condition": "on 1000 SAT and 1000 UNSAT 3-SAT cases from SATLIB"
+  },
+  "speedup_vs_software": {
+    "values": [
+      { "value": "70.67×", "unit": "speedup", "condition": "SAT cases vs MINISAT" },
+      { "value": "6.17×", "unit": "speedup", "condition": "UNSAT cases vs MINISAT" }
+    ]
+  },
+  "speedup_vs_prior_accelerator": {
+    "values": [
+      { "value": "21.11×", "unit": "speedup", "condition": "SAT cases vs prior complete solver" },
+      { "value": "2.61×", "unit": "speedup", "condition": "UNSAT cases vs prior complete solver" }
+    ]
+  },
+  "energy_comparison": {
+    "value": "1.38×",
+    "unit": "higher energy",
+    "condition": "SharpSAT vs DPLL baseline (faster convergence compensates)"
+  },
+  "learned_clauses": {
+    "values": [
+      { "value": "<20", "unit": "clauses", "condition": "SAT cases before solution" },
+      { "value": "full 384 clause budget", "unit": "clauses", "condition": "UNSAT cases before reporting UNSAT" }
+    ]
+  },
+  "comparison": "Heuristic-learning SAT accelerator achieving 21.11×/2.61× speedup on SAT/UNSAT cases",
+  "key_techniques": [
+    "Fast clause learning unit",
+    "Dual-BCP acceleration",
+    "Heuristic PRNG-based variable decider"
+  ]
+}

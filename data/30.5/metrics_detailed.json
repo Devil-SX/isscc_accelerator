@@ -1,0 +1,83 @@
+{
+  "technology": "16nm CMOS",
+  "die_area": {
+    "value": "72",
+    "unit": "kb",
+    "note": "gain-cell array based CIM macro"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.8",
+        "unit": "V",
+        "condition": "shmoo measurement condition"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "1.2",
+        "unit": "ns",
+        "condition": "access time for MXINT8-MAC at 0.8V"
+      }
+    ]
+  },
+  "quantization": "MXINT8, MXFP8, LNS8, BF16, and INT8 formats",
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "120.5",
+        "unit": "TFLOPS/W",
+        "condition": "MXINT8 mode"
+      },
+      {
+        "value": "98.1",
+        "unit": "TFLOPS/W",
+        "condition": "LNS8 mode"
+      },
+      {
+        "value": "50.4",
+        "unit": "TFLOPS/W",
+        "condition": "BF16 mode"
+      },
+      {
+        "value": "138.5",
+        "unit": "TFLOPS/W",
+        "condition": "INT8 mode"
+      }
+    ]
+  },
+  "compute_density": {
+    "values": [
+      {
+        "value": "3.18",
+        "unit": "TOPS/mm2",
+        "condition": "MXINT8 and INT8 modes"
+      },
+      {
+        "value": "1.59",
+        "unit": "TOPS/mm2",
+        "condition": "BF16 mode"
+      }
+    ]
+  },
+  "data_representations": [
+    "2's complement (2C) format",
+    "sign-magnitude (SM) format",
+    "sign-reversed (SR) format"
+  ],
+  "comparison": "1.7 to 2.3× improvement in FoM1 across representative AI workloads; supports multiple numerical formats (MX-LNS-FP-INT) with dual-representation capability",
+  "model_benchmarks": [
+    {
+      "model": "ResNet-20 @CIFAR-100",
+      "metric": "<0.01%",
+      "detail": "inference accuracy loss with product alignment and full output precision"
+    },
+    {
+      "model": "MobileViT @ImageNet-1K",
+      "metric": "<0.01%",
+      "detail": "inference accuracy loss"
+    }
+  ]
+}

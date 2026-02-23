@@ -1,0 +1,99 @@
+{
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "10.5",
+    "unit": "mm²",
+    "note": "complete end-to-end driving processor"
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "varies",
+        "unit": "MHz",
+        "condition": "multiple operating points for power-performance tradeoff"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "10.3",
+        "unit": "fps",
+        "condition": "end-to-end driving with multi-sensor fusion"
+      },
+      {
+        "value": "2.67x higher",
+        "unit": "processing speed improvement",
+        "condition": "vs state-of-the-art autonomous driving SoC [23]"
+      }
+    ]
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "71.3",
+        "unit": "mJ/frame",
+        "condition": "real-time end-to-end driving consumption"
+      },
+      {
+        "value": "218x lower",
+        "unit": "energy per frame",
+        "condition": "vs state-of-the-art driving SoC [23]"
+      },
+      {
+        "value": "544x lower",
+        "unit": "power consumption",
+        "condition": "vs GPU implementation [22]"
+      }
+    ]
+  },
+  "benchmark_performance": {
+    "values": [
+      {
+        "value": "69.6",
+        "unit": "driving score",
+        "condition": "Town05 Long benchmark in CARLA simulator"
+      }
+    ]
+  },
+  "memory_optimization": {
+    "values": [
+      {
+        "value": "73.9% reduction",
+        "unit": "memory demand for statistics",
+        "condition": "sparsity reasoning unit optimization"
+      },
+      {
+        "value": "92.8% reduction",
+        "unit": "external memory access",
+        "condition": "temporal attention with LSTMU and progressive memory pruning"
+      },
+      {
+        "value": "34.3% reduction",
+        "unit": "computational load",
+        "condition": "transformer layers via sparsity generation"
+      }
+    ]
+  },
+  "core_orchestration": {
+    "values": [
+      {
+        "value": "39.6% reduction",
+        "unit": "total processing time",
+        "condition": "flexible core allocation and reconﬁgurable aggregation"
+      },
+      {
+        "value": "89.9% reduction",
+        "unit": "power consumption",
+        "condition": "segmented aggregation network vs baseline"
+      },
+      {
+        "value": "83.2% reduction",
+        "unit": "area",
+        "condition": "segmented aggregation network vs baseline"
+      }
+    ]
+  },
+  "comparison": "Real-time end-to-end driving processor consuming 218x less energy than SOTA autonomous driving SoC while achieving comparable throughput to GPU implementations, processing entire multi-sensor/modal/temporal information pipeline.",
+  "quantization": "Not explicitly stated"
+}

@@ -1,0 +1,110 @@
+{
+  "paper_id": "31.2",
+  "title": "Revolver: Low-Bit GenAI Accelerator for Distilled-Model and CoT with Phase-Aware-Quantization and Rotation-Based Integer-Scaled Group Quantization",
+  "technology": "28nm CMOS",
+  "die_area": {
+    "value": "20.25",
+    "unit": "mm²"
+  },
+  "supply_voltage": {
+    "note": "standard CMOS operation"
+  },
+  "frequency": {
+    "note": "implementation in 28nm process"
+  },
+  "memory": {
+    "global_memory": {
+      "value": "1.28",
+      "unit": "MB"
+    },
+    "weight_buffer": {
+      "value": "52",
+      "unit": "KB",
+      "note": "Multi-Precision Loader for dual-precision weights"
+    }
+  },
+  "peak_performance": {
+    "value": "13.73",
+    "unit": "TOPS/W",
+    "condition": "with LR-HAP and SIDU"
+  },
+  "energy_efficiency": {
+    "values": [
+      {
+        "value": "13.73",
+        "unit": "TOPS/W",
+        "condition": "peak efficiency"
+      }
+    ]
+  },
+  "speedup": {
+    "values": [
+      {
+        "value": "2.46-3.99",
+        "unit": "x",
+        "condition": "LLMs with PAPS + LR-HAP"
+      },
+      {
+        "value": "1.72-2.10",
+        "unit": "x",
+        "condition": "speedup on reasoning tasks with CoT"
+      },
+      {
+        "value": "2.48-3.47",
+        "unit": "x",
+        "condition": "diffusion models"
+      }
+    ]
+  },
+  "energy_savings": {
+    "values": [
+      {
+        "value": "50.4",
+        "unit": "%",
+        "condition": "overall system energy with PAPS + MPRE"
+      },
+      {
+        "value": "52.4",
+        "unit": "%",
+        "condition": "weight EMA reduction"
+      },
+      {
+        "value": "1.88-2.07",
+        "unit": "x",
+        "condition": "vs previous transformer accelerators"
+      },
+      {
+        "value": "1.76-2.36",
+        "unit": "x",
+        "condition": "lower energy on LLM prefill and DM vs prior GenAI"
+      }
+    ]
+  },
+  "throughput": {
+    "values": [
+      {
+        "value": "1.68-2.05",
+        "unit": "x",
+        "condition": "faster LLM decoding vs prior GenAI processors"
+      }
+    ]
+  },
+  "quantization": "Mixed precision: W4A4, W4A8, W8A4, W8A8 with phase-aware precision selection",
+  "weight_precision": "3-bit in decode stage",
+  "hardware_features": [
+    "Phase-Aware Precision Selection (PAPS) with Multi-Precision Residual Encoding (MPRE)",
+    "Local Rotation with Harmonic Aligned Permutation (LR-HAP)",
+    "Paired Unit-FHT Block (PUB)",
+    "Sliced Integer-based Dequantization Unit (SIDU)"
+  ],
+  "rotation_optimization": {
+    "power_reduction": "59.4%",
+    "area_reduction": "60.8%"
+  },
+  "key_metrics": {
+    "scale_factor_precision": "INT8 with LR-HAP",
+    "sfpu_power_reduction": "45.1%",
+    "sfpu_area_reduction": "43.1%",
+    "agc_efficiency_improvement": "66.7%"
+  }
+}

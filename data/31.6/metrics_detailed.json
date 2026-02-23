@@ -1,0 +1,99 @@
+{
+  "paper_id": "31.6",
+  "title": "Tri-Oracle: A 17.78μJ/Token Vision-Language Model Accelerator with Token-Attention-Weight Redundancy Prediction",
+  "technology": "28nm CMOS",
+  "energy_per_token": {
+    "value": "17.78",
+    "unit": "μJ/token",
+    "condition": "off-the-shelf without fine-tuning"
+  },
+  "supply_voltage": {
+    "values": [
+      {
+        "value": "0.75-1.1",
+        "unit": "V"
+      }
+    ]
+  },
+  "frequency": {
+    "values": [
+      {
+        "value": "up to 580",
+        "unit": "MHz"
+      }
+    ]
+  },
+  "area_efficiency": {
+    "value": "1.19-3.99",
+    "unit": "TOPS/mm²"
+  },
+  "energy_reduction": {
+    "values": [
+      {
+        "value": "0.36-0.55",
+        "unit": "x",
+        "condition": "computation energy reduction vs baseline"
+      },
+      {
+        "value": "0.53-0.67",
+        "unit": "x",
+        "condition": "EMA energy reduction vs baseline"
+      }
+    ]
+  },
+  "token_merging": {
+    "reduction_ratio": "68%",
+    "layer_latency_reduction": "67%",
+    "area_overhead": "5.14%"
+  },
+  "attention_optimization": {
+    "attention_latency_reduction": "44%",
+    "from_head_prediction": "44%",
+    "with_load_balancing": "19.2% additional improvement",
+    "utilization_improvement": "24.6%",
+    "area_overhead": "<1%"
+  },
+  "ffn_weight_prediction": {
+    "gated_ffn_latency_reduction": "45%",
+    "ema_reduction": "57%",
+    "area_overhead": "2.3%"
+  },
+  "redundancy_exploitation": {
+    "token_level": "68% reduction, 86% of tokens from high-res images are similar",
+    "attention_level": "44% latency reduction, streaming heads account for 50-75% of heads",
+    "weight_level": "45% FFN latency reduction, 70-90% near-zero values in gated FFN"
+  },
+  "models_evaluated": [
+    {
+      "model": "TinyLLaVA-v1",
+      "task": "vision questioning"
+    },
+    {
+      "model": "LLaVA-1.5",
+      "task": "reasoning"
+    }
+  ],
+  "comparison_vs_sota": {
+    "energy_efficiency": "17.78 μJ/token",
+    "area_overhead": "single-digit area overhead",
+    "training_requirement": "off-the-shelf, no fine-tuning required",
+    "vs_finetuned_methods": "comparable to methods requiring fine-tuning"
+  },
+  "key_components": [
+    "Token Merging Unit (TMU): sign-bit similarity estimation",
+    "Attention Head Prediction Unit (AHPU): head type classification",
+    "Strip-wise SNZV Computation Unit (SSCU): near-zero value prediction",
+    "Sign Magnitude-Similarity Estimation Unit (SMSE): shared across components"
+  ],
+  "sign_bit_operations": {
+    "tmu_similarity": "XNOR gates with popcount for cosine similarity",
+    "sscu_outlier_detection": "3-sigma criterion in RMSNorm for efficient outlier detection"
+  },
+  "memory_optimization": {
+    "ssb_storage_reduction": "91%",
+    "ssb_data_migration_reduction": "51%",
+    "architectural_note": "Semantic Address Translator for physical address mapping"
+  },
+  "quantization": "Not explicitly quantization-specific, but inherent in redundancy prediction",
+  "architectural_notes": "Off-the-shelf methodology requiring only minimal hardware support without specialized training"
+}
